@@ -60,8 +60,8 @@ export default function Relatability() {
           <div className="absolute -top-20 -right-20 w-60 h-60 bg-accent rounded-full blur-[60px] opacity-40"></div>
           <div className="relative z-10">
             <h3 className="text-3xl md:text-5xl font-black uppercase font-heading mb-6 leading-tight tracking-tight">
-              <span className="text-white block mb-2">THAT'S EXACTLY WHY</span>
-              <span className="text-accent">WE BUILT SKILL SAMURAI</span>
+              <span className="text-white block">THAT'S EXACTLY WHY</span>
+              <span className="text-accent block">WE BUILT SKILL SAMURAI</span>
             </h3>
             <p className="text-lg md:text-2xl text-white/90 max-w-2xl mx-auto font-medium">
               We replace the empty guilt of passive gaming with the profound pride of building something real. You'll finally feel good about their screen time.
