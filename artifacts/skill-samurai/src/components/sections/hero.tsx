@@ -51,7 +51,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="inline-flex h-14 items-center justify-center rounded-full bg-primary px-10 text-base lg:text-lg font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 border-b-4 border-primary-foreground/20 mb-10"
           >
-            Start Your Childs Journey
+            START YOUR CHILDS JOURNEY
           </a>
 
           <div className="flex items-center justify-center gap-3">

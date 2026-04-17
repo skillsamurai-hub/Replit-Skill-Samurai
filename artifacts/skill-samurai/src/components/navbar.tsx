@@ -36,7 +36,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="inline-flex h-11 items-center justify-center rounded-full bg-primary px-8 text-sm font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-lg active:scale-95"
           >
-            Book a Free Session
+            BOOK A FREE SESSION
           </a>
           <button
             type="button"

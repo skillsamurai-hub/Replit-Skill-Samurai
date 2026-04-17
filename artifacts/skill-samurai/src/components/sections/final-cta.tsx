@@ -41,7 +41,7 @@ export default function FinalCta() {
               rel="noopener noreferrer"
               className="inline-flex h-16 items-center justify-center rounded-full bg-primary px-10 text-lg md:text-xl font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 group border-b-4 border-primary-foreground/20"
             >
-              Book Your Free Trial
+              BOOK YOUR FREE TRIAL
               <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
             </a>
 

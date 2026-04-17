@@ -55,7 +55,7 @@ export default function Footer() {
             <ul className="space-y-3 text-secondary/75 font-medium">
               <li>
                 <a href="https://skillsamurai.ca/book-a-free-trial" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  Book a Free Trial
+                  BOOK A FREE TRIAL
                 </a>
               </li>
               <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
