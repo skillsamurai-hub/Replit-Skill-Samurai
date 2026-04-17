@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
+import { CheckCircle2, ArrowRight, Sparkles, Facebook, Instagram } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -57,6 +57,26 @@ export default function Hero() {
               <p className="text-sm font-medium text-white/70 sm:ml-2">
                 Free 60-minute trial.<br />No experience needed.
               </p>
+            </div>
+            <div className="flex items-center gap-3 mb-8">
+              <a
+                href="https://facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white border border-white/15 transition-all hover:bg-white hover:text-secondary hover:scale-105"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a
+                href="https://instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white border border-white/15 transition-all hover:bg-white hover:text-secondary hover:scale-105"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
             </div>
             
             <div className="flex flex-wrap gap-x-6 gap-y-3 pt-2 border-t border-white/10 mt-2 pb-1">
