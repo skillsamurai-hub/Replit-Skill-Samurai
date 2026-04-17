@@ -2,16 +2,14 @@ import React from "react";
 
 const stats = [
   {
-    eyebrow: "Illustration",
-    value: "Will your child be Future-Ready?",
-    note: "85% of jobs that will exist in 2030 haven't been invented yet",
-    source: "Dell Technologies & the Institute For The Future.+",
+    eyebrow: "Dell Technologies + Institute for the Future",
+    value: "85% of jobs that will exist in 2030 haven't been invented yet",
+    note: "Will your child be future-ready?",
   },
   {
-    eyebrow: "Research",
+    eyebrow: "LinkedIn Workforce Report",
     value: "By 2030, 80% of all jobs will require digital skills.",
     note: "That means coding, problem-solving, and comfort with tech matter more than ever.",
-    source: "LinkedIn Workforce Report",
   },
 ];
 
@@ -31,11 +29,8 @@ export default function StatsStrip() {
               <h3 className="text-2xl md:text-3xl font-black font-heading text-secondary leading-tight mb-4">
                 {stat.value}
               </h3>
-              <p className="text-base md:text-lg text-muted-foreground font-medium leading-relaxed mb-4">
+              <p className="text-base md:text-lg text-muted-foreground font-medium leading-relaxed mb-4 italic">
                 {stat.note}
-              </p>
-              <p className="text-sm font-bold text-secondary/70 uppercase tracking-wide">
-                {stat.source}
               </p>
             </div>
           ))}
