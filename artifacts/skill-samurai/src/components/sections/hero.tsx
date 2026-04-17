@@ -40,7 +40,7 @@ export default function Hero() {
             After-School Coding &amp; STEM<br /> Classes for Kids in Winnipeg
           </h1>
 
-          <p className="text-lg lg:text-xl text-white/90 mb-10 leading-relaxed max-w-2xl font-medium drop-shadow">
+          <p className="text-lg lg:text-xl text-white/90 mb-10 leading-relaxed font-medium drop-shadow lg:whitespace-nowrap">
             Transform screen time into valuable skills that will shape your child’s future.
           </p>
 
