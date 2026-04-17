@@ -7,26 +7,26 @@ export default function Schedule() {
     {
       icon: <Clock className="h-7 w-7" />,
       label: "Class length",
-      value: "60–90 minutes",
-      detail: "Long enough to build something real, short enough to stay focused."
+      value: "60 minutes",
+      detail: "Focused, hands-on classes that fit a busy family schedule."
     },
     {
       icon: <Users className="h-7 w-7" />,
       label: "Group size",
-      value: "Small groups",
-      detail: "Low coach-to-student ratio so every kid gets real attention."
+      value: "15 students · 2 instructors",
+      detail: "A 1:7.5 ratio gives kids the support they need while still learning with peers."
     },
     {
       icon: <CalendarDays className="h-7 w-7" />,
       label: "When",
-      value: "After school & weekends",
-      detail: "Weekday afternoons and weekend mornings — pick what fits your week."
+      value: "After school only",
+      detail: "Weekday classes only — no weekends."
     },
     {
       icon: <Wallet className="h-7 w-7" />,
       label: "Pricing",
-      value: "Affordable monthly plans",
-      detail: "No big upfront contracts. The trial class is free — pay only if it's a fit."
+      value: "Pricing available by program",
+      detail: "The trial class is free — pay only if it's the right fit for your child."
     },
   ];
 
