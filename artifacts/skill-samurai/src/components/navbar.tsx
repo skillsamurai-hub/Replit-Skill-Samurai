@@ -13,7 +13,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-secondary/95 backdrop-blur-md">
       <div className="container mx-auto px-4 h-24 flex items-center justify-between gap-4">
         <Link href="/" className="flex items-center group" data-testid="link-home">
           <img
@@ -24,7 +24,7 @@ export default function Navbar() {
         </Link>
         <nav className="hidden lg:flex items-center gap-8">
           {links.map((link) => (
-            <a key={link.href} href={link.href} className="text-sm font-semibold text-secondary/80 hover:text-primary transition-colors">
+            <a key={link.href} href={link.href} className="text-sm font-semibold text-white/80 hover:text-primary transition-colors">
               {link.label}
             </a>
           ))}
@@ -41,7 +41,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-secondary"
+            className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white"
             aria-label="Toggle menu"
             aria-expanded={open}
           >
@@ -50,10 +50,10 @@ export default function Navbar() {
         </div>
       </div>
       {open && (
-        <div className="lg:hidden border-t bg-background/95 backdrop-blur-md">
+        <div className="lg:hidden border-t border-white/10 bg-secondary/95 backdrop-blur-md">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
             {links.map((link) => (
-              <a key={link.href} href={link.href} className="text-base font-semibold text-secondary" onClick={() => setOpen(false)}>
+              <a key={link.href} href={link.href} className="text-base font-semibold text-white" onClick={() => setOpen(false)}>
                 {link.label}
               </a>
             ))}
