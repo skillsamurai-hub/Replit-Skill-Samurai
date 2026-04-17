@@ -2,6 +2,7 @@ import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { Code, Lightbulb, Rocket, Blocks } from "lucide-react";
 import classroomPhoto from "@assets/IG_WINNIPEG_POST_6_1776404931683.png";
+import classroomPhotoTwo from "@assets/515493589_17954533130985752_1912039821214310778_n_1776404533433.jpg";
 
 export default function ChildBenefits() {
   const benefits = [
@@ -64,12 +65,21 @@ export default function ChildBenefits() {
 
           <div className="lg:w-1/2 w-full mt-10 lg:mt-0">
             <FadeIn direction="left" className="relative">
-              <div className="aspect-square md:aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl relative z-10 border-[12px] border-white bg-white rotate-2 hover:rotate-0 transition-transform duration-500">
-                <img 
-                  src={classroomPhoto} 
-                  alt="Child deeply focused and smiling at a computer screen" 
-                  className="w-full h-full object-cover"
-                />
+              <div className="grid grid-cols-2 gap-4">
+                <div className="aspect-square md:aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl relative z-10 border-[10px] border-white bg-white rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
+                  <img
+                    src={classroomPhoto}
+                    alt="Children learning together in a classroom"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="aspect-square md:aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl relative z-10 border-[10px] border-white bg-white rotate-2 hover:rotate-0 transition-transform duration-500 mt-8">
+                  <img
+                    src={classroomPhotoTwo}
+                    alt="Kids smiling while coding together"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
               
               {/* Decorative blobs */}
