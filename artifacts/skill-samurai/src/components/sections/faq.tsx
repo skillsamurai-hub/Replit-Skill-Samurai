@@ -5,11 +5,11 @@ import { Plus } from "lucide-react";
 const faqs = [
   {
     q: "My child has never coded before. Will they fit in?",
-    a: "Absolutely. Most kids who walk into Skill Samurai have zero coding experience — and that's exactly who our beginner curriculum is designed for. Our coaches start with visual, game-based tools and grow with your child as they're ready."
+    a: "Absolutely. Most kids who start have zero coding experience — that’s exactly who our programs are designed for. We meet your child at their level and build from there so they feel comfortable and confident."
   },
   {
     q: "What ages do you teach?",
-    a: "We work with kids ages 6 through 18. Younger students start with playful, drag-and-drop coding (Scratch, Roblox-style projects), and older students move into Python, JavaScript, AI/ML, robotics, and Minecraft modding."
+    a: "We work with kids ages 6–18, with programs tailored to each age and experience level."
   },
   {
     q: "How long is each class?",
@@ -17,15 +17,23 @@ const faqs = [
   },
   {
     q: "Is there a long-term contract?",
-    a: "No. Everything is month-to-month. We earn your trust (and your child's excitement) every month — no long contracts, no cancellation games."
+    a: "No. Everything is month-to-month. You’re not locked in — your child continues because they enjoy it and you see the value."
   },
   {
     q: "What happens in the free trial class?",
-    a: "Your child joins a real class, meets a coach, and builds an actual mini-project they can show you at the end. You'll get a clear sense of the vibe, the coaches, and whether your child connects with it — before you pay anything."
+    a: "Your child joins a real class, meets a coach, and builds a mini-project they can show you at the end. You’ll get a clear feel for how everything works before deciding anything."
+  },
+  {
+    q: "Is this just more screen time?",
+    a: "Not quite. Instead of just consuming content, kids are learning how to build games, apps, and projects. It’s a shift from playing to creating — and most parents notice a big difference in how their child uses technology."
   },
   {
     q: "What if my child is shy or already advanced?",
-    a: "Our small group format means coaches get to know each kid quickly. Shy kids get gentle encouragement and patience. Advanced kids get harder challenges and stretch projects. Nobody gets left behind, nobody gets bored."
+    a: "Our small group format allows coaches to get to know each child. Shy kids get patient support, and more advanced students are given challenges that keep them engaged."
+  },
+  {
+    q: "What if we miss a class?",
+    a: "No problem — we offer flexible make-up options so your child can stay on track."
   },
   {
     q: "Are your instructors screened and certified?",
