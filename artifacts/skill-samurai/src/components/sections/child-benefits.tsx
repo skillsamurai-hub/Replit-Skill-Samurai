@@ -65,7 +65,7 @@ export default function ChildBenefits() {
             <FadeIn direction="left" className="relative">
               <div className="aspect-square md:aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl relative z-10 border-[12px] border-white bg-white rotate-2 hover:rotate-0 transition-transform duration-500">
                 <img 
-                  src="/images/learning-moment.png" 
+                  src="/images/learning-calm.png" 
                   alt="Child deeply focused and smiling at a computer screen" 
                   className="w-full h-full object-cover"
                 />

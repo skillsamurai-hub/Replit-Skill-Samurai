@@ -24,3 +24,9 @@ id = "vbkvyOFKfMhLtvTTq5_kl"
 uri = "file://artifacts/skill-samurai/public/images/learning-moment.png"
 type = "image"
 title = "Kid focused on screen"
+
+[[generated]]
+id = "dJt3Vnjmhn86H6-cPFgFg"
+uri = "file://artifacts/skill-samurai/public/images/learning-calm.png"
+type = "image"
+title = "Calm classroom learning photo"
