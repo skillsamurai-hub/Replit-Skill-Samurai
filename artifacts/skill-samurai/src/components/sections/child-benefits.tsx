@@ -1,7 +1,7 @@
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { Code, Lightbulb, Rocket, Blocks } from "lucide-react";
-import calmClassroomPhoto from "@assets/515493589_17954533130985752_1912039821214310778_n_1776404533433.jpg";
+import classroomPhoto from "@assets/IG_WINNIPEG_POST_6_1776404931683.png";
 
 export default function ChildBenefits() {
   const benefits = [
@@ -66,7 +66,7 @@ export default function ChildBenefits() {
             <FadeIn direction="left" className="relative">
               <div className="aspect-square md:aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl relative z-10 border-[12px] border-white bg-white rotate-2 hover:rotate-0 transition-transform duration-500">
                 <img 
-                  src={calmClassroomPhoto} 
+                  src={classroomPhoto} 
                   alt="Child deeply focused and smiling at a computer screen" 
                   className="w-full h-full object-cover"
                 />
