@@ -113,7 +113,6 @@ export default function Hero() {
         </div>
       </div>
       
-      <WaveDivider position="bottom" fill="#ffffff" />
     </section>
   );
 }
