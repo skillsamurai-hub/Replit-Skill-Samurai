@@ -57,6 +57,14 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                <div className="space-y-1">
+                  <div className="text-white font-semibold">LEARNING CENTER HOURS:</div>
+                  <div>Monday – Friday, 4–8 PM (By appointment only)</div>
+                  <div>(By Appointment Only)</div>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <Mail className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                 <span>hello@skillsamurai.ca</span>
               </li>
             </ul>
