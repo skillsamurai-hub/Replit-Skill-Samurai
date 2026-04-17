@@ -92,9 +92,9 @@ export default function Faq() {
               href="https://skillsamurai.ca/book-a-free-trial"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3 text-base font-bold text-white shadow-lg hover:bg-primary/90 hover:scale-[1.02] active:scale-95 transition-all"
+              className="inline-flex items-center justify-center rounded-full bg-white text-secondary px-7 py-3.5 text-base font-black uppercase tracking-wide shadow-xl shadow-black/20 ring-2 ring-white/40 hover:bg-primary hover:text-white hover:ring-primary hover:scale-[1.03] active:scale-95 transition-all"
             >
-              BOOK A FREE TRIAL
+              Book a Free Trial
             </a>
           </FadeIn>
 
