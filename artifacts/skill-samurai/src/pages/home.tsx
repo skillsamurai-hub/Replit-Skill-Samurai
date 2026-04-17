@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Hero from "@/components/sections/hero";
 import MediaBanner from "@/components/sections/media-banner";
+import StatsStrip from "@/components/sections/stats-strip";
 import Relatability from "@/components/sections/relatability";
 import ChildBenefits from "@/components/sections/child-benefits";
 import ParentBenefits from "@/components/sections/parent-benefits";
@@ -22,6 +23,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <MediaBanner />
+        <StatsStrip />
         <Relatability />
         <ChildBenefits />
         <ParentBenefits />
