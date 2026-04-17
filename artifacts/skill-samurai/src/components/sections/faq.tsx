@@ -80,12 +80,12 @@ export default function Faq() {
     <section className="py-28 bg-secondary relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-[1fr,1.5fr] gap-12 lg:gap-20 max-w-6xl mx-auto items-start">
-          <FadeIn className="lg:sticky lg:top-28">
-          <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-3">FAQ</h2>
-          <h3 className="text-4xl md:text-5xl font-black font-heading text-white leading-tight tracking-tight mb-5">
+          <FadeIn className="lg:sticky lg:top-28 relative z-20">
+            <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-3">FAQ</h2>
+            <h3 className="text-4xl md:text-5xl font-black font-heading text-white leading-tight tracking-tight mb-5">
               Parent questions,<br />honestly answered.
             </h3>
-          <p className="text-lg text-white/75 font-medium mb-6">
+            <p className="text-lg text-white/75 font-medium mb-6">
               The things parents actually ask before booking a trial. If you don't see your question here, just ask us — we'd rather over-explain than oversell.
             </p>
             <a
@@ -98,7 +98,7 @@ export default function Faq() {
             </a>
           </FadeIn>
 
-          <FadeIn delay={0.15}>
+          <FadeIn delay={0.15} className="relative z-10">
             <div className="bg-black/15 rounded-3xl border border-white/10 shadow-xl shadow-black/20 px-7 md:px-10 py-3 backdrop-blur-sm">
               {faqs.map((f, i) => (
                 <FaqItem key={i} q={f.q} a={f.a} defaultOpen={i === 0} />
