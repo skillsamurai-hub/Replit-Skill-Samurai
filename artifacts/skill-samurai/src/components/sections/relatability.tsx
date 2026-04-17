@@ -55,7 +55,7 @@ export default function Relatability() {
           ))}
         </div>
 
-        <FadeIn delay={0.4} direction="up" className="max-w-4xl mx-auto bg-secondary text-white rounded-[3rem] p-10 md:p-16 text-center relative overflow-hidden shadow-2xl shadow-secondary/30 rotate-1 hover:rotate-0 transition-transform">
+        <FadeIn delay={0.4} direction="up" className="w-full max-w-6xl mx-auto bg-secondary text-white rounded-[3rem] p-10 md:p-16 text-center relative overflow-hidden shadow-2xl shadow-secondary/30 rotate-1 hover:rotate-0 transition-transform">
           <div className="absolute top-0 left-0 w-full h-full bg-primary/10"></div>
           <div className="absolute -top-20 -right-20 w-60 h-60 bg-accent rounded-full blur-[60px] opacity-40"></div>
           <div className="relative z-10">
