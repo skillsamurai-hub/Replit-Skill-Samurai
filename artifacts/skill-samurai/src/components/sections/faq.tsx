@@ -77,7 +77,7 @@ function FaqItem({ q, a, defaultOpen = false }: { q: string; a: string; defaultO
 
 export default function Faq() {
   return (
-    <section className="py-28 bg-muted/30 relative overflow-hidden">
+    <section className="py-28 bg-secondary/5 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-[1fr,1.5fr] gap-12 lg:gap-20 max-w-6xl mx-auto items-start">
           <FadeIn className="lg:sticky lg:top-28">
