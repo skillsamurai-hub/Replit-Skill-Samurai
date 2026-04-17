@@ -1,6 +1,6 @@
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { Clock, Users, ArrowRight } from "lucide-react";
+import { Clock, Users, CalendarDays, Tag, ArrowRight } from "lucide-react";
 
 export default function Schedule() {
   const facts = [
@@ -15,6 +15,18 @@ export default function Schedule() {
       label: "Group size",
       value: "15 students · 2 instructors",
       detail: "A 1:7.5 ratio, so your child gets help when they need it while still learning with other kids."
+    },
+    {
+      icon: <CalendarDays className="h-7 w-7" />,
+      label: "When",
+      value: "Weekly, after school & weekends",
+      detail: "Pick a recurring time slot that fits around school, sports, and the rest of your week."
+    },
+    {
+      icon: <Tag className="h-7 w-7" />,
+      label: "Pricing",
+      value: "Try your first class free",
+      detail: "Come check it out before committing. We'll walk you through pricing once you've seen it in action."
     },
   ];
 
