@@ -37,7 +37,8 @@ export default function Hero() {
           className="max-w-4xl text-center mx-auto flex flex-col items-center"
         >
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black font-heading leading-[1.1] mb-6 tracking-tight text-white drop-shadow-2xl">
-            After-School Coding &amp; STEM<br /> Classes for Kids in Winnipeg
+            <span className="block whitespace-nowrap">After-School Coding &amp; STEM</span>
+            <span className="block whitespace-nowrap">Classes for Kids in Winnipeg</span>
           </h1>
 
           <p className="text-lg lg:text-xl text-white/90 mb-10 leading-relaxed font-medium drop-shadow lg:whitespace-nowrap">
