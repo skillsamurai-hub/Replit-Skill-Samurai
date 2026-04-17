@@ -111,37 +111,44 @@ export default function WeeklyClasses() {
           </div>
         </div>
 
-        <FadeIn delay={0.2} className="mt-12 max-w-3xl mx-auto text-center">
+        <FadeIn delay={0.2} className="mt-12 max-w-xl mx-auto text-center">
           <p className="text-base md:text-lg text-secondary/80 font-semibold mb-6">
             No contracts. Flexible, month-to-month memberships.
           </p>
 
-          <div className="inline-flex p-1.5 rounded-full bg-white border border-border shadow-md mb-6">
-            <button
-              type="button"
-              onClick={() => setActiveLocation("north-east")}
-              className={`px-5 py-2 rounded-full text-sm font-bold uppercase tracking-wide transition-all ${
-                activeLocation === "north-east"
-                  ? "bg-secondary text-white shadow"
-                  : "text-secondary hover:text-primary"
-              }`}
-            >
-              North East
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveLocation("seven-oaks")}
-              className={`px-5 py-2 rounded-full text-sm font-bold uppercase tracking-wide transition-all ${
-                activeLocation === "seven-oaks"
-                  ? "bg-secondary text-white shadow"
-                  : "text-secondary hover:text-primary"
-              }`}
-            >
-              Seven Oaks
-            </button>
+          <div className="inline-flex flex-col items-center bg-white border border-border rounded-2xl shadow-md p-2 mb-6">
+            <div className="flex p-1 rounded-full bg-muted/40">
+              <button
+                type="button"
+                onClick={() => setActiveLocation("north-east")}
+                className={`px-5 py-2 rounded-full text-sm font-bold uppercase tracking-wide transition-all ${
+                  activeLocation === "north-east"
+                    ? "bg-secondary text-white shadow"
+                    : "text-secondary hover:text-primary"
+                }`}
+              >
+                North East
+              </button>
+              <button
+                type="button"
+                onClick={() => setActiveLocation("seven-oaks")}
+                className={`px-5 py-2 rounded-full text-sm font-bold uppercase tracking-wide transition-all ${
+                  activeLocation === "seven-oaks"
+                    ? "bg-secondary text-white shadow"
+                    : "text-secondary hover:text-primary"
+                }`}
+              >
+                Seven Oaks
+              </button>
+            </div>
+            <p className="text-sm text-muted-foreground font-medium px-4 py-3">
+              {activeLocation === "north-east"
+                ? "1199 Rothesay St., Winnipeg, MB"
+                : "745 Kingsbury Ave., Winnipeg, MB"}
+            </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div>
             <a
               href="https://skillsamurai.ca/book-a-free-trial"
               target="_blank"
@@ -150,11 +157,6 @@ export default function WeeklyClasses() {
             >
               Book a Free Session
             </a>
-            <p className="text-sm text-muted-foreground font-medium">
-              {activeLocation === "north-east"
-                ? "1199 Rothesay St., Winnipeg, MB"
-                : "745 Kingsbury Ave., Winnipeg, MB"}
-            </p>
           </div>
         </FadeIn>
       </div>
