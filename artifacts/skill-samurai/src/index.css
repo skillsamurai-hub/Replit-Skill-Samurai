@@ -66,12 +66,12 @@
   --popover-foreground: 224 45% 15%;
   --popover-border: 220 20% 90%;
 
-  /* Hot Pink — brand CTA (#ee3c83) */
-  --primary: 335 84% 58%;
+  /* Hot Pink — brand CTA (#EE3E86, from skillsamurai.com/mb-winnipeg) */
+  --primary: 335 84% 59%;
   --primary-foreground: 0 0% 100%;
 
-  /* Deep Navy — brand primary (#152f40) */
-  --secondary: 206 50% 17%;
+  /* Navy — brand primary (#2A4169, from skillsamurai.com/mb-winnipeg) */
+  --secondary: 218 42% 29%;
   --secondary-foreground: 0 0% 100%;
 
   /* Warm Orange — brand accent (#f0904c) */

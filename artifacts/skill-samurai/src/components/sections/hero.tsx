@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
 import { WaveDivider } from "@/components/ui/wave-divider";
-import heroPhoto from "@assets/Screenshot_2026-04-16_234335_1776401048604.png";
 
 export default function Hero() {
   return (
@@ -86,8 +85,8 @@ export default function Hero() {
             <div className="relative rounded-[3rem] overflow-hidden border-[12px] border-white shadow-2xl shadow-black/50 bg-white rotate-3 hover:rotate-0 transition-transform duration-500 aspect-[4/3] group">
               <div className="absolute inset-0 bg-secondary/10 group-hover:bg-transparent transition-colors z-10" />
               <img 
-                src={heroPhoto}
-                alt="Skill Samurai students focused on building their own coding projects" 
+                src="/images/hero-coding.png" 
+                alt="Diverse kids engaged in coding with an expert instructor" 
                 className="w-full h-full object-cover"
               />
               
