@@ -6,10 +6,10 @@ import logoUrl from "@assets/SkillSamurai_Logo_Full_(1)_(1)_(1)_1776400767722.pn
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const links = [
-    { href: "#relatability", label: "Why Skill Samurai" },
-    { href: "#proof", label: "Results" },
-    { href: "#how-it-works", label: "How It Works" },
-    { href: "#faq", label: "FAQ" },
+    { href: "#about", label: "About" },
+    { href: "#why-skill-samurai", label: "Why Skill Samurai" },
+    { href: "#programs", label: "Programs" },
+    { href: "#resources", label: "Resources" },
   ];
 
   return (
