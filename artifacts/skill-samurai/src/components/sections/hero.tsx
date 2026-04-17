@@ -82,15 +82,12 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
             className="relative"
           >
-            <div className="relative rounded-[3rem] overflow-hidden border-[12px] border-white shadow-2xl shadow-black/50 bg-secondary rotate-3 hover:rotate-0 transition-transform duration-500 aspect-[4/3] group">
+            <div className="relative rounded-[3rem] overflow-hidden border-[12px] border-white shadow-2xl shadow-black/50 bg-white rotate-3 hover:rotate-0 transition-transform duration-500 aspect-[4/3] group">
               <div className="absolute inset-0 bg-secondary/10 group-hover:bg-transparent transition-colors z-10 pointer-events-none" />
-              <iframe
-                src="https://player.vimeo.com/video/799591701?background=1&autoplay=1&loop=1&muted=1&autopause=0"
-                title="Skill Samurai students at work"
-                allow="autoplay; fullscreen; picture-in-picture"
-                loading="lazy"
-                className="absolute inset-0 w-full h-full"
-                style={{ border: 0, transform: 'scale(1.4)', transformOrigin: 'center' }}
+              <img
+                src="/images/hero-coding.png"
+                alt="Diverse kids engaged in coding with an expert instructor"
+                className="absolute inset-0 w-full h-full object-cover"
               />
               
               {/* Floating element */}
