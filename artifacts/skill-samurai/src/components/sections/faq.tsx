@@ -4,16 +4,12 @@ import { Plus } from "lucide-react";
 
 const faqs = [
   {
-    q: "What do kids build?",
-    a: "Roblox games, Minecraft projects, apps, and coding projects."
-  },
-  {
     q: "My child has never coded before. Will they fit in?",
-    a: "Most kids who start have zero coding experience — we meet them at their level."
+    a: "Absolutely. Most kids who walk into Skill Samurai have zero coding experience — and that's exactly who our beginner curriculum is designed for. Our coaches start with visual, game-based tools and grow with your child as they're ready."
   },
   {
     q: "What ages do you teach?",
-    a: "Ages 6–18."
+    a: "We work with kids ages 6 through 18. Younger students start with playful, drag-and-drop coding (Scratch, Roblox-style projects), and older students move into Python, JavaScript, AI/ML, robotics, and Minecraft modding."
   },
   {
     q: "How long is each class?",
@@ -21,11 +17,11 @@ const faqs = [
   },
   {
     q: "Is there a long-term contract?",
-    a: "Month-to-month. No long-term contracts."
+    a: "No. Everything is month-to-month. We earn your trust (and your child's excitement) every month — no long contracts, no cancellation games."
   },
   {
     q: "What happens in the free trial class?",
-    a: "Your child joins a real class and builds a project they can show you — before you pay anything."
+    a: "Your child joins a real class, meets a coach, and builds an actual mini-project they can show you at the end. You'll get a clear sense of the vibe, the coaches, and whether your child connects with it — before you pay anything."
   },
   {
     q: "What if my child is shy or already advanced?",
