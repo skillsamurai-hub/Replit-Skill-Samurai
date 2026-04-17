@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
 import { Facebook, Instagram, Twitter } from "lucide-react";
-import logoUrl from "@assets/Skill_Samurai_Logo_(Hoodies)_(T-Shirts)_(Hoodies)_1776400642747.png";
+import logoUrl from "@assets/SkillSamurai_Logo_Full_(1)_(1)_(1)_1776400767722.png";
 
 export default function Footer() {
   return (
