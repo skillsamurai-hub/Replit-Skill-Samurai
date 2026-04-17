@@ -16,7 +16,7 @@ export default function Hero() {
           style={{
             border: 0,
             width: '100vw',
-            height: '56.25vw',
+            height: '68vw',
             minHeight: '100%',
             minWidth: '177.77vh',
             top: '50%',
