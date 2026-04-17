@@ -65,19 +65,19 @@ export default function ChildBenefits() {
 
           <div className="lg:w-1/2 w-full mt-10 lg:mt-0">
             <FadeIn direction="left" className="relative">
-              <div className="grid gap-4">
-                <div className="aspect-square md:aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl relative z-10 border-[10px] border-white bg-white rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
+              <div className="grid gap-3 max-w-[520px] mx-auto">
+                <div className="aspect-[4/3] rounded-[2.25rem] overflow-hidden shadow-2xl relative z-10 border-[10px] border-white bg-white rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
                   <img
                     src={classroomPhoto}
                     alt="Children learning together in a classroom"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-center"
                   />
                 </div>
-                <div className="aspect-square md:aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl relative z-10 border-[10px] border-white bg-white rotate-2 hover:rotate-0 transition-transform duration-500 md:ml-16">
+                <div className="aspect-[4/3] rounded-[2.25rem] overflow-hidden shadow-2xl relative z-10 border-[10px] border-white bg-white rotate-2 hover:rotate-0 transition-transform duration-500 md:ml-12">
                   <img
                     src={classroomPhotoTwo}
                     alt="Kids smiling while coding together"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-center"
                   />
                 </div>
               </div>
