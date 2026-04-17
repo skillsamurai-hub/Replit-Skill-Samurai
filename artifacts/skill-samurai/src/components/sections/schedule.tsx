@@ -8,25 +8,25 @@ export default function Schedule() {
       icon: <Clock className="h-7 w-7" />,
       label: "Class length",
       value: "60 minutes",
-      detail: "Focused, hands-on classes designed to keep kids engaged while fitting into a busy schedule."
+      detail: "Focused, hands-on sessions that keep kids engaged without it feeling like more school."
     },
     {
       icon: <Users className="h-7 w-7" />,
       label: "Group size",
       value: "15 students · 2 instructors",
-      detail: "A 1:7.5 ratio gives kids the support they need while still learning alongside peers."
+      detail: "A 1:7.5 ratio, so your child gets support when they need it, while still learning alongside others."
     },
     {
       icon: <CalendarDays className="h-7 w-7" />,
       label: "When",
       value: "After school only",
-      detail: "Weekday classes only — no weekends."
+      detail: "Weekday classes — built to fit into your routine without taking over your weekends."
     },
     {
       icon: <Wallet className="h-7 w-7" />,
       label: "Pricing",
       value: "Pricing varies by program",
-      detail: "The trial class is free — you only continue if it’s the right fit for your child."
+      detail: "The first class is free, so you can see how your child responds before deciding anything."
     },
   ];
 
@@ -39,7 +39,7 @@ export default function Schedule() {
             Everything you need to know,<br className="hidden sm:block" /> in one place.
           </h3>
           <p className="text-lg text-muted-foreground font-medium">
-            No surprises, no pressure. Here's exactly what classes look like and how it works for your family.
+            No surprises, no pressure — just a clear look at how classes work and what this could look like for your family.
           </p>
         </FadeIn>
 
