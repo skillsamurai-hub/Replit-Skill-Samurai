@@ -8,26 +8,26 @@ export default function ChildBenefits() {
   const benefits = [
     {
       icon: <Blocks className="h-8 w-8 text-white" />,
-      title: "Builds their own games",
+      title: "Roblox games",
       desc: "They'll transform from consumers to creators, learning the mechanics behind the games they love.",
       color: "bg-accent"
     },
     {
       icon: <Code className="h-8 w-8 text-white" />,
-      title: "Learns coding & problem-solving",
-      desc: "They acquire future-proof technical skills without even realizing they're studying because it's wrapped in fun.",
+      title: "Minecraft projects",
+      desc: "They create fun, guided projects that build logic, persistence, and creativity.",
       color: "bg-primary"
     },
     {
       icon: <Rocket className="h-8 w-8 text-white" />,
-      title: "Gains real confidence",
-      desc: "There is nothing quite like the look on a child's face when they show you a working game they built from scratch.",
+      title: "Apps",
+      desc: "They build simple apps and see how ideas turn into something real.",
       color: "bg-secondary"
     },
     {
       icon: <Lightbulb className="h-8 w-8 text-white" />,
-      title: "Thinks critically",
-      desc: "We don't do rigid copy-pasting. We teach computational thinking—how to break big problems into solvable pieces.",
+      title: "Coding projects",
+      desc: "We teach computational thinking—how to break big problems into solvable pieces.",
       color: "bg-[#F59100]"
     }
   ];
