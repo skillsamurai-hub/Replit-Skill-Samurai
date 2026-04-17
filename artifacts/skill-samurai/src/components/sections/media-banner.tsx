@@ -15,8 +15,11 @@ function SpotifyLogo() {
 function FoxLogo() {
   return (
     <span
-      className="text-white font-black text-3xl italic tracking-tighter"
-      style={{ fontFamily: 'Impact, "Arial Black", sans-serif', transform: 'skewX(-8deg)', display: 'inline-block', letterSpacing: '-0.05em' }}
+      className="text-white font-black text-4xl italic"
+      style={{
+        fontFamily: '"Arial Black", Impact, sans-serif',
+        letterSpacing: '0.02em',
+      }}
     >
       FOX
     </span>
