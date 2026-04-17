@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-neutral-900/25"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10 pt-28 pb-0 lg:pt-40 lg:pb-0 min-h-[600px] lg:min-h-[760px] flex items-start justify-center">
+      <div className="container mx-auto px-4 relative z-10 pt-28 pb-0 lg:pt-40 lg:pb-0 min-h-[600px] lg:min-h-[760px] flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
