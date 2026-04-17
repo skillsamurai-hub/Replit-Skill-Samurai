@@ -1,5 +1,6 @@
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
+import studioPhoto from "@assets/508688588_17952776135985752_7409911161413540483_n_1776404533433.jpg";
 
 export default function Proof() {
   return (
@@ -24,15 +25,15 @@ export default function Proof() {
           <FadeIn direction="up" delay={0.1}>
             <div className="group rounded-[3rem] overflow-hidden relative aspect-video bg-secondary border-[8px] border-white shadow-2xl shadow-black/10 hover:-translate-y-2 hover:rotate-1 transition-all duration-500">
               <img 
-                src="/images/roblox-project.png" 
-                alt="3D Roblox game level built by a student" 
+                src={studioPhoto} 
+                alt="Children learning together in a classroom" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent pointer-events-none" />
               <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 translate-y-4 group-hover:translate-y-0 transition-transform">
-                <div className="inline-block px-4 py-2 bg-accent text-secondary text-sm font-black uppercase tracking-wider rounded-full mb-4 shadow-lg rotate-2 group-hover:rotate-0 transition-transform">Roblox Studio</div>
-                <h4 className="text-3xl font-black font-heading mb-3 text-white">3D Obby Platformer</h4>
-                <p className="text-white/90 font-medium line-clamp-2 text-lg">A complete multi-level obstacle course with checkpoints, moving platforms, and custom scripts.</p>
+                <div className="inline-block px-4 py-2 bg-accent text-secondary text-sm font-black uppercase tracking-wider rounded-full mb-4 shadow-lg rotate-2 group-hover:rotate-0 transition-transform">In Class</div>
+                <h4 className="text-3xl font-black font-heading mb-3 text-white">Real classroom energy</h4>
+                <p className="text-white/90 font-medium line-clamp-2 text-lg">A warm, focused learning environment where kids build confidence together.</p>
               </div>
             </div>
           </FadeIn>
@@ -46,9 +47,9 @@ export default function Proof() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent pointer-events-none" />
               <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 translate-y-4 group-hover:translate-y-0 transition-transform">
-                <div className="inline-block px-4 py-2 bg-primary text-white text-sm font-black uppercase tracking-wider rounded-full mb-4 shadow-lg -rotate-2 group-hover:rotate-0 transition-transform">In Our Studio</div>
+                <div className="inline-block px-4 py-2 bg-primary text-white text-sm font-black uppercase tracking-wider rounded-full mb-4 shadow-lg -rotate-2 group-hover:rotate-0 transition-transform">Small Groups</div>
                 <h4 className="text-3xl font-black font-heading mb-3 text-white">Confidence you can see</h4>
-                <p className="text-white/90 font-medium line-clamp-2 text-lg">From shy first-timers to proud creators — kids walk out standing a little taller after every class.</p>
+                <p className="text-white/90 font-medium line-clamp-2 text-lg">Kids smile, collaborate, and leave proud of what they made together.</p>
               </div>
             </div>
           </FadeIn>
