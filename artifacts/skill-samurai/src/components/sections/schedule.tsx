@@ -1,6 +1,6 @@
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { Clock, CalendarDays, ArrowRight } from "lucide-react";
+import { Clock, Users, CalendarDays, Wallet, ArrowRight } from "lucide-react";
 
 export default function Schedule() {
   const facts = [
@@ -8,13 +8,25 @@ export default function Schedule() {
       icon: <Clock className="h-7 w-7" />,
       label: "Class length",
       value: "60 minutes",
-      detail: "Focused, hands-on classes that fit a busy family schedule."
+      detail: "Focused, hands-on classes designed to keep kids engaged while fitting into a busy schedule."
+    },
+    {
+      icon: <Users className="h-7 w-7" />,
+      label: "Group size",
+      value: "15 students · 2 instructors",
+      detail: "A 1:7.5 ratio gives kids the support they need while still learning alongside peers."
     },
     {
       icon: <CalendarDays className="h-7 w-7" />,
       label: "When",
       value: "After school only",
       detail: "Weekday classes only — no weekends."
+    },
+    {
+      icon: <Wallet className="h-7 w-7" />,
+      label: "Pricing",
+      value: "Pricing varies by program",
+      detail: "The trial class is free — you only continue if it’s the right fit for your child."
     },
   ];
 
@@ -31,7 +43,7 @@ export default function Schedule() {
           </p>
         </FadeIn>
 
-        <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
           {facts.map((f, i) => (
             <FadeIn key={i} delay={i * 0.08} direction="up">
               <div className="h-full bg-muted/40 border border-border rounded-2xl p-6 hover:border-primary/40 hover:bg-white hover:shadow-xl hover:shadow-secondary/5 transition-all duration-300">
