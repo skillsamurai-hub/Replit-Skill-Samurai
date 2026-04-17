@@ -29,12 +29,12 @@ export default function Hero() {
         <div className="absolute inset-0 bg-neutral-900/25"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10 pt-28 pb-24 lg:pt-40 lg:pb-24 min-h-[600px] lg:min-h-[760px] flex items-center justify-center">
+      <div className="container mx-auto px-4 relative z-10 pt-28 pb-0 lg:pt-40 lg:pb-0 min-h-[600px] lg:min-h-[760px] flex items-start justify-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="max-w-4xl text-center mx-auto flex flex-col items-center"
+          className="max-w-4xl text-center mx-auto flex flex-col items-center pb-6 lg:pb-8"
         >
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading leading-[1.1] mb-6 tracking-tight text-white drop-shadow-2xl">
             <span className="block whitespace-nowrap">After-School Coding &amp; STEM</span>
