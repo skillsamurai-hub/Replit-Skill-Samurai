@@ -25,8 +25,8 @@ export default function Hero() {
           }}
         />
         {/* Grey overlay for text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary/85 via-secondary/70 to-secondary/85"></div>
-        <div className="absolute inset-0 bg-secondary/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/70 to-black/85"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10 pt-28 pb-24 lg:pt-40 lg:pb-24 min-h-[600px] lg:min-h-[760px] flex items-center justify-center">
