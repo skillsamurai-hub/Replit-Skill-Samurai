@@ -34,7 +34,7 @@ export default function ChildBenefits() {
   ];
 
   return (
-    <section className="py-32 bg-primary/5 relative overflow-hidden">
+    <section id="what-they-learn" className="py-32 bg-primary/5 relative overflow-hidden scroll-mt-24">
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="lg:w-1/2">
@@ -63,22 +63,22 @@ export default function ChildBenefits() {
 
           <div className="lg:w-1/2 w-full mt-10 lg:mt-0">
             <FadeIn direction="left" className="relative">
-              <div className="grid gap-3 max-w-[520px] mx-auto">
-                <div className="aspect-[4/3] rounded-[2.25rem] overflow-hidden shadow-2xl relative z-10 border-[10px] border-white bg-white rotate-[-2deg] hover:rotate-0 transition-transform duration-500 md:ml-8">
+              <div className="grid grid-cols-2 grid-rows-2 gap-4 max-w-[560px] mx-auto h-[460px] md:h-[540px]">
+                <div className="row-span-2 rounded-[1.75rem] overflow-hidden shadow-2xl relative z-10 border-[8px] border-white bg-white rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
                   <img
                     src={classroomPhotoTwo}
                     alt="Kids smiling while coding together"
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
-                <div className="aspect-[4/3] rounded-[2.25rem] overflow-hidden shadow-2xl relative z-10 border-[10px] border-white bg-white rotate-2 hover:rotate-0 transition-transform duration-500 md:ml-12">
+                <div className="rounded-[1.75rem] overflow-hidden shadow-2xl relative z-10 border-[8px] border-white bg-white rotate-2 hover:rotate-0 transition-transform duration-500">
                   <img
                     src={classroomPhoto}
                     alt="Children learning together in a classroom"
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
-                <div className="aspect-[4/3] rounded-[2.25rem] overflow-hidden shadow-2xl relative z-10 border-[10px] border-white bg-white -rotate-1 hover:rotate-0 transition-transform duration-500 md:ml-8">
+                <div className="rounded-[1.75rem] overflow-hidden shadow-2xl relative z-10 border-[8px] border-white bg-white -rotate-1 hover:rotate-0 transition-transform duration-500">
                   <img
                     src={classroomPhotoThree}
                     alt="Student focused while coding at a computer"
@@ -90,11 +90,11 @@ export default function ChildBenefits() {
               <div className="absolute -top-12 -right-12 w-64 h-64 bg-accent rounded-full blur-[60px] opacity-60 z-0 animate-pulse"></div>
               <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-primary rounded-full blur-[60px] opacity-40 z-0 animate-pulse" style={{ animationDelay: '1s' }}></div>
 
-              <div className="absolute top-1/2 -left-8 md:-left-12 -translate-y-1/2 bg-white rounded-[2rem] p-5 shadow-2xl z-20 border-[4px] border-muted animate-bounce" style={{ animationDuration: '3s' }}>
-                <span className="text-5xl">🚀</span>
+              <div className="absolute -top-6 -left-6 bg-white rounded-[1.5rem] p-4 shadow-2xl z-20 border-[4px] border-muted animate-bounce" style={{ animationDuration: '3s' }}>
+                <span className="text-4xl">🚀</span>
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-white rounded-[2rem] p-5 shadow-2xl z-20 border-[4px] border-muted animate-bounce" style={{ animationDuration: '4s', animationDelay: '0.5s' }}>
-                <span className="text-5xl">💡</span>
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-[1.5rem] p-4 shadow-2xl z-20 border-[4px] border-muted animate-bounce" style={{ animationDuration: '4s', animationDelay: '0.5s' }}>
+                <span className="text-4xl">💡</span>
               </div>
             </FadeIn>
           </div>
