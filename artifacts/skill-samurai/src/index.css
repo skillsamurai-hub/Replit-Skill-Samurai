@@ -66,27 +66,27 @@
   --popover-foreground: 224 45% 15%;
   --popover-border: 220 20% 90%;
 
-  /* Vibrant Coral/Orange */
-  --primary: 11 85% 55%;
+  /* Hot Pink/Magenta — brand CTA */
+  --primary: 332 82% 52%;
   --primary-foreground: 0 0% 100%;
 
-  /* Navy/Indigo */
-  --secondary: 226 55% 25%;
+  /* Deep Navy — brand primary */
+  --secondary: 220 44% 24%;
   --secondary-foreground: 0 0% 100%;
 
-  /* Bright Yellow */
-  --accent: 44 95% 55%;
-  --accent-foreground: 224 45% 15%;
+  /* Warm Orange — from the samurai fox flame */
+  --accent: 22 92% 56%;
+  --accent-foreground: 220 44% 14%;
 
-  --muted: 220 20% 92%;
-  --muted-foreground: 220 25% 45%;
+  --muted: 220 20% 94%;
+  --muted-foreground: 220 25% 40%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
-  --border: 220 20% 90%;
-  --input: 220 20% 90%;
-  --ring: 11 85% 55%;
+  --border: 220 20% 88%;
+  --input: 220 20% 88%;
+  --ring: 332 82% 52%;
 
   --app-font-sans: 'Plus Jakarta Sans', sans-serif;
   --app-font-heading: 'Outfit', sans-serif;
@@ -114,14 +114,14 @@
   --popover-foreground: 40 33% 98%;
   --popover-border: 224 45% 25%;
 
-  --primary: 11 85% 55%;
+  --primary: 332 82% 56%;
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 226 55% 85%;
-  --secondary-foreground: 224 45% 10%;
+  --secondary: 220 44% 80%;
+  --secondary-foreground: 220 44% 14%;
 
-  --accent: 44 95% 55%;
-  --accent-foreground: 224 45% 10%;
+  --accent: 22 92% 58%;
+  --accent-foreground: 220 44% 10%;
 
   --muted: 224 45% 20%;
   --muted-foreground: 220 25% 70%;
@@ -131,7 +131,7 @@
 
   --border: 224 45% 25%;
   --input: 224 45% 25%;
-  --ring: 11 85% 55%;
+  --ring: 332 82% 56%;
 }
 
 @layer base {
