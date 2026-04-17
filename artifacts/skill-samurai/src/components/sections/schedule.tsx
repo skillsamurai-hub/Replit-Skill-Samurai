@@ -14,19 +14,19 @@ export default function Schedule() {
       icon: <Users className="h-7 w-7" />,
       label: "Group size",
       value: "15 students · 2 instructors",
-      detail: "A 1:7.5 ratio, so your child gets support when they need it, while still learning alongside others."
+      detail: "A 1:7.5 ratio, so your child gets help when they need it while still learning with other kids."
     },
     {
       icon: <CalendarDays className="h-7 w-7" />,
       label: "When",
       value: "After school only",
-      detail: "Weekday classes — built to fit into your routine without taking over your weekends."
+      detail: "Weekday classes that fit into your schedule — no weekends needed."
     },
     {
       icon: <Wallet className="h-7 w-7" />,
       label: "Pricing",
       value: "Pricing varies by program",
-      detail: "The first class is free, so you can see how your child responds before deciding anything."
+      detail: "Start with a free trial class and see how your child responds before making any decisions."
     },
   ];
 
@@ -39,7 +39,7 @@ export default function Schedule() {
             Everything you need to know,<br className="hidden sm:block" /> in one place.
           </h3>
           <p className="text-lg text-muted-foreground font-medium">
-            No surprises, no pressure — just a clear look at how classes work and what this could look like for your family.
+            Most parents start here just to see if it's the right fit for their child. No surprises, no pressure — just a clear look at how classes work and how it fits into your routine without adding more to your plate.
           </p>
         </FadeIn>
 
