@@ -1,6 +1,5 @@
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { WaveDivider } from "@/components/ui/wave-divider";
 import { Code, Lightbulb, Rocket, Blocks } from "lucide-react";
 
 export default function ChildBenefits() {
@@ -89,7 +88,7 @@ export default function ChildBenefits() {
         </div>
       </div>
       
-      <WaveDivider position="bottom" fill="hsl(var(--secondary))" />
+      <div className="absolute bottom-0 left-0 h-px w-full bg-border/70" />
     </section>
   );
 }

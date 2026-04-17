@@ -1,6 +1,5 @@
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { WaveDivider } from "@/components/ui/wave-divider";
 import { XCircle, CheckCircle2 } from "lucide-react";
 
 export default function BeforeAfter() {
@@ -84,7 +83,7 @@ export default function BeforeAfter() {
         </div>
       </div>
       
-      <WaveDivider position="bottom" fill="hsl(var(--accent) / 0.1)" />
+      <div className="absolute bottom-0 left-0 h-px w-full bg-border/70" />
     </section>
   );
 }

@@ -1,13 +1,10 @@
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { ArrowRight } from "lucide-react";
-import { WaveDivider } from "@/components/ui/wave-divider";
 
 export default function FinalCta() {
   return (
     <section className="py-40 relative overflow-hidden">
-      <WaveDivider position="top" fill="#ffffff" className="z-20" />
-      
       {/* Dynamic Background */}
       <div className="absolute inset-0 bg-secondary">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 4px 4px, rgba(255,255,255,0.4) 2px, transparent 0)', backgroundSize: '32px 32px' }}></div>

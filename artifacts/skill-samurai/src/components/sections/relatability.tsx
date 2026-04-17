@@ -1,6 +1,5 @@
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { WaveDivider } from "@/components/ui/wave-divider";
 import { Gamepad2, Brain, Timer, Trophy } from "lucide-react";
 
 export default function Relatability() {
@@ -29,8 +28,6 @@ export default function Relatability() {
 
   return (
     <section className="py-24 bg-white relative overflow-hidden">
-      <WaveDivider position="top" fill="hsl(var(--secondary))" />
-      
       {/* Background dot grid */}
       <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(0,0,0,0.05) 1px, transparent 0)', backgroundSize: '24px 24px' }}></div>
 
@@ -74,7 +71,7 @@ export default function Relatability() {
         </FadeIn>
       </div>
       
-      <WaveDivider position="bottom" fill="hsl(var(--primary) / 0.05)" />
+      <div className="absolute bottom-0 left-0 h-px w-full bg-border/70" />
     </section>
   );
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
-import { WaveDivider } from "@/components/ui/wave-divider";
 
 export default function Hero() {
   return (
@@ -112,7 +111,6 @@ export default function Hero() {
         </div>
       </div>
       
-      <WaveDivider position="bottom" fill="#ffffff" />
     </section>
   );
 }

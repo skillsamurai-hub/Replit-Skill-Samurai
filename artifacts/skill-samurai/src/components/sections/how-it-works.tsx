@@ -1,6 +1,5 @@
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { WaveDivider } from "@/components/ui/wave-divider";
 import { Calendar, Laptop, Sparkles, ThumbsUp, ArrowRight } from "lucide-react";
 
 export default function HowItWorks() {
@@ -74,7 +73,7 @@ export default function HowItWorks() {
         </FadeIn>
       </div>
       
-      <WaveDivider position="bottom" fill="hsl(var(--secondary) / 0.05)" />
+      <div className="absolute bottom-0 left-0 h-px w-full bg-border/70" />
     </section>
   );
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { WaveDivider } from "@/components/ui/wave-divider";
 
 export default function Proof() {
   return (
@@ -57,7 +56,7 @@ export default function Proof() {
         </div>
       </div>
       
-      <WaveDivider position="bottom" fill="#ffffff" />
+      <div className="absolute bottom-0 left-0 h-px w-full bg-border/70" />
     </section>
   );
 }
