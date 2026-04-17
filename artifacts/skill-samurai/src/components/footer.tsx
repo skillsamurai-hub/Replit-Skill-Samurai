@@ -37,11 +37,23 @@ export default function Footer() {
             <ul className="space-y-4 text-white/75 font-medium">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <span>Winnipeg, MB</span>
+                <div className="space-y-3">
+                  <div>
+                    <div className="text-white font-semibold">Skill Samurai Winnipeg</div>
+                    <div>North East</div>
+                    <div>1199 Rothesay St.</div>
+                    <div>Winnipeg, MB</div>
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">Seven Oaks</div>
+                    <div>745 Kingsbury Ave.</div>
+                    <div>Winnipeg, MB</div>
+                  </div>
+                </div>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <span>(204) 555-0123</span>
+                <span>Office: 204-818-2155</span>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
