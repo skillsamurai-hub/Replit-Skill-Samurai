@@ -27,6 +27,10 @@ const faqs = [
     q: "What if my child is shy or already advanced?",
     a: "Our small group format means coaches get to know each kid quickly. Shy kids get gentle encouragement and patience. Advanced kids get harder challenges and stretch projects. Nobody gets left behind, nobody gets bored."
   },
+  {
+    q: "Are your instructors screened and certified?",
+    a: "Yes. Our instructors are background checked, child abuse registry checked, and certified before they work with students."
+  },
 ];
 
 function FaqItem({ q, a, defaultOpen = false }: { q: string; a: string; defaultOpen?: boolean }) {
