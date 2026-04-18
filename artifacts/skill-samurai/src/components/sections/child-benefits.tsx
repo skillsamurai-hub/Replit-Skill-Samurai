@@ -44,21 +44,15 @@ export default function ChildBenefits() {
     },
     {
       icon: <Lightbulb className="h-8 w-8 text-white" />,
-      title: "Independence",
-      desc: "They build the confidence to figure things out on their own instead of waiting for answers.",
+      title: "Creativity",
+      desc: "They get to imagine, design, and build their own ideas from scratch.",
       color: "bg-[#F59100]"
     },
     {
       icon: <Rocket className="h-8 w-8 text-white" />,
-      title: "Creativity",
-      desc: "They get to imagine, design, and build their own ideas from scratch.",
-      color: "bg-secondary"
-    },
-    {
-      icon: <Blocks className="h-8 w-8 text-white" />,
       title: "Resilience",
       desc: "When something breaks, they learn how to try again, adjust, and keep going.",
-      color: "bg-accent"
+      color: "bg-secondary"
     }
   ];
 
@@ -79,9 +73,9 @@ export default function ChildBenefits() {
                 We meet your child exactly where they're at. No experience needed. Just a structured, fun environment where playing on a tablet becomes learning that builds real skills they’ll use everywhere.
               </p>
               
-              <div className="grid sm:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-2 gap-5">
                 {benefits.map((benefit, i) => (
-                  <div key={i} className="bg-white rounded-[2rem] p-6 shadow-xl shadow-secondary/5 border-2 border-white hover:border-primary/20 transition-all hover:-translate-y-2 group">
+                  <div key={i} className="bg-white rounded-[1.75rem] p-5 shadow-xl shadow-secondary/5 border-2 border-white hover:border-primary/20 transition-all hover:-translate-y-2 group">
                     <div className={`h-16 w-16 rounded-[1.25rem] flex items-center justify-center ${benefit.color} transition-transform group-hover:scale-110 mb-4 shadow-lg rotate-3 group-hover:-rotate-3`}>
                       {benefit.icon}
                     </div>
