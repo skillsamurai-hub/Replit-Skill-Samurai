@@ -105,15 +105,15 @@ export default function ChildBenefits() {
               </div>
               <div className="aspect-[4/3] rounded-[2.25rem] overflow-hidden shadow-2xl relative z-10 border-[10px] border-white bg-white rotate-2 hover:rotate-0 transition-transform duration-500 lg:ml-14">
                 <img
-                  src={classroomPhotoThree}
-                  alt="Children using headphones and laptops in class"
+                  src={classroomPhotoTwo}
+                  alt="Kids smiling while coding together"
                   className="w-full h-full object-cover object-center"
                 />
               </div>
-              <div className="aspect-[4/3] rounded-[2.25rem] overflow-hidden shadow-2xl relative z-10 border-[10px] border-white bg-white rotate-[-1deg] hover:rotate-0 transition-transform duration-500 md:ml-6 lg:ml-24 w-full max-w-none">
+              <div className="aspect-[4/3] rounded-[2.25rem] overflow-hidden shadow-2xl relative z-10 border-[10px] border-white bg-white rotate-[-1deg] hover:rotate-0 transition-transform duration-500 md:ml-6 lg:ml-24">
                 <img
-                  src={classroomPhotoTwo}
-                  alt="Kids smiling while coding together"
+                  src={classroomPhotoThree}
+                  alt="Children using headphones and laptops in class"
                   className="w-full h-full object-cover object-center"
                 />
               </div>
