@@ -14,7 +14,7 @@ const offerings = [
       "Flexible group pricing",
     ],
     cta: "Start a Partnership",
-    href: "mailto:winnipeg@skillsamurai.com?subject=Non-Profit%20Partnership%20Inquiry",
+    href: "https://meetings.hubspot.com/skillsamurai/school-hour-of-code?uuid=b840de06-ab04-43d2-a397-5c3889bf58c7",
     accent: "bg-primary",
     accentText: "text-primary",
     accentSoft: "bg-primary/10",
@@ -30,7 +30,7 @@ const offerings = [
       "All ages from K to grade 12",
     ],
     cta: "Request a Workshop",
-    href: "mailto:winnipeg@skillsamurai.com?subject=School%20Workshop%20Inquiry",
+    href: "https://meetings.hubspot.com/skillsamurai/school-hour-of-code?uuid=b840de06-ab04-43d2-a397-5c3889bf58c7",
     accent: "bg-secondary",
     accentText: "text-secondary",
     accentSoft: "bg-secondary/10",
@@ -81,6 +81,8 @@ export default function CommunitySchools() {
                   </ul>
                   <a
                     href={o.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`mt-auto inline-flex items-center justify-center gap-2 self-start rounded-full px-6 py-3 text-sm font-black uppercase tracking-wide text-white shadow-lg transition-all hover:scale-105 active:scale-95 ${o.accent} hover:opacity-90`}
                   >
                     {o.cta}
