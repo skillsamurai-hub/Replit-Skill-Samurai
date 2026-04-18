@@ -123,7 +123,7 @@ export default function GoogleReviews() {
 
         <FadeIn delay={0.3} className="text-center mt-12">
           <a
-            href="https://www.google.com/search?q=skill+samurai+winnipeg#mpd=~8442050446591582271/customers/reviews"
+            href="https://www.google.com/search?q=skill+samurai+winnipeg&sca_esv=0584e342056e488a#mpd=~8442050446591582271/customers/reviews"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-secondary text-white font-bold hover:bg-secondary/90 transition-colors"
