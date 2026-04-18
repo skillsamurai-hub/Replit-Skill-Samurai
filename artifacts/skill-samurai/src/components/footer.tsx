@@ -28,12 +28,10 @@ const locations = [
 export default function Footer() {
   return (
     <footer className="bg-secondary text-white relative overflow-hidden">
-      {/* Decorative glow */}
       <div className="absolute -top-40 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute -bottom-40 -right-32 w-96 h-96 bg-accent/20 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Top CTA banner */}
         <div className="border-b border-white/10 py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <h3 className="text-2xl md:text-3xl font-black font-heading leading-tight tracking-tight">
@@ -44,7 +42,7 @@ export default function Footer() {
             </p>
           </div>
           <a
-            href="https://link.skillsamurai.com/widget/booking/Ku7skA5XAkgQpg8rQqN1"
+            href="https://link.skillsamurai.com/widget/booking/uLciDSsBTUDqpqKRDaZq"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 self-start md:self-auto rounded-full bg-primary px-7 py-3.5 text-base font-black uppercase tracking-wide text-white shadow-xl shadow-primary/30 hover:bg-primary/90 hover:scale-105 active:scale-95 transition-all"
@@ -54,9 +52,7 @@ export default function Footer() {
           </a>
         </div>
 
-        {/* Main grid */}
         <div className="py-16 grid gap-12 md:grid-cols-12">
-          {/* Brand */}
           <div className="md:col-span-4">
             <Link
               href="/"
@@ -101,7 +97,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Locations */}
           <div className="md:col-span-4">
             <h4 className="font-heading font-black text-sm mb-5 text-accent uppercase tracking-[0.15em]">
               Our Locations
@@ -130,7 +125,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Contact + hours + quick links */}
           <div className="md:col-span-4 grid sm:grid-cols-2 gap-8">
             <div>
               <h4 className="font-heading font-black text-sm mb-5 text-accent uppercase tracking-[0.15em]">
@@ -177,7 +171,7 @@ export default function Footer() {
               <ul className="space-y-3 text-white/75 font-medium text-sm">
                 <li>
                   <a
-                    href="https://link.skillsamurai.com/widget/booking/Ku7skA5XAkgQpg8rQqN1"
+                    href="https://link.skillsamurai.com/widget/booking/uLciDSsBTUDqpqKRDaZq"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-primary transition-colors"
@@ -205,7 +199,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div className="border-t border-white/10 py-6 text-sm text-white/55 flex flex-col md:flex-row justify-between items-center gap-3">
           <p>
             © {new Date().getFullYear()} Skill Samurai Winnipeg. All rights

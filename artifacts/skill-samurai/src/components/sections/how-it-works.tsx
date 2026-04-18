@@ -41,7 +41,6 @@ export default function HowItWorks() {
         </FadeIn>
 
         <div className="max-w-6xl mx-auto relative">
-          {/* Connecting line for desktop */}
           <div className="hidden md:block absolute top-14 left-[10%] right-[10%] h-3 bg-muted rounded-full z-0"></div>
 
           <div className="grid md:grid-cols-4 gap-8 relative z-10">
@@ -62,7 +61,7 @@ export default function HowItWorks() {
 
         <FadeIn delay={0.6} className="mt-20 text-center">
           <a
-            href="https://link.skillsamurai.com/widget/booking/Ku7skA5XAkgQpg8rQqN1"
+            href="https://link.skillsamurai.com/widget/booking/uLciDSsBTUDqpqKRDaZq"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-14 md:h-16 items-center justify-center rounded-full bg-primary px-8 md:px-10 text-base md:text-xl font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 group border-b-4 border-primary-foreground/20"
