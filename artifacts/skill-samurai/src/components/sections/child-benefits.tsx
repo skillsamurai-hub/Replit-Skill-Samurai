@@ -65,8 +65,8 @@ export default function ChildBenefits() {
           <div className="lg:w-1/2">
             <FadeIn direction="right">
               <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-3">For Your Child</h2>
-              <h3 className="text-4xl md:text-6xl font-black font-heading uppercase leading-tight tracking-tight mb-8">
-                <span className="text-secondary block">WHAT YOUR CHILD ACTUALLY</span>
+              <h3 className="text-4xl md:text-6xl font-black font-heading uppercase leading-tight tracking-tight mb-8 max-w-xl">
+                <span className="text-secondary block">WHAT YOUR CHILD</span>
                 <span className="text-primary block">GETS OUT OF IT</span>
               </h3>
               <p className="text-xl text-secondary/80 mb-10 font-medium">
