@@ -94,9 +94,10 @@ export default function GoogleReviews() {
           </div>
         </FadeIn>
 
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+        <div className="-mx-4 px-4 overflow-x-auto snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex gap-6 md:gap-8 pb-4 w-max">
           {reviews.map((r, i) => (
-            <FadeIn key={r.name} direction="up" delay={i * 0.1}>
+            <FadeIn key={r.name} direction="up" delay={i * 0.1} className="snap-start shrink-0 w-[85vw] sm:w-[420px] md:w-[460px]">
               <article className="h-full flex flex-col bg-white rounded-3xl p-7 md:p-8 border border-secondary/10 shadow-xl shadow-black/5 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
                 <div className="flex items-start justify-between mb-5">
                   <div className="flex items-center gap-3">
@@ -119,6 +120,7 @@ export default function GoogleReviews() {
               </article>
             </FadeIn>
           ))}
+          </div>
         </div>
 
         <FadeIn delay={0.3} className="text-center mt-12">
