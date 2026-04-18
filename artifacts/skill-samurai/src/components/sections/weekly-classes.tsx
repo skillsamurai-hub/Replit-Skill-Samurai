@@ -110,11 +110,6 @@ export default function WeeklyClasses() {
           </div>
         </div>
 
-        <FadeIn delay={0.2} className="mt-12 max-w-xl mx-auto text-center">
-          <p className="text-base md:text-lg text-secondary/80 font-semibold">
-            No contracts. Flexible, month-to-month memberships.
-          </p>
-        </FadeIn>
       </div>
 
       <style>{`
