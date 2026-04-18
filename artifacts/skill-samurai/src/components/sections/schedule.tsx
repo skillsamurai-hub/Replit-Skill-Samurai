@@ -19,8 +19,8 @@ export default function Schedule() {
     {
       icon: <CalendarDays className="h-7 w-7" />,
       label: "When",
-      value: "Weekly, after school & weekends",
-      detail: "Pick a recurring time slot that fits around school, sports, and the rest of your week."
+      value: "Weekly, after school",
+      detail: "Pick a recurring after-school time slot that fits around school and the rest of your week."
     },
     {
       icon: <Tag className="h-7 w-7" />,
