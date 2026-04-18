@@ -27,7 +27,7 @@ export default function ParentBenefits() {
   ];
 
   return (
-    <section className="py-32 bg-secondary text-white relative overflow-hidden">
+    <section className="py-20 md:py-32 bg-secondary text-white relative overflow-hidden">
       <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-accent/20 rounded-full blur-[100px] pointer-events-none"></div>
       <div className="absolute -bottom-40 -left-40 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[100px] pointer-events-none"></div>
       

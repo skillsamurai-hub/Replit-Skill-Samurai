@@ -34,9 +34,10 @@ export default function Navbar() {
             href="https://skillsamurai.ca/book-a-free-trial"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-11 items-center justify-center rounded-full bg-primary px-8 text-sm font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-lg active:scale-95"
+            className="inline-flex h-10 sm:h-11 items-center justify-center whitespace-nowrap rounded-full bg-primary px-4 sm:px-8 text-xs sm:text-sm font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-lg active:scale-95"
           >
-            BOOK A FREE SESSION
+            <span className="sm:hidden">FREE TRIAL</span>
+            <span className="hidden sm:inline">BOOK A FREE SESSION</span>
           </a>
           <button
             type="button"

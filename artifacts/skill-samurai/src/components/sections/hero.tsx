@@ -29,19 +29,19 @@ export default function Hero() {
         <div className="absolute inset-0 bg-neutral-900/25"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10 pt-28 pb-0 lg:pt-40 lg:pb-0 min-h-[600px] lg:min-h-[760px] flex items-center justify-center">
+      <div className="container mx-auto px-4 relative z-10 pt-24 pb-0 lg:pt-40 lg:pb-0 min-h-[480px] lg:min-h-[760px] flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="max-w-4xl text-center mx-auto flex flex-col items-center pb-6 lg:pb-8"
         >
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading leading-[1.1] mb-6 tracking-tight text-white drop-shadow-2xl">
-            <span className="block whitespace-nowrap">After-School Coding &amp; STEM</span>
-            <span className="block whitespace-nowrap">Classes for Kids in Winnipeg</span>
+          <h1 className="text-[1.6rem] sm:text-4xl lg:text-5xl font-black font-heading leading-[1.1] mb-5 lg:mb-6 tracking-tight text-white drop-shadow-2xl">
+            <span className="block lg:whitespace-nowrap">After-School Coding &amp; STEM</span>
+            <span className="block lg:whitespace-nowrap">Classes for Kids in Winnipeg</span>
           </h1>
 
-          <p className="text-lg lg:text-xl text-white/90 mb-10 leading-relaxed font-medium drop-shadow lg:whitespace-nowrap">
+          <p className="text-base sm:text-lg lg:text-xl text-white/90 mb-8 lg:mb-10 leading-relaxed font-medium drop-shadow lg:whitespace-nowrap">
             Transform screen time into valuable skills that will shape your child’s future.
           </p>
 
@@ -49,7 +49,7 @@ export default function Hero() {
             href="https://skillsamurai.ca/book-a-free-trial"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-14 items-center justify-center rounded-full bg-primary px-10 text-base lg:text-lg font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 border-b-4 border-primary-foreground/20 mb-10"
+            className="inline-flex h-12 sm:h-14 items-center justify-center rounded-full bg-primary px-6 sm:px-10 text-sm sm:text-base lg:text-lg font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 border-b-4 border-primary-foreground/20 mb-8 lg:mb-10"
           >
             START YOUR CHILDS JOURNEY
           </a>

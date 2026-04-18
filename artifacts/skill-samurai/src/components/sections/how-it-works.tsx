@@ -27,8 +27,8 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="py-32 bg-white relative overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10 pt-10">
+    <section className="py-20 md:py-32 bg-white relative overflow-hidden">
+      <div className="container mx-auto px-4 relative z-10 pt-4 md:pt-10">
         <FadeIn className="text-center max-w-4xl mx-auto mb-20">
           <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-3">Simple Process</h2>
           <h3 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading uppercase leading-tight tracking-tight mb-6">
@@ -65,10 +65,10 @@ export default function HowItWorks() {
             href="https://skillsamurai.ca/book-a-free-trial"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-16 items-center justify-center rounded-full bg-primary px-10 text-xl font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 group border-b-4 border-primary-foreground/20"
+            className="inline-flex h-14 md:h-16 items-center justify-center rounded-full bg-primary px-8 md:px-10 text-base md:text-xl font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 group border-b-4 border-primary-foreground/20"
           >
             Book Free Trial
-            <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="ml-3 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />
           </a>
         </FadeIn>
       </div>

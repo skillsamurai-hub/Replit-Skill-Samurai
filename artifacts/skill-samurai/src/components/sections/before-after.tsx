@@ -20,8 +20,8 @@ export default function BeforeAfter() {
   ];
 
   return (
-    <section className="py-32 bg-primary/5 relative overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10 pt-10">
+    <section className="py-20 md:py-32 bg-primary/5 relative overflow-hidden">
+      <div className="container mx-auto px-4 relative z-10 pt-4 md:pt-10">
         <FadeIn className="text-center max-w-4xl mx-auto mb-16">
           <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-3">The Shift</h2>
           <h3 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading uppercase leading-tight tracking-tight mb-8">
@@ -34,7 +34,7 @@ export default function BeforeAfter() {
         </FadeIn>
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-stretch">
-          <FadeIn direction="right" className="bg-muted/30 border-[3px] border-muted rounded-[3rem] p-8 md:p-12 relative overflow-hidden h-full shadow-xl shadow-black/5 hover:-translate-y-2 transition-transform">
+          <FadeIn direction="right" className="bg-muted/30 border-[3px] border-muted rounded-[2rem] md:rounded-[3rem] p-6 sm:p-8 md:p-12 relative overflow-hidden h-full shadow-xl shadow-black/5 hover:-translate-y-2 transition-transform">
             <div className="absolute top-0 left-0 w-3 h-full bg-destructive/60"></div>
             <div className="flex items-center gap-4 mb-10">
               <div className="h-16 w-16 rounded-[1.25rem] bg-destructive/10 flex items-center justify-center text-destructive -rotate-3">
@@ -53,7 +53,7 @@ export default function BeforeAfter() {
             </ul>
           </FadeIn>
 
-          <FadeIn direction="left" delay={0.2} className="bg-primary/5 border-[3px] border-primary/20 rounded-[3rem] p-8 md:p-12 relative overflow-hidden h-full shadow-2xl shadow-primary/10 hover:-translate-y-2 transition-transform">
+          <FadeIn direction="left" delay={0.2} className="bg-primary/5 border-[3px] border-primary/20 rounded-[2rem] md:rounded-[3rem] p-6 sm:p-8 md:p-12 relative overflow-hidden h-full shadow-2xl shadow-primary/10 hover:-translate-y-2 transition-transform">
             <div className="absolute top-0 left-0 w-3 h-full bg-primary"></div>
             <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/20 rounded-full blur-[40px]"></div>
             <div className="flex items-center gap-4 mb-10 relative z-10">

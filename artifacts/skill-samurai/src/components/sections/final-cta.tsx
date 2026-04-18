@@ -4,13 +4,13 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function FinalCta() {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <FadeIn className="max-w-5xl mx-auto relative">
           <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary/15 rounded-full blur-3xl pointer-events-none"></div>
           <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-accent/20 rounded-full blur-3xl pointer-events-none"></div>
 
-          <div className="relative bg-gradient-to-br from-primary/5 via-white to-accent/10 border-[3px] border-primary/15 rounded-[2.5rem] p-8 md:p-14 shadow-2xl shadow-primary/10 text-center">
+          <div className="relative bg-gradient-to-br from-primary/5 via-white to-accent/10 border-[3px] border-primary/15 rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-14 shadow-2xl shadow-primary/10 text-center">
             <p className="text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-primary mb-4">
               Free trial · No commitment
             </p>
@@ -39,10 +39,10 @@ export default function FinalCta() {
               href="https://skillsamurai.ca/book-a-free-trial"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-16 items-center justify-center rounded-full bg-primary px-10 text-lg md:text-xl font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 group border-b-4 border-primary-foreground/20"
+              className="inline-flex h-14 md:h-16 items-center justify-center rounded-full bg-primary px-7 md:px-10 text-sm md:text-xl font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 group border-b-4 border-primary-foreground/20"
             >
               BOOK YOUR FREE TRIAL
-              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 md:ml-3 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />
             </a>
 
             <p className="mt-6 text-secondary/60 text-sm font-medium">

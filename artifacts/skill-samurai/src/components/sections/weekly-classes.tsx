@@ -45,7 +45,7 @@ export default function WeeklyClasses() {
   };
 
   return (
-    <section className="py-28 bg-muted/30 relative overflow-hidden">
+    <section className="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <FadeIn className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-3">Weekly Classes</h2>
