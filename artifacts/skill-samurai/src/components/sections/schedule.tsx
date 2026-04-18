@@ -14,7 +14,7 @@ export default function Schedule() {
       icon: <Users className="h-7 w-7" />,
       label: "Group size",
       value: "Small Group",
-      detail: "A 1:7.5 ratio, so your child gets help when they need it while still learning with other kids."
+      detail: "Your child gets personal attention while still learning alongside other kids."
     },
     {
       icon: <CalendarDays className="h-7 w-7" />,
