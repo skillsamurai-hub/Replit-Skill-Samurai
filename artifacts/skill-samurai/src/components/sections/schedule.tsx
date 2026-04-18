@@ -60,7 +60,7 @@ export default function Schedule() {
 
         <FadeIn delay={0.4} className="mt-12 text-center">
           <a
-            href="https://link.skillsamurai.com/widget/booking/uLciDSsBTUDqpqKRDaZq"
+            href="https://winnipeg.jumbula.com/book-your-free-session"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 text-primary font-bold text-lg hover:gap-3 transition-all"

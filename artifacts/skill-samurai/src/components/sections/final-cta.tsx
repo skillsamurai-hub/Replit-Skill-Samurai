@@ -36,7 +36,7 @@ export default function FinalCta() {
             </div>
 
             <a
-              href="https://link.skillsamurai.com/widget/booking/uLciDSsBTUDqpqKRDaZq"
+              href="https://winnipeg.jumbula.com/book-your-free-session"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-14 md:h-16 items-center justify-center rounded-full bg-primary px-7 md:px-10 text-sm md:text-xl font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 group border-b-4 border-primary-foreground/20"
