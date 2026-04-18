@@ -72,8 +72,8 @@ export default function ChildBenefits() {
             <FadeIn direction="right">
               <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-3">For Your Child</h2>
               <h3 className="text-4xl md:text-6xl font-black font-heading uppercase leading-tight tracking-tight mb-8">
-                <span className="text-secondary block mb-2">WHAT YOUR CHILD</span>
-                <span className="text-primary">ACTUALLY GETS OUT OF IT</span>
+                <span className="text-secondary block">WHAT YOUR CHILD ACTUALLY</span>
+                <span className="text-primary block">GETS OUT OF IT</span>
               </h3>
               <p className="text-xl text-secondary/80 mb-10 font-medium">
                 We meet your child exactly where they're at. No experience needed. Just a structured, fun environment where playing on a tablet becomes learning that builds real skills they’ll use everywhere.
