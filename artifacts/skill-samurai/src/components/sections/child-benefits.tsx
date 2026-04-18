@@ -3,6 +3,7 @@ import { FadeIn } from "@/components/ui/fade-in";
 import { Code, Lightbulb, Rocket, Blocks } from "lucide-react";
 import classroomPhoto from "@assets/IG_WINNIPEG_POST_1776405350952.png";
 import classroomPhotoTwo from "@assets/IG_WINNIPEG_POST_6_1776404931683.png";
+import classroomPhotoThree from "@assets/IG_WINNIPEG_POST_5_(20)_1776481698162.png";
 
 export default function ChildBenefits() {
   const benefits = [
@@ -106,6 +107,13 @@ export default function ChildBenefits() {
                 <img
                   src={classroomPhotoTwo}
                   alt="Kids smiling while coding together"
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div className="aspect-[4/3] rounded-[2.25rem] overflow-hidden shadow-2xl relative z-10 border-[10px] border-white bg-white rotate-[-1deg] hover:rotate-0 transition-transform duration-500 md:ml-6 lg:ml-24">
+                <img
+                  src={classroomPhotoThree}
+                  alt="Children using headphones and laptops in class"
                   className="w-full h-full object-cover object-center"
                 />
               </div>
