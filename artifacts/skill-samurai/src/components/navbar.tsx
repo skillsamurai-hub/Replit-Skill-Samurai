@@ -9,8 +9,8 @@ export default function Navbar() {
 
   const links = [
     { href: "#relatability", label: "Why Skill Samurai" },
-    { href: "#proof", label: "Results" },
     { href: "#how-it-works", label: "How It Works" },
+    { href: "#proof", label: "Results" },
     { href: "/faq", label: "FAQ" },
   ];
 
