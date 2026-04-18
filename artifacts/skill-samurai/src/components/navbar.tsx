@@ -1,16 +1,28 @@
 import React, { useState } from "react";
 import { Link } from "wouter";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import logoUrl from "@assets/SkillSamurai_Logo_Full_(1)_(1)_(1)_1776400767722.png";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [programsOpen, setProgramsOpen] = useState(false);
+
   const links = [
     { href: "#relatability", label: "Why Skill Samurai" },
     { href: "#proof", label: "Results" },
     { href: "#how-it-works", label: "How It Works" },
     { href: "#faq", label: "FAQ" },
-    { href: "#weekly-classes", label: "Programs" },
+  ];
+
+  const programLinks = [
+    {
+      href: "https://winnipeg.jumbula.com/north-east-coding-classes",
+      label: "North East Location",
+    },
+    {
+      href: "https://winnipeg.jumbula.com/seven-oaks-coding-classes",
+      label: "Seven Oaks Location",
+    },
   ];
 
   return (
@@ -25,10 +37,48 @@ export default function Navbar() {
         </Link>
         <nav className="hidden lg:flex items-center gap-8">
           {links.map((link) => (
-            <a key={link.href} href={link.href} className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors">
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors"
+            >
               {link.label}
             </a>
           ))}
+          <div
+            className="relative"
+            onMouseEnter={() => setProgramsOpen(true)}
+            onMouseLeave={() => setProgramsOpen(false)}
+          >
+            <a
+              href="#weekly-classes"
+              className="inline-flex items-center gap-1 text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors"
+              aria-haspopup="true"
+              aria-expanded={programsOpen}
+            >
+              Programs
+              <ChevronDown className={`h-4 w-4 transition-transform ${programsOpen ? "rotate-180" : ""}`} />
+            </a>
+            <div
+              className={`absolute left-1/2 -translate-x-1/2 top-full pt-3 min-w-[260px] transition-all ${
+                programsOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
+              }`}
+            >
+              <div className="bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
+                {programLinks.map((p) => (
+                  <a
+                    key={p.href}
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-5 py-3.5 text-sm font-semibold text-secondary hover:bg-primary hover:text-white transition-colors border-b border-border last:border-b-0"
+                  >
+                    {p.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
         </nav>
         <div className="flex items-center gap-3">
           <a
@@ -55,10 +105,38 @@ export default function Navbar() {
         <div className="lg:hidden border-t border-white/10 bg-secondary/95 backdrop-blur-md">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
             {links.map((link) => (
-              <a key={link.href} href={link.href} className="text-base font-semibold text-white" onClick={() => setOpen(false)}>
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-base font-semibold text-white"
+                onClick={() => setOpen(false)}
+              >
                 {link.label}
               </a>
             ))}
+            <div>
+              <a
+                href="#weekly-classes"
+                className="text-base font-semibold text-white"
+                onClick={() => setOpen(false)}
+              >
+                Programs
+              </a>
+              <div className="mt-3 ml-4 flex flex-col gap-3 border-l border-white/15 pl-4">
+                {programLinks.map((p) => (
+                  <a
+                    key={p.href}
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium text-white/80 hover:text-primary"
+                    onClick={() => setOpen(false)}
+                  >
+                    {p.label}
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       )}
