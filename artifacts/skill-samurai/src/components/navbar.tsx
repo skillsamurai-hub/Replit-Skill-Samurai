@@ -11,7 +11,7 @@ export default function Navbar() {
     { href: "#relatability", label: "Why Skill Samurai" },
     { href: "#proof", label: "Results" },
     { href: "#how-it-works", label: "How It Works" },
-    { href: "#faq", label: "FAQ" },
+    { href: "/faq", label: "FAQ" },
   ];
 
   const programLinks = [
@@ -36,15 +36,25 @@ export default function Navbar() {
           />
         </Link>
         <nav className="hidden lg:flex items-center gap-8">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) =>
+            link.href.startsWith("/") ? (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors"
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors"
+              >
+                {link.label}
+              </a>
+            )
+          )}
           <div
             className="relative"
             onMouseEnter={() => setProgramsOpen(true)}
@@ -104,16 +114,27 @@ export default function Navbar() {
       {open && (
         <div className="lg:hidden border-t border-white/10 bg-secondary/95 backdrop-blur-md">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-            {links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-base font-semibold text-white"
-                onClick={() => setOpen(false)}
-              >
-                {link.label}
-              </a>
-            ))}
+            {links.map((link) =>
+              link.href.startsWith("/") ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-base font-semibold text-white"
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-base font-semibold text-white"
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </a>
+              )
+            )}
             <div>
               <a
                 href="#weekly-classes"

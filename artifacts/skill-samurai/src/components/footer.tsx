@@ -195,9 +195,9 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#faq" className="hover:text-primary transition-colors">
+                  <Link href="/faq" className="hover:text-primary transition-colors">
                     FAQ
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
