@@ -6,7 +6,7 @@ const locations = [
   {
     name: "Seven Oaks",
     tag: "After-school coding classes",
-    address: "Seven Oaks area, Winnipeg, MB",
+    address: "745 Kingsbury Ave., Winnipeg, MB",
     days: "Tue – Sat",
     times: "After-school & weekend slots",
     bookHref: "https://winnipeg.jumbula.com/seven-oaks-coding-classes",
@@ -16,7 +16,7 @@ const locations = [
   {
     name: "North East",
     tag: "After-school coding classes",
-    address: "North East Winnipeg, MB",
+    address: "1199 Rothesay St., Winnipeg, MB",
     days: "Mon – Sat",
     times: "After-school & weekend slots",
     bookHref: "https://winnipeg.jumbula.com/north-east-coding-classes",

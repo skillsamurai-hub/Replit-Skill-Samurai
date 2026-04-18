@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { FadeIn } from "@/components/ui/fade-in";
 import {
   Code2,
@@ -34,7 +34,6 @@ const features = [
 
 export default function WeeklyClasses() {
   const scrollerRef = useRef<HTMLDivElement>(null);
-  const [activeLocation, setActiveLocation] = useState<"north-east" | "seven-oaks">("north-east");
 
   const scrollBy = (dir: number) => {
     const el = scrollerRef.current;
@@ -112,53 +111,9 @@ export default function WeeklyClasses() {
         </div>
 
         <FadeIn delay={0.2} className="mt-12 max-w-xl mx-auto text-center">
-          <p className="text-base md:text-lg text-secondary/80 font-semibold mb-6">
+          <p className="text-base md:text-lg text-secondary/80 font-semibold">
             No contracts. Flexible, month-to-month memberships.
           </p>
-
-          <div className="inline-flex flex-col items-center bg-white border border-border rounded-2xl shadow-md p-2 mb-6">
-            <div className="flex p-1 rounded-full bg-muted/40">
-              <button
-                type="button"
-                onClick={() => setActiveLocation("north-east")}
-                className={`px-5 py-2 rounded-full text-sm font-bold uppercase tracking-wide transition-all ${
-                  activeLocation === "north-east"
-                    ? "bg-secondary text-white shadow"
-                    : "text-secondary hover:text-primary"
-                }`}
-              >
-                North East
-              </button>
-              <button
-                type="button"
-                onClick={() => setActiveLocation("seven-oaks")}
-                className={`px-5 py-2 rounded-full text-sm font-bold uppercase tracking-wide transition-all ${
-                  activeLocation === "seven-oaks"
-                    ? "bg-secondary text-white shadow"
-                    : "text-secondary hover:text-primary"
-                }`}
-              >
-                Seven Oaks
-              </button>
-            </div>
-            <p className="text-sm text-muted-foreground font-medium px-4 py-3">
-              {activeLocation === "north-east"
-                ? "1199 Rothesay St., Winnipeg, MB"
-                : "745 Kingsbury Ave., Winnipeg, MB"}
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center gap-3">
-            <a
-              href={activeLocation === "north-east" ? "https://winnipeg.jumbula.com/north-east-coding-classes" : "https://winnipeg.jumbula.com/seven-oaks-coding-classes"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-base font-black uppercase tracking-wide text-white shadow-xl shadow-primary/30 hover:bg-primary/90 hover:scale-105 active:scale-95 transition-all"
-            >
-              {activeLocation === "north-east" ? "North East Programs" : "Seven Oaks Programs"}
-            </a>
-            <span className="text-sm font-semibold text-secondary/70">{activeLocation === "north-east" ? "North East Location" : "Seven Oaks Location"}</span>
-          </div>
         </FadeIn>
       </div>
 
