@@ -10,6 +10,7 @@ export default function Navbar() {
     { href: "#proof", label: "Results" },
     { href: "#how-it-works", label: "How It Works" },
     { href: "#faq", label: "FAQ" },
+    { href: "#weekly-classes", label: "Programs" },
   ];
 
   return (
