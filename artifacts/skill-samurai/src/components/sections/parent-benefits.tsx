@@ -36,7 +36,7 @@ export default function ParentBenefits() {
           <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-3">For You</h2>
           <h3 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading uppercase leading-tight tracking-tight mb-8">
             <span className="text-white block mb-2">WHAT THIS MEANS</span>
-            <span className="text-accent">FOR YOU AS A PARENT</span>
+            <span className="text-accent block">FOR YOU AS A PARENT</span>
           </h3>
           <p className="text-xl text-white/80 font-medium">
             A safe answer to the screen time battle. We provide a warm, expert hand on the shoulder saying, "we've got this."
