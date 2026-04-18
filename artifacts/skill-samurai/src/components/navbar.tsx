@@ -18,10 +18,22 @@ export default function Navbar() {
     {
       href: "https://winnipeg.jumbula.com/north-east-coding-classes",
       label: "North East Location",
+      external: true,
     },
     {
       href: "https://winnipeg.jumbula.com/seven-oaks-coding-classes",
       label: "Seven Oaks Location",
+      external: true,
+    },
+    {
+      href: "#community-schools",
+      label: "School Workshops",
+      external: false,
+    },
+    {
+      href: "#community-schools",
+      label: "Non-Profit Partnerships",
+      external: false,
     },
   ];
 
@@ -77,10 +89,10 @@ export default function Navbar() {
               <div className="bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
                 {programLinks.map((p) => (
                   <a
-                    key={p.href}
+                    key={p.label}
                     href={p.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    {...(p.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    onClick={() => setProgramsOpen(false)}
                     className="block px-5 py-3.5 text-sm font-semibold text-secondary hover:bg-primary hover:text-white transition-colors border-b border-border last:border-b-0"
                   >
                     {p.label}
@@ -146,10 +158,9 @@ export default function Navbar() {
               <div className="mt-3 ml-4 flex flex-col gap-3 border-l border-white/15 pl-4">
                 {programLinks.map((p) => (
                   <a
-                    key={p.href}
+                    key={p.label}
                     href={p.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    {...(p.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     className="text-sm font-medium text-white/80 hover:text-primary"
                     onClick={() => setOpen(false)}
                   >
