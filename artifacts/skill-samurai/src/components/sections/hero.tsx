@@ -4,7 +4,7 @@ import { Facebook, Instagram } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-secondary min-h-[88svh]">
+    <section className="relative overflow-hidden bg-secondary min-h-[78svh] md:min-h-[88svh]">
       {/* Full-bleed background video */}
       <div className="absolute inset-0 z-0">
         <iframe
@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-neutral-900/25"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10 pt-20 sm:pt-24 lg:pt-32 pb-8 min-h-[88svh] flex items-center justify-center">
+      <div className="container mx-auto px-4 relative z-10 pt-20 sm:pt-24 lg:pt-32 pb-8 min-h-[78svh] md:min-h-[88svh] flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
