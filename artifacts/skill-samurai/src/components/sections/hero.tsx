@@ -4,7 +4,7 @@ import { Facebook, Instagram } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-secondary">
+    <section className="relative overflow-hidden bg-secondary min-h-[100svh]">
       {/* Full-bleed background video */}
       <div className="absolute inset-0 z-0">
         <iframe
@@ -29,19 +29,19 @@ export default function Hero() {
         <div className="absolute inset-0 bg-neutral-900/25"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10 pt-24 pb-0 lg:pt-40 lg:pb-0 min-h-[480px] lg:min-h-[760px] flex items-center justify-center">
+      <div className="container mx-auto px-4 relative z-10 pt-20 sm:pt-24 lg:pt-32 pb-0 min-h-[100svh] flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="max-w-4xl text-center mx-auto flex flex-col items-center pb-6 lg:pb-8"
+          className="max-w-4xl text-center mx-auto flex flex-col items-center pb-4 lg:pb-8"
         >
-          <h1 className="text-[1.6rem] sm:text-4xl lg:text-5xl font-black font-heading leading-[1.1] mb-5 lg:mb-6 tracking-tight text-white drop-shadow-2xl">
+          <h1 className="text-[1.5rem] sm:text-4xl lg:text-5xl font-black font-heading leading-[1.06] mb-4 lg:mb-6 tracking-tight text-white drop-shadow-2xl">
             <span className="block lg:whitespace-nowrap">After-School Coding &amp; STEM</span>
             <span className="block lg:whitespace-nowrap">Classes for Kids in Winnipeg</span>
           </h1>
 
-          <p className="text-base sm:text-lg lg:text-xl text-white/90 mb-8 lg:mb-10 leading-relaxed font-medium drop-shadow lg:whitespace-nowrap">
+          <p className="text-sm sm:text-lg lg:text-xl text-white/90 mb-6 lg:mb-8 leading-relaxed font-medium drop-shadow lg:whitespace-nowrap">
             Transform screen time into valuable skills that will shape your child’s future.
           </p>
 
@@ -49,7 +49,7 @@ export default function Hero() {
             href="https://skillsamurai.ca/book-a-free-trial"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-11 sm:h-12 items-center justify-center rounded-full bg-primary px-5 sm:px-7 text-xs sm:text-sm font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 border-b-4 border-primary-foreground/20 mb-8 lg:mb-10"
+            className="inline-flex h-10 sm:h-12 items-center justify-center rounded-full bg-primary px-5 sm:px-7 text-[11px] sm:text-sm font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 border-b-4 border-primary-foreground/20 mb-6 lg:mb-8"
           >
             START YOUR CHILDS JOURNEY
           </a>
