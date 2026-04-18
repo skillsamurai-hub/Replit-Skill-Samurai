@@ -76,7 +76,7 @@ export default function ChildBenefits() {
                 <span className="text-primary">ACTUALLY GETS OUT OF IT</span>
               </h3>
               <p className="text-xl text-secondary/80 mb-10 font-medium">
-                We meet your child exactly where they're at. No experience needed. Just a structured, fun environment where learning builds the skills that carry over into everything else.
+                We meet your child exactly where they're at. No experience needed. Just a structured, fun environment where playing on a tablet becomes learning that builds real skills they’ll use everywhere.
               </p>
               
               <div className="grid sm:grid-cols-2 gap-6">
