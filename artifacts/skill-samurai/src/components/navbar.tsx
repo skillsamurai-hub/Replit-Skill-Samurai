@@ -26,7 +26,7 @@ export default function Navbar() {
       external: true,
     },
     {
-      href: "#community-schools",
+      href: "https://meetings.hubspot.com/skillsamurai/school-hour-of-code?uuid=b840de06-ab04-43d2-a397-5c3889bf58c7",
       label: "School Workshops",
       external: false,
     },
