@@ -36,7 +36,7 @@ export default function HowItWorks() {
             <span className="text-primary">IS EASY</span>
           </h3>
           <p className="text-xl text-muted-foreground font-medium max-w-2xl mx-auto">
-            We've removed all the friction so your child can start learning immediately.
+            We make it simple for your child to start learning right away.
           </p>
         </FadeIn>
 
