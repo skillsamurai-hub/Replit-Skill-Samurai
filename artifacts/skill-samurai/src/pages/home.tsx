@@ -14,6 +14,7 @@ import HowItWorks from "@/components/sections/how-it-works";
 import Schedule from "@/components/sections/schedule";
 import WeeklyClasses from "@/components/sections/weekly-classes";
 import Faq from "@/components/sections/faq";
+import CommunitySchools from "@/components/sections/community-schools";
 import FinalCta from "@/components/sections/final-cta";
 
 export default function Home() {
@@ -34,6 +35,7 @@ export default function Home() {
         <Proof />
         <GoogleReviews />
         <Faq />
+        <CommunitySchools />
         <FinalCta />
       </main>
       <Footer />

@@ -180,17 +180,22 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-primary transition-colors">
+                  <a href="#weekly-classes" className="hover:text-primary transition-colors">
                     Programs
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
+                  <a href="#community-schools" className="hover:text-primary transition-colors">
+                    School Workshops
+                  </a>
+                </li>
+                <li>
+                  <a href="#community-schools" className="hover:text-primary transition-colors">
+                    Non-Profit Partnerships
+                  </a>
+                </li>
+                <li>
+                  <a href="#faq" className="hover:text-primary transition-colors">
                     FAQ
                   </a>
                 </li>
