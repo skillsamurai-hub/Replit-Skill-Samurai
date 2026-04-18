@@ -9,6 +9,7 @@ import ChildBenefits from "@/components/sections/child-benefits";
 import ParentBenefits from "@/components/sections/parent-benefits";
 import BeforeAfter from "@/components/sections/before-after";
 import Proof from "@/components/sections/proof";
+import GoogleReviews from "@/components/sections/google-reviews";
 import HowItWorks from "@/components/sections/how-it-works";
 import Schedule from "@/components/sections/schedule";
 import WeeklyClasses from "@/components/sections/weekly-classes";
@@ -31,6 +32,7 @@ export default function Home() {
         <Schedule />
         <StatsStrip />
         <Proof />
+        <GoogleReviews />
         <Faq />
         <FinalCta />
       </main>
