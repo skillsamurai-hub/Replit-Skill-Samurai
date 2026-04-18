@@ -61,7 +61,7 @@ export default function HowItWorks() {
 
         <FadeIn delay={0.6} className="mt-20 text-center">
           <a
-            href="https://winnipeg.jumbula.com/book-your-free-session"
+            href="https://winnipeg.jumbula.com/north-east-coding-classes"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-14 md:h-16 items-center justify-center rounded-full bg-primary px-8 md:px-10 text-base md:text-xl font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 group border-b-4 border-primary-foreground/20"

@@ -44,7 +44,7 @@ export default function Hero() {
           </p>
 
           <a
-            href="https://winnipeg.jumbula.com/book-your-free-session"
+            href="https://winnipeg.jumbula.com/north-east-coding-classes"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-10 sm:h-12 items-center justify-center rounded-full bg-primary px-5 sm:px-7 text-[11px] sm:text-sm font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 border-b-4 border-primary-foreground/20 mb-6 lg:mb-8"

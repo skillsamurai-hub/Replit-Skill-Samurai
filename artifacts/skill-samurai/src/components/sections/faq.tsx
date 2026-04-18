@@ -89,7 +89,7 @@ export default function Faq() {
               The things parents actually ask before booking a trial. If you don't see your question here, just ask us — we'd rather over-explain than oversell.
             </p>
             <a
-              href="https://winnipeg.jumbula.com/book-your-free-session"
+              href="https://winnipeg.jumbula.com/north-east-coding-classes"
               target="_blank"
               rel="noopener noreferrer"
               className="relative z-20 inline-flex items-center justify-center rounded-full bg-primary px-7 py-3 text-base font-bold text-white shadow-lg hover:bg-primary/90 hover:scale-[1.02] active:scale-95 transition-all"

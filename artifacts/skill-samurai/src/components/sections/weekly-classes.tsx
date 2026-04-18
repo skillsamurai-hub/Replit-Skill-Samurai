@@ -150,7 +150,7 @@ export default function WeeklyClasses() {
 
           <div>
             <a
-              href="https://winnipeg.jumbula.com/book-your-free-session"
+              href={activeLocation === "north-east" ? "https://winnipeg.jumbula.com/north-east-coding-classes" : "https://winnipeg.jumbula.com/seven-oaks-coding-classes"}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-base font-black uppercase tracking-wide text-white shadow-xl shadow-primary/30 hover:bg-primary/90 hover:scale-105 active:scale-95 transition-all"
