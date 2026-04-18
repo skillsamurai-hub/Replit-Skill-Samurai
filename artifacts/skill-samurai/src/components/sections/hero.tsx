@@ -49,7 +49,7 @@ export default function Hero() {
             href="https://skillsamurai.ca/book-a-free-trial"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-12 sm:h-14 items-center justify-center rounded-full bg-primary px-6 sm:px-10 text-sm sm:text-base lg:text-lg font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 border-b-4 border-primary-foreground/20 mb-8 lg:mb-10"
+            className="inline-flex h-11 sm:h-12 items-center justify-center rounded-full bg-primary px-5 sm:px-7 text-xs sm:text-sm font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 border-b-4 border-primary-foreground/20 mb-8 lg:mb-10"
           >
             START YOUR CHILDS JOURNEY
           </a>
