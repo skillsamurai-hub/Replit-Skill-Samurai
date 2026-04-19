@@ -35,8 +35,8 @@ export default function Home() {
         <WeeklyClasses />
         <HowItWorks />
         <Locations />
-        <CommunitySchools />
         <FinalCta />
+        <CommunitySchools />
       </main>
       <Footer />
     </div>
