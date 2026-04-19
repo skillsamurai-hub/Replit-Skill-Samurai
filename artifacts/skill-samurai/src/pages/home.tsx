@@ -27,16 +27,16 @@ export default function Home() {
         <Relatability />
         <StatsStrip />
         <ChildBenefits />
-        <ParentBenefits />
         <BeforeAfter />
-        <WeeklyClasses />
-        <Locations />
-        <Schedule />
         <HowItWorks />
+        <Schedule />
+        <WeeklyClasses />
         <Proof />
         <GoogleReviews />
-        <CommunitySchools />
+        <ParentBenefits />
+        <Locations />
         <FinalCta />
+        <CommunitySchools />
       </main>
       <Footer />
     </div>
