@@ -99,8 +99,8 @@ export default function GoogleReviews() {
         <div className="-mx-4 px-4 overflow-x-auto snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <div className="flex gap-6 md:gap-8 pb-4 w-max">
           {reviews.map((r, i) => (
-            <FadeIn key={r.name} direction="left" delay={i * 0.1} className="snap-start shrink-0 w-[85vw] sm:w-[420px] md:w-[460px]">
-              <article className="h-full flex flex-col bg-white rounded-3xl p-7 md:p-8 shadow-2xl shadow-black/40 hover:shadow-2xl transition-shadow duration-300 border-t-4 border-primary">
+            <FadeIn key={r.name} direction="up" delay={i * 0.1} className="snap-start shrink-0 w-[85vw] sm:w-[420px] md:w-[460px]">
+              <article className="h-full flex flex-col bg-white rounded-3xl p-7 md:p-8 shadow-2xl shadow-black/40 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 border-t-4 border-primary">
                 <div className="flex items-start justify-between mb-5">
                   <div className="flex items-center gap-3">
                     <div className={`w-11 h-11 rounded-full ${r.color} text-white flex items-center justify-center font-black text-sm shrink-0`}>
