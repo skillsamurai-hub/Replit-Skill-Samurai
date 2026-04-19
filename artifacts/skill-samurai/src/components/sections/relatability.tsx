@@ -6,23 +6,23 @@ export default function Relatability() {
   const painPoints = [
     {
       icon: <Gamepad2 className="h-10 w-10 text-primary" />,
-      title: "Your child loves Roblox, Minecraft, or YouTube",
-      desc: "They can spend hours absorbed in these worlds, but it feels like passive consumption rather than active creation."
+      title: "They're already deep into Roblox, Minecraft, or YouTube",
+      desc: "They'll happily lose hours in there. The question is — are they building anything from it, or just consuming it?"
     },
     {
       icon: <Brain className="h-10 w-10 text-primary" />,
-      title: "It's hard to know what's actually helping them",
-      desc: "With so many apps and games, distinguishing between empty calories and meaningful brain-building is exhausting."
+      title: "You can't tell what's actually helping them",
+      desc: "Every app says it's 'educational.' How do you know which ones are building your child's brain — and which ones are just keeping them quiet?"
     },
     {
       icon: <Timer className="h-10 w-10 text-primary" />,
-      title: "You don't want to constantly limit screen time",
-      desc: "The daily battle of 'time's up' leaves everyone frustrated. You want them off screens, or doing something better on them."
+      title: "The 'time's up' fight is wearing everyone down",
+      desc: "How is the daily screen-time battle going? Most parents tell us they're tired of being the bad guy — and the kids resent it anyway."
     },
     {
       icon: <Trophy className="h-10 w-10 text-primary" />,
-      title: "You just want them doing something productive",
-      desc: "You know they're smart. You just need a way to channel that screen-focused energy into real-world skills."
+      title: "You know they're smart — but where does that go?",
+      desc: "If nothing changes in the next year… where does all that screen-focused energy actually end up?"
     }
   ];
 
@@ -32,10 +32,10 @@ export default function Relatability() {
 
       <div className="container mx-auto px-4 relative z-10 pt-10">
         <FadeIn className="text-center max-w-4xl mx-auto mb-16">
-          <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-3">This might sound familiar...</h2>
+          <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-3">A few honest questions...</h2>
           <h3 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading uppercase leading-tight tracking-tight">
-            <span className="text-secondary block mb-2">THE SCREEN TIME BATTLE</span>
-            <span className="text-primary block">EVERY PARENT KNOWS</span>
+            <span className="text-secondary block mb-2">DOES ANY OF THIS</span>
+            <span className="text-primary block">SOUND LIKE YOUR HOUSE?</span>
           </h3>
         </FadeIn>
 
@@ -60,11 +60,11 @@ export default function Relatability() {
           <div className="absolute -top-20 -right-20 w-60 h-60 bg-accent rounded-full blur-[60px] opacity-40"></div>
           <div className="relative z-10">
             <h3 className="text-3xl md:text-5xl font-black uppercase font-heading mb-6 leading-tight tracking-tight">
-              <span className="text-white block">THAT'S EXACTLY WHY</span>
-              <span className="text-accent block">WE BUILT SKILL SAMURAI</span>
+              <span className="text-white block">SO HERE'S THE QUESTION</span>
+              <span className="text-accent block">WE KEPT ASKING OURSELVES</span>
             </h3>
             <p className="text-lg md:text-2xl text-white/90 max-w-2xl mx-auto font-medium">
-              Your child already loves being on screens. We turn that into something you can actually feel good about.
+              Your child is on a screen either way — what would it look like if those hours quietly turned into real skills?
             </p>
           </div>
         </FadeIn>

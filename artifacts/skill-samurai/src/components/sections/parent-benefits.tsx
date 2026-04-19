@@ -6,23 +6,23 @@ export default function ParentBenefits() {
   const benefits = [
     {
       icon: <Heart className="h-8 w-8 text-white" />,
-      title: "Less guilt about screen time",
-      desc: "Stop worrying that they're rotting their brains. They're actively engaged in high-value learning."
+      title: "The screen-time guilt quietly fades",
+      desc: "When the screen is teaching them to code, you stop wondering if they're wasting their afternoons."
     },
     {
       icon: <ShieldCheck className="h-8 w-8 text-white" />,
-      title: "No more battles over devices",
-      desc: "Channel their obsession with screens into a scheduled, productive outlet that you both agree on."
+      title: "The device fight stops being a fight",
+      desc: "What changes when they're excited about what they're building — instead of being told to 'put it down'?"
     },
     {
       icon: <Eye className="h-8 w-8 text-white" />,
-      title: "You'll actually see what they're learning",
-      desc: "They won't just say 'nothing' when asked what they did. They'll show you the app they just coded."
+      title: "You finally see what they did all week",
+      desc: "Imagine asking 'what'd you do today?' and getting a real answer — followed by them showing you what they built."
     },
     {
       icon: <TrendingUp className="h-8 w-8 text-white" />,
-      title: "You're investing in skills that matter",
-      desc: "Beyond coding, they learn resilience, logic, and how to push through failure to solve problems."
+      title: "Skills that compound long after the class ends",
+      desc: "Coding is the surface. Underneath it: patience, logic, and the ability to push through frustration — the things that quietly shape who they become."
     }
   ];
 
@@ -35,11 +35,11 @@ export default function ParentBenefits() {
         <FadeIn className="text-center max-w-4xl mx-auto mb-16">
           <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-3">For You</h2>
           <h3 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading uppercase leading-tight tracking-tight mb-8">
-            <span className="text-white block mb-2">WHAT THIS MEANS</span>
-            <span className="text-accent block">FOR YOU AS A PARENT</span>
+            <span className="text-white block mb-2">SO WHAT ACTUALLY</span>
+            <span className="text-accent block">CHANGES FOR YOU?</span>
           </h3>
           <p className="text-xl text-white/80 font-medium max-w-3xl mx-auto">
-            A safe answer to the screen time battle. We provide a warm, expert hand on the shoulder saying, "we've got this."
+            Most parents don't want another activity to manage — they want one less thing to worry about. Here's what quietly shifts when your child finds something on a screen that's actually building them.
           </p>
         </FadeIn>
 
