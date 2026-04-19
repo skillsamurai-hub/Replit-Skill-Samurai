@@ -157,7 +157,7 @@ export default function Locations() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-white border border-white/25 hover:bg-white/10 transition-all"
             >
-              Make Up a Missed Class · Seven Oaks
+              Makeup Options · Seven Oaks
             </a>
             <a
               href={locations[1].makeupHref}
@@ -165,7 +165,7 @@ export default function Locations() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-white border border-white/25 hover:bg-white/10 transition-all"
             >
-              Make Up a Missed Class · North East
+              Makeup Options · North East
             </a>
           </div>
         </FadeIn>
