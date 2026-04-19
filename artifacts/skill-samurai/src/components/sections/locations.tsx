@@ -7,7 +7,7 @@ const locations = [
     name: "Seven Oaks",
     tag: "After-school coding classes for ages 6–18",
     address: "745 Kingsbury Ave., Winnipeg, MB",
-    days: "Wed – Sat",
+    days: "Wed – Thu",
     times: "Flexible after-school class times",
     timesDetail: "Classes start from 4:30pm",
     bookHref: "https://link.skillsamurai.com/widget/booking/uLciDSsBTUDqpqKRDaZq",
