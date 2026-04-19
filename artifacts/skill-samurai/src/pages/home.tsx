@@ -33,9 +33,9 @@ export default function Home() {
         <ParentBenefits />
         <Schedule />
         <WeeklyClasses />
-        <CommunitySchools />
         <HowItWorks />
         <Locations />
+        <CommunitySchools />
         <FinalCta />
       </main>
       <Footer />
