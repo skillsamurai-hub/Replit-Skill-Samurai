@@ -10,20 +10,20 @@ export default function FinalCta() {
           <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary/15 rounded-full blur-3xl pointer-events-none"></div>
           <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-accent/20 rounded-full blur-3xl pointer-events-none"></div>
 
-          <div className="relative bg-white border-[3px] border-secondary/10 rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-14 shadow-2xl shadow-primary/10 text-center">
-            <p className="text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-primary mb-4">
+          <div className="relative bg-secondary text-white border-[3px] border-secondary/20 rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-14 shadow-2xl shadow-secondary/25 text-center">
+            <p className="text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-accent mb-4">
               Free trial · No commitment
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading text-secondary uppercase tracking-tight mb-5 leading-[1.05]">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading text-white uppercase tracking-tight mb-5 leading-[1.05]">
               Let your child try it.<br />
-              <span className="text-primary">You'll see the difference.</span>
+              <span className="text-accent">You'll see the difference.</span>
             </h2>
 
-            <p className="text-lg md:text-xl text-secondary/70 font-medium max-w-2xl mx-auto mb-8">
+            <p className="text-lg md:text-xl text-white/75 font-medium max-w-2xl mx-auto mb-8">
               One free 60-minute class. No experience needed. No pressure to sign up.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-x-5 gap-y-3 mb-10 text-secondary/80 text-sm md:text-base font-semibold">
+            <div className="flex flex-wrap justify-center gap-x-5 gap-y-3 mb-10 text-white/85 text-sm md:text-base font-semibold">
               <span className="flex items-center gap-2">
                 <CheckCircle2 className="h-5 w-5 text-primary" /> No experience needed
               </span>
@@ -43,7 +43,7 @@ export default function FinalCta() {
               <ArrowRight className="ml-2 md:ml-3 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />
             </a>
 
-            <p className="mt-6 text-secondary/60 text-sm font-medium">
+            <p className="mt-6 text-white/65 text-sm font-medium">
               Zero commitment. A safe answer to the screen-time battle.
             </p>
           </div>
