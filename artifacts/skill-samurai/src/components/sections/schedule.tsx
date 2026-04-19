@@ -34,8 +34,8 @@ export default function Schedule() {
     {
       icon: <Tag className="h-7 w-7" />,
       label: "Pricing",
-      value: "$169/month",
-      detail: "One-time $99 registration fee. No contracts, 30-day notice, no cancellation fees, and 10% sibling discount.",
+      value: "Free trial first",
+      detail: "We’ll recommend the right program after your trial. Then you can review pricing, month-to-month terms, and the 10% sibling discount.",
       iconBg: "bg-primary",
       tint: "bg-primary/5",
       hoverBorder: "hover:border-primary/40",
