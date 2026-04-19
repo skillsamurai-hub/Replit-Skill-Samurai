@@ -9,7 +9,7 @@ const locations = [
     region: "Great for families in North/West Winnipeg",
     address: "745 Kingsbury Ave., Winnipeg, MB",
     days: "Tue – Sat",
-    times: "After-school and weekend options",
+    times: "After-school options",
     bookHref: "https://skillsamurai.com/mb-winnipeg",
     makeupHref: "https://skillsamurai.com/mb-winnipeg",
     accent: "primary",
@@ -20,7 +20,7 @@ const locations = [
     region: "Great for families in East/North East Winnipeg",
     address: "1199 Rothesay St., Winnipeg, MB",
     days: "Mon – Sat",
-    times: "After-school and weekend options",
+    times: "After-school options",
     bookHref: "https://winnipeg.jumbula.com/book-your-free-session",
     makeupHref: "https://skillsamurai.com/mb-winnipeg",
     accent: "secondary",
@@ -49,7 +49,7 @@ export default function Locations() {
         <FadeIn delay={0.1} className="text-center mb-8 md:mb-10">
           <span className="inline-flex items-center gap-2 rounded-full bg-secondary/5 border border-secondary/10 px-4 py-2 text-xs sm:text-sm font-semibold text-secondary/80">
             <CalendarClock className="h-4 w-4 text-primary" />
-            Classes available after school and on weekends.
+            Classes available after school.
           </span>
         </FadeIn>
 
