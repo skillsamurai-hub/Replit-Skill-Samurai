@@ -59,7 +59,7 @@ export default function ChildBenefits() {
                 <span className="block text-primary">GETS OUT OF IT</span>
               </h3>
               <p className="mt-5 sm:mt-6 text-lg sm:text-xl text-secondary/80 font-medium max-w-xl leading-relaxed">
-                We meet your child exactly where they're at. No experience needed. Just a structured, fun environment where playing on a tablet becomes learning that builds real skills they’ll use everywhere.
+                We meet your child exactly where they're at. No experience needed. Just a structured, fun environment where playing on a laptop becomes learning that builds real skills they’ll use everywhere.
               </p>
             </FadeIn>
 
