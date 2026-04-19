@@ -60,9 +60,7 @@ export default function Schedule() {
 
         <FadeIn delay={0.4} className="mt-12 text-center">
           <a
-            href="https://winnipeg.jumbula.com/north-east-coding-classes"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#locations"
             className="inline-flex items-center justify-center gap-2 text-primary font-bold text-lg hover:gap-3 transition-all"
           >
             See available trial times
