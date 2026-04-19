@@ -84,11 +84,8 @@ export default function Locations() {
                       </div>
                     </div>
 
-                    <p className="text-sm font-semibold text-secondary/80 mb-1">
+                    <p className="text-sm font-semibold text-secondary/80 mb-4">
                       {loc.tag}
-                    </p>
-                    <p className="text-xs sm:text-sm text-muted-foreground mb-4 italic">
-                      Beginner-friendly — no experience needed.
                     </p>
 
                     <div className="flex flex-wrap gap-1.5 mb-6">
