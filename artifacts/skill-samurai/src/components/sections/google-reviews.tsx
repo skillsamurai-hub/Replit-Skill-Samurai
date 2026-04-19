@@ -72,25 +72,27 @@ function Stars({ count }: { count: number }) {
 
 export default function GoogleReviews() {
   return (
-    <section className="py-20 md:py-32 bg-white relative overflow-hidden">
-      <div className="absolute -top-20 -left-20 w-96 h-96 bg-primary/5 rounded-full blur-[80px] pointer-events-none" />
-      <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-accent/10 rounded-full blur-[80px] pointer-events-none" />
+    <section className="py-20 md:py-28 bg-secondary relative overflow-hidden">
+      <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-primary/25 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute -bottom-40 -right-40 w-[600px] h-[600px] bg-accent/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.06),transparent_60%)] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <FadeIn className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/5 border border-secondary/10 mb-6">
+        <FadeIn className="text-center max-w-3xl mx-auto mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6 shadow-lg">
             <GoogleG className="w-5 h-5" />
-            <span className="text-secondary font-bold tracking-wide text-sm uppercase">Verified Google Reviews</span>
+            <span className="text-white font-bold tracking-wide text-sm uppercase">Verified Google Reviews</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading uppercase leading-tight tracking-tight mb-6">
-            <span className="text-secondary block mb-2">PARENTS IN WINNIPEG</span>
-            <span className="text-primary">LOVE WHAT WE DO</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading uppercase leading-tight tracking-tight mb-8">
+            <span className="text-white block mb-2">PARENTS IN WINNIPEG</span>
+            <span className="text-accent">LOVE WHAT WE DO</span>
           </h2>
-          <div className="flex items-center justify-center gap-3">
-            <Stars count={5} />
-            <span className="text-secondary font-bold">5.0</span>
-            <span className="text-secondary/60">·</span>
-            <span className="text-secondary/70 font-medium">Real reviews from local families</span>
+          <div className="inline-flex items-center gap-4 px-6 py-4 rounded-2xl bg-white/10 border border-white/15 backdrop-blur-sm shadow-xl">
+            <span className="text-5xl md:text-6xl font-black font-heading text-accent leading-none">5.0</span>
+            <div className="flex flex-col items-start gap-1">
+              <Stars count={5} />
+              <span className="text-white/80 font-semibold text-sm">Real reviews from local families</span>
+            </div>
           </div>
         </FadeIn>
 
@@ -98,7 +100,7 @@ export default function GoogleReviews() {
           <div className="flex gap-6 md:gap-8 pb-4 w-max">
           {reviews.map((r, i) => (
             <FadeIn key={r.name} direction="up" delay={i * 0.1} className="snap-start shrink-0 w-[85vw] sm:w-[420px] md:w-[460px]">
-              <article className="h-full flex flex-col bg-white rounded-3xl p-7 md:p-8 border border-secondary/10 shadow-xl shadow-black/5 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+              <article className="h-full flex flex-col bg-white rounded-3xl p-7 md:p-8 shadow-2xl shadow-black/40 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 border-t-4 border-primary">
                 <div className="flex items-start justify-between mb-5">
                   <div className="flex items-center gap-3">
                     <div className={`w-11 h-11 rounded-full ${r.color} text-white flex items-center justify-center font-black text-sm shrink-0`}>
@@ -128,7 +130,7 @@ export default function GoogleReviews() {
             href="https://www.google.com/search?q=skill+samurai+winnipeg&sca_esv=0584e342056e488a#mpd=~8442050446591582271/customers/reviews"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-secondary text-white font-bold hover:bg-secondary/90 transition-colors"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-secondary font-bold hover:bg-accent hover:text-secondary hover:scale-105 transition-all shadow-xl"
           >
             <GoogleG className="w-5 h-5" />
             Read all reviews on Google
