@@ -20,7 +20,7 @@ export default function FinalCta() {
               </p>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading text-white uppercase tracking-tight mb-5 leading-[1.05]">
                 Let your child try it.<br />
-                <span className="text-accent">You'll see the difference.</span>
+                <span className="text-primary">You'll see the difference.</span>
               </h2>
 
               <p className="text-lg md:text-xl text-white/80 font-medium max-w-2xl mx-auto mb-10">
