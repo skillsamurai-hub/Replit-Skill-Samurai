@@ -1,6 +1,6 @@
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Sparkles, Brain, Smile, ShieldCheck } from "lucide-react";
 
 export default function FinalCta() {
   return (
@@ -23,20 +23,31 @@ export default function FinalCta() {
                 <span className="text-accent">You'll see the difference.</span>
               </h2>
 
-              <p className="text-lg md:text-xl text-white/80 font-medium max-w-2xl mx-auto mb-8">
-                One free 60-minute class. No experience needed. No pressure to sign up.
+              <p className="text-lg md:text-xl text-white/80 font-medium max-w-2xl mx-auto mb-10">
+                One free 60-minute class. In an hour, you'll see what your child walks away with.
               </p>
 
-              <div className="flex flex-wrap justify-center gap-x-5 gap-y-3 mb-10 text-white/85 text-sm md:text-base font-semibold">
-                <span className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary" /> No experience needed
-                </span>
-                <span className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary" /> Fun &amp; structured
-                </span>
-                <span className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary" /> Month-to-month
-                </span>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10 text-left max-w-4xl mx-auto">
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+                  <Smile className="h-6 w-6 text-accent mb-3" />
+                  <h3 className="text-white font-bold text-base mb-1">A confident, proud kid</h3>
+                  <p className="text-white/70 text-sm leading-snug">They'll show you something they built — and actually want to keep going.</p>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+                  <Brain className="h-6 w-6 text-accent mb-3" />
+                  <h3 className="text-white font-bold text-base mb-1">Screen time that builds skills</h3>
+                  <p className="text-white/70 text-sm leading-snug">Coding, problem-solving, and focus — instead of endless scrolling.</p>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+                  <Sparkles className="h-6 w-6 text-accent mb-3" />
+                  <h3 className="text-white font-bold text-base mb-1">A real taste of class</h3>
+                  <p className="text-white/70 text-sm leading-snug">Meet the instructors, see the curriculum, and watch your child in action.</p>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
+                  <ShieldCheck className="h-6 w-6 text-accent mb-3" />
+                  <h3 className="text-white font-bold text-base mb-1">Zero pressure to sign up</h3>
+                  <p className="text-white/70 text-sm leading-snug">No sales pitch. Just an honest hour to see if it's the right fit.</p>
+                </div>
               </div>
 
               <a
