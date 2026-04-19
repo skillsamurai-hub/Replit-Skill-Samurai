@@ -41,7 +41,7 @@ export default function Relatability() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {painPoints.map((point, i) => (
-            <FadeIn key={i} delay={i * 0.1} direction="up" className="bg-white rounded-3xl p-8 border-[3px] border-secondary/10 hover:-translate-y-2 hover:border-primary/30 transition-all shadow-xl shadow-black/5">
+            <FadeIn key={i} delay={i * 0.1} direction="up" className="bg-secondary/5 rounded-3xl p-8 border-[3px] border-secondary/10 hover:-translate-y-2 hover:border-primary/30 transition-all shadow-xl shadow-black/5">
               <div className="h-20 w-20 rounded-[1.5rem] bg-primary/10 flex items-center justify-center mb-6 rotate-3 group-hover:-rotate-3 transition-transform">
                 {point.icon}
               </div>

@@ -58,7 +58,7 @@ export default function CommunitySchools() {
             const Icon = o.icon;
             return (
               <FadeIn key={o.eyebrow} delay={i * 0.1} direction="up">
-                <article className="h-full bg-white rounded-3xl p-7 md:p-9 border-[3px] border-white hover:border-primary/20 shadow-xl shadow-secondary/5 hover:-translate-y-1 transition-all duration-300 flex flex-col">
+                <article className="h-full bg-secondary/5 rounded-3xl p-7 md:p-9 border-[3px] border-secondary/10 hover:border-primary/20 shadow-xl shadow-secondary/5 hover:-translate-y-1 transition-all duration-300 flex flex-col">
                   <div className={`h-14 w-14 rounded-2xl ${o.accent} flex items-center justify-center mb-5 shadow-lg rotate-3`}>
                     <Icon className="h-7 w-7 text-white" strokeWidth={2} />
                   </div>

@@ -63,7 +63,7 @@ export default function Locations() {
 
             return (
               <FadeIn key={loc.name} delay={i * 0.1} direction="up">
-                <article className={`h-full bg-white rounded-3xl p-6 sm:p-8 border-2 border-border ${ring} shadow-xl shadow-secondary/5 hover:-translate-y-1 transition-all duration-300 flex flex-col`}>
+                <article className={`h-full bg-secondary/5 rounded-3xl p-6 sm:p-8 border-2 border-border ${ring} shadow-xl shadow-secondary/5 hover:-translate-y-1 transition-all duration-300 flex flex-col`}>
                   <div className="flex items-center gap-3 mb-5">
                     <div className={`h-12 w-12 sm:h-14 sm:w-14 rounded-2xl ${accentBg} flex items-center justify-center shadow-lg rotate-3 flex-shrink-0`}>
                       <MapPin className="h-6 w-6 sm:h-7 sm:w-7 text-white" strokeWidth={2.4} />
