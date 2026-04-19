@@ -35,7 +35,7 @@ export default function Schedule() {
       icon: <Tag className="h-7 w-7" />,
       label: "Pricing",
       value: "Month-to-month",
-      detail: "No contracts, 30-day notice, and no cancellation fees.",
+      detail: "No contracts, 30-day notice, no cancellation fees, and 10% sibling discount.",
       iconBg: "bg-primary",
       tint: "bg-primary/5",
       hoverBorder: "hover:border-primary/40",
