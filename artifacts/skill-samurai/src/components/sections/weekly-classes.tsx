@@ -97,7 +97,7 @@ export default function WeeklyClasses() {
                 <div
                   key={c.label}
                   data-card
-                  className="snap-start flex-shrink-0 w-[260px] md:w-[280px] bg-white/12 rounded-3xl border-2 border-white/15 hover:border-accent/30 shadow-xl shadow-black/15 p-8 flex flex-col items-center text-center hover:-translate-y-2 transition-all duration-300 group backdrop-blur-sm"
+                  className="snap-start flex-shrink-0 w-[260px] md:w-[280px] bg-white/12 rounded-3xl border-2 border-white/15 hover:border-accent/30 shadow-xl shadow-black/15 p-8 flex flex-col items-center text-center hover:-translate-y-3 hover:scale-[1.03] transition-all duration-300 group backdrop-blur-sm"
                 >
                   <div
                     className={`h-20 w-20 rounded-2xl ${c.color} flex items-center justify-center mb-6 shadow-lg rotate-3 group-hover:-rotate-3 group-hover:scale-110 transition-all`}
