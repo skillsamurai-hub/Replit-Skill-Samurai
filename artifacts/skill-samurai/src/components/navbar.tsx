@@ -16,12 +16,12 @@ export default function Navbar() {
 
   const programLinks = [
     {
-      href: "https://winnipeg.jumbula.com/north-east-coding-classes",
+      href: "https://link.skillsamurai.com/widget/booking/Ku7skA5XAkgQpg8rQqN1",
       label: "North East Location",
       external: true,
     },
     {
-      href: "https://winnipeg.jumbula.com/seven-oaks-coding-classes",
+      href: "https://link.skillsamurai.com/widget/booking/uLciDSsBTUDqpqKRDaZq",
       label: "Seven Oaks Location",
       external: true,
     },
