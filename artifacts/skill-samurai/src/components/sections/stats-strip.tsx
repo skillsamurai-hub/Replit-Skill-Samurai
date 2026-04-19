@@ -2,14 +2,14 @@ import React from "react";
 
 const stats = [
   {
-    eyebrow: "Dell Technologies + Institute for the Future",
-    value: "85% of jobs that will exist in 2030 haven't been invented yet",
-    note: "Will your child be future-ready?",
-  },
-  {
     eyebrow: "LinkedIn Workforce Report",
     value: "By 2030, 80% of all jobs will require digital skills.",
     note: "That means coding, problem-solving, and comfort with tech matter more than ever.",
+  },
+  {
+    eyebrow: "Dell Technologies + Institute for the Future",
+    value: "85% of jobs that will exist in 2030 haven't been invented yet",
+    note: "Will your child be future-ready?",
   },
 ];
 
