@@ -4,17 +4,6 @@ import { MapPin, Clock, ArrowRight, CalendarClock, Sparkles } from "lucide-react
 
 const locations = [
   {
-    name: "Seven Oaks",
-    tag: "After-school coding classes for ages 6–18",
-    address: "745 Kingsbury Ave., Winnipeg, MB",
-    days: "Mon – Tue",
-    times: "Flexible after-school class times",
-    timesDetail: "Classes start from 4:30pm",
-    bookHref: "https://link.skillsamurai.com/widget/booking/uLciDSsBTUDqpqKRDaZq",
-    makeupHref: "https://link.skillsamurai.com/widget/booking/RjGKMmLLevpPEAJx8FnW",
-    accent: "primary",
-  },
-  {
     name: "North East",
     tag: "After-school coding classes for ages 6–18",
     address: "1199 Rothesay St., Winnipeg, MB",
@@ -24,6 +13,17 @@ const locations = [
     bookHref: "https://link.skillsamurai.com/widget/booking/Ku7skA5XAkgQpg8rQqN1",
     makeupHref: "https://link.skillsamurai.com/widget/booking/SGsgwBr4folY53lMpMYc",
     accent: "secondary",
+  },
+  {
+    name: "Seven Oaks",
+    tag: "After-school coding classes for ages 6–18",
+    address: "745 Kingsbury Ave., Winnipeg, MB",
+    days: "Mon – Tue",
+    times: "Flexible after-school class times",
+    timesDetail: "Classes start from 4:30pm",
+    bookHref: "https://link.skillsamurai.com/widget/booking/uLciDSsBTUDqpqKRDaZq",
+    makeupHref: "https://link.skillsamurai.com/widget/booking/RjGKMmLLevpPEAJx8FnW",
+    accent: "primary",
   },
 ];
 
