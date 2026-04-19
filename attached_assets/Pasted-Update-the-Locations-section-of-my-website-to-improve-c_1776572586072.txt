@@ -1,0 +1,86 @@
+Update the “Locations” section of my website to improve clarity and conversions while keeping the current clean, modern card design.
+
+Overall layout:
+
+Keep the two side-by-side location cards (Seven Oaks and North East)
+Maintain rounded cards, soft shadows, and current color scheme (pink for Seven Oaks, navy for North East)
+Keep icons for address, days, and times
+
+1. Update the main headline above both cards
+Replace:
+“Classes available after school.”
+
+With:
+“Choose Your Location & Book a Free Coding Class”
+
+2. Keep the structure of each card but refine the copy
+
+For BOTH location cards:
+
+Keep:
+
+Location name
+“After-school coding classes for ages 6–18”
+
+Update subtext to:
+“Beginner-friendly — no experience needed.”
+
+Remove:
+
+“Great for families in North/West Winnipeg”
+“Great for families in East/North East Winnipeg”
+
+3. Improve the “Times” section
+
+Replace:
+“After-school options”
+
+With something more specific:
+“Flexible after-school class times”
+
+(Optional if space allows):
+“Classes start from 4:30pm”
+
+4. Improve the main CTA button
+
+Keep:
+“Book a Free Trial”
+
+Add a small trust line directly under the button (smaller text):
+“Takes 1 hour • No commitment • No experience needed”
+
+5. Remove or replace “Best place to start”
+
+Either:
+
+Remove it completely for a cleaner look
+OR replace with:
+“Perfect for beginners”
+
+6. Improve the secondary CTA (Makeup class)
+
+Option A (preferred):
+
+Move “Schedule a Makeup Class” below BOTH cards as one shared link
+
+Option B:
+
+Keep it in the card but increase visibility slightly (darker text or border)
+
+7. Make the entire card clickable
+
+Clicking anywhere on the card should trigger the same action as “Book a Free Trial”
+
+8. Optional (high impact visual addition)
+
+Add a small row of tags or icons under the description:
+“Roblox • Minecraft • Game Design”
+
+Keep it subtle and aligned with the design.
+
+Design constraints:
+
+Keep spacing clean and breathable
+Maintain mobile responsiveness (cards stack vertically)
+Do not overcrowd the cards
+Prioritize clarity and fast decision-making for parents

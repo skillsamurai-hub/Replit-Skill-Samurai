@@ -6,10 +6,10 @@ const locations = [
   {
     name: "Seven Oaks",
     tag: "After-school coding classes for ages 6–18",
-    region: "Great for families in North/West Winnipeg",
     address: "745 Kingsbury Ave., Winnipeg, MB",
     days: "Tue – Sat",
-    times: "After-school options",
+    times: "Flexible after-school class times",
+    timesDetail: "Classes start from 4:30pm",
     bookHref: "https://link.skillsamurai.com/widget/booking/uLciDSsBTUDqpqKRDaZq",
     makeupHref: "https://link.skillsamurai.com/widget/booking/RjGKMmLLevpPEAJx8FnW",
     accent: "primary",
@@ -17,15 +17,17 @@ const locations = [
   {
     name: "North East",
     tag: "After-school coding classes for ages 6–18",
-    region: "Great for families in East/North East Winnipeg",
     address: "1199 Rothesay St., Winnipeg, MB",
     days: "Mon – Sat",
-    times: "After-school options",
+    times: "Flexible after-school class times",
+    timesDetail: "Classes start from 4:30pm",
     bookHref: "https://link.skillsamurai.com/widget/booking/Ku7skA5XAkgQpg8rQqN1",
     makeupHref: "https://link.skillsamurai.com/widget/booking/SGsgwBr4folY53lMpMYc",
     accent: "secondary",
   },
 ];
+
+const programTags = ["Roblox", "Minecraft", "Game Design"];
 
 export default function Locations() {
   return (
@@ -39,21 +41,14 @@ export default function Locations() {
             Two Winnipeg Locations
           </h2>
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white leading-tight tracking-tight mb-4">
-            Choose the location that works best for your family.
+            Choose Your Location &amp; Book a Free Coding Class
           </h3>
           <p className="text-base sm:text-lg text-white/75 font-medium mb-3">
-            Choose a location below to book a free trial or schedule a makeup class.
+            Pick the location that works best for your family — both offer the same hands-on programs.
           </p>
           <p className="text-sm sm:text-base text-accent font-semibold">
             Most kids start with a free trial. No experience needed.
           </p>
-        </FadeIn>
-
-        <FadeIn delay={0.1} className="text-center mb-8 md:mb-10">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/15 px-4 py-2 text-xs sm:text-sm font-semibold text-white/85">
-            <CalendarClock className="h-4 w-4 text-accent" />
-            Classes available after school.
-          </span>
         </FadeIn>
 
         <div className="grid md:grid-cols-2 gap-5 md:gap-6 max-w-5xl mx-auto">
@@ -62,98 +57,127 @@ export default function Locations() {
             const accentBg = isPrimary ? "bg-primary" : "bg-secondary";
             const accentText = isPrimary ? "text-primary" : "text-secondary";
             const accentSoft = isPrimary ? "bg-primary/10" : "bg-secondary/10";
-            const ring = isPrimary ? "hover:border-primary/30" : "hover:border-secondary/30";
+            const ring = isPrimary ? "hover:border-primary/40" : "hover:border-secondary/40";
+            const buttonShadow = isPrimary ? "shadow-primary/25" : "shadow-secondary/25";
 
             return (
               <FadeIn key={loc.name} delay={i * 0.1} direction="up">
-                <article className={`h-full bg-white rounded-3xl p-6 sm:p-8 border-2 border-white/20 ${ring} shadow-2xl shadow-black/30 hover:-translate-y-1 transition-all duration-300 flex flex-col`}>
-                  <div className="flex items-center gap-3 mb-5">
-                    <div className={`h-12 w-12 sm:h-14 sm:w-14 rounded-2xl ${accentBg} flex items-center justify-center shadow-lg rotate-3 flex-shrink-0`}>
-                      <MapPin className="h-6 w-6 sm:h-7 sm:w-7 text-white" strokeWidth={2.4} />
+                <a
+                  href={loc.bookHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Book a free trial at Skill Samurai ${loc.name}`}
+                  className={`group block h-full bg-white rounded-3xl p-6 sm:p-8 border-2 border-white/20 ${ring} shadow-2xl shadow-black/30 hover:-translate-y-1 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-accent/60`}
+                >
+                  <div className="h-full flex flex-col">
+                    <div className="flex items-center gap-3 mb-5">
+                      <div className={`h-12 w-12 sm:h-14 sm:w-14 rounded-2xl ${accentBg} flex items-center justify-center shadow-lg rotate-3 flex-shrink-0`}>
+                        <MapPin className="h-6 w-6 sm:h-7 sm:w-7 text-white" strokeWidth={2.4} />
+                      </div>
+                      <div>
+                        <p className={`text-[11px] font-bold uppercase tracking-[0.2em] ${accentText}`}>
+                          Skill Samurai
+                        </p>
+                        <h4 className="text-2xl sm:text-3xl font-black font-heading text-secondary leading-tight">
+                          {loc.name}
+                        </h4>
+                      </div>
                     </div>
-                    <div>
-                      <p className={`text-[11px] font-bold uppercase tracking-[0.2em] ${accentText}`}>
-                        Skill Samurai
-                      </p>
-                      <h4 className="text-2xl sm:text-3xl font-black font-heading text-secondary leading-tight">
-                        {loc.name}
-                      </h4>
+
+                    <p className="text-sm font-semibold text-secondary/80 mb-1">
+                      {loc.tag}
+                    </p>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-4 italic">
+                      Beginner-friendly — no experience needed.
+                    </p>
+
+                    <div className="flex flex-wrap gap-1.5 mb-6">
+                      {programTags.map((tag) => (
+                        <span
+                          key={tag}
+                          className={`text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${accentSoft} ${accentText}`}
+                        >
+                          {tag}
+                        </span>
+                      ))}
                     </div>
-                  </div>
 
-                  <p className="text-sm font-semibold text-secondary/80 mb-1">
-                    {loc.tag}
-                  </p>
-                  <p className="text-xs sm:text-sm text-muted-foreground mb-2 italic">
-                    Beginner-friendly — most kids start with no experience.
-                  </p>
-                  <p className={`text-xs font-bold uppercase tracking-wider ${accentText} mb-5`}>
-                    {loc.region}
-                  </p>
+                    <ul className="space-y-3 mb-7">
+                      <li className="flex items-start gap-3">
+                        <div className={`mt-0.5 h-8 w-8 rounded-lg ${accentSoft} ${accentText} flex items-center justify-center flex-shrink-0`}>
+                          <MapPin className="h-4 w-4" />
+                        </div>
+                        <div>
+                          <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground mb-0.5">Address</p>
+                          <p className="text-sm sm:text-base font-semibold text-secondary leading-snug">{loc.address}</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className={`mt-0.5 h-8 w-8 rounded-lg ${accentSoft} ${accentText} flex items-center justify-center flex-shrink-0`}>
+                          <CalendarClock className="h-4 w-4" />
+                        </div>
+                        <div>
+                          <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground mb-0.5">Days</p>
+                          <p className="text-sm sm:text-base font-semibold text-secondary leading-snug">{loc.days}</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <div className={`mt-0.5 h-8 w-8 rounded-lg ${accentSoft} ${accentText} flex items-center justify-center flex-shrink-0`}>
+                          <Clock className="h-4 w-4" />
+                        </div>
+                        <div>
+                          <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground mb-0.5">Times</p>
+                          <p className="text-sm sm:text-base font-semibold text-secondary leading-snug">{loc.times}</p>
+                          <p className="text-xs text-muted-foreground mt-0.5">{loc.timesDetail}</p>
+                        </div>
+                      </li>
+                    </ul>
 
-                  <ul className="space-y-3 mb-7">
-                    <li className="flex items-start gap-3">
-                      <div className={`mt-0.5 h-8 w-8 rounded-lg ${accentSoft} ${accentText} flex items-center justify-center flex-shrink-0`}>
-                        <MapPin className="h-4 w-4" />
-                      </div>
-                      <div>
-                        <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground mb-0.5">Address</p>
-                        <p className="text-sm sm:text-base font-semibold text-secondary leading-snug">{loc.address}</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className={`mt-0.5 h-8 w-8 rounded-lg ${accentSoft} ${accentText} flex items-center justify-center flex-shrink-0`}>
-                        <CalendarClock className="h-4 w-4" />
-                      </div>
-                      <div>
-                        <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground mb-0.5">Days</p>
-                        <p className="text-sm sm:text-base font-semibold text-secondary leading-snug">{loc.days}</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className={`mt-0.5 h-8 w-8 rounded-lg ${accentSoft} ${accentText} flex items-center justify-center flex-shrink-0`}>
-                        <Clock className="h-4 w-4" />
-                      </div>
-                      <div>
-                        <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground mb-0.5">Times</p>
-                        <p className="text-sm sm:text-base font-semibold text-secondary leading-snug">{loc.times}</p>
-                      </div>
-                    </li>
-                  </ul>
-
-                  <div className="mt-auto flex flex-col gap-3">
-                    <div className="flex flex-col items-center">
-                      <a
-                        href={loc.bookHref}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`w-full inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-black uppercase tracking-wide text-white shadow-xl shadow-primary/20 transition-all hover:scale-[1.02] active:scale-95 ${accentBg} hover:opacity-90`}
+                    <div className="mt-auto">
+                      <span
+                        className={`w-full inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-black uppercase tracking-wide text-white shadow-xl ${buttonShadow} transition-all group-hover:scale-[1.02] ${accentBg} group-hover:opacity-95`}
                       >
                         <Sparkles className="h-4 w-4" />
                         Book a Free Trial
-                        <ArrowRight className="h-4 w-4" />
-                      </a>
-                      <span className="mt-1.5 text-[11px] font-bold uppercase tracking-wider text-primary">
-                        Best place to start
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </span>
+                      <p className="mt-2 text-center text-[11px] font-semibold text-secondary/60">
+                        Takes 1 hour · No commitment · No experience needed
+                      </p>
                     </div>
-                    <a
-                      href={loc.makeupHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center gap-2 rounded-full px-6 py-2.5 text-xs font-bold uppercase tracking-wide text-secondary/70 border border-border hover:text-secondary hover:bg-muted/40 transition-all"
-                    >
-                      Schedule a Makeup Class
-                    </a>
                   </div>
-                </article>
+                </a>
               </FadeIn>
             );
           })}
         </div>
 
-        <FadeIn delay={0.25} className="mt-10 text-center">
-          <p className="text-base md:text-lg text-secondary/80 font-semibold">
+        <FadeIn delay={0.25} className="mt-8 md:mt-10 text-center">
+          <p className="text-sm md:text-base text-white/70 font-medium mb-3">
+            Already a student? Need to reschedule a missed class?
+          </p>
+          <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+            <a
+              href={locations[0].makeupHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-white border border-white/25 hover:bg-white/10 transition-all"
+            >
+              Makeup Class · Seven Oaks
+            </a>
+            <a
+              href={locations[1].makeupHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-white border border-white/25 hover:bg-white/10 transition-all"
+            >
+              Makeup Class · North East
+            </a>
+          </div>
+        </FadeIn>
+
+        <FadeIn delay={0.3} className="mt-8 text-center">
+          <p className="text-sm md:text-base text-white/70 font-medium">
             No contracts. Flexible, month-to-month membership that fits your schedule.
           </p>
         </FadeIn>
