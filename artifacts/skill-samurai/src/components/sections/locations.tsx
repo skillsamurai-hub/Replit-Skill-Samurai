@@ -44,7 +44,7 @@ export default function Locations() {
             Choose Your Location &amp; Book a Free Coding Class
           </h3>
           <p className="text-base sm:text-lg text-white/75 font-medium mb-3">
-            Pick the location that works best for your family — both offer the same hands-on programs. No experience needed.
+            Same hands-on programs at both locations — no experience needed.
           </p>
         </FadeIn>
 
