@@ -39,7 +39,7 @@ const offerings = [
 
 export default function CommunitySchools() {
   return (
-    <section id="community-schools" className="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
+    <section id="community-schools" className="py-20 md:py-28 bg-secondary/10 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <FadeIn className="text-center max-w-3xl mx-auto mb-14">
           <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-3">

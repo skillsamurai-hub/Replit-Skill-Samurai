@@ -29,7 +29,7 @@ const locations = [
 
 export default function Locations() {
   return (
-    <section id="locations" className="py-20 md:py-28 bg-white relative overflow-hidden">
+    <section id="locations" className="py-20 md:py-28 bg-secondary/5 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <FadeIn className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
           <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-3">

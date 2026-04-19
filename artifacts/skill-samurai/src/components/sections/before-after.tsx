@@ -20,7 +20,7 @@ export default function BeforeAfter() {
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-primary/5 relative overflow-hidden">
+    <section className="py-20 md:py-32 bg-secondary/10 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10 pt-4 md:pt-10">
         <FadeIn className="text-center max-w-4xl mx-auto mb-16">
           <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-3">The Shift</h2>
