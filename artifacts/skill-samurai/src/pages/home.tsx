@@ -25,9 +25,9 @@ export default function Home() {
         <Hero />
         <MediaBanner />
         <Relatability />
+        <StatsStrip />
         <ChildBenefits />
         <BeforeAfter />
-        <StatsStrip />
         <Proof />
         <GoogleReviews />
         <ParentBenefits />
