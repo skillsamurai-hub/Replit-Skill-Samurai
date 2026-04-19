@@ -25,7 +25,6 @@ export default function Home() {
         <Hero />
         <MediaBanner />
         <Relatability />
-        <HowItWorks />
         <ChildBenefits />
         <BeforeAfter />
         <StatsStrip />
@@ -35,6 +34,7 @@ export default function Home() {
         <Schedule />
         <WeeklyClasses />
         <CommunitySchools />
+        <HowItWorks />
         <Locations />
         <FinalCta />
       </main>
