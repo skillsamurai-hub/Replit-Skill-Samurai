@@ -29,14 +29,6 @@ const reviews: Review[] = [
     text: "A very fun experience for students and they love it! I have attended two classroom workshops with my Grade 2 students and it has been engaging and inspiring for them each time.",
   },
   {
-    name: "julie lim",
-    initials: "JL",
-    color: "bg-accent text-secondary",
-    weeksAgo: "2 weeks ago",
-    rating: 5,
-    text: "Very good instructors, my kids enjoyed the trial class. Thank you",
-  },
-  {
     name: "Rhoda V",
     initials: "RV",
     color: "bg-primary",
