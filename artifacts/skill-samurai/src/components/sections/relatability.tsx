@@ -59,7 +59,7 @@ export default function Relatability() {
           <div className="absolute top-0 left-0 w-full h-full bg-primary/10"></div>
           <div className="absolute -top-20 -right-20 w-60 h-60 bg-accent rounded-full blur-[60px] opacity-40"></div>
           <div className="relative z-10">
-            <h3 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase font-heading mb-8 leading-[1.05] tracking-tight">
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase font-heading mb-8 leading-tight tracking-tight">
               <span className="text-white block">THAT'S EXACTLY WHY</span>
               <span className="text-accent block">WE BUILT SKILL SAMURAI</span>
             </h3>
