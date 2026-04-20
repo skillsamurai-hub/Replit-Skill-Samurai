@@ -7,22 +7,22 @@ export default function Relatability() {
     {
       icon: <Gamepad2 className="h-10 w-10 text-primary" />,
       title: "Your child loves Roblox, Minecraft, or YouTube",
-      desc: "They can spend hours absorbed in these worlds, but it feels like passive consumption rather than active creation."
+      desc: "They can spend hours on it… and part of you wonders, \"Is this actually helping them?\""
     },
     {
       icon: <Brain className="h-10 w-10 text-primary" />,
-      title: "It's hard to know what's actually helping them",
-      desc: "With so many apps and games, distinguishing between empty calories and meaningful brain-building is exhausting."
+      title: "You're not against screens",
+      desc: "You just don't want all that time to go to waste — you want it to lead somewhere."
     },
     {
       icon: <Timer className="h-10 w-10 text-primary" />,
-      title: "You don't want to constantly limit screen time",
-      desc: "The daily battle of 'time's up' leaves everyone frustrated. You want them off screens, or doing something better on them."
+      title: "You've tried setting limits",
+      desc: "But it usually turns into \"just five more minutes\" — and then frustration on both sides."
     },
     {
       icon: <Trophy className="h-10 w-10 text-primary" />,
-      title: "You just want them doing something productive",
-      desc: "You know they're smart. You just need a way to channel that screen-focused energy into real-world skills."
+      title: "When you ask what they did, it's \"nothing\"",
+      desc: "Even though you know they're smart and capable of so much more than what you're seeing."
     }
   ];
 
