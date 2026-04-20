@@ -34,12 +34,12 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="max-w-4xl text-center mx-auto flex flex-col items-center pb-4 lg:pb-8"
         >
-          <h1 className="text-[1.5rem] sm:text-4xl lg:text-5xl font-black font-heading leading-[1.06] mb-4 lg:mb-6 tracking-tight text-white drop-shadow-2xl">
-            <span className="block lg:whitespace-nowrap">After-School Coding &amp; STEM</span>
-            <span className="block lg:whitespace-nowrap">Classes for Kids in Winnipeg</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading leading-[1.1] mb-4 lg:mb-6 tracking-tight text-white drop-shadow-2xl">
+            <span className="block">After-School Coding &amp; STEM</span>
+            <span className="block">Classes for Kids in Winnipeg</span>
           </h1>
 
-          <p className="text-sm sm:text-lg lg:text-xl text-white/90 mb-6 lg:mb-8 leading-relaxed font-medium drop-shadow lg:whitespace-nowrap">
+          <p className="text-base sm:text-lg lg:text-xl text-white/90 mb-6 lg:mb-8 leading-relaxed font-medium drop-shadow">
             Transform screen time into valuable skills that will shape your child’s future.
           </p>
 
