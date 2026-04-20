@@ -30,8 +30,8 @@ export default function Home() {
         <GoogleReviews />
         <Proof />
         <HowItWorks />
-        <Schedule />
         <Locations />
+        <Schedule />
         <FinalCta />
       </main>
       <Footer />
