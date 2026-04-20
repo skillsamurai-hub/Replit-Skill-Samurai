@@ -33,8 +33,8 @@ export default function Home() {
         <HowItWorks />
         <Schedule />
         <Locations />
-        <CommunitySchools />
         <FinalCta />
+        <CommunitySchools />
       </main>
       <Footer />
     </div>
