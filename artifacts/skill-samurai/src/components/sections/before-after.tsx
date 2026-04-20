@@ -4,19 +4,19 @@ import { XCircle, CheckCircle2 } from "lucide-react";
 
 export default function BeforeAfter() {
   const before = [
-    "Playing games endlessly",
-    "Passive screen time consumption",
-    "Hard to stay focused on hard tasks",
-    "Frustrating battles over devices",
-    "Nothing tangible to show for it"
+    "Screen time that feels unproductive",
+    "Daily pushback around devices",
+    "Gives up quickly when things get hard",
+    "Hard to stay focused",
+    "Not much to show for their time"
   ];
 
   const after = [
-    "Building their own games",
-    "Learning real technical skills",
-    "Deep focus on engaging projects",
-    "Excited to go to coding class",
-    "Proud to show you what they made"
+    "Creating their own games and projects",
+    "Focused and engaged on something they care about",
+    "Works through challenges instead of quitting",
+    "Looks forward to class each week",
+    "Excited to show you what they built"
   ];
 
   return (
@@ -25,11 +25,11 @@ export default function BeforeAfter() {
         <FadeIn className="text-center max-w-4xl mx-auto mb-16">
           <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-3">The Shift</h2>
           <h3 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading uppercase leading-tight tracking-tight mb-8">
-            <span className="text-secondary block mb-2">THE REAL-WORLD</span>
-            <span className="text-primary">TRANSFORMATION</span>
+            <span className="text-secondary block mb-2">WHAT YOU'LL START</span>
+            <span className="text-primary">TO NOTICE AT HOME</span>
           </h3>
           <p className="text-xl text-muted-foreground font-medium">
-            Your child will go from playing games to building them. Here is what that shift looks like.
+            Your child goes from just playing games… to building something they're proud of.
           </p>
         </FadeIn>
 
@@ -74,7 +74,7 @@ export default function BeforeAfter() {
             
             <div className="mt-12 pt-8 border-t-[3px] border-primary/10 relative z-10">
               <p className="text-primary font-black italic text-center text-xl uppercase tracking-wide">
-                "They'll actually build something you can see."
+                "You'll see the difference — not just hear about it."
               </p>
             </div>
           </FadeIn>
