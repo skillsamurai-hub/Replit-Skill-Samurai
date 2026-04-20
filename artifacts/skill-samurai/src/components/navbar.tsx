@@ -26,14 +26,9 @@ export default function Navbar() {
       external: true,
     },
     {
-      href: "https://meetings.hubspot.com/skillsamurai/school-hour-of-code?uuid=b840de06-ab04-43d2-a397-5c3889bf58c7",
-      label: "School Workshops",
+      href: "/schools-community",
+      label: "Schools & Non-Profits",
       external: false,
-    },
-    {
-      href: "https://meetings.hubspot.com/skillsamurai/school-hour-of-code?uuid=b840de06-ab04-43d2-a397-5c3889bf58c7",
-      label: "Non-Profit Partnerships",
-      external: true,
     },
   ];
 
@@ -87,17 +82,28 @@ export default function Navbar() {
               }`}
             >
               <div className="bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
-                {programLinks.map((p) => (
-                  <a
-                    key={p.label}
-                    href={p.href}
-                    {...(p.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    onClick={() => setProgramsOpen(false)}
-                    className="block px-5 py-3.5 text-sm font-semibold text-secondary hover:bg-primary hover:text-white transition-colors border-b border-border last:border-b-0"
-                  >
-                    {p.label}
-                  </a>
-                ))}
+                {programLinks.map((p) =>
+                  p.href.startsWith("/") ? (
+                    <Link
+                      key={p.label}
+                      href={p.href}
+                      onClick={() => setProgramsOpen(false)}
+                      className="block px-5 py-3.5 text-sm font-semibold text-secondary hover:bg-primary hover:text-white transition-colors border-b border-border last:border-b-0"
+                    >
+                      {p.label}
+                    </Link>
+                  ) : (
+                    <a
+                      key={p.label}
+                      href={p.href}
+                      {...(p.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      onClick={() => setProgramsOpen(false)}
+                      className="block px-5 py-3.5 text-sm font-semibold text-secondary hover:bg-primary hover:text-white transition-colors border-b border-border last:border-b-0"
+                    >
+                      {p.label}
+                    </a>
+                  )
+                )}
               </div>
             </div>
           </div>
@@ -154,17 +160,28 @@ export default function Navbar() {
                 Programs
               </a>
               <div className="mt-3 ml-4 flex flex-col gap-3 border-l border-white/15 pl-4">
-                {programLinks.map((p) => (
-                  <a
-                    key={p.label}
-                    href={p.href}
-                    {...(p.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    className="text-sm font-medium text-white/80 hover:text-primary"
-                    onClick={() => setOpen(false)}
-                  >
-                    {p.label}
-                  </a>
-                ))}
+                {programLinks.map((p) =>
+                  p.href.startsWith("/") ? (
+                    <Link
+                      key={p.label}
+                      href={p.href}
+                      className="text-sm font-medium text-white/80 hover:text-primary"
+                      onClick={() => setOpen(false)}
+                    >
+                      {p.label}
+                    </Link>
+                  ) : (
+                    <a
+                      key={p.label}
+                      href={p.href}
+                      {...(p.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      className="text-sm font-medium text-white/80 hover:text-primary"
+                      onClick={() => setOpen(false)}
+                    >
+                      {p.label}
+                    </a>
+                  )
+                )}
               </div>
             </div>
           </div>

@@ -12,7 +12,6 @@ import GoogleReviews from "@/components/sections/google-reviews";
 import HowItWorks from "@/components/sections/how-it-works";
 import Schedule from "@/components/sections/schedule";
 import WeeklyClasses from "@/components/sections/weekly-classes";
-import CommunitySchools from "@/components/sections/community-schools";
 import Locations from "@/components/sections/locations";
 import FinalCta from "@/components/sections/final-cta";
 
@@ -34,7 +33,6 @@ export default function Home() {
         <Schedule />
         <Locations />
         <FinalCta />
-        <CommunitySchools />
       </main>
       <Footer />
     </div>
