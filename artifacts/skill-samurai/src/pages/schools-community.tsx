@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import CommunitySchools from "@/components/sections/community-schools";
 import { FadeIn } from "@/components/ui/fade-in";
 import { GraduationCap, HeartHandshake, Building2 } from "lucide-react";
 
@@ -50,7 +49,7 @@ export default function SchoolsCommunityPage() {
                 },
               ].map((item, i) => (
                 <FadeIn key={item.title} delay={i * 0.1} direction="up">
-                  <div className="h-full bg-secondary/5 rounded-3xl p-7 border-[3px] border-secondary/10">
+                  <div className="h-full bg-white rounded-3xl p-7 border-[3px] border-secondary/15 shadow-xl shadow-secondary/10 hover:-translate-y-1 hover:border-primary/40 transition-all duration-300">
                     <div className="h-14 w-14 rounded-2xl bg-primary flex items-center justify-center mb-5 shadow-lg rotate-3">
                       <item.icon className="h-7 w-7 text-white" strokeWidth={2} />
                     </div>
@@ -66,8 +65,6 @@ export default function SchoolsCommunityPage() {
             </div>
           </div>
         </section>
-
-        <CommunitySchools />
 
         <section className="py-20 md:py-24 bg-secondary text-white text-center">
           <div className="container mx-auto px-4">
