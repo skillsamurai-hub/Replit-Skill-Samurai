@@ -1,5 +1,5 @@
-import React from "react";
-import { Star } from "lucide-react";
+import React, { useRef } from "react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
 
 type Review = {
@@ -71,6 +71,15 @@ function Stars({ count }: { count: number }) {
 }
 
 export default function GoogleReviews() {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+
+  const scrollByCard = (dir: 1 | -1) => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const amount = Math.min(el.clientWidth * 0.9, 480);
+    el.scrollBy({ left: dir * amount, behavior: "smooth" });
+  };
+
   return (
     <section className="py-20 md:py-32 bg-secondary/10 relative overflow-hidden">
       <div className="absolute -top-20 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[80px] pointer-events-none" />
@@ -94,8 +103,26 @@ export default function GoogleReviews() {
           </div>
         </FadeIn>
 
-        <div className="-mx-4 px-4 overflow-x-auto overflow-y-visible [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" style={{ overscrollBehaviorX: "contain", touchAction: "pan-y pan-x" }}>
-          <div className="flex gap-6 md:gap-8 pb-4 w-max min-w-full">
+        <div className="relative">
+          <button
+            type="button"
+            onClick={() => scrollByCard(-1)}
+            aria-label="Previous reviews"
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 lg:-translate-x-4 z-20 h-12 w-12 items-center justify-center rounded-full bg-white text-secondary shadow-xl shadow-secondary/20 border border-secondary/10 hover:bg-primary hover:text-white hover:border-primary transition-colors"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollByCard(1)}
+            aria-label="Next reviews"
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 lg:translate-x-4 z-20 h-12 w-12 items-center justify-center rounded-full bg-white text-secondary shadow-xl shadow-secondary/20 border border-secondary/10 hover:bg-primary hover:text-white hover:border-primary transition-colors"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
+
+          <div ref={scrollerRef} className="-mx-4 px-4 overflow-x-auto overflow-y-visible scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" style={{ overscrollBehaviorX: "contain", touchAction: "pan-y pan-x" }}>
+            <div className="flex gap-6 md:gap-8 pb-4 w-max min-w-full">
             {reviews.map((r, i) => (
             <div key={r.name} className="snap-start shrink-0 w-[85vw] sm:w-[420px] md:w-[460px]">
               <article className="h-full flex flex-col bg-secondary/5 rounded-3xl p-7 md:p-8 border border-secondary/10 shadow-xl shadow-secondary/5">
@@ -120,6 +147,7 @@ export default function GoogleReviews() {
               </article>
             </div>
             ))}
+            </div>
           </div>
         </div>
 
