@@ -95,6 +95,14 @@ export default function GoogleReviews() {
         </FadeIn>
 
         <div className="-mx-4 px-4 overflow-x-auto overflow-y-visible [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" style={{ overscrollBehaviorX: "contain", touchAction: "pan-y pan-x" }}>
+          <div className="flex items-center justify-between gap-3 px-1 mb-3 md:hidden text-secondary/70">
+            <span className="text-xs font-bold uppercase tracking-[0.2em]">Swipe to see more</span>
+            <div className="flex items-center gap-1.5">
+              <span className="h-2 w-2 rounded-full bg-primary" />
+              <span className="h-2 w-2 rounded-full bg-secondary/30" />
+              <span className="h-2 w-2 rounded-full bg-secondary/30" />
+            </div>
+          </div>
           <div className="flex gap-6 md:gap-8 pb-4 w-max min-w-full">
             {reviews.map((r, i) => (
             <div key={r.name} className="snap-start shrink-0 w-[85vw] sm:w-[420px] md:w-[460px]">
