@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import React from "react";
+import { Star } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
 
 type Review = {
@@ -71,25 +71,6 @@ function Stars({ count }: { count: number }) {
 }
 
 export default function GoogleReviews() {
-  const scrollerRef = useRef<HTMLDivElement>(null);
-
-  const scrollToReview = (index: number) => {
-    const container = scrollerRef.current;
-    if (!container) return;
-    const card = container.querySelector<HTMLElement>("[data-review-card]");
-    if (!card) return;
-    const width = card.offsetWidth + 24;
-    container.scrollTo({ left: index * width, behavior: "smooth" });
-  };
-
-  const scrollByCard = (direction: 1 | -1) => {
-    const container = scrollerRef.current;
-    if (!container) return;
-    const card = container.querySelector<HTMLElement>("[data-review-card]");
-    const step = card ? card.offsetWidth + 24 : container.clientWidth * 0.8;
-    container.scrollBy({ left: direction * step, behavior: "smooth" });
-  };
-
   return (
     <section className="py-20 md:py-32 bg-secondary/10 relative overflow-hidden">
       <div className="absolute -top-20 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[80px] pointer-events-none" />
@@ -113,45 +94,10 @@ export default function GoogleReviews() {
           </div>
         </FadeIn>
 
-        <div className="relative">
-          <button
-            type="button"
-            onClick={() => scrollByCard(-1)}
-            aria-label="Previous review"
-            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 w-12 h-12 items-center justify-center rounded-full bg-white text-secondary border border-secondary/10 shadow-lg shadow-secondary/10 hover:bg-primary hover:text-white hover:border-transparent transition-all"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <button
-            type="button"
-            onClick={() => scrollByCard(1)}
-            aria-label="Next review"
-            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-20 w-12 h-12 items-center justify-center rounded-full bg-white text-secondary border border-secondary/10 shadow-lg shadow-secondary/10 hover:bg-primary hover:text-white hover:border-transparent transition-all"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
-
-          <div
-            className="-mx-4 px-4 overflow-x-auto overflow-y-visible [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-            style={{ overscrollBehaviorX: "contain", touchAction: "pan-y pan-x" }}
-          >
-            <div className="flex items-center justify-between gap-3 px-1 mb-3 md:hidden text-secondary/70">
-              <span className="text-xs font-bold uppercase tracking-[0.2em]">Swipe to see more</span>
-              <div className="flex items-center gap-1.5">
-                {reviews.map((_, index) => (
-                  <button
-                    key={index}
-                    type="button"
-                    onClick={() => scrollToReview(index)}
-                    aria-label={`Scroll to review ${index + 1}`}
-                    className="h-2.5 w-2.5 rounded-full bg-secondary/30 hover:bg-primary transition-colors"
-                  />
-                ))}
-              </div>
-            </div>
-            <div ref={scrollerRef} className="flex gap-6 md:gap-8 w-max min-w-full">
+        <div className="-mx-4 px-4 overflow-x-auto overflow-y-visible [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" style={{ overscrollBehaviorX: "contain", touchAction: "pan-y pan-x" }}>
+          <div className="flex gap-6 md:gap-8 pb-4 w-max min-w-full">
             {reviews.map((r, i) => (
-            <div key={r.name} data-review-card className="snap-start shrink-0 w-[85vw] sm:w-[420px] md:w-[460px]">
+            <div key={r.name} className="snap-start shrink-0 w-[85vw] sm:w-[420px] md:w-[460px]">
               <article className="h-full flex flex-col bg-secondary/5 rounded-3xl p-7 md:p-8 border border-secondary/10 shadow-xl shadow-secondary/5">
                 <div className="flex items-start justify-between mb-5">
                   <div className="flex items-center gap-3">
