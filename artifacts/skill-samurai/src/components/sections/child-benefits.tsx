@@ -14,33 +14,21 @@ export default function ChildBenefits() {
       color: "bg-accent"
     },
     {
-      icon: <Code className="h-8 w-8 text-white" />,
-      title: "Focus",
-      desc: "Coding helps kids stay engaged, follow through, and build attention on tasks that matter.",
-      color: "bg-primary"
-    },
-    {
       icon: <Lightbulb className="h-8 w-8 text-white" />,
       title: "Confidence",
       desc: "When they build something real, they start believing they can tackle harder things too.",
-      color: "bg-[#F59100]"
+      color: "bg-primary"
     },
     {
       icon: <Code className="h-8 w-8 text-white" />,
       title: "Teamwork",
       desc: "Group projects help them listen, collaborate, and support each other through challenges.",
-      color: "bg-primary"
-    },
-    {
-      icon: <Lightbulb className="h-8 w-8 text-white" />,
-      title: "Creativity",
-      desc: "They get to imagine, design, and build their own ideas from scratch.",
       color: "bg-[#F59100]"
     },
     {
       icon: <Rocket className="h-8 w-8 text-white" />,
-      title: "Resilience",
-      desc: "When something breaks, they learn how to try again, adjust, and keep going.",
+      title: "Creativity",
+      desc: "They get to imagine, design, and build their own ideas from scratch.",
       color: "bg-secondary"
     }
   ];

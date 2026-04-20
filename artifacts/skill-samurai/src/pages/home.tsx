@@ -6,7 +6,6 @@ import MediaBanner from "@/components/sections/media-banner";
 import StatsStrip from "@/components/sections/stats-strip";
 import Relatability from "@/components/sections/relatability";
 import ChildBenefits from "@/components/sections/child-benefits";
-import ParentBenefits from "@/components/sections/parent-benefits";
 import BeforeAfter from "@/components/sections/before-after";
 import Proof from "@/components/sections/proof";
 import GoogleReviews from "@/components/sections/google-reviews";
@@ -30,13 +29,12 @@ export default function Home() {
         <BeforeAfter />
         <Proof />
         <GoogleReviews />
-        <ParentBenefits />
         <Schedule />
         <WeeklyClasses />
         <HowItWorks />
         <Locations />
-        <FinalCta />
         <CommunitySchools />
+        <FinalCta />
       </main>
       <Footer />
     </div>
