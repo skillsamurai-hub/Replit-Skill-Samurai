@@ -59,11 +59,11 @@ export default function Relatability() {
           <div className="absolute top-0 left-0 w-full h-full bg-primary/10"></div>
           <div className="absolute -top-20 -right-20 w-60 h-60 bg-accent rounded-full blur-[60px] opacity-40"></div>
           <div className="relative z-10">
-            <h3 className="text-3xl md:text-5xl font-black uppercase font-heading mb-6 leading-tight tracking-tight">
+            <h3 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase font-heading mb-8 leading-[1.05] tracking-tight">
               <span className="text-white block">THAT'S EXACTLY WHY</span>
               <span className="text-accent block">WE BUILT SKILL SAMURAI</span>
             </h3>
-            <p className="text-lg md:text-2xl text-white/90 max-w-2xl mx-auto font-medium">
+            <p className="text-lg md:text-2xl lg:text-3xl text-white/90 max-w-4xl mx-auto font-medium leading-snug">
               Your child already loves being on screens. We turn that into something you can actually feel good about.
             </p>
           </div>
