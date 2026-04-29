@@ -6,7 +6,7 @@ import { GraduationCap, HeartHandshake, Building2 } from "lucide-react";
 
 export default function SchoolsCommunityPage() {
   return (
-    <div className="flex min-h-[100dvh] flex-col overflow-x-hidden">
+    <div className="flex min-h-[100dvh] flex-col overflow-x-clip">
       <Navbar />
       <main className="flex-1">
         <section className="relative overflow-hidden bg-secondary text-white py-24 md:py-32">

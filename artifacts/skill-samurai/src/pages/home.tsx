@@ -17,7 +17,7 @@ import FinalCta from "@/components/sections/final-cta";
 
 export default function Home() {
   return (
-    <div className="flex min-h-[100dvh] flex-col overflow-x-hidden">
+    <div className="flex min-h-[100dvh] flex-col overflow-x-clip">
       <Navbar />
       <main className="flex-1">
         <Hero />
