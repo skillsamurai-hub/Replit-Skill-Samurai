@@ -36,6 +36,8 @@ export default function SchoolsCommunityPage() {
                   icon: GraduationCap,
                   title: "For Schools",
                   desc: "Curriculum-aligned coding and robotics workshops, after-school programs, and full-semester enrichment for K–12.",
+                  ctaLabel: "Learn More",
+                  ctaHref: "https://meetings.hubspot.com/skillsamurai/school-hour-of-code",
                 },
                 {
                   icon: HeartHandshake,
@@ -49,7 +51,7 @@ export default function SchoolsCommunityPage() {
                 },
               ].map((item, i) => (
                 <FadeIn key={item.title} delay={i * 0.1} direction="up">
-                  <div className="h-full bg-white rounded-3xl p-7 border-[3px] border-secondary/15 shadow-xl shadow-secondary/10 hover:-translate-y-1 hover:border-primary/40 transition-all duration-300">
+                  <div className="h-full flex flex-col bg-white rounded-3xl p-7 border-[3px] border-secondary/15 shadow-xl shadow-secondary/10 hover:-translate-y-1 hover:border-primary/40 transition-all duration-300">
                     <div className="h-14 w-14 rounded-2xl bg-primary flex items-center justify-center mb-5 shadow-lg rotate-3">
                       <item.icon className="h-7 w-7 text-white" strokeWidth={2} />
                     </div>
@@ -59,6 +61,16 @@ export default function SchoolsCommunityPage() {
                     <p className="text-muted-foreground font-medium leading-relaxed">
                       {item.desc}
                     </p>
+                    {item.ctaHref && (
+                      <a
+                        href={item.ctaHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-5 inline-flex items-center justify-center self-start rounded-full bg-primary hover:bg-primary/90 text-white px-5 py-2.5 text-xs font-black uppercase tracking-wide shadow-lg shadow-primary/30 transition-all"
+                      >
+                        {item.ctaLabel}
+                      </a>
+                    )}
                   </div>
                 </FadeIn>
               ))}
