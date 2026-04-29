@@ -1,11 +1,28 @@
 import React, { useState } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logoUrl from "@assets/SkillSamurai_Logo_Full_(1)_(1)_(1)_1776400767722.png";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(false);
+  const [, navigate] = useLocation();
+
+  const handleHashNav = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const hash = href.split("#")[1];
+    setOpen(false);
+    if (window.location.pathname === "/") {
+      const el = document.getElementById(hash);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/");
+      setTimeout(() => {
+        const el = document.getElementById(hash);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 120);
+    }
+  };
 
   const links = [
     { href: "/#how-it-works", label: "How It Works" },
@@ -51,7 +68,8 @@ export default function Navbar() {
           >
             <a
               href="/#weekly-classes"
-              className="inline-flex items-center gap-1 text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors"
+              onClick={(e) => handleHashNav(e, "/#weekly-classes")}
+              className="inline-flex items-center gap-1 text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors cursor-pointer"
               aria-haspopup="true"
               aria-expanded={programsOpen}
             >
@@ -98,6 +116,15 @@ export default function Navbar() {
               >
                 {link.label}
               </Link>
+            ) : link.href.includes("#") ? (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={(e) => handleHashNav(e, link.href)}
+                className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors cursor-pointer"
+              >
+                {link.label}
+              </a>
             ) : (
               <a
                 key={link.href}
@@ -135,8 +162,8 @@ export default function Navbar() {
             <div>
               <a
                 href="/#weekly-classes"
-                className="text-base font-semibold text-white"
-                onClick={() => setOpen(false)}
+                onClick={(e) => handleHashNav(e, "/#weekly-classes")}
+                className="text-base font-semibold text-white cursor-pointer"
               >
                 Programs
               </a>
@@ -175,6 +202,15 @@ export default function Navbar() {
                 >
                   {link.label}
                 </Link>
+              ) : link.href.includes("#") ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => handleHashNav(e, link.href)}
+                  className="text-base font-semibold text-white cursor-pointer"
+                >
+                  {link.label}
+                </a>
               ) : (
                 <a
                   key={link.href}
