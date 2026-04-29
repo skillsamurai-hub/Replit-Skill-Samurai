@@ -43,6 +43,8 @@ export default function SchoolsCommunityPage() {
                   icon: HeartHandshake,
                   title: "For Non-Profits",
                   desc: "Sponsored seats, flexible group rates, and co-hosted community events that make tech education accessible.",
+                  ctaLabel: "Learn More",
+                  ctaHref: "https://meetings.hubspot.com/skillsamurai/non-profit-workshop",
                 },
                 {
                   icon: Building2,
