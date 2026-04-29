@@ -1,6 +1,6 @@
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { Clock, Users, CalendarDays, Tag, ArrowRight } from "lucide-react";
+import { Clock, Users, CalendarDays, Tag, ArrowRight, CalendarCheck } from "lucide-react";
 
 export default function Schedule() {
   const facts = [
@@ -70,7 +70,16 @@ export default function Schedule() {
           ))}
         </div>
 
-        <FadeIn delay={0.4} className="mt-12 text-center">
+        <FadeIn delay={0.4} className="mt-12 flex flex-col items-center gap-4">
+          <a
+            href="https://canva.link/17rddy244ftzthp"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-secondary/70 hover:text-primary font-semibold text-sm transition-colors"
+          >
+            <CalendarCheck className="h-4 w-4" />
+            See this month's live parent calendar
+          </a>
           <a
             href="#locations"
             className="inline-flex items-center justify-center gap-2 text-primary font-bold text-lg hover:gap-3 transition-all"
