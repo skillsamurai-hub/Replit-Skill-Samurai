@@ -116,7 +116,7 @@ export default function WeeklyClasses() {
 
         <FadeIn delay={0.2} className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
-            href="https://link.skillsamurai.com/widget/booking/Ku7skA5XAkgQpg8rQqN1"
+            href="https://winnipeg.jumbula.com/north-east-coding-classes"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-primary hover:bg-primary/90 text-white px-7 py-3.5 text-sm font-bold uppercase tracking-wide shadow-lg shadow-primary/30 transition-all"
@@ -125,7 +125,7 @@ export default function WeeklyClasses() {
             Enroll · North East
           </a>
           <a
-            href="https://link.skillsamurai.com/widget/booking/uLciDSsBTUDqpqKRDaZq"
+            href="https://winnipeg.jumbula.com/seven-oaks-coding-classes"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-primary hover:bg-primary/90 text-white px-7 py-3.5 text-sm font-bold uppercase tracking-wide shadow-lg shadow-primary/30 transition-all"
