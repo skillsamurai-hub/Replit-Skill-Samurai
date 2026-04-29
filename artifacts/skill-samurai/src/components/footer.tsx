@@ -176,17 +176,17 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#weekly-classes" className="hover:text-primary transition-colors">
+                  <a href="/#weekly-classes" className="hover:text-primary transition-colors">
                     Programs
                   </a>
                 </li>
                 <li>
-                  <a href="#community-schools" className="hover:text-primary transition-colors">
+                  <a href="/schools-community" className="hover:text-primary transition-colors">
                     School Workshops
                   </a>
                 </li>
                 <li>
-                  <a href="#community-schools" className="hover:text-primary transition-colors">
+                  <a href="/schools-community" className="hover:text-primary transition-colors">
                     Non-Profit Partnerships
                   </a>
                 </li>

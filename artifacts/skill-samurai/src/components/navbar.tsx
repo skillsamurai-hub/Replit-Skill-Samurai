@@ -8,9 +8,9 @@ export default function Navbar() {
   const [programsOpen, setProgramsOpen] = useState(false);
 
   const links = [
-    { href: "#how-it-works", label: "How It Works" },
-    { href: "#relatability", label: "Why Us" },
-    { href: "#proof", label: "Results" },
+    { href: "/#how-it-works", label: "How It Works" },
+    { href: "/#relatability", label: "Why Us" },
+    { href: "/#proof", label: "Results" },
     { href: "/faq", label: "FAQ" },
     { href: "https://canva.link/17rddy244ftzthp", label: "Calendar", external: true as const },
   ];
@@ -50,7 +50,7 @@ export default function Navbar() {
             onMouseLeave={() => setProgramsOpen(false)}
           >
             <a
-              href="#weekly-classes"
+              href="/#weekly-classes"
               className="inline-flex items-center gap-1 text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors"
               aria-haspopup="true"
               aria-expanded={programsOpen}
@@ -134,7 +134,7 @@ export default function Navbar() {
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
             <div>
               <a
-                href="#weekly-classes"
+                href="/#weekly-classes"
                 className="text-base font-semibold text-white"
                 onClick={() => setOpen(false)}
               >
