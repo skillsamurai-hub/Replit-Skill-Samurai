@@ -50,6 +50,8 @@ export default function SchoolsCommunityPage() {
                   icon: Building2,
                   title: "For Community Groups",
                   desc: "Pop-up Hour of Code events, summer camps, and family STEM days tailored to your group.",
+                  ctaLabel: "Learn More",
+                  ctaHref: "https://meetings.hubspot.com/skillsamurai/community-workshop",
                 },
               ].map((item, i) => (
                 <FadeIn key={item.title} delay={i * 0.1} direction="up">
