@@ -11,6 +11,7 @@ export default function Navbar() {
     { href: "#relatability", label: "Why Skill Samurai" },
     { href: "#how-it-works", label: "How It Works" },
     { href: "#proof", label: "Results" },
+    { href: "https://canva.link/17rddy244ftzthp", label: "Calendar", external: true as const },
     { href: "/faq", label: "FAQ" },
   ];
 
@@ -56,6 +57,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
+                {...("external" in link && link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors"
               >
                 {link.label}
@@ -144,6 +146,7 @@ export default function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
+                  {...("external" in link && link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className="text-base font-semibold text-white"
                   onClick={() => setOpen(false)}
                 >
