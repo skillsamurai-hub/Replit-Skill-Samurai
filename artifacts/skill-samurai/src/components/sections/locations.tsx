@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { MapPin, Clock, ArrowRight, CalendarClock, Sparkles, CalendarCheck } from "lucide-react";
+import CalendarModal from "@/components/ui/calendar-modal";
 
 const locations = [
   {
@@ -30,6 +31,7 @@ const locations = [
 const programTags = ["Roblox", "Minecraft", "Game Design"];
 
 export default function Locations() {
+  const [calendarOpen, setCalendarOpen] = useState(false);
   return (
     <section id="locations" className="py-20 md:py-28 bg-secondary relative overflow-hidden">
       <div className="absolute -top-20 -right-20 w-96 h-96 bg-primary/15 rounded-full blur-[80px] pointer-events-none" />
@@ -151,15 +153,14 @@ export default function Locations() {
             Already a student? Check class updates or reschedule a missed class.
           </p>
           <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
-            <a
-              href="https://canva.link/17rddy244ftzthp"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-secondary bg-accent hover:bg-accent/90 transition-all"
+            <button
+              type="button"
+              onClick={() => setCalendarOpen(true)}
+              className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-secondary bg-accent hover:bg-accent/90 transition-all cursor-pointer"
             >
               <CalendarCheck className="h-4 w-4" />
               Live Parent Calendar
-            </a>
+            </button>
             <a
               href={locations[0].makeupHref}
               target="_blank"
@@ -185,6 +186,7 @@ export default function Locations() {
           </p>
         </FadeIn>
       </div>
+      <CalendarModal open={calendarOpen} onClose={() => setCalendarOpen(false)} />
     </section>
   );
 }

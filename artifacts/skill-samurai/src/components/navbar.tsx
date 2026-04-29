@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logoUrl from "@assets/SkillSamurai_Logo_Full_(1)_(1)_(1)_1776400767722.png";
+import CalendarModal from "@/components/ui/calendar-modal";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(false);
+  const [calendarOpen, setCalendarOpen] = useState(false);
   const [, navigate] = useLocation();
 
   const handleHashNav = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -29,7 +31,6 @@ export default function Navbar() {
     { href: "/#relatability", label: "Why Us" },
     { href: "/#proof", label: "Results" },
     { href: "/faq", label: "FAQ" },
-    { href: "https://canva.link/17rddy244ftzthp", label: "Calendar", external: true as const },
   ];
 
   const programLinks = [
@@ -136,6 +137,13 @@ export default function Navbar() {
               </a>
             )
           )}
+          <button
+            type="button"
+            onClick={() => setCalendarOpen(true)}
+            className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors cursor-pointer"
+          >
+            Calendar
+          </button>
         </nav>
         <div className="flex items-center gap-3">
           <a
@@ -223,9 +231,17 @@ export default function Navbar() {
                 </a>
               )
             )}
+            <button
+              type="button"
+              onClick={() => { setCalendarOpen(true); setOpen(false); }}
+              className="text-base font-semibold text-white text-left cursor-pointer"
+            >
+              Calendar
+            </button>
           </div>
         </div>
       )}
+      <CalendarModal open={calendarOpen} onClose={() => setCalendarOpen(false)} />
     </header>
   );
 }
