@@ -8,21 +8,21 @@ export default function Navbar() {
   const [programsOpen, setProgramsOpen] = useState(false);
 
   const links = [
-    { href: "#relatability", label: "Why Skill Samurai" },
     { href: "#how-it-works", label: "How It Works" },
+    { href: "#relatability", label: "Why Us" },
     { href: "#proof", label: "Results" },
-    { href: "https://canva.link/17rddy244ftzthp", label: "Calendar", external: true as const },
     { href: "/faq", label: "FAQ" },
+    { href: "https://canva.link/17rddy244ftzthp", label: "Calendar", external: true as const },
   ];
 
   const programLinks = [
     {
-      href: "https://link.skillsamurai.com/widget/booking/Ku7skA5XAkgQpg8rQqN1",
+      href: "https://winnipeg.jumbula.com/north-east-coding-classes",
       label: "North East Location",
       external: true,
     },
     {
-      href: "https://link.skillsamurai.com/widget/booking/uLciDSsBTUDqpqKRDaZq",
+      href: "https://winnipeg.jumbula.com/seven-oaks-coding-classes",
       label: "Seven Oaks Location",
       external: true,
     },
@@ -44,26 +44,6 @@ export default function Navbar() {
           />
         </Link>
         <nav className="hidden lg:flex items-center gap-8">
-          {links.map((link) =>
-            link.href.startsWith("/") ? (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors"
-              >
-                {link.label}
-              </Link>
-            ) : (
-              <a
-                key={link.href}
-                href={link.href}
-                {...("external" in link && link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors"
-              >
-                {link.label}
-              </a>
-            )
-          )}
           <div
             className="relative"
             onMouseEnter={() => setProgramsOpen(true)}
@@ -109,6 +89,26 @@ export default function Navbar() {
               </div>
             </div>
           </div>
+          {links.map((link) =>
+            link.href.startsWith("/") ? (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors"
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                {...("external" in link && link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors"
+              >
+                {link.label}
+              </a>
+            )
+          )}
         </nav>
         <div className="flex items-center gap-3">
           <a
@@ -132,28 +132,6 @@ export default function Navbar() {
       {open && (
         <div className="lg:hidden border-t border-white/10 bg-secondary/95 backdrop-blur-md">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-            {links.map((link) =>
-              link.href.startsWith("/") ? (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-base font-semibold text-white"
-                  onClick={() => setOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ) : (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  {...("external" in link && link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  className="text-base font-semibold text-white"
-                  onClick={() => setOpen(false)}
-                >
-                  {link.label}
-                </a>
-              )
-            )}
             <div>
               <a
                 href="#weekly-classes"
@@ -187,6 +165,28 @@ export default function Navbar() {
                 )}
               </div>
             </div>
+            {links.map((link) =>
+              link.href.startsWith("/") ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-base font-semibold text-white"
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  {...("external" in link && link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  className="text-base font-semibold text-white"
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </a>
+              )
+            )}
           </div>
         </div>
       )}
