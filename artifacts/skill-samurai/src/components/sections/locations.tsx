@@ -1,6 +1,6 @@
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { MapPin, Clock, ArrowRight, CalendarClock, Sparkles } from "lucide-react";
+import { MapPin, Clock, ArrowRight, CalendarClock, Sparkles, CalendarCheck } from "lucide-react";
 
 const locations = [
   {
@@ -148,9 +148,18 @@ export default function Locations() {
 
         <FadeIn delay={0.25} className="mt-8 md:mt-10 text-center">
           <p className="text-sm md:text-base text-white/70 font-medium mb-3">
-            Already a student? Need to reschedule a missed class?
+            Already a student? Need to reschedule or check upcoming dates?
           </p>
           <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+            <a
+              href="https://canva.link/17rddy244ftzthp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-secondary bg-accent hover:bg-accent/90 transition-all"
+            >
+              <CalendarCheck className="h-4 w-4" />
+              Live Parent Calendar
+            </a>
             <a
               href={locations[0].makeupHref}
               target="_blank"
