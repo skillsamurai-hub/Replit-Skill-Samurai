@@ -7,6 +7,7 @@ import { openCalendarPopup } from "@/components/ui/calendar-modal";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
   const [, navigate] = useLocation();
 
   const handleHashNav = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -50,6 +51,11 @@ export default function Navbar() {
     },
   ];
 
+  const resourceLinks = [
+    { label: "Blog", href: "/blog", type: "internal" as const },
+    { label: "Parent Calendar", href: null, type: "popup" as const },
+  ];
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-secondary/95 backdrop-blur-md">
       <div className="container mx-auto px-4 h-24 flex items-center justify-between gap-4">
@@ -60,7 +66,10 @@ export default function Navbar() {
             className="h-20 w-auto group-hover:scale-105 transition-transform duration-300"
           />
         </Link>
+
+        {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-8">
+          {/* Programs dropdown */}
           <div
             className="relative"
             onMouseEnter={() => setProgramsOpen(true)}
@@ -83,7 +92,7 @@ export default function Navbar() {
             >
               <div className="bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
                 {programLinks.map((p) =>
-                  p.href.startsWith("/") ? (
+                  p.href.startsWith("/") && !p.external ? (
                     <Link
                       key={p.label}
                       href={p.href}
@@ -96,7 +105,8 @@ export default function Navbar() {
                     <a
                       key={p.label}
                       href={p.href}
-                      {...(p.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       onClick={() => setProgramsOpen(false)}
                       className="block px-5 py-3.5 text-sm font-semibold text-secondary hover:bg-primary hover:text-white transition-colors border-b border-border last:border-b-0"
                     >
@@ -107,6 +117,8 @@ export default function Navbar() {
               </div>
             </div>
           </div>
+
+          {/* Static links */}
           {links.map((link) =>
             link.href.startsWith("/") && !link.href.includes("#") ? (
               <Link
@@ -129,21 +141,60 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                {...("external" in link && link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors"
               >
                 {link.label}
               </a>
             )
           )}
-          <button
-            type="button"
-            onClick={() => openCalendarPopup()}
-            className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors cursor-pointer"
+
+          {/* Resources dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setResourcesOpen(true)}
+            onMouseLeave={() => setResourcesOpen(false)}
           >
-            Calendar
-          </button>
+            <button
+              type="button"
+              className="inline-flex items-center gap-1 text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors cursor-pointer"
+              aria-haspopup="true"
+              aria-expanded={resourcesOpen}
+            >
+              Resources
+              <ChevronDown className={`h-4 w-4 transition-transform ${resourcesOpen ? "rotate-180" : ""}`} />
+            </button>
+            <div
+              className={`absolute left-1/2 -translate-x-1/2 top-full pt-3 min-w-[220px] transition-all ${
+                resourcesOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
+              }`}
+            >
+              <div className="bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
+                {resourceLinks.map((r) =>
+                  r.type === "internal" ? (
+                    <Link
+                      key={r.label}
+                      href={r.href!}
+                      onClick={() => setResourcesOpen(false)}
+                      className="block px-5 py-3.5 text-sm font-semibold text-secondary hover:bg-primary hover:text-white transition-colors border-b border-border last:border-b-0"
+                    >
+                      {r.label}
+                    </Link>
+                  ) : (
+                    <button
+                      key={r.label}
+                      type="button"
+                      onClick={() => { openCalendarPopup(); setResourcesOpen(false); }}
+                      className="w-full text-left block px-5 py-3.5 text-sm font-semibold text-secondary hover:bg-primary hover:text-white transition-colors border-b border-border last:border-b-0 cursor-pointer"
+                    >
+                      {r.label}
+                    </button>
+                  )
+                )}
+              </div>
+            </div>
+          </div>
         </nav>
+
         <div className="flex items-center gap-3">
           <a
             href="/#locations"
@@ -163,9 +214,12 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+
+      {/* Mobile menu */}
       {open && (
         <div className="lg:hidden border-t border-white/10 bg-secondary/95 backdrop-blur-md">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
+            {/* Programs */}
             <div>
               <a
                 href="/#weekly-classes"
@@ -176,7 +230,7 @@ export default function Navbar() {
               </a>
               <div className="mt-3 ml-4 flex flex-col gap-3 border-l border-white/15 pl-4">
                 {programLinks.map((p) =>
-                  p.href.startsWith("/") ? (
+                  p.href.startsWith("/") && !p.external ? (
                     <Link
                       key={p.label}
                       href={p.href}
@@ -189,7 +243,8 @@ export default function Navbar() {
                     <a
                       key={p.label}
                       href={p.href}
-                      {...(p.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-sm font-medium text-white/80 hover:text-primary"
                       onClick={() => setOpen(false)}
                     >
@@ -199,6 +254,8 @@ export default function Navbar() {
                 )}
               </div>
             </div>
+
+            {/* Static links */}
             {links.map((link) =>
               link.href.startsWith("/") && !link.href.includes("#") ? (
                 <Link
@@ -222,7 +279,6 @@ export default function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  {...("external" in link && link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className="text-base font-semibold text-white"
                   onClick={() => setOpen(false)}
                 >
@@ -230,13 +286,27 @@ export default function Navbar() {
                 </a>
               )
             )}
-            <button
-              type="button"
-              onClick={() => { openCalendarPopup(); setOpen(false); }}
-              className="text-base font-semibold text-white text-left cursor-pointer"
-            >
-              Calendar
-            </button>
+
+            {/* Resources group */}
+            <div>
+              <span className="text-base font-semibold text-white">Resources</span>
+              <div className="mt-3 ml-4 flex flex-col gap-3 border-l border-white/15 pl-4">
+                <Link
+                  href="/blog"
+                  className="text-sm font-medium text-white/80 hover:text-primary"
+                  onClick={() => setOpen(false)}
+                >
+                  Blog
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => { openCalendarPopup(); setOpen(false); }}
+                  className="text-sm font-medium text-white/80 hover:text-primary text-left cursor-pointer"
+                >
+                  Parent Calendar
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       )}
