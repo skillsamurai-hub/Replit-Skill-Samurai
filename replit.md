@@ -16,6 +16,19 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
 
+## Artifacts
+
+### Skill Samurai Winnipeg (`artifacts/skill-samurai`)
+- **Framework**: Next.js 15 (App Router) with static export (`output: 'export'`)
+- **Styling**: Tailwind CSS v4 via PostCSS (`@tailwindcss/postcss`)
+- **Routing**: Next.js file-based routing in `app/` directory
+- **Components**: React components in `src/components/` with `'use client'` for all interactive components
+- **SEO**: Server-side rendered HTML with per-page `metadata` exports; full SSR on every request in dev, static HTML at build time
+- **Images**: `@assets` alias → `../../attached_assets/`; webpack alias in `next.config.ts`
+- **Port**: 22075
+- **Pages**: `/` (Home), `/faq`, `/schools-community`, `/blog`
+- **Brand**: Hot pink `hsl(335 84% 59%)`, navy `hsl(218 42% 29%)`, orange `#F59100`
+
 ## Key Commands
 
 - `pnpm run typecheck` — full typecheck across all packages

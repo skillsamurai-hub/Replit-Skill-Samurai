@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useId, useState } from "react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { Plus } from "lucide-react";

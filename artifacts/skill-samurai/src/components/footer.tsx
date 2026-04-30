@@ -1,5 +1,7 @@
+"use client";
+
 import React from "react";
-import { Link } from "wouter";
+import Link from "next/link";
 import {
   Facebook,
   Instagram,
@@ -58,7 +60,7 @@ export default function Footer() {
               data-testid="link-footer-home"
             >
               <img
-                src={logoUrl}
+                src={logoUrl.src ?? logoUrl}
                 alt="Skill Samurai — Coding, Robotics & STEM Academy"
                 className="h-20 w-auto"
               />

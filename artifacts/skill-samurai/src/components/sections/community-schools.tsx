@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { HeartHandshake, GraduationCap, ArrowRight } from "lucide-react";

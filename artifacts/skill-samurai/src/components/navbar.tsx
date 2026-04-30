@@ -1,5 +1,8 @@
+"use client";
+
 import React, { useState } from "react";
-import { Link, useLocation } from "wouter";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logoUrl from "@assets/SkillSamurai_Logo_Full_(1)_(1)_(1)_1776400767722.png";
 import { openCalendarModal } from "@/components/ui/calendar-modal";
@@ -8,17 +11,18 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
-  const [, navigate] = useLocation();
+  const pathname = usePathname();
+  const router = useRouter();
 
   const handleHashNav = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const hash = href.split("#")[1];
     setOpen(false);
-    if (window.location.pathname === "/") {
+    if (pathname === "/") {
       const el = document.getElementById(hash);
       if (el) el.scrollIntoView({ behavior: "smooth" });
     } else {
-      navigate("/");
+      router.push("/");
       setTimeout(() => {
         const el = document.getElementById(hash);
         if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -61,7 +65,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 h-24 flex items-center justify-between gap-4">
         <Link href="/" className="flex items-center group" data-testid="link-home">
           <img
-            src={logoUrl}
+            src={logoUrl.src ?? logoUrl}
             alt="Skill Samurai — Coding, Robotics & STEM Academy"
             className="h-20 w-auto group-hover:scale-105 transition-transform duration-300"
           />
@@ -69,7 +73,6 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-8">
-          {/* Static links */}
           {links.map((link) =>
             link.href.startsWith("/") && !link.href.includes("#") ? (
               <Link
@@ -219,7 +222,6 @@ export default function Navbar() {
       {open && (
         <div className="lg:hidden border-t border-white/10 bg-secondary/95 backdrop-blur-md">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-            {/* Static links */}
             {links.map((link) =>
               link.href.startsWith("/") && !link.href.includes("#") ? (
                 <Link
@@ -237,7 +239,7 @@ export default function Navbar() {
                   onClick={(e) => handleHashNav(e, link.href)}
                   className="text-base font-semibold text-white cursor-pointer"
                 >
-                  {link.label}
+                  {link.href.includes("weekly-classes") ? "Programs" : link.label}
                 </a>
               ) : (
                 <a

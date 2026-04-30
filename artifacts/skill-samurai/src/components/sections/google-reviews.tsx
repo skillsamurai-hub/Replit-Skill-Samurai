@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";

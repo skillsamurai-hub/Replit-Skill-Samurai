@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { MapPin, Clock, ArrowRight, CalendarClock, Sparkles, CalendarCheck } from "lucide-react";

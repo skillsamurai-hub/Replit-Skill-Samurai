@@ -22,10 +22,5 @@ build = [ "pnpm", "--filter", "@workspace/skill-samurai", "run", "build" ]
 publicDir = "artifacts/skill-samurai/dist/public"
 serve = "static"
 
-[[services.production.rewrites]]
-from = "/*"
-to = "/index.html"
-
 [services.env]
 PORT = "22075"
-BASE_PATH = "/"

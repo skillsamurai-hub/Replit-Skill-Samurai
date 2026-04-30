@@ -1,6 +1,3 @@
-import React from "react";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 import Hero from "@/components/sections/hero";
 import MediaBanner from "@/components/sections/media-banner";
 import StatsStrip from "@/components/sections/stats-strip";
@@ -15,26 +12,22 @@ import WeeklyClasses from "@/components/sections/weekly-classes";
 import Locations from "@/components/sections/locations";
 import FinalCta from "@/components/sections/final-cta";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-[100dvh] flex-col overflow-x-clip">
-      <Navbar />
-      <main className="flex-1">
-        <Hero />
-        <MediaBanner />
-        <Relatability />
-        <ChildBenefits />
-        <StatsStrip />
-        <BeforeAfter />
-        <WeeklyClasses />
-        <GoogleReviews />
-        <Proof />
-        <HowItWorks />
-        <Locations />
-        <Schedule />
-        <FinalCta />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <Hero />
+      <MediaBanner />
+      <Relatability />
+      <ChildBenefits />
+      <StatsStrip />
+      <BeforeAfter />
+      <WeeklyClasses />
+      <GoogleReviews />
+      <Proof />
+      <HowItWorks />
+      <Locations />
+      <Schedule />
+      <FinalCta />
+    </>
   );
 }

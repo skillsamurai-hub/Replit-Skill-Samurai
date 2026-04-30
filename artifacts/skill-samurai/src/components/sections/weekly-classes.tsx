@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef } from "react";
 import { FadeIn } from "@/components/ui/fade-in";
 import {
