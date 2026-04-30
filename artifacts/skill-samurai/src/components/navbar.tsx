@@ -58,6 +58,7 @@ export default function Navbar() {
   const resourceLinks = [
     { label: "FAQ", href: "/faq", type: "internal" as const },
     { label: "Blog", href: "/blog", type: "internal" as const },
+    { label: "Shop / Merch", href: "/shop", type: "internal" as const },
     { label: "Scratch Coding Classes", href: "https://www.youtube.com/@SkillSamuraiWinnipeg/playlists", type: "external" as const },
     { label: "Parent Calendar", href: null, type: "popup" as const },
   ];
@@ -320,6 +321,13 @@ export default function Navbar() {
                   onClick={() => setOpen(false)}
                 >
                   Blog
+                </Link>
+                <Link
+                  href="/shop"
+                  className="text-sm font-medium text-white/80 hover:text-primary"
+                  onClick={() => setOpen(false)}
+                >
+                  Shop / Merch
                 </Link>
                 <a
                   href="https://www.youtube.com/@SkillSamuraiWinnipeg/playlists"
