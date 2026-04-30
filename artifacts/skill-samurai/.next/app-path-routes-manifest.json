@@ -1,8 +1,8 @@
 {
   "/_not-found/page": "/_not-found",
   "/page": "/",
-  "/blog/page": "/blog",
   "/faq/page": "/faq",
-  "/schools-community/page": "/schools-community",
-  "/shop/page": "/shop"
+  "/shop/page": "/shop",
+  "/blog/page": "/blog",
+  "/schools-community/page": "/schools-community"
 }
