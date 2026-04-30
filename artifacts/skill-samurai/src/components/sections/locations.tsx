@@ -1,7 +1,7 @@
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { MapPin, Clock, ArrowRight, CalendarClock, Sparkles, CalendarCheck } from "lucide-react";
-import { openCalendarPopup } from "@/components/ui/calendar-modal";
+import { openCalendarModal } from "@/components/ui/calendar-modal";
 
 const locations = [
   {
@@ -154,7 +154,7 @@ export default function Locations() {
           <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
             <button
               type="button"
-              onClick={() => openCalendarPopup()}
+              onClick={() => openCalendarModal()}
               className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wide text-secondary bg-accent hover:bg-accent/90 transition-all cursor-pointer"
             >
               <CalendarCheck className="h-4 w-4" />

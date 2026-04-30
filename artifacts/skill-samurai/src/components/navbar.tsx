@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logoUrl from "@assets/SkillSamurai_Logo_Full_(1)_(1)_(1)_1776400767722.png";
-import { openCalendarPopup } from "@/components/ui/calendar-modal";
+import { openCalendarModal } from "@/components/ui/calendar-modal";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -183,7 +183,7 @@ export default function Navbar() {
                     <button
                       key={r.label}
                       type="button"
-                      onClick={() => { openCalendarPopup(); setResourcesOpen(false); }}
+                      onClick={() => { openCalendarModal(); setResourcesOpen(false); }}
                       className="w-full text-left block px-5 py-3.5 text-sm font-semibold text-secondary hover:bg-primary hover:text-white transition-colors border-b border-border last:border-b-0 cursor-pointer"
                     >
                       {r.label}
@@ -300,7 +300,7 @@ export default function Navbar() {
                 </Link>
                 <button
                   type="button"
-                  onClick={() => { openCalendarPopup(); setOpen(false); }}
+                  onClick={() => { openCalendarModal(); setOpen(false); }}
                   className="text-sm font-medium text-white/80 hover:text-primary text-left cursor-pointer"
                 >
                   Parent Calendar
