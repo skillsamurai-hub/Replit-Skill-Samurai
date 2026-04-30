@@ -4,6 +4,7 @@ import { Providers } from "./providers";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { CalendarModal } from "@/components/ui/calendar-modal";
+import { BookingModal } from "@/components/ui/booking-modal";
 
 export const metadata: Metadata = {
   title: "Skill Samurai Winnipeg | Coding & STEM Classes for Kids Ages 6–18",
@@ -66,6 +67,7 @@ export default function RootLayout({
             <Footer />
           </div>
           <CalendarModal />
+          <BookingModal />
         </Providers>
       </body>
     </html>

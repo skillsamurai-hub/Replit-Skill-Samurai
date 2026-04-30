@@ -6,6 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logoUrl from "@assets/SkillSamurai_Logo_Full_(1)_(1)_(1)_1776400767722.png";
 import { openCalendarModal } from "@/components/ui/calendar-modal";
+import { openBookingModal } from "@/components/ui/booking-modal";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -211,13 +212,14 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a
-            href="/#locations"
-            className="inline-flex h-10 sm:h-11 items-center justify-center whitespace-nowrap rounded-full bg-primary px-4 sm:px-8 text-xs sm:text-sm font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-lg active:scale-95"
+          <button
+            type="button"
+            onClick={openBookingModal}
+            className="inline-flex h-10 sm:h-11 items-center justify-center whitespace-nowrap rounded-full bg-primary px-4 sm:px-8 text-xs sm:text-sm font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-lg active:scale-95 cursor-pointer"
           >
             <span className="sm:hidden">FREE TRIAL</span>
             <span className="hidden sm:inline">BOOK A FREE SESSION</span>
-          </a>
+          </button>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}

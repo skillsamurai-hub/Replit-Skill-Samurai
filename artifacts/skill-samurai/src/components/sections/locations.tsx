@@ -32,6 +32,17 @@ const locations = [
 
 const programTags = ["Roblox", "Minecraft", "Game Design"];
 
+function openPopup(url: string) {
+  const w = 900, h = 700;
+  const left = Math.max(0, (window.screen.width - w) / 2);
+  const top = Math.max(0, (window.screen.height - h) / 2);
+  window.open(
+    url,
+    "SkillSamuraiBooking",
+    `width=${w},height=${h},left=${left},top=${top},resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,status=no`
+  );
+}
+
 export default function Locations() {
   return (
     <section id="locations" className="py-20 md:py-28 bg-secondary relative overflow-hidden">
@@ -62,12 +73,11 @@ export default function Locations() {
 
             return (
               <FadeIn key={loc.name} delay={i * 0.1} direction="up">
-                <a
-                  href={loc.bookHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
+                  onClick={() => openPopup(loc.bookHref)}
                   aria-label={`Book a free trial at Skill Samurai ${loc.name}`}
-                  className={`group block h-full bg-white rounded-3xl p-6 sm:p-8 border-2 border-white/20 ${ring} shadow-2xl shadow-black/30 hover:-translate-y-1 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-accent/60`}
+                  className={`group block w-full h-full text-left bg-white rounded-3xl p-6 sm:p-8 border-2 border-white/20 ${ring} shadow-2xl shadow-black/30 hover:-translate-y-1 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-accent/60 cursor-pointer`}
                 >
                   <div className="h-full flex flex-col">
                     <div className="flex items-center gap-3 mb-5">
@@ -143,7 +153,7 @@ export default function Locations() {
                       </p>
                     </div>
                   </div>
-                </a>
+                </button>
               </FadeIn>
             );
           })}
