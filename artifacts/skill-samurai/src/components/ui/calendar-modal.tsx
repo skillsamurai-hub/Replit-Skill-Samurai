@@ -73,16 +73,24 @@ export function CalendarModal() {
             View upcoming class dates, holiday closures, and schedule changes for the current session. This calendar is kept up to date for enrolled families.
           </p>
 
-          <a
-            href="https://canva.link/17rddy244ftzthp"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setOpen(false)}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-bold text-white shadow-md hover:bg-primary/90 hover:scale-105 active:scale-95 transition-all"
+          <button
+            type="button"
+            onClick={() => {
+              const w = 900, h = 700;
+              const left = Math.max(0, (window.screen.width - w) / 2);
+              const top = Math.max(0, (window.screen.height - h) / 2);
+              window.open(
+                "https://canva.link/17rddy244ftzthp",
+                "SkillSamuraiCalendar",
+                `width=${w},height=${h},left=${left},top=${top},resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,status=no`
+              );
+              setOpen(false);
+            }}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-bold text-white shadow-md hover:bg-primary/90 hover:scale-105 active:scale-95 transition-all cursor-pointer"
           >
             <ExternalLink className="h-4 w-4" />
             Open Calendar
-          </a>
+          </button>
 
           <button
             type="button"
