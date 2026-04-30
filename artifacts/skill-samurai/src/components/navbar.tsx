@@ -30,7 +30,6 @@ export default function Navbar() {
     { href: "/#how-it-works", label: "How It Works" },
     { href: "/#relatability", label: "Why Us" },
     { href: "/#proof", label: "Results" },
-    { href: "/faq", label: "FAQ" },
   ];
 
   const programLinks = [
@@ -53,6 +52,7 @@ export default function Navbar() {
 
   const resourceLinks = [
     { label: "Blog", href: "/blog", type: "internal" as const },
+    { label: "FAQ", href: "/faq", type: "internal" as const },
     { label: "Parent Calendar", href: null, type: "popup" as const },
   ];
 
@@ -297,6 +297,13 @@ export default function Navbar() {
                   onClick={() => setOpen(false)}
                 >
                   Blog
+                </Link>
+                <Link
+                  href="/faq"
+                  className="text-sm font-medium text-white/80 hover:text-primary"
+                  onClick={() => setOpen(false)}
+                >
+                  FAQ
                 </Link>
                 <button
                   type="button"
