@@ -12,9 +12,9 @@
       "static/chunks/dd38a621-bdb5e4bab05750c9.js",
       "static/chunks/253-2953007fccc8a8e7.js",
       "static/chunks/main-app-18fd9ce788bb6910.js",
-      "static/css/62f574fbbb82f56a.css",
+      "static/css/58cb903f8c45428c.css",
       "static/chunks/129-c18196993fc42cc4.js",
-      "static/chunks/app/layout-c80f882ee7924081.js"
+      "static/chunks/app/layout-396d10d1f3d55685.js"
     ],
     "/page": [
       "static/chunks/webpack-6f01d1ba13471ecc.js",
@@ -34,6 +34,22 @@
       "static/chunks/652-aed0e445350c4315.js",
       "static/chunks/app/faq/page-b65b28273bfb8e01.js"
     ],
+    "/blog/page": [
+      "static/chunks/webpack-6f01d1ba13471ecc.js",
+      "static/chunks/dd38a621-bdb5e4bab05750c9.js",
+      "static/chunks/253-2953007fccc8a8e7.js",
+      "static/chunks/main-app-18fd9ce788bb6910.js",
+      "static/chunks/652-aed0e445350c4315.js",
+      "static/chunks/app/blog/page-d51c1179bd58888f.js"
+    ],
+    "/careers/page": [
+      "static/chunks/webpack-6f01d1ba13471ecc.js",
+      "static/chunks/dd38a621-bdb5e4bab05750c9.js",
+      "static/chunks/253-2953007fccc8a8e7.js",
+      "static/chunks/main-app-18fd9ce788bb6910.js",
+      "static/chunks/652-aed0e445350c4315.js",
+      "static/chunks/app/careers/page-d51c1179bd58888f.js"
+    ],
     "/shop/page": [
       "static/chunks/webpack-6f01d1ba13471ecc.js",
       "static/chunks/dd38a621-bdb5e4bab05750c9.js",
@@ -42,21 +58,13 @@
       "static/chunks/652-aed0e445350c4315.js",
       "static/chunks/app/shop/page-5c1a65c6a4a9bcee.js"
     ],
-    "/blog/page": [
-      "static/chunks/webpack-6f01d1ba13471ecc.js",
-      "static/chunks/dd38a621-bdb5e4bab05750c9.js",
-      "static/chunks/253-2953007fccc8a8e7.js",
-      "static/chunks/main-app-18fd9ce788bb6910.js",
-      "static/chunks/652-aed0e445350c4315.js",
-      "static/chunks/app/blog/page-5f6a66f677696c26.js"
-    ],
     "/schools-community/page": [
       "static/chunks/webpack-6f01d1ba13471ecc.js",
       "static/chunks/dd38a621-bdb5e4bab05750c9.js",
       "static/chunks/253-2953007fccc8a8e7.js",
       "static/chunks/main-app-18fd9ce788bb6910.js",
       "static/chunks/652-aed0e445350c4315.js",
-      "static/chunks/app/schools-community/page-5f6a66f677696c26.js"
+      "static/chunks/app/schools-community/page-d51c1179bd58888f.js"
     ]
   }
 }

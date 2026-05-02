@@ -52,6 +52,12 @@
       "namedRegex": "^/blog(?:/)?$"
     },
     {
+      "page": "/careers",
+      "regex": "^/careers(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/careers(?:/)?$"
+    },
+    {
       "page": "/faq",
       "regex": "^/faq(?:/)?$",
       "routeKeys": {},
