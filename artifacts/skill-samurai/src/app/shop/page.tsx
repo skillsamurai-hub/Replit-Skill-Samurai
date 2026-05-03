@@ -26,7 +26,7 @@ export default function ShopPage() {
           <img
             src="/shop-banner.png"
             alt="Rep Skill Samurai — Tees, Hoodies, Hats and more. Shop now."
-            className="w-full h-auto max-h-[80vh] object-cover object-center"
+            className="w-full h-auto block"
           />
           {/* Hover overlay CTA */}
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30">
