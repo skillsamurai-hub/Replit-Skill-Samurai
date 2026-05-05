@@ -1,10 +1,12 @@
 {
   "/_not-found/page": "/_not-found",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/robots.txt/route": "/robots.txt",
   "/page": "/",
-  "/blog/page": "/blog",
   "/blog/[slug]/page": "/blog/[slug]",
+  "/blog/page": "/blog",
   "/faq/page": "/faq",
-  "/schools-community/page": "/schools-community",
   "/careers/page": "/careers",
+  "/schools-community/page": "/schools-community",
   "/shop/page": "/shop"
 }
