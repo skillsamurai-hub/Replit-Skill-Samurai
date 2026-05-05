@@ -13,8 +13,8 @@ const locations = [
     days: "Mon – Tue",
     times: "5:30pm & 6:30pm",
     timesDetail: "Two flexible after-school start times",
-    bookHref: "https://link.skillsamurai.com/widget/booking/SGsgwBr4folY53lMpMYc",
-    makeupHref: "https://link.skillsamurai.com/widget/booking/SGsgwBr4folY53lMpMYc",
+    bookHref: "https://link.skillsamurai.com/widget/booking/Ku7skA5XAkgQpg8rQqN1",
+    makeupHref: "https://link.skillsamurai.com/widget/booking/Ku7skA5XAkgQpg8rQqN1",
     accent: "secondary",
   },
   {
