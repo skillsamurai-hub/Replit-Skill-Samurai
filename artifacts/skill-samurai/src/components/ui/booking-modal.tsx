@@ -16,7 +16,7 @@ const locations = [
     name: "North East",
     address: "1199 Rothesay St.",
     days: "Mon – Tue",
-    href: "https://link.skillsamurai.com/widget/booking/Ku7skA5XAkgQpg8rQqN1",
+    href: "https://link.skillsamurai.com/widget/booking/SGsgwBr4folY53lMpMYc",
   },
   {
     name: "Seven Oaks",
