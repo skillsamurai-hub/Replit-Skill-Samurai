@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import React from "react";
-
+import FinalCta from "@/components/sections/final-cta";
 import { FadeIn } from "@/components/ui/fade-in";
 import { MapPin, Clock, Briefcase, Heart, Zap, Users, GraduationCap, CheckCircle2 } from "lucide-react";
 

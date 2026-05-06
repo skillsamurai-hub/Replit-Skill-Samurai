@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Clock, Tag, Calendar } from "lucide-react";
 import { posts, getPostBySlug } from "@/lib/blog-posts";
-
+import FinalCta from "@/components/sections/final-cta";
 import { FadeIn } from "@/components/ui/fade-in";
 
 export function generateStaticParams() {

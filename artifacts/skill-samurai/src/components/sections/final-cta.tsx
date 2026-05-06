@@ -17,6 +17,14 @@ export default function FinalCta() {
             <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-accent/20 rounded-full blur-[80px] pointer-events-none"></div>
 
             <div className="relative z-10">
+              <p className="text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-accent mb-4">
+                Free trial · No commitment
+              </p>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading text-white uppercase tracking-tight mb-5 leading-[1.05]">
+                Let your child try it.<br />
+                You'll see the <span className="text-primary">difference</span>.
+              </h2>
+
               <p className="text-lg md:text-xl text-white/80 font-medium max-w-2xl mx-auto mb-10">
                 One free hour. A real class, a real project, and a clear picture of what your child walks away with.
               </p>
