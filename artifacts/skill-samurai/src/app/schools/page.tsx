@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { GraduationCap, CheckCircle2, Calendar, Users, BookOpen, Award } from "lucide-react";
+import { GraduationCap, CheckCircle2, Calendar, Users, BookOpen, Award, Star } from "lucide-react";
 import FinalCta from "@/components/sections/final-cta";
 
 export const metadata: Metadata = {
@@ -132,6 +132,36 @@ export default function SchoolsPage() {
               </div>
             </FadeIn>
           </div>
+        </div>
+      </section>
+
+      {/* High School Co-op callout */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <FadeIn>
+            <div className="max-w-5xl mx-auto rounded-3xl bg-secondary p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-shrink-0 h-16 w-16 rounded-2xl bg-accent flex items-center justify-center shadow-lg">
+                <Star className="h-8 w-8 text-secondary" />
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <p className="text-accent font-bold tracking-wider uppercase text-xs mb-2">High School Co-op Program</p>
+                <h3 className="text-2xl md:text-3xl font-black font-heading text-white leading-tight mb-2">
+                  Your students can earn a high school credit here.
+                </h3>
+                <p className="text-white/70 font-medium leading-relaxed">
+                  Grade 10–12 students can volunteer as classroom assistants and earn <strong className="text-white">1 credit for every 100 hours</strong> — no coding experience required.
+                </p>
+              </div>
+              <a
+                href="https://meetings.hubspot.com/skillsamurai/studentcoopprogram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 inline-flex h-12 items-center justify-center rounded-full bg-accent px-7 text-sm font-black uppercase tracking-wide text-secondary shadow-lg shadow-accent/30 transition-all hover:opacity-90 hover:scale-105 active:scale-95 whitespace-nowrap"
+              >
+                Book an Interview
+              </a>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
