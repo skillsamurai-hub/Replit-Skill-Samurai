@@ -49,8 +49,13 @@ export default function Navbar() {
       external: true,
     },
     {
-      href: "/schools-community",
-      label: "Schools & Non-Profits",
+      href: "/schools",
+      label: "For Schools",
+      external: false,
+    },
+    {
+      href: "/non-profits",
+      label: "For Non-Profits & Community",
       external: false,
     },
   ];
