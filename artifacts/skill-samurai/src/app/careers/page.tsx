@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import React from "react";
 import FinalCta from "@/components/sections/final-cta";
 import { FadeIn } from "@/components/ui/fade-in";
-import { MapPin, Clock, Briefcase, Heart, Zap, Users } from "lucide-react";
+import { MapPin, Clock, Briefcase, Heart, Zap, Users, GraduationCap, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Careers | Skill Samurai Winnipeg",
@@ -105,6 +105,71 @@ export default function CareersPage() {
                 </div>
               </FadeIn>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* High School Co-op */}
+      <section className="py-20 md:py-28 bg-white border-y border-border">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <FadeIn>
+              <div className="inline-flex items-center gap-2 mb-5 px-4 py-2 rounded-full bg-accent/15 border border-accent/30">
+                <GraduationCap className="h-4 w-4 text-accent" />
+                <span className="text-accent font-bold tracking-wider uppercase text-xs">High School Co-op</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-secondary leading-tight mb-4">
+                Earn a high school credit while teaching kids to code.
+              </h2>
+              <p className="text-muted-foreground font-medium leading-relaxed mb-6">
+                We accept high school students through Manitoba's co-op and community service programs. Volunteer alongside our instructors, support students in class, and build real experience in education and technology.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "100 volunteer hours = 1 high school credit",
+                  "Work directly with our instructors",
+                  "Gain hands-on experience in STEM education",
+                  "Counts toward community involvement requirements",
+                  "Letter of reference provided upon completion",
+                  "Open to students at both locations",
+                ].map((point) => (
+                  <li key={point} className="flex items-start gap-3 text-sm font-medium text-secondary/80">
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="mailto:winnipeg@skillsamurai.com?subject=High School Co-op Inquiry – Skill Samurai Winnipeg"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3 text-sm font-black uppercase tracking-wide text-secondary shadow-lg shadow-accent/30 transition-all hover:opacity-90 hover:scale-105 active:scale-95"
+              >
+                Apply for Co-op →
+              </a>
+            </FadeIn>
+            <FadeIn delay={0.15} direction="up">
+              <div className="rounded-3xl bg-secondary p-8 md:p-10 text-white">
+                <div className="text-6xl font-black font-heading text-primary mb-2">100</div>
+                <div className="text-xl font-bold text-white/90 mb-6">volunteer hours<br/>= 1 high school credit</div>
+                <div className="h-px bg-white/15 mb-6" />
+                <p className="text-white/70 font-medium leading-relaxed text-sm mb-6">
+                  This program is ideal for Grade 10–12 students interested in technology, teaching, or community service. No prior coding experience is required — just enthusiasm and reliability.
+                </p>
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-center gap-3 text-sm font-medium text-white/80">
+                    <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
+                    North East &amp; Seven Oaks locations
+                  </div>
+                  <div className="flex items-center gap-3 text-sm font-medium text-white/80">
+                    <Clock className="h-4 w-4 text-primary flex-shrink-0" />
+                    After school &amp; weekend shifts available
+                  </div>
+                  <div className="flex items-center gap-3 text-sm font-medium text-white/80">
+                    <GraduationCap className="h-4 w-4 text-primary flex-shrink-0" />
+                    Grades 10–12 welcome
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
