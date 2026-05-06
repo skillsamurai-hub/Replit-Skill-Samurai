@@ -27,8 +27,8 @@ export default function Proof() {
           <FadeIn direction="up" delay={0.1}>
             <div className="group rounded-[3rem] overflow-hidden relative aspect-video bg-secondary border-[8px] border-white shadow-2xl shadow-black/10 hover:-translate-y-2 hover:rotate-1 transition-all duration-500">
               <img 
-                src="/images/student-girl-coding.png" 
-                alt="Skill Samurai Winnipeg student focused at her laptop during class" 
+                src="/images/roblox-project.png" 
+                alt="3D Roblox game level built by a student" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent pointer-events-none" />
@@ -43,8 +43,8 @@ export default function Proof() {
           <FadeIn direction="up" delay={0.2}>
             <div className="group rounded-[3rem] overflow-hidden relative aspect-video bg-secondary border-[8px] border-white shadow-2xl shadow-black/10 hover:-translate-y-2 hover:-rotate-1 transition-all duration-500 mt-0 md:mt-12">
               <img 
-                src="/images/student-boy-class.png" 
-                alt="Skill Samurai Winnipeg student smiling in class with headphones" 
+                src="/images/kids-collaborating.png" 
+                alt="Kids celebrating their coding project" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent pointer-events-none" />
