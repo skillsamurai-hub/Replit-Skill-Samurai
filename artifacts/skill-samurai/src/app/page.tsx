@@ -10,7 +10,7 @@ import HowItWorks from "@/components/sections/how-it-works";
 import Schedule from "@/components/sections/schedule";
 import WeeklyClasses from "@/components/sections/weekly-classes";
 import Locations from "@/components/sections/locations";
-import FinalCta from "@/components/sections/final-cta";
+
 
 export default function HomePage() {
   return (

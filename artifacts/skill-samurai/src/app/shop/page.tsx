@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import React from "react";
 import Link from "next/link";
-import FinalCta from "@/components/sections/final-cta";
+
 
 export const metadata: Metadata = {
   title: "Shop | Skill Samurai Winnipeg",

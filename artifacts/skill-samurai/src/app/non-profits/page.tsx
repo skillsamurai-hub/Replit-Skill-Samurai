@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { HeartHandshake, CheckCircle2, Ticket, UsersRound, Megaphone, Handshake } from "lucide-react";
-import FinalCta from "@/components/sections/final-cta";
+
 
 export const metadata: Metadata = {
   title: "Non-Profits & Community Groups | Skill Samurai Winnipeg",

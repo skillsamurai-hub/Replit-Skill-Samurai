@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { GraduationCap, CheckCircle2, Calendar, Users, BookOpen, Award, Star } from "lucide-react";
-import FinalCta from "@/components/sections/final-cta";
+
 
 export const metadata: Metadata = {
   title: "School Workshops & Programs | Skill Samurai Winnipeg",

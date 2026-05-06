@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import React from "react";
 import Link from "next/link";
-import FinalCta from "@/components/sections/final-cta";
+
 import { FadeIn } from "@/components/ui/fade-in";
 import { ArrowRight, Clock, Tag } from "lucide-react";
 import { posts } from "@/lib/blog-posts";
