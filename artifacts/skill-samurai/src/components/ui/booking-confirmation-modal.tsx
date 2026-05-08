@@ -143,20 +143,20 @@ export function BookingConfirmationModal() {
               <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
                 <Image
                   src={robloxProject}
-                  alt="Sample Roblox game built during a trial class"
+                  alt="Roblox Studio editor showing a colourful obstacle course being built by a student"
                   fill
                   sizes="(max-width: 640px) 50vw, 160px"
                   className="object-cover"
                   priority={false}
                 />
                 <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent px-2 py-1.5">
-                  <p className="text-[10px] font-bold text-white leading-tight">Roblox Game</p>
+                  <p className="text-[10px] font-bold text-white leading-tight">Roblox Obby</p>
                 </div>
               </div>
               <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
                 <Image
                   src={minecraftProject}
-                  alt="Sample Minecraft build created during a trial class"
+                  alt="Minecraft house with wood and stone built by a beginner student in survival mode"
                   fill
                   sizes="(max-width: 640px) 50vw, 160px"
                   className="object-cover"
