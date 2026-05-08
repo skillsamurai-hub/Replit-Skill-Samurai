@@ -7,24 +7,12 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import logoUrl from "@assets/SkillSamurai_Logo_Full_(1)_(1)_(1)_1776400767722.png";
 import { openCalendarModal } from "@/components/ui/calendar-modal";
 import { openBookingModal } from "@/components/ui/booking-modal";
-
-const MAKEUP_LINKS = [
-  { label: "North East", href: "https://link.skillsamurai.com/widget/booking/SGsgwBr4folY53lMpMYc" },
-  { label: "Seven Oaks", href: "https://link.skillsamurai.com/widget/booking/RjGKMmLLevpPEAJx8FnW" },
-];
-
-function openPopup(url: string) {
-  const w = 900, h = 700;
-  const left = Math.max(0, (window.screen.width - w) / 2);
-  const top = Math.max(0, (window.screen.height - h) / 2);
-  window.open(url, "SkillSamuraiBooking", `width=${w},height=${h},left=${left},top=${top},resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,status=no`);
-}
+import { openMakeupModal } from "@/components/ui/makeup-modal";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [programsOpen, setProgramsOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
-  const [makeupOpen, setMakeupOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
 
@@ -232,36 +220,13 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          {/* Makeup Class dropdown */}
-          <div
-            className="relative hidden lg:block"
-            onMouseEnter={() => setMakeupOpen(true)}
-            onMouseLeave={() => setMakeupOpen(false)}
+          <button
+            type="button"
+            onClick={openMakeupModal}
+            className="hidden lg:inline-flex h-10 sm:h-11 items-center justify-center whitespace-nowrap rounded-full bg-primary px-4 sm:px-8 text-xs sm:text-sm font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-lg active:scale-95 cursor-pointer"
           >
-            <button
-              type="button"
-              className="inline-flex h-10 sm:h-11 items-center justify-center whitespace-nowrap rounded-full bg-primary px-4 sm:px-8 text-xs sm:text-sm font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-lg active:scale-95 cursor-pointer gap-1.5"
-              aria-haspopup="true"
-              aria-expanded={makeupOpen}
-            >
-              Book Makeup Class
-              <ChevronDown className={`h-3.5 w-3.5 transition-transform ${makeupOpen ? "rotate-180" : ""}`} />
-            </button>
-            <div className={`absolute right-0 top-full pt-3 min-w-[180px] transition-all ${makeupOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}>
-              <div className="bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
-                {MAKEUP_LINKS.map((loc) => (
-                  <button
-                    key={loc.label}
-                    type="button"
-                    onClick={() => { openPopup(loc.href); setMakeupOpen(false); }}
-                    className="w-full text-left block px-5 py-3.5 text-sm font-semibold text-secondary hover:bg-primary hover:text-white transition-colors border-b border-border last:border-b-0 cursor-pointer"
-                  >
-                    {loc.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
+            Book Makeup Class
+          </button>
 
           <button
             type="button"
@@ -354,22 +319,13 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Makeup Class */}
-            <div>
-              <span className="text-base font-semibold text-white">Book Makeup Class</span>
-              <div className="mt-3 ml-4 flex flex-col gap-3 border-l border-white/15 pl-4">
-                {MAKEUP_LINKS.map((loc) => (
-                  <button
-                    key={loc.label}
-                    type="button"
-                    onClick={() => { openPopup(loc.href); setOpen(false); }}
-                    className="text-sm font-medium text-white/80 hover:text-primary text-left cursor-pointer"
-                  >
-                    {loc.label}
-                  </button>
-                ))}
-              </div>
-            </div>
+            <button
+              type="button"
+              onClick={() => { openMakeupModal(); setOpen(false); }}
+              className="text-base font-semibold text-white text-left cursor-pointer"
+            >
+              Book Makeup Class
+            </button>
 
             {/* Resources group */}
             <div>
