@@ -223,7 +223,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={openMakeupModal}
-            className="hidden lg:inline-flex h-10 sm:h-11 items-center justify-center whitespace-nowrap rounded-full bg-accent px-4 sm:px-8 text-xs sm:text-sm font-semibold text-secondary shadow-md transition-all hover:bg-accent/90 hover:scale-105 hover:shadow-lg active:scale-95 cursor-pointer"
+            className="hidden lg:inline-flex h-10 sm:h-11 items-center justify-center whitespace-nowrap rounded-full bg-accent px-4 sm:px-8 text-xs sm:text-sm font-semibold text-white shadow-md transition-all hover:bg-accent/90 hover:scale-105 hover:shadow-lg active:scale-95 cursor-pointer"
           >
             Book Makeup Class
           </button>
