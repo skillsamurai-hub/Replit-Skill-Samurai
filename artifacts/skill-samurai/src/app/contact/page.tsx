@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MapPin, Phone, Mail, Clock, ArrowRight, Instagram, Facebook, MessageSquare } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, ArrowRight, Instagram, Facebook } from "lucide-react";
+import { ContactForm } from "@/components/ui/contact-form";
 
 export const metadata: Metadata = {
   title: "Contact Us | Skill Samurai Winnipeg",
@@ -40,21 +41,17 @@ export default function ContactPage() {
             We&apos;d Love to Hear from You
           </h1>
           <p className="mt-4 text-white/75 text-base sm:text-lg max-w-xl mx-auto font-medium leading-relaxed">
-            Questions about classes, locations, or pricing? Reach out — we&apos;re happy to help.
+            Questions about classes, locations, or pricing? Fill out the form and we&apos;ll be in touch shortly.
           </p>
         </div>
       </section>
 
-      {/* Contact details + locations */}
       <section className="py-14 sm:py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid gap-10 lg:grid-cols-2 max-w-5xl mx-auto">
+          <div className="grid gap-10 lg:grid-cols-[380px_1fr] max-w-5xl mx-auto items-start">
 
-            {/* Contact methods */}
+            {/* Left column — contact details */}
             <div className="flex flex-col gap-6">
-              <h2 className="text-xl font-black font-heading text-secondary tracking-tight">
-                Contact Details
-              </h2>
 
               <a
                 href="tel:+12048182155"
@@ -89,14 +86,41 @@ export default function ContactPage() {
                   <Clock className="h-5 w-5 text-primary" strokeWidth={2.2} />
                 </div>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-secondary/50 mb-0.5">Learning Center Hours</p>
+                  <p className="text-xs font-bold uppercase tracking-widest text-secondary/50 mb-0.5">Hours</p>
                   <p className="text-base font-extrabold text-secondary">Mon – Fri, 4–8 PM</p>
                   <p className="text-xs text-muted-foreground mt-0.5">By appointment only</p>
                 </div>
               </div>
 
-              {/* Social */}
-              <div className="flex items-center gap-3 pt-2">
+              {locations.map((loc) => (
+                <div
+                  key={loc.name}
+                  className="rounded-2xl border border-border bg-white px-6 py-5 shadow-sm"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-secondary/10">
+                      <MapPin className="h-4 w-4 text-secondary" strokeWidth={2.2} />
+                    </div>
+                    <h3 className="text-sm font-extrabold text-secondary">{loc.name}</h3>
+                  </div>
+                  <div className="flex flex-col gap-1 text-sm text-muted-foreground">
+                    <p className="font-semibold text-secondary/80">{loc.address}, {loc.city}</p>
+                    <p><span className="font-semibold text-secondary/60">Days:</span> {loc.days}</p>
+                    <p><span className="font-semibold text-secondary/60">Times:</span> {loc.times}</p>
+                  </div>
+                  <a
+                    href={loc.mapsHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-primary hover:underline"
+                  >
+                    Open in Google Maps
+                    <ArrowRight className="h-3 w-3" />
+                  </a>
+                </div>
+              ))}
+
+              <div className="flex items-center gap-3">
                 <a
                   href="https://instagram.com/skillsamuraiwinnipeg/"
                   target="_blank"
@@ -114,62 +138,18 @@ export default function ContactPage() {
                   <Facebook className="h-5 w-5" />
                 </a>
               </div>
+
+              <Link
+                href="/#locations"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-black uppercase tracking-wide text-white shadow-lg shadow-primary/30 hover:bg-primary/90 hover:scale-105 active:scale-95 transition-all"
+              >
+                Book a Free Trial
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
 
-            {/* Locations */}
-            <div className="flex flex-col gap-6">
-              <h2 className="text-xl font-black font-heading text-secondary tracking-tight">
-                Our Locations
-              </h2>
-
-              {locations.map((loc) => (
-                <div
-                  key={loc.name}
-                  className="rounded-2xl border border-border bg-white px-6 py-5 shadow-sm"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-secondary/10">
-                      <MapPin className="h-5 w-5 text-secondary" strokeWidth={2.2} />
-                    </div>
-                    <h3 className="text-base font-extrabold text-secondary">{loc.name}</h3>
-                  </div>
-                  <div className="flex flex-col gap-1.5 text-sm text-muted-foreground">
-                    <p className="font-semibold text-secondary/80">{loc.address}, {loc.city}</p>
-                    <p><span className="font-semibold text-secondary/60">Class days:</span> {loc.days}</p>
-                    <p><span className="font-semibold text-secondary/60">Start times:</span> {loc.times}</p>
-                  </div>
-                  <a
-                    href={loc.mapsHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline"
-                  >
-                    Open in Google Maps
-                    <ArrowRight className="h-3.5 w-3.5" />
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Book CTA */}
-          <div className="mt-14 max-w-5xl mx-auto rounded-3xl bg-secondary px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/20">
-                <MessageSquare className="h-6 w-6 text-primary" />
-              </div>
-              <div>
-                <p className="text-white font-black text-lg leading-tight">Ready to get started?</p>
-                <p className="text-white/65 text-sm font-medium">Book a free trial class — no commitment.</p>
-              </div>
-            </div>
-            <Link
-              href="/#locations"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-black uppercase tracking-wide text-white shadow-xl shadow-primary/30 hover:bg-primary/90 hover:scale-105 active:scale-95 transition-all shrink-0"
-            >
-              Book a Free Trial
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+            {/* Right column — embedded form */}
+            <ContactForm />
           </div>
         </div>
       </section>
