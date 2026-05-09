@@ -84,7 +84,19 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-8">
-          {/* Programs dropdown — first: primary conversion */}
+          {/* Scroll links */}
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={(e) => handleHashNav(e, link.href)}
+              className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors cursor-pointer"
+            >
+              {link.label}
+            </a>
+          ))}
+
+          {/* Programs dropdown */}
           <div
             className="relative"
             onMouseEnter={() => setProgramsOpen(true)}
@@ -132,18 +144,6 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-
-          {/* Scroll links — persuasion journey */}
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={(e) => handleHashNav(e, link.href)}
-              className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors cursor-pointer"
-            >
-              {link.label}
-            </a>
-          ))}
 
           {/* Resources dropdown */}
           <div
@@ -237,7 +237,19 @@ export default function Navbar() {
       {open && (
         <div className="lg:hidden border-t border-white/10 bg-secondary/95 backdrop-blur-md">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-            {/* Programs — first */}
+            {/* Scroll links */}
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={(e) => handleHashNav(e, link.href)}
+                className="text-base font-semibold text-white cursor-pointer"
+              >
+                {link.label}
+              </a>
+            ))}
+
+            {/* Programs */}
             <div>
               <a
                 href="/#weekly-classes"
@@ -272,18 +284,6 @@ export default function Navbar() {
                 )}
               </div>
             </div>
-
-            {/* Persuasion journey scroll links */}
-            {links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => handleHashNav(e, link.href)}
-                className="text-base font-semibold text-white cursor-pointer"
-              >
-                {link.label}
-              </a>
-            ))}
 
             {/* Resources group */}
             <div>
