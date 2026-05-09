@@ -62,6 +62,7 @@ export default function Navbar() {
   ];
 
   const resourceLinks = [
+    { label: "Contact Us", href: "/contact", type: "internal" as const },
     { label: "FAQ", href: "/faq", type: "internal" as const },
     { label: "Blog", href: "/blog", type: "internal" as const },
     { label: "Shop / Merch", href: "/shop", type: "internal" as const },
@@ -201,13 +202,6 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Contact — end of nav */}
-          <Link
-            href="/contact"
-            className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors"
-          >
-            Contact
-          </Link>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -341,15 +335,6 @@ export default function Navbar() {
                 </button>
               </div>
             </div>
-
-            {/* Contact */}
-            <Link
-              href="/contact"
-              className="text-base font-semibold text-white"
-              onClick={() => setOpen(false)}
-            >
-              Contact
-            </Link>
 
             <button
               type="button"
