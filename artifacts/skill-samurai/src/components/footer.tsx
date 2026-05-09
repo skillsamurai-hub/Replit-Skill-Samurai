@@ -159,6 +159,8 @@ export default function Footer() {
                       Learning Center Hours
                     </div>
                     <div>By Appointment Only</div>
+                    <div className="text-white/50 text-xs mt-0.5">Sat – Sun, 12–6 PM</div>
+                    <div className="text-white/50 text-xs">Mon – Fri, 4–8 PM</div>
                   </div>
                 </li>
               </ul>
