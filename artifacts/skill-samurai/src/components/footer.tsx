@@ -64,6 +64,8 @@ export default function Footer() {
                 src={logoUrl.src ?? logoUrl}
                 alt="Skill Samurai — Coding, Robotics & STEM Academy"
                 className="h-20 w-auto"
+                loading="lazy"
+                decoding="async"
               />
             </Link>
             <p className="text-white/75 max-w-sm mb-8 font-medium leading-relaxed">
@@ -156,10 +158,8 @@ export default function Footer() {
                     <div className="text-white font-semibold mb-0.5">
                       Learning Center Hours
                     </div>
+                    <div>Sat – Sun, 12–6 PM</div>
                     <div>Mon – Fri, 4–8 PM</div>
-                    <div className="text-white/55 text-xs mt-0.5">
-                      By appointment only
-                    </div>
                   </div>
                 </li>
               </ul>

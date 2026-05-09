@@ -29,6 +29,8 @@ export default function Proof() {
               <img 
                 src="/images/roblox-project.png" 
                 alt="3D Roblox game level built by a student" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent pointer-events-none" />
@@ -45,6 +47,8 @@ export default function Proof() {
               <img 
                 src="/images/kids-collaborating.png" 
                 alt="Kids celebrating their coding project" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent pointer-events-none" />

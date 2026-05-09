@@ -7,6 +7,8 @@ export default function Hero() {
   const [videoSrc, setVideoSrc] = useState<string | null>(null);
 
   useEffect(() => {
+    // Skip video on mobile — saves bandwidth, no visible benefit on small screens
+    if (window.innerWidth < 768) return;
     const timer = setTimeout(() => {
       setVideoSrc(
         "https://player.vimeo.com/video/799591701?background=1&autoplay=1&loop=1&muted=1&autopause=0"

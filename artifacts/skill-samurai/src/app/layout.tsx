@@ -89,7 +89,7 @@ export default function RootLayout({
     priceRange: "$$",
     currenciesAccepted: "CAD",
     paymentAccepted: "Cash, Credit Card",
-    openingHours: ["Mo-Fr 15:00-19:00", "Sa 09:00-17:00"],
+    openingHours: ["Mo-Fr 16:00-20:00", "Sa-Su 12:00-18:00"],
     address: [
       {
         "@type": "PostalAddress",
