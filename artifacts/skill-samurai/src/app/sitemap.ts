@@ -3,7 +3,7 @@ import { posts } from "@/lib/blog-posts";
 
 export const dynamic = "force-static";
 
-const BASE_URL = "https://winnipeg.skillsamurai.com";
+const BASE_URL = "https://www.skillsamuraiwinnipeg.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({

@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://winnipeg.skillsamurai.com/sitemap.xml",
+    sitemap: "https://www.skillsamuraiwinnipeg.com/sitemap.xml",
   };
 }
