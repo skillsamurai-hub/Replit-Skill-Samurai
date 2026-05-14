@@ -14,6 +14,8 @@ export default function Hero() {
       setVideoSrc(
         "https://player.vimeo.com/video/799591701?background=1&autoplay=1&loop=1&muted=1&autopause=0"
       );
+      // Fallback: show video after 4s even if onLoad never fires (e.g. nested iframe environments)
+      setTimeout(() => setVideoReady(true), 4000);
     }, 800);
     return () => clearTimeout(timer);
   }, []);
