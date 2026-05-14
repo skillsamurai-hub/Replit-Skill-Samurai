@@ -41,7 +41,7 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10 pt-20 sm:pt-24 lg:pt-32 pb-8 min-h-[78svh] md:min-h-[calc(100svh-16rem)] flex items-center justify-center">
-        <div className="max-w-4xl text-center mx-auto flex flex-col items-center pb-4 lg:pb-8 hero-content">
+        <div className="max-w-4xl text-center mx-auto flex flex-col items-center pb-4 lg:pb-8">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading leading-[1.1] mb-4 lg:mb-6 tracking-tight text-white drop-shadow-2xl">
             <span className="block">After-School Coding &amp; STEM</span>
             <span className="block">Classes for Kids in Winnipeg</span>
@@ -83,15 +83,6 @@ export default function Hero() {
         </div>
       </div>
 
-      <style>{`
-        .hero-content {
-          animation: heroFadeUp 0.6s ease-out both;
-        }
-        @keyframes heroFadeUp {
-          from { opacity: 0; transform: translateY(24px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-      `}</style>
     </section>
   );
 }
