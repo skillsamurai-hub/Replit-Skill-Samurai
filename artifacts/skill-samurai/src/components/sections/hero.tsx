@@ -5,6 +5,7 @@ import { Facebook, Instagram } from "lucide-react";
 
 export default function Hero() {
   const [videoSrc, setVideoSrc] = useState<string | null>(null);
+  const [videoReady, setVideoReady] = useState(false);
 
   useEffect(() => {
     // Skip video on mobile — saves bandwidth, no visible benefit on small screens
@@ -25,6 +26,7 @@ export default function Hero() {
           title="Skill Samurai students at work"
           allow="autoplay; fullscreen; picture-in-picture"
           className="absolute pointer-events-none"
+          onLoad={() => setVideoReady(true)}
           style={{
             border: 0,
             top: "50%",
@@ -36,6 +38,8 @@ export default function Hero() {
             transform: "translate(-50%, -50%) translateZ(0)",
             willChange: "transform",
             backfaceVisibility: "hidden",
+            opacity: videoReady ? 1 : 0,
+            transition: "opacity 1.4s ease",
           }}
         />}
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/85 via-neutral-900/60 to-neutral-900/85" />
