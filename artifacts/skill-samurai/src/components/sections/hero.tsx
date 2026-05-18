@@ -60,10 +60,10 @@ export default function Hero() {
               border: 0,
               top: "50%",
               left: "50%",
-              width: "max(100%, calc(100% * 16 / 9))",
-              height: "max(100%, calc(100% * 9 / 16))",
-              minWidth: "177.77%",
-              minHeight: "56.25vw",
+              // Use svh for width so portrait mobile hero (78svh tall) is always
+              // fully covered — vw-only sizing leaves bars on tall/narrow screens
+              width: "max(100%, calc(100svh * 16 / 9))",
+              height: "max(100%, calc(100vw * 9 / 16))",
               transform: "translate(-50%, -50%) translateZ(0)",
               willChange: "transform",
               backfaceVisibility: "hidden",
