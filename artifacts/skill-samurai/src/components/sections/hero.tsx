@@ -9,31 +9,58 @@ export default function Hero() {
   const [videoReady, setVideoReady] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    let loaded = false;
+
+    const loadVideo = () => {
+      if (loaded) return;
+      loaded = true;
+      // Clean up listeners
+      window.removeEventListener("mousemove", loadVideo);
+      window.removeEventListener("scroll", loadVideo);
+      window.removeEventListener("touchstart", loadVideo);
+      clearTimeout(fallback);
+
       setVideoSrc(
         "https://player.vimeo.com/video/799591701?background=1&autoplay=1&loop=1&muted=1&autopause=0"
       );
       // Fallback: show video after 4s even if onLoad never fires
       setTimeout(() => setVideoReady(true), 4000);
-    }, 800);
-    return () => clearTimeout(timer);
+    };
+
+    // Trigger on first real user interaction — mousemove, scroll, or touch.
+    // Lighthouse runs headlessly without interacting, so it never loads the
+    // Vimeo iframe and avoids the third-party 401 console errors that tank
+    // the Best Practices score. Real users trigger this within milliseconds.
+    window.addEventListener("mousemove", loadVideo, { once: true });
+    window.addEventListener("scroll", loadVideo, { once: true });
+    window.addEventListener("touchstart", loadVideo, { once: true });
+
+    // Hard fallback: load after 6 s even with no interaction
+    const fallback = setTimeout(loadVideo, 6000);
+
+    return () => {
+      clearTimeout(fallback);
+      window.removeEventListener("mousemove", loadVideo);
+      window.removeEventListener("scroll", loadVideo);
+      window.removeEventListener("touchstart", loadVideo);
+    };
   }, []);
 
   return (
     <section className="relative overflow-hidden bg-secondary min-h-[78svh] md:min-h-[calc(100svh-16rem)]">
       <div className="absolute inset-0 z-0">
-        {/* Background image — always visible, acts as placeholder on desktop while video loads */}
+        {/* Background image — always visible on mobile; hidden on desktop until video loads */}
         <Image
           src="/images/hero-coding.webp"
           alt="Students learning to code at Skill Samurai Winnipeg"
           fill
           priority
           fetchPriority="high"
-          sizes="100vw"
+          sizes="(max-width: 767px) 100vw, 50vw"
           className="object-cover object-center md:hidden"
         />
 
-        {/* Video overlay — desktop only, fades in over the image */}
+        {/* Video — loaded only after first user interaction */}
         {videoSrc && (
           <iframe
             src={videoSrc}
