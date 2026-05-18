@@ -11,6 +11,7 @@ type Review = {
   weeksAgo: string;
   rating: number;
   text: string;
+  tags: string[];
 };
 
 const reviews: Review[] = [
@@ -20,6 +21,7 @@ const reviews: Review[] = [
     color: "bg-primary",
     weeksAgo: "48 weeks ago",
     rating: 5,
+    tags: ["Selective Mutism", "Special Needs", "Patient Staff"],
     text: "My son has been coming here for almost a year now and absolutely loves it! He has Select Mutism and it has been difficult finding an extra curricular activity for him that he is comfortable with and actually enjoys. Akil has been so amazing with him, and can see if he's struggling even without the verbal cues for help. Genesis is also so friendly and helpful. The class is held in a coffee shop with a little play area for toddlers. It's a great place to catch up on work or some reading while my son does his coding.",
   },
   {
@@ -28,6 +30,7 @@ const reviews: Review[] = [
     color: "bg-secondary",
     weeksAgo: "27 weeks ago",
     rating: 5,
+    tags: ["1+ Year Member", "Coding & Robotics", "Affordable"],
     text: "My son has been attending these computer classes for over a year, and he really enjoys them! The atmosphere is very welcoming, and the instructors provide an individual approach to every child. There are many interesting directions to choose from — coding, robotics, STEM, and game development. My son has already completed more than three programs and continues to learn with great interest. I love that these classes help him focus, think critically, and be creative while doing something he truly enjoys. The schedule and location are convenient, and the price is affordable. I highly recommend this program for kids in Winnipeg!",
   },
   {
@@ -36,6 +39,7 @@ const reviews: Review[] = [
     color: "bg-accent text-secondary",
     weeksAgo: "Mar 18, 2025",
     rating: 5,
+    tags: ["ADHD", "Grades 4 & 6", "Siblings"],
     text: "My grandsons really enjoyed the class and have signed up for 3 mths now and looking forward to going. My oldest has ADHD and found it kept his interest for the whole class. The teacher helped him out when he needed it and he did a great job. The younger one didn't want to leave. They are grades 4 and 6. I would highly recommend this program as it is also very professionally done and all staff very accessible!",
   },
   {
@@ -44,6 +48,7 @@ const reviews: Review[] = [
     color: "bg-primary",
     weeksAgo: "18 weeks ago",
     rating: 5,
+    tags: ["Builds Confidence", "Game Making", "Beginner-Friendly"],
     text: "With a few sessions in my son Isaiah felt so comfortable and at ease. The Skill Samurai team have been super helpful and patient. It's refreshing to see him use his creativity and imagination to program fun games! The skills that he's learning will serve him well in the long run and help build on his self-confidence. Highly recommend the Skill Samurai Winnipeg program; Akil, Genesis and the entire team are the absolute best!",
   },
   {
@@ -52,6 +57,7 @@ const reviews: Review[] = [
     color: "bg-secondary",
     weeksAgo: "Mar 14, 2025",
     rating: 5,
+    tags: ["Age 6", "Screen Time → Skills", "Builds Patience"],
     text: "My 6-year-old son, Hudson, started at Skill Samurai last fall, and I can't praise the program enough! Thanks to Genesis, we've transformed screen time into valuable learning, and I feel so confident in the skills he's developing. Hudson often gets discouraged quickly, but we've noticed he's become much more patient and persistent since he began coding. Genesis and Akil are amazing — so supportive and attentive. They're teaching him not only how to create video games but also how to present them, and he practices this skill often. Hudson looks forward to coding class every week and proudly shares his experiences with his friends and teachers. I'm incredibly grateful we found Skill Samurai and can offer him these valuable skills, which I am confident he will use for a lifetime.",
   },
   {
@@ -60,6 +66,7 @@ const reviews: Review[] = [
     color: "bg-primary",
     weeksAgo: "Mar 12, 2025",
     rating: 5,
+    tags: ["Roblox", "Problem Solving", "Free Trial"],
     text: "We signed up after hearing about this program through my sister-in-law. It was definitely more up Isaiah's alley in terms of his interests and personality. Isaiah looks forward to class every week! Puts his critical thinking and problem solving skills to work and challenges him. Yes, it's more screen time BUT he's learning too! Isaiah can't wait to create his own Roblox. It's conveniently located and Genesis & Akil are amazing. It's a very relaxed & comfortable environment. A plus for the parents is that it's a nice change from sitting on gym benches waiting for your kids to finish their extra curricular sports activities! Especially after being a basketball mom with my eldest for several years. Definitely recommend to everyone and take advantage of the free trial!",
   },
   {
@@ -68,6 +75,7 @@ const reviews: Review[] = [
     color: "bg-secondary",
     weeksAgo: "Apr 10, 2025",
     rating: 5,
+    tags: ["Free Trial", "Hands-On Learning", "3-Month Program"],
     text: "My son Lucas recently tried a free coding session at Skill Samurai Winnipeg and really enjoyed it. The hands-on approach made learning coding fun, and he's excited to attend each week. He's now enrolled in the 3-month program and hopes that the classes can be more than once a week. The owner and instructors are accommodating, friendly, and create a welcoming environment. So far, it's been a great experience, and we're excited to see his progress!",
   },
   {
@@ -76,6 +84,7 @@ const reviews: Review[] = [
     color: "bg-accent text-secondary",
     weeksAgo: "34 weeks ago",
     rating: 5,
+    tags: ["Age 7", "Never Coded Before", "Builds Focus"],
     text: "My son has been attending Skill Samurai for several months now, and I've noticed tremendous progress in him. I'm so proud of him! He is 7 years old and had never been exposed to coding before. At the beginning, he lacked patience, but over time, he has become more confident, focused, and truly enjoys attending the classes. I must sincerely thank the teachers there, they are incredibly patient, friendly, and professional, always ready to answer questions. Their guidance has made a huge difference in my son's learning experience.",
   },
   {
@@ -84,6 +93,7 @@ const reviews: Review[] = [
     color: "bg-secondary",
     weeksAgo: "25 weeks ago",
     rating: 5,
+    tags: ["Homeschooling", "Multiple Kids", "Learning Through Play"],
     text: "My kids have been coming for almost two months now, and they absolutely love it! As a homeschooling family, I really appreciate how Skill Samurai makes learning feel like play. What I love most is how Skill Samurai sneaks in so many different subjects without the kids feeling like they're doing \"work\". They just think they're playing games! The staff is amazing, patient, and encouraging, and the location is super convenient with plenty of parking. Highly recommend for any parent who wants to make learning fun and meaningful.",
   },
   {
@@ -92,6 +102,7 @@ const reviews: Review[] = [
     color: "bg-primary",
     weeksAgo: "34 weeks ago",
     rating: 5,
+    tags: ["Girls in Coding", "Fast Progress", "Builds Confidence"],
     text: "Our daughter is enrolled in coding course at Skill Samurai, and she absolutely loved it! As parents, we were thrilled to see her so engaged and excited about learning. The instructors are fantastic (Gen has been so awesomely accommodating) — they're not only knowledgeable but also great at making the classes fun and interactive. Our daughter learned so much in a short time, from the basics of programming to building her own projects. It's been amazing to watch her confidence grow. We highly recommend Skill Samurai to any parent looking for a high-quality, fun, and educational experience for their child. Thank you",
   },
   {
@@ -100,6 +111,7 @@ const reviews: Review[] = [
     color: "bg-secondary",
     weeksAgo: "5 weeks ago",
     rating: 5,
+    tags: ["Free Demo Class", "Beyond Coding", "Instantly Hooked"],
     text: "Had a great experience participating in a demo coding class the other day. The environment was welcoming and well organized, instructors were attentive to students unique needs, and everyone was engaged in their projects. Genesis (the owner) answered all my questions and also educated me on all the various benefits this program provides beyond just coding. My son had a blast and was hooked from the start. Looking forward to watching him flourish as he develops his coding skills, builds confidence and becomes more comfortable with evolving technology and software.",
   },
   {
@@ -108,6 +120,7 @@ const reviews: Review[] = [
     color: "bg-accent text-secondary",
     weeksAgo: "Mar 5, 2025",
     rating: 5,
+    tags: ["First Month", "Flexible Schedule", "Welcoming"],
     text: "My son expressed interest in coding and I came across Skill Samurai on Instagram. After trying the first class, my son absolutely loved it and has enjoyed learning with them for the past month. Everything about the program is welcoming and flexible. I am blown away with what the kids learn and are capable of creating… Great program!!",
   },
   {
@@ -116,6 +129,7 @@ const reviews: Review[] = [
     color: "bg-accent text-secondary",
     weeksAgo: "48 weeks ago",
     rating: 5,
+    tags: ["Two Kids", "Free Trial", "Gaming"],
     text: "My two children did the trial class and fell in love instantly. We have them coming back already and the kids are talking about the vision they have on their game they want to create!! If your kids are into gaming, you have to get them to try this. The trial class is free… you don't have anything to lose!!!",
   },
   {
@@ -124,6 +138,7 @@ const reviews: Review[] = [
     color: "bg-secondary",
     weeksAgo: "50 weeks ago",
     rating: 5,
+    tags: ["Young Kids", "Animations & Music", "Beginner"],
     text: "My son loves creating his own animations, music and games and we heard through our friend that Skill Samurai was a great place to go for young kids interested in coding. My son jumped right in and really enjoyed the structured learning provided about something he's passionate about. Genesis is amazing to chat with and it's obvious that she's in this field for the right reasons. We've just gotten started but are really excited to see where this takes him! Highly recommend!",
   },
   {
@@ -132,6 +147,7 @@ const reviews: Review[] = [
     color: "bg-primary",
     weeksAgo: "39 weeks ago",
     rating: 5,
+    tags: ["Roblox", "Girls", "Career Skills"],
     text: "My daughter loves to play Roblox so this class is right up her alley. I have never seen her so excited as when she came out of the trial class and she can not wait to start creating her own games! Little does she know that she is developing skills that will help her excel in her career later in life. The staff as fantastic and such a joy to work with and have really found a way to take what the kids love and make it beneficial for their futures!",
   },
   {
@@ -140,6 +156,7 @@ const reviews: Review[] = [
     color: "bg-accent text-secondary",
     weeksAgo: "43 weeks ago",
     rating: 5,
+    tags: ["Roblox", "Video Games", "Reluctant to Try"],
     text: "My son loves going to coding class. We tried different after school programs but to no avail my son has no interest in any of them. My son loves to play roblox and different video games. This program allows him to be creative. He always looks forward on going every week. Recommended an all kids who's always on their phones and gadgets.",
   },
   {
@@ -148,6 +165,7 @@ const reviews: Review[] = [
     color: "bg-secondary",
     weeksAgo: "27 weeks ago",
     rating: 5,
+    tags: ["Nervous at First", "Builds Confidence", "Encouraging"],
     text: "At first, I wasn't sure how my child would take to coding, but these classes have been amazing! The teachers are so encouraging and make every session exciting. It's wonderful to see my child gaining confidence while learning valuable skills for the future. Genesis is amazing and super helpful. We would highly recommend anyone wanting to have their kid try a new skill to go and visit them once. You will not be disappointed from the beginning till end. Thank you to the amazing team — keep up the good work!",
   },
   {
@@ -156,6 +174,7 @@ const reviews: Review[] = [
     color: "bg-primary",
     weeksAgo: "30 weeks ago",
     rating: 5,
+    tags: ["Teens", "Any Age", "Go At Your Own Pace"],
     text: "Absolutely glad that I found this place! My teens have always asked to go into coding but I didn't know much about it. When I finally looked into it and talked to a friend who had their kid in this, it sounded like something my kids would enjoy to actually learn and love even more. The staff there are super friendly and helpful. I would highly recommend this place, doesn't matter the age, the instructions are easy to understand and the staff is hands on and go at your speed.",
   },
   {
@@ -164,6 +183,7 @@ const reviews: Review[] = [
     color: "bg-accent text-secondary",
     weeksAgo: "32 weeks ago",
     rating: 5,
+    tags: ["Free Trial", "Multiple Programs", "Multiple Kids"],
     text: "Took my children to a free coding class to help them find their interest. Genesis and the team are super friendly and very accommodating. They really try to find what the child is interested in and there's so many programs to choose from. The kids look forward to their next class.",
   },
 ];
@@ -272,6 +292,14 @@ export default function GoogleReviews() {
                 <p className="mt-4 text-secondary/80 leading-relaxed text-[15px] flex-1">
                   {r.text}
                 </p>
+
+                <div className="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-secondary/8">
+                  {r.tags.map((tag) => (
+                    <span key={tag} className="inline-block px-2.5 py-1 rounded-full bg-secondary/6 text-secondary/60 text-[11px] font-semibold tracking-wide">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </article>
             </div>
             ))}
