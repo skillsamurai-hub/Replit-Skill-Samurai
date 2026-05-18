@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
 import Hero from "@/components/sections/hero";
 import MediaBanner from "@/components/sections/media-banner";
 import StatsStrip from "@/components/sections/stats-strip";
@@ -5,12 +7,13 @@ import Relatability from "@/components/sections/relatability";
 import ChildBenefits from "@/components/sections/child-benefits";
 import BeforeAfter from "@/components/sections/before-after";
 import Proof from "@/components/sections/proof";
-import GoogleReviews from "@/components/sections/google-reviews";
 import HowItWorks from "@/components/sections/how-it-works";
 import Schedule from "@/components/sections/schedule";
-import WeeklyClasses from "@/components/sections/weekly-classes";
-import Locations from "@/components/sections/locations";
 import FinalCta from "@/components/sections/final-cta";
+
+const WeeklyClasses = dynamic(() => import("@/components/sections/weekly-classes"));
+const GoogleReviews = dynamic(() => import("@/components/sections/google-reviews"));
+const Locations = dynamic(() => import("@/components/sections/locations"));
 
 export default function HomePage() {
   return (
@@ -21,11 +24,17 @@ export default function HomePage() {
       <ChildBenefits />
       <StatsStrip />
       <BeforeAfter />
-      <WeeklyClasses />
-      <GoogleReviews />
+      <Suspense fallback={null}>
+        <WeeklyClasses />
+      </Suspense>
+      <Suspense fallback={null}>
+        <GoogleReviews />
+      </Suspense>
       <Proof />
       <HowItWorks />
-      <Locations />
+      <Suspense fallback={null}>
+        <Locations />
+      </Suspense>
       <Schedule />
       <FinalCta />
     </>

@@ -16,6 +16,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--app-font-sans",
   display: "swap",
 });
+import { Suspense } from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { ModalProvider } from "@/components/ui/modal-provider";
@@ -157,7 +158,9 @@ export default function RootLayout({
           <div className="flex min-h-[100dvh] flex-col overflow-x-clip">
             <Navbar />
             <main className="flex-1">{children}</main>
-            <Footer />
+            <Suspense fallback={null}>
+              <Footer />
+            </Suspense>
           </div>
           <ModalProvider />
         </Providers>
