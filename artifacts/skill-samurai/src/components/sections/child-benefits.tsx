@@ -1,9 +1,6 @@
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { Code, Lightbulb, Rocket, Blocks } from "lucide-react";
-import classroomPhoto from "@assets/IG_WINNIPEG_POST_1776405350952.png";
-import classroomPhotoTwo from "@assets/IG_WINNIPEG_POST_5_(20)_1776481698162.png";
-import classroomPhotoThree from "@assets/IG_WINNIPEG_POST_6_1776404931683.png";
 
 export default function ChildBenefits() {
   const benefits = [
@@ -86,22 +83,28 @@ export default function ChildBenefits() {
             <div className="grid gap-4 max-w-[560px] mx-auto">
               <div className="aspect-[4/3] rounded-[2.25rem] overflow-hidden shadow-2xl relative z-10 border-[10px] border-white bg-white rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
                 <img
-                  src={(classroomPhoto as any).src ?? classroomPhoto}
+                  src="/images/classroom-1.webp"
                   alt="Children learning together in a classroom"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center"
                 />
               </div>
               <div className="aspect-[4/3] rounded-[2.25rem] overflow-hidden shadow-2xl relative z-10 border-[10px] border-white bg-white rotate-2 hover:rotate-0 transition-transform duration-500 lg:ml-14">
                 <img
-                  src={(classroomPhotoTwo as any).src ?? classroomPhotoTwo}
+                  src="/images/classroom-2.webp"
                   alt="Children using headphones and laptops in class"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center"
                 />
               </div>
               <div className="aspect-[4/3] rounded-[2.25rem] overflow-hidden shadow-2xl relative z-10 border-[10px] border-white bg-white rotate-[-1deg] hover:rotate-0 transition-transform duration-500 md:ml-6 lg:ml-24">
                 <img
-                  src={(classroomPhotoThree as any).src ?? classroomPhotoThree}
+                  src="/images/classroom-3.webp"
                   alt="Kids smiling while coding together"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center"
                 />
               </div>

@@ -25,7 +25,7 @@ export default function Proof() {
           <FadeIn direction="up" delay={0.1}>
             <div className="group rounded-[3rem] overflow-hidden relative aspect-video bg-secondary border-[8px] border-white shadow-2xl shadow-black/10 hover:-translate-y-2 hover:rotate-1 transition-all duration-500">
               <img 
-                src="/images/roblox-project.png" 
+                src="/images/roblox-project.webp" 
                 alt="3D Roblox game level built by a student" 
                 loading="lazy"
                 decoding="async"
@@ -43,7 +43,7 @@ export default function Proof() {
           <FadeIn direction="up" delay={0.2}>
             <div className="group rounded-[3rem] overflow-hidden relative aspect-video bg-secondary border-[8px] border-white shadow-2xl shadow-black/10 hover:-translate-y-2 hover:-rotate-1 transition-all duration-500 mt-0 md:mt-12">
               <img 
-                src="/images/kids-collaborating.png" 
+                src="/images/kids-collaborating.webp" 
                 alt="Kids celebrating their coding project" 
                 loading="lazy"
                 decoding="async"
