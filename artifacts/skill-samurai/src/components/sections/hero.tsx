@@ -30,7 +30,7 @@ export default function Hero() {
           priority
           fetchPriority="high"
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-center md:hidden"
         />
 
         {/* Video overlay — desktop only, fades in over the image */}
