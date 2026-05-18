@@ -6,12 +6,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const config: NextConfig = {
-  output: "export",
   distDir: "dist/public",
   trailingSlash: true,
-  images: {
-    unoptimized: true,
-  },
+  compress: true,
   allowedDevOrigins: ["*.replit.dev", "*.kirk.replit.dev"],
   webpack: (webpackConfig) => {
     webpackConfig.resolve.alias = {

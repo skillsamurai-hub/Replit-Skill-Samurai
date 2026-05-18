@@ -15,7 +15,7 @@ import {
   ChevronRight,
   CheckCircle2,
 } from "lucide-react";
-import { openBookingModal } from "@/components/ui/booking-modal";
+import { openBookingModal } from "@/components/ui/modal-events";
 
 const classes = [
   { icon: Code2, label: "Coding", color: "bg-primary" },

@@ -3,7 +3,7 @@
 import React from "react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { MapPin, Clock, ArrowRight, CalendarClock, Sparkles, CalendarCheck } from "lucide-react";
-import { openCalendarModal } from "@/components/ui/calendar-modal";
+import { openCalendarModal } from "@/components/ui/modal-events";
 
 const locations = [
   {

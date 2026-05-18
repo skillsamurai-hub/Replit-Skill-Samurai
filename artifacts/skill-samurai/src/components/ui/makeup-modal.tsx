@@ -5,12 +5,6 @@ import { X, MapPin, CalendarCheck } from "lucide-react";
 
 const EVENT = "skill-samurai:open-makeup";
 
-export function openMakeupModal() {
-  if (typeof window !== "undefined") {
-    window.dispatchEvent(new CustomEvent(EVENT));
-  }
-}
-
 const locations = [
   {
     name: "North East",

@@ -5,9 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logoUrl from "@assets/SkillSamurai_Logo_Full_(1)_(1)_(1)_1776400767722.png";
-import { openCalendarModal } from "@/components/ui/calendar-modal";
-import { openBookingModal } from "@/components/ui/booking-modal";
-import { openMakeupModal } from "@/components/ui/makeup-modal";
+import { openCalendarModal, openBookingModal, openMakeupModal } from "@/components/ui/modal-events";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);

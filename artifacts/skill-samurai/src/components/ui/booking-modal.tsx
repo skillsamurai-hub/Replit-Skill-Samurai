@@ -5,12 +5,6 @@ import { X, MapPin, Sparkles } from "lucide-react";
 
 const EVENT = "skill-samurai:open-booking";
 
-export function openBookingModal() {
-  if (typeof window !== "undefined") {
-    window.dispatchEvent(new CustomEvent(EVENT));
-  }
-}
-
 const locations = [
   {
     name: "North East",

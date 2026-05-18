@@ -3,7 +3,7 @@
 import React, { useId, useState } from "react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { Plus } from "lucide-react";
-import { openBookingModal } from "@/components/ui/booking-modal";
+import { openBookingModal } from "@/components/ui/modal-events";
 
 const faqs = [
   {

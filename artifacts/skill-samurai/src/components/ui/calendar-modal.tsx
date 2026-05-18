@@ -5,12 +5,6 @@ import { X, CalendarDays, ExternalLink } from "lucide-react";
 
 const EVENT = "skill-samurai:open-calendar";
 
-export function openCalendarModal() {
-  if (typeof window !== "undefined") {
-    window.dispatchEvent(new CustomEvent(EVENT));
-  }
-}
-
 export function CalendarModal() {
   const [open, setOpen] = useState(false);
 

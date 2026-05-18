@@ -13,7 +13,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import logoUrl from "@assets/SkillSamurai_Logo_Full_(1)_(1)_(1)_1776400767722.png";
-import { openBookingModal } from "@/components/ui/booking-modal";
+import { openBookingModal } from "@/components/ui/modal-events";
 
 const locations = [
   {

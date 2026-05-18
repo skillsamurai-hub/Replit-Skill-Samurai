@@ -19,8 +19,7 @@ run = "pnpm --filter @workspace/skill-samurai run dev"
 
 [services.production]
 build = [ "pnpm", "--filter", "@workspace/skill-samurai", "run", "build" ]
-publicDir = "artifacts/skill-samurai/dist/public"
-serve = "static"
+run = [ "pnpm", "--filter", "@workspace/skill-samurai", "run", "start" ]
 
 [services.env]
 PORT = "22075"
