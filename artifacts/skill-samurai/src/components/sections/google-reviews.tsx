@@ -30,7 +30,7 @@ const reviews: Review[] = [
     color: "bg-secondary",
     weeksAgo: "27 weeks ago",
     rating: 5,
-    tags: ["1+ Year Member", "Coding & Robotics", "Affordable"],
+    tags: ["Grade 10", "High School", "1+ Year Member", "Coding & Robotics", "Affordable"],
     text: "My son has been attending these computer classes for over a year, and he really enjoys them! The atmosphere is very welcoming, and the instructors provide an individual approach to every child. There are many interesting directions to choose from — coding, robotics, STEM, and game development. My son has already completed more than three programs and continues to learn with great interest. I love that these classes help him focus, think critically, and be creative while doing something he truly enjoys. The schedule and location are convenient, and the price is affordable. I highly recommend this program for kids in Winnipeg!",
   },
   {
