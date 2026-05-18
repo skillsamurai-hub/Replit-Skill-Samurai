@@ -57,7 +57,7 @@ export const metadata: Metadata = {
       "Weekly coding, robotics, and STEM classes for kids ages 6–18 in Winnipeg. Two locations. Flexible month-to-month. Book a free trial!",
     images: [
       {
-        url: "https://www.skillsamuraiwinnipeg.com/og-image.jpg",
+        url: "https://www.skillsamuraiwinnipeg.com/opengraph.jpg",
         width: 1200,
         height: 630,
         alt: "Skill Samurai Winnipeg — Coding & STEM for Kids",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     title: "Skill Samurai Winnipeg | Coding & STEM Classes for Kids Ages 6–18",
     description:
       "Weekly coding, robotics, and STEM classes for kids ages 6–18 in Winnipeg. Two locations. Book a free trial!",
-    images: ["https://www.skillsamuraiwinnipeg.com/og-image.jpg"],
+    images: ["https://www.skillsamuraiwinnipeg.com/opengraph.jpg"],
   },
   other: {
     "geo.region": "CA-MB",
