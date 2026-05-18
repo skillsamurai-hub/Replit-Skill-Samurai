@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { Facebook, Instagram } from "lucide-react";
 
 export default function Hero() {
@@ -8,7 +9,7 @@ export default function Hero() {
   const [videoReady, setVideoReady] = useState(false);
 
   useEffect(() => {
-    // Skip video on mobile — saves bandwidth, no visible benefit on small screens
+    // Only load video on desktop — saves bandwidth on mobile
     if (window.innerWidth < 768) return;
     const timer = setTimeout(() => {
       setVideoSrc(
@@ -23,12 +24,24 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-secondary min-h-[78svh] md:min-h-[calc(100svh-16rem)]">
       <div className="absolute inset-0 z-0">
+        {/* Background image — always visible, acts as placeholder on desktop while video loads */}
+        <Image
+          src="/images/hero-coding.webp"
+          alt="Students learning to code at Skill Samurai Winnipeg"
+          fill
+          priority
+          fetchPriority="high"
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+
+        {/* Video overlay — desktop only, fades in over the image */}
         {videoSrc && (
           <iframe
             src={videoSrc}
             title="Skill Samurai students at work"
             allow="autoplay; fullscreen; picture-in-picture"
-            className="absolute pointer-events-none"
+            className="absolute pointer-events-none hidden md:block"
             onLoad={() => setVideoReady(true)}
             style={{
               border: 0,
@@ -46,6 +59,7 @@ export default function Hero() {
             }}
           />
         )}
+
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/85 via-neutral-900/60 to-neutral-900/85" />
       </div>
 
