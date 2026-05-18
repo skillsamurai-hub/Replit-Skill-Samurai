@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logoUrl from "@assets/SkillSamurai_Logo_Full_(1)_(1)_(1)_1776400767722.png";
@@ -73,10 +74,13 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-secondary/95 backdrop-blur-md">
       <div className="container mx-auto px-4 h-24 flex items-center justify-between gap-4">
         <Link href="/" className="flex items-center group" data-testid="link-home">
-          <img
-            src={logoUrl.src ?? logoUrl}
+          <Image
+            src={logoUrl}
             alt="Skill Samurai — Coding, Robotics & STEM Academy"
+            height={80}
+            priority
             className="h-20 w-auto group-hover:scale-105 transition-transform duration-300"
+            style={{ width: "auto" }}
           />
         </Link>
 
