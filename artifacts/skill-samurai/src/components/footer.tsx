@@ -20,11 +20,13 @@ const locations = [
     name: "North East",
     address: "1199 Rothesay St.",
     city: "Winnipeg, MB",
+    mapsHref: "https://www.google.com/maps/place/Scout:+Coffee+%2B+Community/@49.93695,-97.0822149,17z/data=!3m1!4b1!4m15!1m8!3m7!1s0x52ea70687b88eb87:0xbf9ac5a2210a5553!2s1199+Rothesay+St,+Winnipeg,+MB+R2G+1T6!3b1!8m2!3d49.93695!4d-97.07964!16s%2Fg%2F11rq8kcfmn!3m5!1s0x52ea71db14dd06d5:0xa6c92b43e48a88e3!8m2!3d49.93695!4d-97.07964!16s%2Fg%2F11rqz03s3h?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D",
   },
   {
     name: "Seven Oaks",
     address: "745 Kingsbury Ave.",
     city: "Winnipeg, MB",
+    mapsHref: "https://www.google.com/maps/place/Skill+Samurai+-+Coding,+Robotics+%26+STEM+Academy+(Coding+For+Kids+in+Winnipeg)/@49.9482295,-97.1417296,17z/data=!3m1!4b1!4m6!3m5!1s0x41383ce25378dcb3:0x568e52da29e10a8f!8m2!3d49.9482295!4d-97.1391547!16s%2Fg%2F11l5kgf4s7?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D",
   },
 ];
 
@@ -106,9 +108,12 @@ export default function Footer() {
             </h4>
             <div className="grid sm:grid-cols-2 gap-4">
               {locations.map((loc) => (
-                <div
+                <a
                   key={loc.name}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-primary/40 hover:bg-white/10 transition-colors"
+                  href={loc.mapsHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-primary/40 hover:bg-white/10 transition-colors group"
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <div className="h-8 w-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center">
@@ -123,7 +128,11 @@ export default function Footer() {
                     <br />
                     {loc.city}
                   </p>
-                </div>
+                  <span className="mt-2 inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wide text-primary group-hover:underline">
+                    <MapPin className="h-3 w-3" />
+                    Get Directions
+                  </span>
+                </a>
               ))}
             </div>
           </div>
