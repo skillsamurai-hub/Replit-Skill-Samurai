@@ -1,18 +1,19 @@
 import { Star, Code2, Gamepad2, Rocket, ArrowRight, Trophy } from "lucide-react";
 
+const PRIMARY = "hsl(335 84% 59%)";
+const SECONDARY = "hsl(218 42% 29%)";
+const ORANGE = "#F59100";
+const BG = "hsl(204 35% 96%)";
+
 const featured = {
   name: "Ethan",
   age: 11,
-  location: "North East",
   project: "Haunted Maze",
   projectType: "Roblox Game",
   description:
-    "Ethan spent 6 weeks designing and scripting his own Roblox horror maze complete with jump scares, a leaderboard, and custom sound effects. Over 200 players have visited his game.",
+    "Ethan spent 6 weeks designing and scripting his own Roblox horror maze — complete with jump scares, a leaderboard, and custom sound effects. Over 200 players have visited his game.",
   quote:
     "I didn't just want to play games anymore — I wanted to make them. Now I have friends from school playing something I actually built.",
-  badge: "Game Developer",
-  color: "#E91E8C",
-  weeks: 6,
 };
 
 const spotlights = [
@@ -22,9 +23,8 @@ const spotlights = [
     project: "Study Timer App",
     projectType: "Python App",
     icon: Code2,
+    iconColor: ORANGE,
     quote: "My teachers noticed I started coding instead of scrolling. That said everything.",
-    color: "#F59100",
-    badge: "Python Dev",
   },
   {
     name: "Marcus",
@@ -32,9 +32,8 @@ const spotlights = [
     project: "Space Shooter",
     projectType: "Scratch Game",
     icon: Gamepad2,
+    iconColor: PRIMARY,
     quote: "I made a game my whole class plays at lunch. It's the best feeling ever.",
-    color: "#E91E8C",
-    badge: "Game Creator",
   },
   {
     name: "Priya",
@@ -42,9 +41,8 @@ const spotlights = [
     project: "Portfolio Website",
     projectType: "HTML/CSS/JS",
     icon: Rocket,
+    iconColor: SECONDARY,
     quote: "I put it on my college application. My counsellor was really impressed.",
-    color: "#2D5086",
-    badge: "Web Dev",
   },
 ];
 
@@ -52,7 +50,7 @@ function Stars() {
   return (
     <div className="flex gap-0.5">
       {[...Array(5)].map((_, i) => (
-        <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+        <Star key={i} className="w-3.5 h-3.5" style={{ fill: "#FBBF24", color: "#FBBF24" }} />
       ))}
     </div>
   );
@@ -61,7 +59,10 @@ function Stars() {
 export function Spotlight() {
   return (
     <section
-      style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", background: "hsl(218 42% 29%)" }}
+      style={{
+        fontFamily: "'Plus Jakarta Sans', sans-serif",
+        background: BG,
+      }}
       className="min-h-screen py-20 px-4 relative overflow-hidden"
     >
       <link
@@ -70,76 +71,117 @@ export function Spotlight() {
       />
 
       <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(ellipse, rgba(233,30,140,0.18) 0%, transparent 70%)" }}
+        className="absolute -top-20 -left-20 w-96 h-96 rounded-full pointer-events-none"
+        style={{ background: `${PRIMARY}1a`, filter: "blur(80px)" }}
+      />
+      <div
+        className="absolute -bottom-20 -right-20 w-96 h-96 rounded-full pointer-events-none"
+        style={{ background: `${ORANGE}26`, filter: "blur(80px)" }}
       />
 
       <div className="max-w-5xl mx-auto relative z-10">
+
         <div className="text-center mb-14">
           <div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border mb-6"
-            style={{ background: "rgba(233,30,140,0.12)", borderColor: "rgba(233,30,140,0.3)", color: "#E91E8C" }}
+            style={{
+              background: `${SECONDARY}0d`,
+              borderColor: `${SECONDARY}1a`,
+            }}
           >
-            <Trophy className="w-4 h-4" />
-            <span className="text-xs font-bold uppercase tracking-widest">Student Spotlight</span>
+            <Trophy className="w-4 h-4" style={{ color: SECONDARY }} />
+            <span
+              className="text-xs font-bold uppercase tracking-widest"
+              style={{ color: SECONDARY }}
+            >
+              Student Spotlight
+            </span>
           </div>
+
           <h2
-            className="text-5xl md:text-6xl font-black uppercase leading-tight mb-4"
-            style={{ fontFamily: "'Outfit', sans-serif", color: "#fff" }}
+            className="text-5xl font-black uppercase leading-tight tracking-tight mb-4"
+            style={{ fontFamily: "'Outfit', sans-serif" }}
           >
-            KIDS WHO BUILD
-            <span style={{ color: "#E91E8C" }}> REAL THINGS</span>
+            <span className="block mb-1" style={{ color: SECONDARY }}>KIDS WHO BUILD</span>
+            <span style={{ color: PRIMARY }}>REAL THINGS</span>
           </h2>
-          <p className="text-white/70 text-lg font-medium max-w-xl mx-auto">
+          <p className="text-base font-medium max-w-xl mx-auto" style={{ color: `${SECONDARY}b3` }}>
             Every week, Skill Samurai students ship projects they're proud of. Here are a few who blew us away.
           </p>
         </div>
 
         <div
-          className="rounded-3xl p-8 md:p-10 mb-8 flex flex-col md:flex-row gap-8 items-center"
-          style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)" }}
+          className="rounded-3xl p-8 mb-8 flex flex-col md:flex-row gap-8 items-center"
+          style={{
+            background: "#ffffff",
+            border: `1px solid ${SECONDARY}1a`,
+            boxShadow: "0 4px 24px rgba(45,80,134,0.08)",
+          }}
         >
           <div className="flex-shrink-0">
             <div
-              className="w-48 h-48 rounded-2xl flex items-center justify-center relative"
-              style={{ background: "linear-gradient(135deg, rgba(233,30,140,0.3), rgba(245,145,0,0.3))", border: "2px solid rgba(233,30,140,0.4)" }}
+              className="w-44 h-44 rounded-2xl flex flex-col items-center justify-center relative"
+              style={{
+                background: `linear-gradient(135deg, ${PRIMARY}22, ${ORANGE}22)`,
+                border: `2px dashed ${PRIMARY}55`,
+              }}
             >
-              <div className="text-center">
-                <div className="text-6xl mb-2">🎮</div>
-                <div className="text-white/60 text-xs font-bold uppercase tracking-wider">Project Photo</div>
+              <div className="text-5xl mb-1">🎮</div>
+              <div
+                className="text-[10px] font-bold uppercase tracking-wider"
+                style={{ color: `${SECONDARY}80` }}
+              >
+                Student Photo
               </div>
               <div
-                className="absolute -top-3 -right-3 px-3 py-1 rounded-full text-white text-xs font-black uppercase tracking-wide"
-                style={{ background: "#E91E8C" }}
+                className="absolute -top-3 -right-3 px-3 py-1 rounded-full text-white text-[10px] font-black uppercase tracking-wide"
+                style={{ background: PRIMARY, boxShadow: `0 4px 12px ${PRIMARY}55` }}
               >
-                Featured
+                ⭐ Featured
               </div>
             </div>
           </div>
 
-          <div className="flex-1 text-center md:text-left">
-            <div className="flex items-center gap-3 justify-center md:justify-start mb-3">
-              <span className="text-white font-black text-2xl" style={{ fontFamily: "'Outfit', sans-serif" }}>
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-2">
+              <span
+                className="font-black text-2xl"
+                style={{ fontFamily: "'Outfit', sans-serif", color: SECONDARY }}
+              >
                 {featured.name}, age {featured.age}
               </span>
               <span
-                className="px-2 py-1 rounded-lg text-xs font-bold uppercase tracking-wide"
-                style={{ background: "rgba(233,30,140,0.2)", color: "#E91E8C" }}
+                className="px-2.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wide"
+                style={{ background: `${PRIMARY}15`, color: PRIMARY }}
               >
-                {featured.badge}
+                Game Developer
               </span>
             </div>
-            <div className="flex items-center gap-2 justify-center md:justify-start mb-4">
-              <Gamepad2 className="w-4 h-4" style={{ color: "#F59100" }} />
-              <span className="font-bold text-white">{featured.project}</span>
-              <span className="text-white/50 text-sm">— {featured.projectType}</span>
+
+            <div className="flex items-center gap-2 mb-4">
+              <Gamepad2 className="w-4 h-4 flex-shrink-0" style={{ color: ORANGE }} />
+              <span className="font-bold text-sm" style={{ color: SECONDARY }}>{featured.project}</span>
+              <span className="text-sm" style={{ color: `${SECONDARY}60` }}>— {featured.projectType}</span>
             </div>
-            <p className="text-white/70 mb-5 leading-relaxed text-sm">{featured.description}</p>
+
+            <p className="text-sm leading-relaxed mb-5" style={{ color: `${SECONDARY}99` }}>
+              {featured.description}
+            </p>
+
             <blockquote
-              className="rounded-2xl p-4 italic text-white/90 font-medium text-sm relative"
-              style={{ background: "rgba(233,30,140,0.1)", borderLeft: "3px solid #E91E8C" }}
+              className="rounded-2xl p-4 text-sm font-medium italic relative"
+              style={{
+                background: `${PRIMARY}0d`,
+                borderLeft: `3px solid ${PRIMARY}`,
+                color: `${SECONDARY}cc`,
+              }}
             >
-              <span className="text-3xl leading-none absolute -top-1 left-3 text-pink-400 opacity-40">"</span>
+              <span
+                className="text-3xl leading-none absolute top-1 left-3 opacity-30"
+                style={{ color: PRIMARY }}
+              >
+                "
+              </span>
               <span className="pl-4 block">{featured.quote}</span>
             </blockquote>
           </div>
@@ -150,36 +192,56 @@ export function Spotlight() {
             <div
               key={s.name}
               className="rounded-2xl p-6"
-              style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.09)" }}
+              style={{
+                background: "#ffffff",
+                border: `1px solid ${SECONDARY}15`,
+                boxShadow: "0 2px 12px rgba(45,80,134,0.06)",
+              }}
             >
-              <div className="flex items-center gap-3 mb-3">
+              <div className="flex items-center gap-3 mb-4">
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-                  style={{ background: `${s.color}22` }}
+                  style={{ background: `${s.iconColor}18` }}
                 >
-                  <s.icon className="w-5 h-5" style={{ color: s.color }} />
+                  <s.icon className="w-5 h-5" style={{ color: s.iconColor }} />
                 </div>
                 <div>
-                  <p className="text-white font-bold text-sm">{s.name}, age {s.age}</p>
-                  <p className="text-white/50 text-xs">{s.project}</p>
+                  <p className="font-bold text-sm" style={{ color: SECONDARY }}>
+                    {s.name}, age {s.age}
+                  </p>
+                  <p className="text-xs font-medium" style={{ color: `${SECONDARY}70` }}>
+                    {s.project}
+                  </p>
                 </div>
               </div>
               <Stars />
-              <p className="text-white/65 text-sm italic mt-3 leading-relaxed">"{s.quote}"</p>
+              <p
+                className="text-sm italic mt-3 leading-relaxed"
+                style={{ color: `${SECONDARY}80` }}
+              >
+                "{s.quote}"
+              </p>
             </div>
           ))}
         </div>
 
         <div className="text-center">
           <button
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-black text-sm uppercase tracking-wide text-white transition-all hover:scale-105"
-            style={{ background: "#E91E8C", boxShadow: "0 8px 30px rgba(233,30,140,0.4)" }}
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-black text-sm uppercase tracking-wide text-white transition-all"
+            style={{
+              background: PRIMARY,
+              fontFamily: "'Outfit', sans-serif",
+              boxShadow: `0 8px 30px ${PRIMARY}40`,
+            }}
           >
             See More Student Projects
             <ArrowRight className="w-4 h-4" />
           </button>
-          <p className="text-white/40 text-sm mt-3">New spotlights added every month</p>
+          <p className="text-xs font-medium mt-3" style={{ color: `${SECONDARY}60` }}>
+            New spotlights added every month
+          </p>
         </div>
+
       </div>
     </section>
   );
