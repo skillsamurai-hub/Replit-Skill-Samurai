@@ -87,6 +87,11 @@ export default function Hero() {
             Transform screen time into valuable skills that will shape your child&apos;s future.
           </p>
 
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6 lg:mb-8">
+            <span className="text-yellow-400 text-base leading-none">★★★★★</span>
+            <span className="text-white/90 text-xs sm:text-sm font-bold uppercase tracking-wide">Winnipeg&apos;s #1 Rated Kids Coding Class · 146+ Reviews</span>
+          </div>
+
           <a
             href="#locations"
             className="inline-flex h-10 sm:h-12 items-center justify-center rounded-full bg-primary px-5 sm:px-7 text-[11px] sm:text-sm font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 border-b-4 border-primary-foreground/20 mb-6 lg:mb-8"

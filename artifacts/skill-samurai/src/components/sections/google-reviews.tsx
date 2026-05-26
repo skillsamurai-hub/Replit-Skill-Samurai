@@ -231,7 +231,7 @@ export default function GoogleReviews() {
         <FadeIn className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/5 border border-secondary/10 mb-6">
             <GoogleG className="w-5 h-5" />
-            <span className="text-secondary font-bold tracking-wide text-sm uppercase">Verified Google Reviews</span>
+            <span className="text-secondary font-bold tracking-wide text-sm uppercase">Winnipeg&apos;s Top Rated Kids Coding Academy</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading uppercase leading-tight tracking-tight mb-6">
             <span className="text-secondary block mb-2">PARENTS IN WINNIPEG</span>
