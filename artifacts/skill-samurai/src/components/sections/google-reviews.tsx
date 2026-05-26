@@ -237,11 +237,13 @@ export default function GoogleReviews() {
             <span className="text-secondary block mb-2">PARENTS IN WINNIPEG</span>
             <span className="text-primary">LOVE WHAT WE DO</span>
           </h2>
-          <div className="flex items-center justify-center gap-3">
+          <div className="flex items-center justify-center gap-3 flex-wrap">
             <Stars count={5} />
             <span className="text-secondary font-bold">5.0</span>
             <span className="text-secondary/60">·</span>
-            <span className="text-secondary/70 font-medium">Real reviews from local families</span>
+            <span className="text-secondary font-black">19 five-star reviews</span>
+            <span className="text-secondary/60">·</span>
+            <span className="text-secondary/70 font-medium">from local Winnipeg families</span>
           </div>
         </FadeIn>
 
