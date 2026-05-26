@@ -97,7 +97,8 @@ export function Spotlight() {
             <span style={{ color: PRIMARY }}>REAL THINGS</span>
           </h2>
           <p className="text-base font-medium max-w-xl mx-auto" style={{ color: `${SECONDARY}b3` }}>
-            Every week, Skill Samurai students ship projects they're proud of. Here are a few who blew us away.
+            Every week, Skill Samurai students ship projects they're proud of.
+            <br />Here are a few who blew us away.
           </p>
         </div>
 
