@@ -68,7 +68,7 @@ const projects = [
   },
   {
     name: "Soren",
-    age: null,
+    age: 15,
     project: "Breakfast Obby",
     projectType: "Game Design",
     category: "game",
