@@ -7,7 +7,7 @@ import { Code2, Gamepad2, Rocket, ArrowRight } from "lucide-react";
 
 const featured = {
   name: "Kai",
-  age: null,
+  age: 12,
   project: "Bob's Burgers 3D Build",
   projectType: "3D Modeling",
   tag: "3D Designer",
