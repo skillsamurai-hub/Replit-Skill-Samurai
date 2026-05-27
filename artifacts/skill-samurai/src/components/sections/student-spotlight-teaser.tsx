@@ -31,7 +31,7 @@ const cards = [
     color: "text-[#F59100]",
     bg: "bg-[#F59100]/10",
     border: "border-[#F59100]/20",
-    videoUrl: null,
+    videoUrl: "https://www.instagram.com/reel/DO54lAVjSGh/",
   },
   {
     name: "Jack",

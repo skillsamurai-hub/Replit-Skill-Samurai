@@ -29,6 +29,7 @@ const projects = [
     projectType: "3D Design",
     category: "app",
     tag: "3D Designer",
+    videoUrl: "https://www.instagram.com/reel/DO54lAVjSGh/",
     emoji: "🤖",
     description:
       "After completing Skill Samurai's 3D design curriculum, Aria created a Robot Picture Frame entirely from her own imagination — no template, no instructions. Just her creativity and everything she'd learned.",
