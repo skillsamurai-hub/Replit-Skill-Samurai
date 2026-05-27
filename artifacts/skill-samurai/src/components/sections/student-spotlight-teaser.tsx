@@ -68,15 +68,6 @@ export default function StudentSpotlightTeaser() {
               <span className="text-primary">REAL THINGS</span>
             </h3>
           </FadeIn>
-          <FadeIn delay={0.1}>
-            <Link
-              href="/student-projects"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-secondary/20 text-secondary font-black text-sm uppercase tracking-wide hover:border-primary hover:text-primary transition-colors"
-            >
-              See All Projects
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </FadeIn>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-6">
