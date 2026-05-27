@@ -124,7 +124,7 @@ export default function StudentSpotlightTeaser() {
                     rel="noopener noreferrer"
                     className={`text-xs font-black uppercase tracking-wide ${s.color} hover:underline`}
                   >
-                    ▶ Watch on Instagram
+                    ▶ See it in action
                   </a>
                 )}
               </div>

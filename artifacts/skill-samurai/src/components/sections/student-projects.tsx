@@ -283,7 +283,7 @@ export default function StudentProjectsSection() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 mt-4 text-xs font-black uppercase tracking-wide text-primary hover:underline"
                     >
-                      ▶ Watch the video on Instagram
+                      ▶ See it in action
                     </a>
                   )}
                 </div>
