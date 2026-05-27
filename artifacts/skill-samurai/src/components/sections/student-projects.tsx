@@ -18,6 +18,7 @@ const projects = [
       "For her sandbox project, Kai built a detailed 3D replica of the Bob's Burgers restaurant — applying every tool and technique she'd mastered throughout her curriculum. She then presented her work to the class, walking through her creative process from concept to completion.",
     quote:
       "I got to build something I actually love. Presenting it to everyone made me realize how much I really learned.",
+    videoUrl: "https://www.instagram.com/reel/DQxMBWdD9i6/",
     featured: true,
   },
   {
@@ -209,6 +210,16 @@ export default function StudentProjectsSection() {
                   <blockquote className="bg-secondary/5 border-l-[3px] border-primary rounded-xl px-4 py-3 text-sm italic text-secondary/75 font-medium">
                     "{p.quote}"
                   </blockquote>
+                  {"videoUrl" in p && p.videoUrl && (
+                    <a
+                      href={p.videoUrl as string}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 mt-4 text-xs font-black uppercase tracking-wide text-primary hover:underline"
+                    >
+                      ▶ Watch the video on Instagram
+                    </a>
+                  )}
                 </div>
               </FadeIn>
             );

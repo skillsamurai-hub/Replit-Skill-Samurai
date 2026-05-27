@@ -16,6 +16,7 @@ const featured = {
   quote:
     "I got to build something I actually love. Presenting it to everyone made me realize how much I really learned.",
   emoji: "🍔",
+  videoUrl: "https://www.instagram.com/reel/DQxMBWdD9i6/",
 };
 
 const minis = [
@@ -101,6 +102,16 @@ export default function StudentSpotlightTeaser() {
                 <blockquote className="bg-primary/8 border-l-[3px] border-primary rounded-xl px-4 py-3 text-sm italic text-secondary/75 font-medium">
                   "{featured.quote}"
                 </blockquote>
+                {featured.videoUrl && (
+                  <a
+                    href={featured.videoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 mt-4 text-xs font-black uppercase tracking-wide text-primary hover:underline"
+                  >
+                    ▶ Watch the video on Instagram
+                  </a>
+                )}
               </div>
             </div>
           </FadeIn>
