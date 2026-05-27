@@ -60,7 +60,7 @@ const minis = [
     Icon: Gamepad2,
     color: "text-primary",
     bg: "bg-primary/10",
-    quote: null,
+    quote: "Built an interactive robot game using block-based coding — a beginner project that already shows serious creative thinking.",
   },
 ];
 
