@@ -51,6 +51,21 @@ const projects = [
     featured: false,
   },
   {
+    name: "Jack",
+    age: 7,
+    project: "Froggy Flap",
+    projectType: "Scratch Game",
+    category: "game",
+    tag: "Game Creator",
+    emoji: "🐸",
+    description:
+      "At just 7 years old, Jack built his own Flappy Bird-style game in Scratch — but with a twist: the hero is a frog. He designed the character, programmed the movement, and added his own obstacles and score.",
+    quote:
+      "I made my own game and my frog is the main character. I want to make more levels!",
+    videoUrl: "https://www.instagram.com/reel/DHego-dytfS/",
+    featured: false,
+  },
+  {
     name: "Marcus",
     age: 9,
     project: "Space Shooter",
