@@ -63,6 +63,7 @@ export default function Navbar() {
   const resourceLinks = [
     { label: "Contact Us", href: "/contact", type: "internal" as const },
     { label: "Live Parent Calendar 2026", href: null, type: "popup" as const },
+    { label: "Parent Log In", href: "https://winnipeg.jumbula.com/", type: "external" as const },
     { label: "Shop / Merch", href: "/shop", type: "internal" as const },
     { label: "FAQ", href: "/faq", type: "internal" as const },
     { label: "Blog", href: "/blog", type: "internal" as const },
@@ -298,6 +299,15 @@ export default function Navbar() {
                 >
                   Live Parent Calendar 2026
                 </button>
+                <a
+                  href="https://winnipeg.jumbula.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-white/80 hover:text-primary"
+                  onClick={() => setOpen(false)}
+                >
+                  Parent Log In
+                </a>
                 <Link
                   href="/shop"
                   className="text-sm font-medium text-white/80 hover:text-primary"
