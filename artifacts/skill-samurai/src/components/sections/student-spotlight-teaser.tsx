@@ -22,7 +22,7 @@ const featured = {
 const minis = [
   {
     name: "Aria",
-    age: null,
+    age: 12,
     project: "Robot Picture Frame",
     projectType: "3D Design",
     Icon: Code2,

@@ -23,7 +23,7 @@ const projects = [
   },
   {
     name: "Aria",
-    age: null,
+    age: 12,
     grade: "Grade 5",
     project: "Robot Picture Frame",
     projectType: "3D Design",
