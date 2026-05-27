@@ -223,7 +223,7 @@ export default function GoogleReviews() {
   };
 
   return (
-    <section className="py-20 md:py-32 bg-secondary/10 relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-secondary/10 relative overflow-hidden">
       <div className="absolute -top-20 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[80px] pointer-events-none" />
       <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-accent/15 rounded-full blur-[80px] pointer-events-none" />
 
@@ -269,7 +269,7 @@ export default function GoogleReviews() {
             <div className="flex gap-6 md:gap-8 pb-4 w-max min-w-full">
             {reviews.map((r, i) => (
             <div key={r.name} className="snap-start shrink-0 w-[85vw] sm:w-[420px] md:w-[460px]">
-              <article className="h-full flex flex-col bg-white rounded-3xl p-7 md:p-8 border border-secondary/10 shadow-xl shadow-secondary/10">
+              <article className="h-full flex flex-col bg-white rounded-3xl p-5 md:p-6 border border-secondary/10 shadow-xl shadow-secondary/10">
                 <div className="flex items-start justify-between mb-5">
                   <div className="flex items-center gap-3">
                     <div className={`w-11 h-11 rounded-full ${r.color} text-white flex items-center justify-center font-black text-sm shrink-0`}>
@@ -291,7 +291,7 @@ export default function GoogleReviews() {
                   </span>
                 </div>
 
-                <p className="mt-4 text-secondary/80 leading-relaxed text-[15px] flex-1">
+                <p className="mt-4 text-secondary/80 leading-relaxed text-[15px] flex-1 line-clamp-5">
                   {r.text}
                 </p>
 
