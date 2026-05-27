@@ -131,7 +131,7 @@ export default function WeeklyClasses() {
               href="https://winnipeg.jumbula.com/seven-oaks-coding-classes"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-secondary hover:bg-secondary/90 hover:scale-105 active:scale-95 text-white px-7 py-4 text-sm font-black uppercase tracking-wide shadow-lg shadow-secondary/30 transition-all border-b-4 border-primary-foreground/20"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-accent hover:bg-accent/90 hover:scale-105 active:scale-95 text-accent-foreground px-7 py-4 text-sm font-black uppercase tracking-wide shadow-lg shadow-accent/30 transition-all border-b-4 border-primary-foreground/20"
             >
               Enroll — Seven Oaks
             </a>
