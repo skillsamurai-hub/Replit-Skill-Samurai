@@ -67,6 +67,22 @@ const projects = [
     featured: false,
   },
   {
+    name: "Kaleb",
+    age: null,
+    grade: "Grade 1",
+    project: "Dino Launch",
+    projectType: "Game Design",
+    category: "game",
+    tag: "Game Creator",
+    emoji: "🦖",
+    description:
+      "Kaleb, a first-grader, built Dino Launch — a game completely driven by his own storytelling and imagination. He was so excited to show it off that his coaches were blown away. One of our youngest builders, and already thinking like a game designer.",
+    quote:
+      "I made the dino fly and then it launches! I want to add more dinosaurs next.",
+    videoUrl: "https://www.instagram.com/reel/C_Lt7F8vGEa/",
+    featured: false,
+  },
+  {
     name: "Soren",
     age: 15,
     project: "Breakfast Obby",
