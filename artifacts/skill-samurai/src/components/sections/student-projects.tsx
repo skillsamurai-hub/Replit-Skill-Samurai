@@ -24,13 +24,14 @@ const projects = [
   {
     name: "Aria",
     age: null,
+    grade: "Grade 5",
     project: "Robot Picture Frame",
     projectType: "3D Design",
     category: "app",
     tag: "3D Designer",
     emoji: "🤖",
     description:
-      "After completing Skill Samurai's 3D design curriculum, Aria (Grade 5, Homeschool) created a Robot Picture Frame entirely from her own imagination — no template, no instructions. Just her creativity and everything she'd learned.",
+      "After completing Skill Samurai's 3D design curriculum, Aria created a Robot Picture Frame entirely from her own imagination — no template, no instructions. Just her creativity and everything she'd learned.",
     quote:
       "I wanted to make something that was actually mine. Once I learned the tools, I knew exactly what I wanted to build.",
     videoUrl: "https://www.instagram.com/reel/DO54lAVjSGh/",
@@ -253,7 +254,7 @@ export default function StudentProjectsSection() {
                   <div className="mb-3">
                     <div className="flex items-center gap-2 flex-wrap mb-1">
                       <span className="font-black text-lg font-heading text-secondary">
-                        {p.name}{p.age ? `, age ${p.age}` : ""}
+                        {p.name}{"age" in p && p.age ? `, age ${p.age}` : "grade" in p && p.grade ? ` · ${p.grade}` : ""}
                       </span>
                     </div>
                     <div className="flex items-center gap-1.5">
