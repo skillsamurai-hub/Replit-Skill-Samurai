@@ -67,6 +67,21 @@ const projects = [
     featured: false,
   },
   {
+    name: "Jarrell",
+    age: 16,
+    grade: null,
+    project: "Interactive Robot Game",
+    projectType: "Game Design",
+    category: "game",
+    tag: "Game Creator",
+    emoji: "🤖",
+    description:
+      "Jarrell, 16, built an interactive robot gameplay experience using block-based coding as his first game development project. A strong start that shows exactly how quickly older beginners can bring a real idea to life.",
+    quote: null,
+    videoUrl: "https://www.instagram.com/reel/DPjNdEQja7L/",
+    featured: false,
+  },
+  {
     name: "Kaleb",
     age: null,
     grade: "Grade 1",
