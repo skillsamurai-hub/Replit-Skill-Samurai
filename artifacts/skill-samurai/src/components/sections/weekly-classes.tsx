@@ -117,13 +117,12 @@ export default function WeeklyClasses() {
         </div>
 
         <FadeIn delay={0.2} className="mt-10 flex flex-col items-center gap-3">
-          <button
-            type="button"
-            onClick={openBookingModal}
+          <a
+            href="#locations"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-primary hover:bg-primary/90 hover:scale-105 active:scale-95 text-white px-8 py-4 text-sm font-black uppercase tracking-wide shadow-lg shadow-primary/30 transition-all border-b-4 border-primary-foreground/20"
           >
             Enroll Now
-          </button>
+          </a>
           <p className="text-white/60 text-sm font-medium">
             No contracts. Flexible, month-to-month membership that fits your schedule.
           </p>
