@@ -23,11 +23,11 @@ export default function FinalCta() {
                 You'll see the <span className="text-primary">difference</span>.
               </h2>
 
-              <p className="text-lg md:text-xl text-white/80 font-medium max-w-2xl mx-auto mb-10">
+              <p className="text-lg md:text-xl text-white/80 font-medium max-w-2xl mx-auto mb-6 md:mb-10">
                 One free hour. A real class, a real project, and a clear picture of what your child walks away with.
               </p>
 
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10 text-left max-w-4xl mx-auto">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-6 md:mb-10 text-left max-w-4xl mx-auto">
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
                   <Smile className="h-6 w-6 text-accent mb-3" />
                   <h3 className="text-white font-bold text-base mb-1">A confident, proud kid</h3>

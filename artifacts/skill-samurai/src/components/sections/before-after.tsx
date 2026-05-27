@@ -36,14 +36,14 @@ export default function BeforeAfter() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-stretch">
           <FadeIn direction="right" className="bg-muted/30 border-[3px] border-muted rounded-[2rem] md:rounded-[3rem] p-6 sm:p-8 md:p-12 relative overflow-hidden h-full shadow-xl shadow-black/5 hover:-translate-y-2 transition-transform">
             <div className="absolute top-0 left-0 w-3 h-full bg-destructive/60"></div>
-            <div className="flex items-center gap-4 mb-10">
-              <div className="h-16 w-16 rounded-[1.25rem] bg-destructive/10 flex items-center justify-center text-destructive -rotate-3">
-                <XCircle className="h-8 w-8" />
+            <div className="flex items-center gap-4 mb-6 md:mb-10">
+              <div className="h-14 w-14 md:h-16 md:w-16 rounded-[1.25rem] bg-destructive/10 flex items-center justify-center text-destructive -rotate-3">
+                <XCircle className="h-7 w-7 md:h-8 md:w-8" />
               </div>
-              <h3 className="text-2xl font-black font-heading text-secondary uppercase tracking-wide">BEFORE<br/>SKILL SAMURAI</h3>
+              <h3 className="text-xl md:text-2xl font-black font-heading text-secondary uppercase tracking-wide">BEFORE<br/>SKILL SAMURAI</h3>
             </div>
             
-            <ul className="space-y-6">
+            <ul className="space-y-4 md:space-y-6">
               {before.map((item, i) => (
                 <li key={i} className="flex items-start gap-4">
                   <XCircle className="h-6 w-6 text-muted-foreground flex-shrink-0 mt-0.5" />
@@ -56,14 +56,14 @@ export default function BeforeAfter() {
           <FadeIn direction="left" delay={0.2} className="bg-primary/5 border-[3px] border-primary/20 rounded-[2rem] md:rounded-[3rem] p-6 sm:p-8 md:p-12 relative overflow-hidden h-full shadow-2xl shadow-primary/10 hover:-translate-y-2 transition-transform">
             <div className="absolute top-0 left-0 w-3 h-full bg-primary"></div>
             <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/20 rounded-full blur-[40px]"></div>
-            <div className="flex items-center gap-4 mb-10 relative z-10">
-              <div className="h-16 w-16 rounded-[1.25rem] bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30 rotate-3">
-                <CheckCircle2 className="h-8 w-8" />
+            <div className="flex items-center gap-4 mb-6 md:mb-10 relative z-10">
+              <div className="h-14 w-14 md:h-16 md:w-16 rounded-[1.25rem] bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30 rotate-3">
+                <CheckCircle2 className="h-7 w-7 md:h-8 md:w-8" />
               </div>
-              <h3 className="text-2xl font-black font-heading text-secondary uppercase tracking-wide">AFTER<br/>SKILL SAMURAI</h3>
+              <h3 className="text-xl md:text-2xl font-black font-heading text-secondary uppercase tracking-wide">AFTER<br/>SKILL SAMURAI</h3>
             </div>
             
-            <ul className="space-y-6 relative z-10">
+            <ul className="space-y-4 md:space-y-6 relative z-10">
               {after.map((item, i) => (
                 <li key={i} className="flex items-start gap-4">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
@@ -72,8 +72,8 @@ export default function BeforeAfter() {
               ))}
             </ul>
             
-            <div className="mt-12 pt-8 border-t-[3px] border-primary/10 relative z-10">
-              <p className="text-primary font-black italic text-center text-xl uppercase tracking-wide">
+            <div className="mt-6 pt-6 md:mt-12 md:pt-8 border-t-[3px] border-primary/10 relative z-10">
+              <p className="text-primary font-black italic text-center text-base md:text-xl uppercase tracking-wide">
                 "You'll see the difference — not just hear about it."
               </p>
             </div>

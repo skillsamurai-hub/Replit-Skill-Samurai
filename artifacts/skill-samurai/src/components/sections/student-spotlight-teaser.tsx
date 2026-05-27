@@ -68,7 +68,7 @@ export default function StudentSpotlightTeaser() {
       <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-[#F59100]/15 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8 md:mb-14">
           <FadeIn className="max-w-2xl">
             <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-3">
               Student Spotlight

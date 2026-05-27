@@ -32,10 +32,10 @@ export default function Proof() {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 translate-y-4 group-hover:translate-y-0 transition-transform">
-                <div className="inline-block px-4 py-2 bg-accent text-secondary text-sm font-black uppercase tracking-wider rounded-full mb-4 shadow-lg rotate-2 group-hover:rotate-0 transition-transform">Game Design Studio</div>
-                <h4 className="text-3xl font-black font-heading mb-3 text-white">Design Your Own 3D Game</h4>
-                <p className="text-white/90 font-medium line-clamp-2 text-lg">A complete multi-level obstacle course with checkpoints, moving platforms, and custom scripts.</p>
+              <div className="absolute bottom-0 left-0 w-full p-5 md:p-10 md:translate-y-4 md:group-hover:translate-y-0 md:transition-transform">
+                <div className="inline-block px-3 py-1.5 md:px-4 md:py-2 bg-accent text-secondary text-xs md:text-sm font-black uppercase tracking-wider rounded-full mb-2 md:mb-4 shadow-lg md:rotate-2 md:group-hover:rotate-0 md:transition-transform">Game Design Studio</div>
+                <h4 className="text-xl md:text-3xl font-black font-heading mb-2 md:mb-3 text-white">Design Your Own 3D Game</h4>
+                <p className="text-white/90 font-medium line-clamp-2 text-sm md:text-lg hidden sm:block">A complete multi-level obstacle course with checkpoints, moving platforms, and custom scripts.</p>
               </div>
             </div>
           </FadeIn>
@@ -50,10 +50,10 @@ export default function Proof() {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-full p-8 md:p-10 translate-y-4 group-hover:translate-y-0 transition-transform">
-                <div className="inline-block px-4 py-2 bg-primary text-white text-sm font-black uppercase tracking-wider rounded-full mb-4 shadow-lg -rotate-2 group-hover:rotate-0 transition-transform">Small Groups</div>
-                <h4 className="text-3xl font-black font-heading mb-3 text-white">Confidence you can see</h4>
-                <p className="text-white/90 font-medium line-clamp-2 text-lg">Kids smile, collaborate, and leave proud of what they made together.</p>
+              <div className="absolute bottom-0 left-0 w-full p-5 md:p-10 md:translate-y-4 md:group-hover:translate-y-0 md:transition-transform">
+                <div className="inline-block px-3 py-1.5 md:px-4 md:py-2 bg-primary text-white text-xs md:text-sm font-black uppercase tracking-wider rounded-full mb-2 md:mb-4 shadow-lg md:-rotate-2 md:group-hover:rotate-0 md:transition-transform">Small Groups</div>
+                <h4 className="text-xl md:text-3xl font-black font-heading mb-2 md:mb-3 text-white">Confidence you can see</h4>
+                <p className="text-white/90 font-medium line-clamp-2 text-sm md:text-lg hidden sm:block">Kids smile, collaborate, and leave proud of what they made together.</p>
               </div>
             </div>
           </FadeIn>

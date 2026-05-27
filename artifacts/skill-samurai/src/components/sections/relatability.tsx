@@ -31,7 +31,7 @@ export default function Relatability() {
       {/* Background dot grid */}
 
       <div className="container mx-auto px-4 relative z-10 pt-10">
-        <FadeIn className="text-center max-w-4xl mx-auto mb-16">
+        <FadeIn className="text-center max-w-4xl mx-auto mb-8 md:mb-16">
           <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-3">This might sound familiar...</h2>
           <h3 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading uppercase leading-tight tracking-tight">
             <span className="text-secondary block mb-2">THE SCREEN TIME BATTLE</span>
@@ -39,9 +39,9 @@ export default function Relatability() {
           </h3>
         </FadeIn>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-10 md:mb-20">
           {painPoints.map((point, i) => (
-            <FadeIn key={i} delay={i * 0.1} direction="up" className="bg-white rounded-3xl p-8 border-[3px] border-secondary/15 hover:-translate-y-2 hover:border-primary/40 transition-all shadow-2xl shadow-secondary/15">
+            <FadeIn key={i} delay={i * 0.1} direction="up" className="bg-white rounded-3xl p-6 md:p-8 border-[3px] border-secondary/15 hover:-translate-y-2 hover:border-primary/40 transition-all shadow-2xl shadow-secondary/15">
               <div className="h-20 w-20 rounded-[1.5rem] bg-primary/15 flex items-center justify-center mb-6 rotate-3 group-hover:-rotate-3 transition-transform">
                 {point.icon}
               </div>

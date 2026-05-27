@@ -228,7 +228,7 @@ export default function GoogleReviews() {
       <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-accent/15 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <FadeIn className="text-center max-w-3xl mx-auto mb-14">
+        <FadeIn className="text-center max-w-3xl mx-auto mb-8 md:mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/5 border border-secondary/10 mb-6">
             <GoogleG className="w-5 h-5" />
             <span className="text-secondary font-bold tracking-wide text-sm uppercase">Winnipeg&apos;s Top Rated Kids Coding Academy</span>
