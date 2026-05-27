@@ -42,7 +42,7 @@ const minis = [
   },
   {
     name: "Owen",
-    age: null,
+    age: 8,
     project: "Dino Defense",
     projectType: "Game Design",
     Icon: Rocket,
