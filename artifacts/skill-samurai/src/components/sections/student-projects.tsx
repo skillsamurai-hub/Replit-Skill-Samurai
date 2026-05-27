@@ -67,7 +67,7 @@ const projects = [
     featured: false,
   },
   {
-    name: "Jarrell",
+    name: "Jayrel",
     age: 16,
     grade: null,
     project: "Interactive Robot Game",

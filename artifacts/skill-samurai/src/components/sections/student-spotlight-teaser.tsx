@@ -50,6 +50,16 @@ const minis = [
     bg: "bg-secondary/10",
     quote: "I finally finished my game. Showing it to everyone was really fun.",
   },
+  {
+    name: "Jayrel",
+    age: 16,
+    project: "Interactive Robot Game",
+    projectType: "Game Design",
+    Icon: Gamepad2,
+    color: "text-primary",
+    bg: "bg-primary/10",
+    quote: null,
+  },
 ];
 
 export default function StudentSpotlightTeaser() {
@@ -128,7 +138,7 @@ export default function StudentSpotlightTeaser() {
                       {s.name}{s.age ? `, age ${s.age}` : ""}
                       <span className="text-secondary/50 font-medium"> · {s.projectType}</span>
                     </p>
-                    <p className="text-xs text-secondary/60 italic mt-1">"{s.quote}"</p>
+                    {s.quote && <p className="text-xs text-secondary/60 italic mt-1">"{s.quote}"</p>}
                   </div>
                 </div>
               </FadeIn>
