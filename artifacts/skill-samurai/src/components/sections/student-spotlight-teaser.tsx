@@ -39,7 +39,7 @@ const cards = [
     project: "Froggy Flap",
     projectType: "Scratch Game",
     tag: "Game Creator",
-    quote: "I showed my dad my game and he asked if he could play it. A dad asking to play your game is the coolest thing ever.",
+    quote: "I showed my mom my game and she asked if she could play it. A mom asking to play your game is the coolest thing ever.",
     Icon: Gamepad2,
     color: "text-primary",
     bg: "bg-primary/10",
