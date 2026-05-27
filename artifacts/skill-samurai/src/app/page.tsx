@@ -10,6 +10,7 @@ import Proof from "@/components/sections/proof";
 import HowItWorks from "@/components/sections/how-it-works";
 import Schedule from "@/components/sections/schedule";
 import FinalCta from "@/components/sections/final-cta";
+import StudentSpotlightTeaser from "@/components/sections/student-spotlight-teaser";
 
 const WeeklyClasses = dynamic(() => import("@/components/sections/weekly-classes"));
 const GoogleReviews = dynamic(() => import("@/components/sections/google-reviews"));
@@ -30,6 +31,7 @@ export default function HomePage() {
       <Suspense fallback={null}>
         <GoogleReviews />
       </Suspense>
+      <StudentSpotlightTeaser />
       <Proof />
       <HowItWorks />
       <Suspense fallback={null}>
