@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/fade-in";
-import { Code2, Gamepad2, Rocket, ArrowRight } from "lucide-react";
+import { Code2, Gamepad2, Rocket, Palette, ArrowRight } from "lucide-react";
 
 const featured = {
   name: "Kai",
@@ -15,7 +15,9 @@ const featured = {
     "For her sandbox project, Kai built a detailed 3D replica of the Bob's Burgers restaurant — applying every tool and technique she'd mastered throughout her curriculum. She then presented her work to the class, walking through her creative process from concept to completion.",
   quote:
     "I got to build something I actually love. Presenting it to everyone made me realize how much I really learned.",
-  emoji: "🎨",
+  Icon: Palette,
+  color: "text-primary",
+  bg: "bg-primary/10",
   videoUrl: "https://www.instagram.com/reel/DQxMBWdD9i6/",
 };
 
@@ -85,8 +87,8 @@ export default function StudentSpotlightTeaser() {
           <FadeIn className="lg:col-span-3" direction="up" delay={0.1}>
             <div className="h-full bg-white rounded-3xl p-7 border border-secondary/10 shadow-lg shadow-secondary/5 flex flex-col sm:flex-row gap-6 items-start">
               <div className="flex-shrink-0">
-                <div className="w-28 h-28 rounded-2xl bg-gradient-to-br from-primary/20 to-[#F59100]/20 border-2 border-dashed border-primary/30 flex flex-col items-center justify-center relative">
-                  <span className="text-4xl">{featured.emoji}</span>
+                <div className={`w-16 h-16 rounded-2xl ${featured.bg} flex items-center justify-center relative`}>
+                  <featured.Icon className={`w-8 h-8 ${featured.color}`} />
                   <div className="absolute -top-2.5 -right-2.5 bg-primary text-white text-[9px] font-black uppercase tracking-wide px-2 py-0.5 rounded-full shadow-lg shadow-primary/40">
                     ⭐ Featured
                   </div>
