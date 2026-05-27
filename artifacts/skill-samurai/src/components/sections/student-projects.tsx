@@ -37,6 +37,21 @@ const projects = [
     featured: false,
   },
   {
+    name: "Owen",
+    age: null,
+    project: "Dino Defense",
+    projectType: "Game Design",
+    category: "game",
+    tag: "Game Creator",
+    emoji: "🦕",
+    description:
+      "Owen built and finished Dino Defense — a complete game he designed from start to finish. He then presented it to the class, walking through how it works and what he created. His coaches were blown away by both the game and his presentation skills.",
+    quote:
+      "I finally finished my game. Showing it to everyone was actually really fun.",
+    videoUrl: "https://www.instagram.com/reel/DCeiahwRq3v/",
+    featured: false,
+  },
+  {
     name: "Sofia",
     age: 14,
     project: "Study Timer App",

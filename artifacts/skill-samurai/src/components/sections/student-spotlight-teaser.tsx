@@ -41,14 +41,14 @@ const minis = [
     quote: "I made my own game and my frog is the main character!",
   },
   {
-    name: "Priya",
-    age: 16,
-    project: "Portfolio Website",
-    projectType: "HTML/CSS/JS",
+    name: "Owen",
+    age: null,
+    project: "Dino Defense",
+    projectType: "Game Design",
     Icon: Rocket,
     color: "text-secondary",
     bg: "bg-secondary/10",
-    quote: "I put it on my college application. My counsellor was impressed.",
+    quote: "I finally finished my game. Showing it to everyone was really fun.",
   },
 ];
 
