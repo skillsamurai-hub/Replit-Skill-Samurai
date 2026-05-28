@@ -63,9 +63,9 @@ const cards = [
 
 export default function StudentSpotlightTeaser() {
   return (
-    <section id="student-spotlight" className="py-20 md:py-32 bg-background relative overflow-hidden">
-      <div className="absolute -top-20 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[80px] pointer-events-none" />
-      <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-[#F59100]/15 rounded-full blur-[80px] pointer-events-none" />
+    <section id="student-spotlight" className="py-20 md:py-32 bg-secondary relative overflow-hidden">
+      <div className="absolute -top-20 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-[80px] pointer-events-none" />
+      <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-[#F59100]/20 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8 md:mb-14">
@@ -74,7 +74,7 @@ export default function StudentSpotlightTeaser() {
               Student Spotlight
             </h2>
             <h3 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading uppercase leading-tight tracking-tight">
-              <span className="text-secondary block mb-2">KIDS WHO BUILD</span>
+              <span className="text-white block mb-2">KIDS WHO BUILD</span>
               <span className="text-primary">REAL THINGS</span>
             </h3>
           </FadeIn>
