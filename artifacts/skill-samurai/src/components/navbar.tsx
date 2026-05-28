@@ -34,7 +34,7 @@ export default function Navbar() {
   const links = [
     { href: "/#how-it-works", label: "How It Works" },
     { href: "/#relatability", label: "Why Us" },
-    { href: "/#proof", label: "Results" },
+    { href: "/#student-spotlight", label: "Results" },
   ];
 
   const programLinks = [
