@@ -45,17 +45,17 @@ const cards = [
     videoUrl: "https://www.instagram.com/reel/DO54lAVjSGh/",
   },
   {
-    name: "Jack",
-    age: 7,
-    project: "Froggy Flap",
-    projectType: "Scratch Game",
+    name: "Owen",
+    age: 8,
+    project: "Dino Defense",
+    projectType: "Game Design",
     tag: "Game Creator",
-    quote: "I showed my mom my game and she asked if she could play it. A mom asking to play your game is the coolest thing ever.",
+    quote: "I finally finished my game. Showing it to everyone was actually really fun.",
     Icon: Gamepad2,
     color: "text-primary",
     bg: "bg-primary/10",
     border: "border-primary/20",
-    videoUrl: "https://www.instagram.com/reel/DHego-dytfS/",
+    videoUrl: "https://www.instagram.com/reel/DCeiahwRq3v/",
   },
 ];
 
