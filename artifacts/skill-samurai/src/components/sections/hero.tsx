@@ -94,7 +94,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6 lg:mb-8 hover:bg-white/20 transition-colors"
           >
             <span className="text-yellow-400 text-base leading-none">★★★★★</span>
-            <span className="text-white/90 text-xs sm:text-sm font-bold uppercase tracking-wide">Top-Rated Coding Classes for Kids in Winnipeg</span>
+            <span className="text-white/90 text-xs sm:text-sm font-bold uppercase tracking-wide">Winnipeg&apos;s Top Rated Coding Classes for Kids</span>
           </a>
 
           <a
