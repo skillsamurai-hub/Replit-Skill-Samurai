@@ -239,7 +239,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden border-t border-white/10 bg-secondary/95 backdrop-blur-md overflow-y-auto max-h-[calc(100dvh-6rem)]">
+        <div className="lg:hidden border-t border-white/10 bg-secondary/95 backdrop-blur-md">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
             {/* Scroll links */}
             {links.map((link) => (
