@@ -5,9 +5,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const config: NextConfig = {
-  distDir: "dist/public",
-  trailingSlash: true,
+const config: NextConfig = {  trailingSlash: true,
   compress: true,
   allowedDevOrigins: ["*.replit.dev", "*.kirk.replit.dev"],
   webpack: (webpackConfig) => {
