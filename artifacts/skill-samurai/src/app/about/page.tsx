@@ -160,7 +160,7 @@ export default function AboutPage() {
               146+ five-star reviews from Winnipeg families.
             </h2>
             <p className="text-lg text-secondary/70 mb-8">
-              Read what local parents are saying about their child's experience at Skill Samurai Winnipeg.
+              Read what local parents are saying about their child's<br className="hidden sm:block" /> experience at Skill Samurai Winnipeg.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
