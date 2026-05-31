@@ -221,8 +221,9 @@ export default function Footer() {
 
         <div className="border-t border-white/10 py-6 text-sm text-white/55 flex flex-col md:flex-row justify-between items-center gap-3">
           <p>
-            © 2023 Skill Samurai Winnipeg. All rights
-            reserved.
+            © 2026 Skill Samurai Winnipeg. All rights reserved.
+            <br />
+            Serving Winnipeg Families Since 2023.
           </p>
           <div className="flex gap-6">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">
