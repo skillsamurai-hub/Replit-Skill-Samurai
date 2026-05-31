@@ -99,7 +99,7 @@ export default function BirthdayPartiesPage() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black font-heading text-white uppercase tracking-tight leading-[1.0] mb-6">
-              Make Their Birthday <span className="text-primary">Epic.</span>
+              Make Their Birthday<br /><span className="text-primary">Epic.</span>
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
