@@ -66,7 +66,7 @@ const reviews: Review[] = [
     color: "bg-primary",
     weeksAgo: "Mar 12, 2025",
     rating: 5,
-    tags: ["Roblox", "Problem Solving", "Free Trial"],
+    tags: ["Problem Solving", "Free Trial"],
     text: "We signed up after hearing about this program through my sister-in-law. It was definitely more up Isaiah's alley in terms of his interests and personality. Isaiah looks forward to class every week! Puts his critical thinking and problem solving skills to work and challenges him. Yes, it's more screen time BUT he's learning too! Isaiah can't wait to create his own Roblox. It's conveniently located and Genesis & Akil are amazing. It's a very relaxed & comfortable environment. A plus for the parents is that it's a nice change from sitting on gym benches waiting for your kids to finish their extra curricular sports activities! Especially after being a basketball mom with my eldest for several years. Definitely recommend to everyone and take advantage of the free trial!",
   },
   {
@@ -147,7 +147,7 @@ const reviews: Review[] = [
     color: "bg-primary",
     weeksAgo: "39 weeks ago",
     rating: 5,
-    tags: ["Roblox", "Girls", "Career Skills"],
+    tags: ["Girls in Coding", "Career Skills"],
     text: "My daughter loves to play Roblox so this class is right up her alley. I have never seen her so excited as when she came out of the trial class and she can not wait to start creating her own games! Little does she know that she is developing skills that will help her excel in her career later in life. The staff as fantastic and such a joy to work with and have really found a way to take what the kids love and make it beneficial for their futures!",
   },
   {
@@ -156,7 +156,7 @@ const reviews: Review[] = [
     color: "bg-accent text-secondary",
     weeksAgo: "43 weeks ago",
     rating: 5,
-    tags: ["Roblox", "Video Games", "Reluctant to Try"],
+    tags: ["Video Games", "Reluctant to Try"],
     text: "My son loves going to coding class. We tried different after school programs but to no avail my son has no interest in any of them. My son loves to play roblox and different video games. This program allows him to be creative. He always looks forward on going every week. Recommended an all kids who's always on their phones and gadgets.",
   },
   {

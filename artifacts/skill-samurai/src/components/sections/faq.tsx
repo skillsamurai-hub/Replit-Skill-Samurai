@@ -43,8 +43,8 @@ const faqGroups = [
         a: "Classes run between 60 and 90 minutes depending on the program. Long enough for students to build something meaningful and gain momentum, while keeping learning engaging and fun.",
       },
       {
-        q: "My child loves Roblox and Minecraft. Do you teach that?",
-        a: "Yes. Many of our students start because they love games like these. We use those interests as a gateway to teach coding, game design, creativity, and computer science concepts in a fun and engaging way.",
+        q: "My child loves video games like Minecraft. Do you teach that?",
+        a: "Yes. Many of our students start because they love video games. We use those interests as a gateway to teach coding, game design, creativity, and computer science concepts in a fun and engaging way.",
       },
       {
         q: "Will my child build real projects?",
