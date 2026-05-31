@@ -151,7 +151,7 @@ export default function Navbar() {
               aria-haspopup="true"
               aria-expanded={moreOpen}
             >
-              More
+              Resources
               <ChevronDown className={`h-4 w-4 transition-transform ${moreOpen ? "rotate-180" : ""}`} />
             </button>
             <div
@@ -268,7 +268,7 @@ export default function Navbar() {
 
             {/* More */}
             <div>
-              <span className="text-base font-semibold text-white/50">More</span>
+              <span className="text-base font-semibold text-white/50">Resources</span>
               <div className="mt-3 ml-4 flex flex-col gap-3 border-l border-white/15 pl-4">
                 <Link href="/blog" className="text-sm font-medium text-white/70 hover:text-primary" onClick={() => setOpen(false)}>Blog</Link>
                 <button type="button" onClick={() => { openCalendarModal(); setOpen(false); }} className="text-sm font-medium text-white/70 hover:text-primary text-left cursor-pointer">Live Parent Calendar 2026</button>
