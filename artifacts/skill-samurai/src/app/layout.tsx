@@ -153,7 +153,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${outfit.variable} ${plusJakartaSans.variable}`}>
+    <html lang="en" className={`${outfit.variable} ${plusJakartaSans.variable}`} suppressHydrationWarning>
       <body>
         <Providers>
           <div className="flex min-h-[100dvh] flex-col overflow-x-clip">
