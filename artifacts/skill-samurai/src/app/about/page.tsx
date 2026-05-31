@@ -42,6 +42,11 @@ const values = [
     body:
       "Everything is month-to-month. We earn your family's trust every single month — through the quality of our teaching and the excitement your child brings home after class.",
   },
+  {
+    title: "Every Child Progresses",
+    body:
+      "Whether your child is six or sixteen, a total beginner or already building projects at home, we meet them exactly where they are and keep them challenged as they grow.",
+  },
 ];
 
 export default function AboutPage() {
