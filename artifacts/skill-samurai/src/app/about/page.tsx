@@ -28,11 +28,6 @@ const values = [
       "We keep class sizes intentionally small so every student gets guidance tailored to their level, pace, and interests — not a one-size-fits-all lecture.",
   },
   {
-    title: "Part of a Proven Global Network",
-    body:
-      "Skill Samurai is a trusted international brand with academies across Canada, Australia, New Zealand, and beyond. Our Winnipeg locations bring that proven curriculum to your neighbourhood.",
-  },
-  {
     title: "Beyond Coding",
     body:
       "Coding is the vehicle, not the destination. Our students develop critical thinking, creativity, persistence, and communication skills that carry into every area of their lives.",
@@ -63,7 +58,7 @@ export default function AboutPage() {
               Winnipeg's Home for Kids Who Build Things
             </h1>
             <p className="text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl mx-auto">
-              We started Skill Samurai Winnipeg with one belief: every kid has the potential to go from consumer to creator. Two locations, 146+ five-star reviews, and hundreds of student projects later — we're just getting started.
+              We started Skill Samurai Winnipeg with one belief: every kid has the potential to go from consumer to creator. Hundreds of student projects later — we're just getting started.
             </p>
           </FadeIn>
         </div>
@@ -85,37 +80,25 @@ export default function AboutPage() {
 
       {/* Mission */}
       <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <FadeIn>
-              <p className="text-primary font-bold uppercase tracking-widest text-sm mb-3">Why We Exist</p>
-              <h2 className="text-4xl md:text-5xl font-black font-heading text-secondary leading-tight tracking-tight mb-6">
-                Screen time that builds something real.
-              </h2>
-              <p className="text-lg text-secondary/75 leading-relaxed mb-5">
-                Kids today spend hours consuming content — games, videos, social media. We flip that equation. At Skill Samurai Winnipeg, students spend their screen time <em>creating</em>: building games, designing apps, scripting animations, and programming robots.
-              </p>
-              <p className="text-lg text-secondary/75 leading-relaxed mb-8">
-                The technology skills they develop here will matter for decades. But more than that — the confidence, problem-solving mindset, and creative thinking they build at Skill Samurai travels with them into school, sports, and life.
-              </p>
-              <Link
-                href="/#student-spotlight"
-                className="inline-flex items-center gap-2 rounded-full bg-secondary px-7 py-3 text-base font-bold text-white hover:bg-secondary/90 hover:scale-[1.02] active:scale-95 transition-all"
-              >
-                See Student Work →
-              </Link>
-            </FadeIn>
-            <FadeIn delay={0.15}>
-              <div className="grid grid-cols-2 gap-4">
-                {values.slice(0, 4).map((v) => (
-                  <div key={v.title} className="bg-secondary/5 border border-secondary/10 rounded-2xl p-5">
-                    <h3 className="font-heading font-bold text-secondary text-base mb-2">{v.title}</h3>
-                    <p className="text-sm text-secondary/65 leading-relaxed">{v.body}</p>
-                  </div>
-                ))}
-              </div>
-            </FadeIn>
-          </div>
+        <div className="container mx-auto px-4 max-w-3xl text-center">
+          <FadeIn>
+            <p className="text-primary font-bold uppercase tracking-widest text-sm mb-3">Why We Exist</p>
+            <h2 className="text-4xl md:text-5xl font-black font-heading text-secondary leading-tight tracking-tight mb-6">
+              Screen time that builds something real.
+            </h2>
+            <p className="text-lg text-secondary/75 leading-relaxed mb-5">
+              Kids today spend hours consuming content — games, videos, social media. We flip that equation. At Skill Samurai Winnipeg, students spend their screen time <em>creating</em>: building games, designing apps, scripting animations, and programming robots.
+            </p>
+            <p className="text-lg text-secondary/75 leading-relaxed mb-8">
+              The technology skills they develop here will matter for decades. But more than that — the confidence, problem-solving mindset, and creative thinking they build at Skill Samurai travels with them into school, sports, and life.
+            </p>
+            <Link
+              href="/#student-spotlight"
+              className="inline-flex items-center gap-2 rounded-full bg-secondary px-7 py-3 text-base font-bold text-white hover:bg-secondary/90 hover:scale-[1.02] active:scale-95 transition-all"
+            >
+              See Student Work →
+            </Link>
+          </FadeIn>
         </div>
       </section>
 
