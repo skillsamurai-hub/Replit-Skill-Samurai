@@ -86,7 +86,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <FadeIn>
               <img
-                src="/images/student-girl-coding.webp"
+                src="/images/student-headset.png"
                 alt="Student coding at Skill Samurai Winnipeg"
                 className="rounded-3xl shadow-2xl w-full object-cover aspect-[4/3]"
                 loading="lazy"
