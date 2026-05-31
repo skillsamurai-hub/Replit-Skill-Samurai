@@ -109,7 +109,7 @@ export default function CampsPage() {
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary text-white font-black text-sm uppercase tracking-wide shadow-lg shadow-primary/40 hover:bg-primary/90 transition-colors"
               >
                 <Mail className="h-4 w-4" />
-                Join the Interest List
+                Join the Waitlist
               </a>
               <a
                 href="tel:+12048182155"
@@ -262,7 +262,7 @@ export default function CampsPage() {
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary text-white font-black text-sm uppercase tracking-wide shadow-lg shadow-primary/40 hover:bg-primary/90 transition-colors"
               >
                 <Mail className="h-4 w-4" />
-                Join the Interest List
+                Join the Waitlist
               </a>
               <a
                 href="tel:+12048182155"
