@@ -134,7 +134,7 @@ export default function CampsPage() {
             <h2 className="text-3xl md:text-4xl font-black font-heading text-secondary uppercase tracking-tight">
               Camp Tracks
             </h2>
-            <p className="mt-3 text-secondary/60 max-w-xl mx-auto">Each camp is designed around a specific skill — kids pick the one that excites them most.</p>
+            <p className="mt-3 text-secondary/60 max-w-xl mx-auto">Each camp is designed around a specific skill.</p>
           </FadeIn>
           <div className="grid sm:grid-cols-2 gap-5 max-w-4xl mx-auto">
             {camps.map((camp, i) => (
