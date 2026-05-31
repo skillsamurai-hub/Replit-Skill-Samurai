@@ -55,10 +55,10 @@ export default function AboutPage() {
           <FadeIn>
             <p className="text-primary font-bold uppercase tracking-widest text-sm mb-4">Our Story</p>
             <h1 className="text-5xl md:text-6xl font-black font-heading text-white leading-tight tracking-tight mb-6">
-              Winnipeg's Home for Kids Who Build Things
+              We Were Parents Looking for the Same Thing You Are
             </h1>
             <p className="text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl mx-auto">
-              We started Skill Samurai Winnipeg with one belief: every kid has the potential to go from consumer to creator. Hundreds of student projects later — we're just getting started.
+              We started Skill Samurai Winnipeg as parents ourselves — searching for something that would turn our kids' screen time into something we could actually feel good about. We couldn't find it. So we built it.
             </p>
           </FadeIn>
         </div>
@@ -87,10 +87,10 @@ export default function AboutPage() {
               Screen time that builds something real.
             </h2>
             <p className="text-lg text-secondary/75 leading-relaxed mb-5">
-              Kids today spend hours consuming content — games, videos, social media. We flip that equation. At Skill Samurai Winnipeg, students spend their screen time <em>creating</em>: building games, designing apps, scripting animations, and programming robots.
+              As parents, we saw our own kids spending hours in front of screens — consuming games, videos, and social media. We knew screens weren't going away. What we wanted was a place where that time actually built something: skills, confidence, a sense of achievement.
             </p>
             <p className="text-lg text-secondary/75 leading-relaxed mb-8">
-              The technology skills they develop here will matter for decades. But more than that — the confidence, problem-solving mindset, and creative thinking they build at Skill Samurai travels with them into school, sports, and life.
+              That's what Skill Samurai Winnipeg is. Students spend their screen time <em>creating</em> — games, apps, animations, robots, AI projects — and leave every class with something real to show for it. The coding skills matter. But the confidence and problem-solving mindset they build here? That travels with them everywhere.
             </p>
             <Link
               href="/#student-spotlight"
