@@ -138,7 +138,7 @@ export default function AboutPage() {
           <FadeIn>
             <p className="text-primary font-bold uppercase tracking-widest text-sm mb-4">Our Long-Term Goal</p>
             <h2 className="text-4xl md:text-5xl font-black font-heading text-secondary leading-tight tracking-tight mb-6">
-              Every kid deserves access — not just the ones who can afford it.
+              Every kid deserves access — not just the ones who have the financial means.
             </h2>
             <p className="text-lg text-secondary/75 leading-relaxed mb-5">
               We believe coding and technology education shouldn't be a privilege. Every child — regardless of their family's income — deserves the chance to build real skills and discover what they're capable of.
