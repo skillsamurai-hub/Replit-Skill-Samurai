@@ -290,7 +290,7 @@ export default function BirthdayPartiesPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 md:py-24 bg-gray-100">
+      <section className="py-16 md:py-24 bg-gray-200">
         <div className="container mx-auto px-4">
           <FadeIn className="text-center mb-12">
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">Common questions</p>
