@@ -59,7 +59,7 @@ const themes = [
 const faqs = [
   {
     q: "What ages are birthday parties for?",
-    a: "Ages 6–18. We tailor the activity to match the birthday kid's age and interest level.",
+    a: "Ages 6–16. We tailor the activity to match the birthday kid's age and interest level.",
   },
   {
     q: "How many kids can attend?",
@@ -127,7 +127,7 @@ export default function BirthdayPartiesPage() {
             </div>
           </FadeIn>
           <FadeIn delay={0.4}>
-            <p className="mt-5 text-white/50 text-sm">Ages 6–18 · Up to 15 guests · Both Winnipeg locations</p>
+            <p className="mt-5 text-white/50 text-sm">Ages 6–16 · Up to 15 guests · Both Winnipeg locations</p>
           </FadeIn>
         </div>
       </section>
@@ -269,7 +269,7 @@ export default function BirthdayPartiesPage() {
                 (204) 900-5437
               </a>
             </div>
-            <p className="mt-5 text-white/40 text-sm">Both Winnipeg locations · Weekends · Ages 6–18</p>
+            <p className="mt-5 text-white/40 text-sm">Both Winnipeg locations · Weekends · Ages 6–16</p>
           </FadeIn>
         </div>
       </section>
