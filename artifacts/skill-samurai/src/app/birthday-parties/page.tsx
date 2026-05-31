@@ -183,6 +183,66 @@ export default function BirthdayPartiesPage() {
         </div>
       </section>
 
+      {/* Party Highlights */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <FadeIn className="text-center mb-10">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">Real parties, real kids</p>
+            <h2 className="text-3xl md:text-4xl font-black font-heading text-secondary uppercase tracking-tight">
+              See It in Action
+            </h2>
+            <p className="mt-3 text-secondary/60 max-w-xl mx-auto">Highlights from real birthday parties at Skill Samurai Winnipeg.</p>
+          </FadeIn>
+          <div className="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
+            {[
+              {
+                label: "Birthday Party Highlight",
+                tag: "Party Fun",
+                videoUrl: "https://www.instagram.com/reel/DADztP8AN41/",
+                color: "text-primary",
+                bg: "bg-primary/10",
+                border: "border-primary/20",
+                tagBg: "bg-primary text-white",
+              },
+              {
+                label: "Birthday Party Highlight",
+                tag: "Kids Coding",
+                videoUrl: "https://www.instagram.com/reel/DI9g9RiSRDm/",
+                color: "text-[#F59100]",
+                bg: "bg-[#F59100]/10",
+                border: "border-[#F59100]/20",
+                tagBg: "bg-[#F59100] text-white",
+              },
+            ].map((item, i) => (
+              <FadeIn key={i} delay={i * 0.1}>
+                <div className={`h-full bg-white rounded-3xl p-6 border ${item.border} shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4`}>
+                  <div className="flex items-center gap-3">
+                    <div className={`w-11 h-11 rounded-2xl ${item.bg} flex items-center justify-center flex-shrink-0`}>
+                      <Cake className={`w-5 h-5 ${item.color}`} />
+                    </div>
+                    <div>
+                      <p className="font-black text-base font-heading text-secondary leading-tight">Skill Samurai Winnipeg</p>
+                      <span className={`text-[10px] font-bold uppercase tracking-wide ${item.color}`}>{item.tag}</span>
+                    </div>
+                  </div>
+                  <div>
+                    <span className={`inline-block px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wide ${item.tagBg}`}>{item.label}</span>
+                  </div>
+                  <a
+                    href={item.videoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-xs font-black uppercase tracking-wide ${item.color} hover:underline mt-auto`}
+                  >
+                    ▶ Watch on Instagram
+                  </a>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* How It Works */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
