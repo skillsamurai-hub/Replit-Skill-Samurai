@@ -92,6 +92,12 @@ export default function AboutPage() {
                 loading="lazy"
                 decoding="async"
               />
+              <blockquote className="border-l-4 border-primary pl-5 mt-6">
+                <p className="text-base text-secondary/70 italic leading-relaxed">
+                  "I am blown away with what the kids learn and are capable of creating… My son was enrolled in the 3-month program and hopes that the classes can be more than once a week."
+                </p>
+                <cite className="mt-2 block text-sm font-bold text-secondary not-italic">— Natasha P., Skill Samurai Winnipeg parent</cite>
+              </blockquote>
             </FadeIn>
             <FadeIn delay={0.15}>
               <p className="text-primary font-bold uppercase tracking-widest text-sm mb-3">Why We Exist</p>
@@ -104,12 +110,6 @@ export default function AboutPage() {
               <p className="text-lg text-secondary/75 leading-relaxed mb-8">
                 That's what Skill Samurai Winnipeg is. Students spend their screen time <em>creating</em> — games, apps, animations, robots, AI projects — and leave every class with something real to show for it.
               </p>
-              <blockquote className="border-l-4 border-primary pl-5 mb-8">
-                <p className="text-base text-secondary/70 italic leading-relaxed">
-                  "I am blown away with what the kids learn and are capable of creating… My son was enrolled in the 3-month program and hopes that the classes can be more than once a week."
-                </p>
-                <cite className="mt-2 block text-sm font-bold text-secondary not-italic">— Natasha P., Skill Samurai Winnipeg parent</cite>
-              </blockquote>
               <Link
                 href="/#student-spotlight"
                 className="inline-flex items-center gap-2 rounded-full bg-secondary px-7 py-3 text-base font-bold text-white hover:bg-secondary/90 hover:scale-[1.02] active:scale-95 transition-all"
