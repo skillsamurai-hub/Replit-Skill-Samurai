@@ -75,7 +75,7 @@ const faqs = [
   },
   {
     q: "How far in advance should I book?",
-    a: "We recommend booking at least 2 weeks ahead to secure your preferred date and time slot.",
+    a: "We recommend booking up to 3 months in advance — the sooner the better to secure your preferred date and time slot.",
   },
   {
     q: "Which locations offer birthday parties?",
