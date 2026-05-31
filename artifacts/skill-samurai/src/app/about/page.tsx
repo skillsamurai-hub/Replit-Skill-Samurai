@@ -53,7 +53,7 @@ export default function AboutPage() {
         <div className="absolute -bottom-40 -right-32 w-[500px] h-[500px] bg-accent/15 rounded-full blur-[120px] pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10 max-w-4xl text-center">
           <FadeIn>
-            <p className="text-primary font-bold uppercase tracking-widest text-sm mb-4">Our Story</p>
+            <p className="text-primary font-bold uppercase tracking-widest text-sm mb-4">Built by Parents, for Parents</p>
             <h1 className="text-5xl md:text-6xl font-black font-heading text-white leading-tight tracking-tight mb-6">
               We Were Parents Looking for the Same Thing You Are
             </h1>
