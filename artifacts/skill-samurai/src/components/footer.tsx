@@ -225,12 +225,12 @@ export default function Footer() {
             reserved.
           </p>
           <div className="flex gap-6">
-            <a href="https://skillsamurai.com/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">
               Privacy Policy
-            </a>
-            <a href="https://skillsamurai.com/terms-and-conditions" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+            </Link>
+            <Link href="/terms-and-conditions" className="hover:text-white transition-colors">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>
