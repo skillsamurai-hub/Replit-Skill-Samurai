@@ -290,23 +290,23 @@ export default function BirthdayPartiesPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 md:py-24 bg-gray-200">
+      <section className="py-16 md:py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <FadeIn className="text-center mb-12">
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">Common questions</p>
-            <h2 className="text-3xl md:text-4xl font-black font-heading text-secondary uppercase tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-black font-heading text-white uppercase tracking-tight">
               FAQs
             </h2>
           </FadeIn>
           <div className="max-w-2xl mx-auto space-y-4">
             {faqs.map((faq, i) => (
               <FadeIn key={i} delay={i * 0.05}>
-                <div className="bg-white rounded-2xl p-6 border border-gray-100">
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/10">
                   <div className="flex gap-3 items-start">
                     <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                     <div>
-                      <h3 className="font-black text-secondary text-sm mb-1.5">{faq.q}</h3>
-                      <p className="text-sm text-secondary/65 leading-relaxed">{faq.a}</p>
+                      <h3 className="font-black text-white text-sm mb-1.5">{faq.q}</h3>
+                      <p className="text-sm text-white/65 leading-relaxed">{faq.a}</p>
                     </div>
                   </div>
                 </div>
