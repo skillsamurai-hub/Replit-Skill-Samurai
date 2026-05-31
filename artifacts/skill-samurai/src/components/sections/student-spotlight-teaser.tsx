@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Code2, Gamepad2 } from "lucide-react";
+import { ArrowRight, Code2, Gamepad2, Instagram } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
 
 const cards = [
@@ -187,6 +187,18 @@ export default function StudentSpotlightTeaser() {
             See All Student Projects
             <ArrowRight className="w-4 h-4" />
           </Link>
+          <p className="mt-4 text-sm text-secondary/50">
+            See more student work on{" "}
+            <a
+              href="https://www.instagram.com/skillsamuraiwinnipeg/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 font-semibold text-secondary/70 hover:text-primary transition-colors"
+            >
+              <Instagram className="h-3.5 w-3.5" />
+              @skillsamuraiwinnipeg
+            </a>
+          </p>
         </FadeIn>
       </div>
     </section>
