@@ -169,6 +169,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Script id="domain-redirect" strategy="beforeInteractive">
+          {`if(window.location.hostname.endsWith('.replit.app')){window.location.replace('https://www.skillsamuraiwinnipeg.com'+window.location.pathname+window.location.search);}`}
+        </Script>
         <Script id="fb-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
