@@ -61,7 +61,6 @@ export default function Navbar() {
   ];
 
   const resourceLinks = [
-    { label: "About Us", href: "/about", type: "internal" as const },
     { label: "Contact Us", href: "/contact", type: "internal" as const },
     { label: "Live Parent Calendar 2026", href: null, type: "popup" as const },
     { label: "Shop / Merch", href: "/shop", type: "internal" as const },
@@ -149,6 +148,14 @@ export default function Navbar() {
               </div>
             </div>
           </div>
+
+          {/* About Us */}
+          <Link
+            href="/about"
+            className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors"
+          >
+            About Us
+          </Link>
 
           {/* Resources dropdown */}
           <div
@@ -290,17 +297,19 @@ export default function Navbar() {
               </div>
             </div>
 
+            {/* About Us */}
+            <Link
+              href="/about"
+              className="text-base font-semibold text-white hover:text-primary transition-colors"
+              onClick={() => setOpen(false)}
+            >
+              About Us
+            </Link>
+
             {/* Resources group */}
             <div>
               <span className="text-base font-semibold text-white">Resources</span>
               <div className="mt-3 ml-4 flex flex-col gap-3 border-l border-white/15 pl-4">
-                <Link
-                  href="/about"
-                  className="text-sm font-medium text-white/80 hover:text-primary"
-                  onClick={() => setOpen(false)}
-                >
-                  About Us
-                </Link>
                 <button
                   type="button"
                   onClick={() => { openCalendarModal(); setOpen(false); }}
