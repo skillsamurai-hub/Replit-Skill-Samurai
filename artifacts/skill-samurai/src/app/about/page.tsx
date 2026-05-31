@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import FinalCta from "@/components/sections/final-cta";
 import { FadeIn } from "@/components/ui/fade-in";
+import AboutHeroCta from "@/components/sections/about-hero-cta";
 
 export const metadata: Metadata = {
   title: "About Us | Skill Samurai Winnipeg",
   description:
-    "Skill Samurai Winnipeg is part of a global network of coding and STEM academies helping kids ages 6–18 build real skills, confidence, and a love of learning. Two locations in Winnipeg, Manitoba.",
+    "Skill Samurai Winnipeg is an after-school coding & STEM academy built by parents, for parents. Two locations serving kids ages 6–18 across Winnipeg since 2023.",
 };
 
 const stats = [
@@ -19,33 +20,27 @@ const stats = [
 const values = [
   {
     title: "Real Skills, Not Just Concepts",
-    body:
-      "Every student builds actual projects — games, apps, websites, animations, and AI experiments. We measure success by what students create, not just what they memorize.",
+    body: "Every student builds actual projects — games, apps, websites, animations, and AI experiments. We measure success by what students create, not just what they memorize.",
   },
   {
     title: "Small Classes, Personal Attention",
-    body:
-      "We keep class sizes intentionally small so every student gets guidance tailored to their level, pace, and interests — not a one-size-fits-all lecture.",
+    body: "We keep class sizes intentionally small so every student gets guidance tailored to their level, pace, and interests — not a one-size-fits-all lecture.",
   },
   {
     title: "Beyond Coding",
-    body:
-      "Coding is the vehicle, not the destination. Our students develop critical thinking, creativity, persistence, and communication skills that carry into every area of their lives.",
+    body: "Coding is the vehicle, not the destination. Our students develop critical thinking, creativity, persistence, and communication skills that carry into every area of their lives.",
   },
   {
     title: "Safe, Screened, and Certified",
-    body:
-      "Every Coding Instructor undergoes background checks, child abuse registry checks, and structured training before stepping into a classroom. Your child's safety is never an afterthought.",
+    body: "Every Coding Instructor undergoes background checks, child abuse registry checks, and structured training before stepping into a classroom. Your child's safety is never an afterthought.",
   },
   {
     title: "No Contracts, No Pressure",
-    body:
-      "Everything is month-to-month. We earn your family's trust every single month — through the quality of our teaching and the excitement your child brings home after class.",
+    body: "Everything is month-to-month. We earn your family's trust every single month — through the quality of our teaching and the excitement your child brings home after class.",
   },
   {
     title: "Every Child Progresses",
-    body:
-      "Whether your child is six or sixteen, a total beginner or already building projects at home, we meet them exactly where they are and keep them challenged as they grow.",
+    body: "Whether your child is six or sixteen, a total beginner or already building projects at home, we meet them exactly where they are and keep them challenged as they grow.",
   },
 ];
 
@@ -58,13 +53,15 @@ export default function AboutPage() {
         <div className="absolute -bottom-40 -right-32 w-[500px] h-[500px] bg-accent/15 rounded-full blur-[120px] pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10 max-w-4xl text-center">
           <FadeIn>
-            <p className="text-primary font-bold uppercase tracking-widest text-sm mb-4">Built by Parents, for Parents</p>
+            <p className="text-primary font-bold uppercase tracking-widest text-sm mb-2">Built by Parents, for Parents</p>
+            <p className="text-white/50 font-semibold uppercase tracking-widest text-xs mb-5">An After-School Program with a Purpose</p>
             <h1 className="text-5xl md:text-6xl font-black font-heading text-white leading-tight tracking-tight mb-6">
               We Were Parents Looking for the Same Thing You Are
             </h1>
-            <p className="text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl mx-auto mb-8">
               We started Skill Samurai Winnipeg as parents ourselves — searching for something that would turn our kids' screen time into something we could actually feel good about. We couldn't find it. So we built it.
             </p>
+            <AboutHeroCta />
           </FadeIn>
         </div>
       </section>
@@ -85,25 +82,42 @@ export default function AboutPage() {
 
       {/* Mission */}
       <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-3xl text-center">
-          <FadeIn>
-            <p className="text-primary font-bold uppercase tracking-widest text-sm mb-3">Why We Exist</p>
-            <h2 className="text-4xl md:text-5xl font-black font-heading text-secondary leading-tight tracking-tight mb-6">
-              Screen time that builds something real.
-            </h2>
-            <p className="text-lg text-secondary/75 leading-relaxed mb-5">
-              As parents, we saw our own kids spending hours in front of screens — consuming games, videos, and social media. We knew screens weren't going away. What we wanted was a place where that time actually built something: skills, confidence, a sense of achievement.
-            </p>
-            <p className="text-lg text-secondary/75 leading-relaxed mb-8">
-              That's what Skill Samurai Winnipeg is. Students spend their screen time <em>creating</em> — games, apps, animations, robots, AI projects — and leave every class with something real to show for it. The coding skills matter. But the confidence and problem-solving mindset they build here? That travels with them everywhere.
-            </p>
-            <Link
-              href="/#student-spotlight"
-              className="inline-flex items-center gap-2 rounded-full bg-secondary px-7 py-3 text-base font-bold text-white hover:bg-secondary/90 hover:scale-[1.02] active:scale-95 transition-all"
-            >
-              See Student Work →
-            </Link>
-          </FadeIn>
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <FadeIn>
+              <img
+                src="/images/kids-collaborating.webp"
+                alt="Students collaborating at Skill Samurai Winnipeg"
+                className="rounded-3xl shadow-2xl w-full object-cover aspect-[4/3]"
+                loading="lazy"
+                decoding="async"
+              />
+            </FadeIn>
+            <FadeIn delay={0.15}>
+              <p className="text-primary font-bold uppercase tracking-widest text-sm mb-3">Why We Exist</p>
+              <h2 className="text-4xl md:text-5xl font-black font-heading text-secondary leading-tight tracking-tight mb-6">
+                Screen time that builds something real.
+              </h2>
+              <p className="text-lg text-secondary/75 leading-relaxed mb-5">
+                As parents, we saw our own kids spending hours in front of screens — consuming games, videos, and social media. We knew screens weren't going away. What we wanted was a place where that time actually built something: skills, confidence, a sense of achievement.
+              </p>
+              <p className="text-lg text-secondary/75 leading-relaxed mb-8">
+                That's what Skill Samurai Winnipeg is. Students spend their screen time <em>creating</em> — games, apps, animations, robots, AI projects — and leave every class with something real to show for it.
+              </p>
+              <blockquote className="border-l-4 border-primary pl-5 mb-8">
+                <p className="text-base text-secondary/70 italic leading-relaxed">
+                  "I am blown away with what the kids learn and are capable of creating… My son was enrolled in the 3-month program and hopes that the classes can be more than once a week."
+                </p>
+                <cite className="mt-2 block text-sm font-bold text-secondary not-italic">— Natasha P., Skill Samurai Winnipeg parent</cite>
+              </blockquote>
+              <Link
+                href="/#student-spotlight"
+                className="inline-flex items-center gap-2 rounded-full bg-secondary px-7 py-3 text-base font-bold text-white hover:bg-secondary/90 hover:scale-[1.02] active:scale-95 transition-all"
+              >
+                See Student Work →
+              </Link>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
@@ -182,7 +196,7 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://g.page/r/CY8K4SnaUo5WEBM/review"
+                href="https://www.google.com/maps/place/Skill+Samurai+-+Coding,+Robotics+%26+STEM+Academy+(Coding+For+Kids+in+Winnipeg)/@49.9482295,-97.1391547,17z"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full border-2 border-secondary px-7 py-3 text-base font-bold text-secondary hover:bg-secondary hover:text-white transition-all"
