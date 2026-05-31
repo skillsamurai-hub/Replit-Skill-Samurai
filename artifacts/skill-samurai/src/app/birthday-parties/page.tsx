@@ -14,7 +14,7 @@ const included = [
   },
   {
     icon: Users,
-    title: "Up to 15 Guests",
+    title: "Up to 12 Guests",
     desc: "Perfect for small groups. Every child gets hands-on time at their own computer with instructor guidance.",
     color: "text-[#F59100]",
     bg: "bg-[#F59100]/10",
@@ -63,7 +63,7 @@ const faqs = [
   },
   {
     q: "How many kids can attend?",
-    a: "Up to 15 guests. If you have a larger group, contact us and we'll see what we can arrange.",
+    a: "Up to 12 guests. If you have a larger group, contact us and we'll see what we can arrange.",
   },
   {
     q: "Do kids need any experience?",
@@ -127,7 +127,7 @@ export default function BirthdayPartiesPage() {
             </div>
           </FadeIn>
           <FadeIn delay={0.4}>
-            <p className="mt-5 text-white/50 text-sm">Ages 6–16 · Up to 15 guests · Both Winnipeg locations</p>
+            <p className="mt-5 text-white/50 text-sm">Ages 6–16 · Up to 12 guests · Both Winnipeg locations</p>
           </FadeIn>
         </div>
       </section>
