@@ -83,8 +83,8 @@ export default function Hero() {
           </h1>
 
           <p className="text-base sm:text-lg lg:text-xl text-white/90 mb-6 lg:mb-8 leading-relaxed font-medium drop-shadow max-w-2xl mx-auto">
-            <span className="block">We help kids build confidence, creativity, and future-ready</span>
-            <span className="block">skills by creating technology — instead of just consuming it.</span>
+            <span className="block">We help kids build confidence, creativity, and future-ready skills by</span>
+            <span className="block">creating technology — instead of just consuming it.</span>
           </p>
 
           <a
