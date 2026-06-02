@@ -80,6 +80,64 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Why Us */}
+      <section id="why-us" className="py-16 md:py-24 bg-white border-b border-secondary/10">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <FadeIn className="text-center mb-12 md:mb-16">
+            <p className="text-primary font-bold uppercase tracking-widest text-sm mb-4">Why Skill Samurai</p>
+            <p className="text-secondary/50 font-semibold uppercase tracking-widest text-xs mb-5">This might sound familiar...</p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading text-secondary leading-tight tracking-tight">
+              The Screen Time Battle<br className="hidden md:block" /> Every Parent Knows
+            </h2>
+          </FadeIn>
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+            <FadeIn>
+              <div className="space-y-5">
+                {[
+                  { emoji: "😩", text: "Your kid has been on a screen for three hours — again. You've asked them to stop four times." },
+                  { emoji: "📱", text: "It's YouTube, TikTok, Roblox, repeat. Passive consumption, no end in sight." },
+                  { emoji: "😶", text: "You know technology is their future — but watching them scroll mindlessly doesn't feel like preparation." },
+                  { emoji: "🤷", text: "You've looked for coding programs, but most feel boring, too advanced, or just glorified babysitting." },
+                ].map((item) => (
+                  <div key={item.emoji} className="flex gap-4 items-start bg-secondary/5 rounded-2xl p-5 border border-secondary/10">
+                    <span className="text-2xl mt-0.5 shrink-0">{item.emoji}</span>
+                    <p className="text-secondary/75 text-base leading-relaxed font-medium">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.15}>
+              <div className="bg-secondary rounded-3xl p-8 md:p-10 text-white relative overflow-hidden">
+                <div className="absolute -top-16 -right-16 w-48 h-48 bg-primary/20 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative z-10">
+                  <p className="text-primary font-bold uppercase tracking-widest text-xs mb-4">Here's the shift</p>
+                  <h3 className="text-2xl md:text-3xl font-black font-heading leading-tight mb-5">
+                    What if screen time built something real?
+                  </h3>
+                  <div className="space-y-4">
+                    {[
+                      "Your child builds actual games, apps, and animations — not just plays them.",
+                      "Every class ends with something tangible they made themselves.",
+                      "The skills transfer everywhere: problem-solving, persistence, creativity.",
+                      "You stop dreading the screen — because now it's a tool, not a distraction.",
+                    ].map((point, i) => (
+                      <div key={i} className="flex gap-3 items-start">
+                        <span className="mt-1 h-5 w-5 rounded-full bg-primary flex items-center justify-center shrink-0">
+                          <svg className="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </span>
+                        <p className="text-white/80 text-sm leading-relaxed">{point}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
       {/* Mission */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
