@@ -149,7 +149,7 @@ export default function AboutPage() {
               />
               <blockquote className="border-l-4 border-primary pl-5 mt-6">
                 <p className="text-base text-secondary/70 italic leading-relaxed">
-                  "Thanks to Genesis, we've transformed screen time into valuable learning, and I feel so confident in the skills he's developing. Hudson looks forward to coding class every week and proudly shares his experiences with his friends and teachers."
+                  "Thanks to Skill Samurai, we've transformed screen time into valuable learning, and I feel so confident in the skills he's developing. Hudson looks forward to coding class every week and proudly shares his experiences with his friends and teachers."
                 </p>
                 <cite className="mt-2 block text-sm font-bold text-secondary not-italic">— Bria L., Skill Samurai Winnipeg parent</cite>
               </blockquote>
