@@ -204,15 +204,6 @@ export default function Navbar() {
           {/* Social icons — desktop only */}
           <div className="hidden lg:flex items-center gap-2">
             <a
-              href="https://www.instagram.com/skillsamuraiwinnipeg"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="flex h-8 w-8 items-center justify-center rounded-full text-white/60 hover:text-primary transition-colors"
-            >
-              <Instagram className="h-4 w-4" />
-            </a>
-            <a
               href="https://www.facebook.com/skillsamuraiwinnipeg"
               target="_blank"
               rel="noopener noreferrer"
@@ -222,6 +213,15 @@ export default function Navbar() {
               <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.9v-2.89h2.538V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
               </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/skillsamuraiwinnipeg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="flex h-8 w-8 items-center justify-center rounded-full text-white/60 hover:text-primary transition-colors"
+            >
+              <Instagram className="h-4 w-4" />
             </a>
           </div>
 
@@ -317,17 +317,6 @@ export default function Navbar() {
             {/* Social icons — mobile */}
             <div className="flex items-center gap-4 pt-2 border-t border-white/10">
               <a
-                href="https://www.instagram.com/skillsamuraiwinnipeg"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="flex items-center gap-2 text-sm font-medium text-white/60 hover:text-primary transition-colors"
-                onClick={() => setOpen(false)}
-              >
-                <Instagram className="h-4 w-4" />
-                Instagram
-              </a>
-              <a
                 href="https://www.facebook.com/skillsamuraiwinnipeg"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -339,6 +328,17 @@ export default function Navbar() {
                   <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.9v-2.89h2.538V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
                 </svg>
                 Facebook
+              </a>
+              <a
+                href="https://www.instagram.com/skillsamuraiwinnipeg"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="flex items-center gap-2 text-sm font-medium text-white/60 hover:text-primary transition-colors"
+                onClick={() => setOpen(false)}
+              >
+                <Instagram className="h-4 w-4" />
+                Instagram
               </a>
             </div>
           </div>
