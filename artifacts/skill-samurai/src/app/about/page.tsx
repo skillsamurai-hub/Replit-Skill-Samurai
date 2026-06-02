@@ -89,34 +89,34 @@ export default function AboutPage() {
               There are other options.<br className="hidden md:block" /> Here's what makes us different.
             </h2>
             <p className="mt-5 text-lg text-secondary/65 max-w-2xl mx-auto">
-              Most coding programs for kids look similar on paper. These are the things Winnipeg parents consistently tell us set us apart.
+              We help kids build confidence, creativity, and future-ready skills by creating technology — instead of just consuming it.
             </p>
           </FadeIn>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
             {[
               {
-                label: "146+ five-star reviews",
-                detail: "The most-reviewed kids coding academy in Winnipeg — from real local parents, not imported testimonials.",
+                label: "Kids actually look forward to class",
+                detail: "Our hands-on, project-based format keeps kids genuinely excited — not just sitting through another screen session.",
               },
               {
-                label: "Month-to-month, no contracts",
-                detail: "We earn your trust every single month. There's no lock-in, no pressure, no penalty for leaving.",
-              },
-              {
-                label: "Ages 6 to 18, every level",
-                detail: "Whether your child is 6 or 16, total beginner or self-taught — we have the right track for where they are today.",
-              },
-              {
-                label: "Background-checked instructors",
-                detail: "Every instructor passes a background check and child abuse registry check before stepping into a classroom.",
-              },
-              {
-                label: "Small class sizes",
+                label: "Small class sizes with personalized support",
                 detail: "Intentionally capped so every student gets real attention — not a one-size-fits-all lecture to a room of 30.",
               },
               {
-                label: "A curriculum that keeps up with tech",
-                detail: "We continuously update what we teach — AI, game dev, web, robotics — so your child is always learning skills that are actually relevant today.",
+                label: "Build confidence through real projects",
+                detail: "Every student leaves class with something they made themselves — a game, app, or animation they're proud to show off.",
+              },
+              {
+                label: "Coding, AI, robotics, and game development",
+                detail: "A curriculum that keeps up with tech — so your child is always learning skills that are actually relevant today.",
+              },
+              {
+                label: "Make friends with like-minded kids",
+                detail: "A welcoming environment where kids bond over shared interests and build real friendships alongside real skills.",
+              },
+              {
+                label: "Month-to-month, no long-term contracts",
+                detail: "We earn your family's trust every single month — no lock-in, no pressure, no penalty for leaving.",
               },
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.07}>
