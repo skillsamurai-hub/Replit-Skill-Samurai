@@ -36,7 +36,7 @@ export default function HowItWorks() {
             <span className="text-primary">IS EASY</span>
           </h3>
           <p className="text-xl text-muted-foreground font-medium max-w-2xl mx-auto">
-            We make it simple for your child to start learning right away.
+            We make it simple for Winnipeg families to get their child started right away.
           </p>
         </FadeIn>
 

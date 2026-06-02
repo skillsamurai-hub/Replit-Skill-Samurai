@@ -49,14 +49,14 @@ export default function ChildBenefits() {
           <div>
             <FadeIn direction="right">
               <h2 className="text-primary font-bold tracking-[0.28em] uppercase text-xs sm:text-sm mb-3 sm:mb-4">
-                For Your Child
+                For Winnipeg Kids
               </h2>
               <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading uppercase leading-[0.95] tracking-tight max-w-xl text-secondary">
                 <span className="block">WHAT YOUR CHILD</span>
                 <span className="block text-primary">GETS OUT OF IT</span>
               </h3>
               <p className="mt-5 sm:mt-6 text-lg sm:text-xl text-secondary/80 font-medium max-w-xl leading-relaxed">
-                We meet your child exactly where they're at. No experience needed. Just a structured, fun environment where playing on a laptop becomes learning that builds real skills they’ll use everywhere.
+                Right here in Winnipeg, we meet your child exactly where they're at. No experience needed — just a structured, fun environment where screen time becomes learning that builds real skills they'll use everywhere.
               </p>
             </FadeIn>
 
