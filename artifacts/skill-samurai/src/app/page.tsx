@@ -20,13 +20,13 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <MediaBanner />
       <Relatability />
       <BeforeAfter />
       <ChildBenefits />
+      <StatsStrip />
       <MidCta />
       <HowItWorks />
-      <MediaBanner />
-      <StatsStrip />
       <Suspense fallback={null}>
         <GoogleReviews />
       </Suspense>
