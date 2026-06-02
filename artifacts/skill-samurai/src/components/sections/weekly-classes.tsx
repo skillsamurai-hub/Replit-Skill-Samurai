@@ -18,14 +18,14 @@ import {
 import { openBookingModal } from "@/components/ui/modal-events";
 
 const classes = [
-  { icon: Code2, label: "Coding", color: "bg-primary" },
-  { icon: Bot, label: "Robotics", color: "bg-accent" },
-  { icon: FlaskConical, label: "STEM", color: "bg-secondary" },
-  { icon: Gamepad2, label: "Game Development", color: "bg-primary" },
-  { icon: Smartphone, label: "App Development", color: "bg-accent" },
-  { icon: Box, label: "3D Printing", color: "bg-secondary" },
-  { icon: BrainCircuit, label: "Artificial Intelligence", color: "bg-primary" },
-  { icon: Clapperboard, label: "Video Editing", color: "bg-accent" },
+  { icon: Code2, label: "Coding", color: "bg-primary", ages: "Ages 7–18" },
+  { icon: Bot, label: "Robotics", color: "bg-accent", ages: "Ages 7–14" },
+  { icon: FlaskConical, label: "STEM", color: "bg-secondary", ages: "Ages 7–12" },
+  { icon: Gamepad2, label: "Game Development", color: "bg-primary", ages: "Ages 10–18" },
+  { icon: Smartphone, label: "App Development", color: "bg-accent", ages: "Ages 12–18" },
+  { icon: Box, label: "3D Printing", color: "bg-secondary", ages: "Ages 8–14" },
+  { icon: BrainCircuit, label: "Artificial Intelligence", color: "bg-primary", ages: "Ages 13–18" },
+  { icon: Clapperboard, label: "Video Editing", color: "bg-accent", ages: "Ages 9–16" },
 ];
 
 const features = [
@@ -107,9 +107,12 @@ export default function WeeklyClasses() {
                   >
                     <Icon className="h-10 w-10 text-white" strokeWidth={2} />
                   </div>
-                  <h4 className="text-xl font-bold font-heading text-secondary leading-tight">
+                  <h4 className="text-xl font-bold font-heading text-secondary leading-tight mb-2">
                     {c.label}
                   </h4>
+                  <span className="text-xs font-bold uppercase tracking-wide text-secondary/50 bg-secondary/8 rounded-full px-3 py-1">
+                    {c.ages}
+                  </span>
                 </div>
               );
             })}
