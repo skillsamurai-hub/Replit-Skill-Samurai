@@ -47,25 +47,25 @@ export default function WeeklyClasses() {
   };
 
   return (
-    <section id="weekly-classes" className="py-20 md:py-28 bg-secondary relative overflow-hidden">
-      <div className="absolute -top-20 -left-20 w-96 h-96 bg-primary/15 rounded-full blur-[80px] pointer-events-none" />
-      <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-accent/20 rounded-full blur-[80px] pointer-events-none" />
+    <section id="weekly-classes" className="py-20 md:py-28 bg-white border-y border-secondary/10 relative overflow-hidden">
+      <div className="absolute -top-20 -left-20 w-96 h-96 bg-primary/6 rounded-full blur-[80px] pointer-events-none" />
+      <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-accent/6 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <FadeIn className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-3">Weekly Classes</h2>
-          <h3 className="text-4xl md:text-5xl font-black font-heading text-white leading-tight tracking-tight mb-5">
+          <h3 className="text-4xl md:text-5xl font-black font-heading text-secondary leading-tight tracking-tight mb-5">
             After School Tech Accelerator Classes
           </h3>
-          <p className="text-lg text-white/75 font-medium">
+          <p className="text-lg text-secondary/65 font-medium">
             Hands-on classes that let kids explore game design, robotics, AI, app development and more — personalized to their age, interests, and learning style.
           </p>
         </FadeIn>
 
         <FadeIn delay={0.1} className="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-10">
           {features.map((f) => (
-            <div key={f} className="inline-flex items-center gap-2 text-white font-semibold text-sm md:text-base">
-              <CheckCircle2 className="h-5 w-5 text-accent" />
+            <div key={f} className="inline-flex items-center gap-2 text-secondary font-semibold text-sm md:text-base">
+              <CheckCircle2 className="h-5 w-5 text-primary" />
               {f}
             </div>
           ))}
@@ -100,14 +100,14 @@ export default function WeeklyClasses() {
                 <div
                   key={c.label}
                   data-card
-                  className="snap-start flex-shrink-0 w-[260px] md:w-[280px] bg-white/12 rounded-3xl border-2 border-white/15 hover:border-accent/30 shadow-xl shadow-black/15 p-8 flex flex-col items-center text-center transition-all duration-300 group backdrop-blur-sm"
+                  className="snap-start flex-shrink-0 w-[260px] md:w-[280px] bg-white rounded-3xl border-2 border-secondary/10 hover:border-primary/30 shadow-lg shadow-secondary/8 p-8 flex flex-col items-center text-center transition-all duration-300 group"
                 >
                   <div
                     className={`h-20 w-20 rounded-2xl ${c.color} flex items-center justify-center mb-6 shadow-lg rotate-3 group-hover:-rotate-3 group-hover:scale-110 transition-all`}
                   >
                     <Icon className="h-10 w-10 text-white" strokeWidth={2} />
                   </div>
-                  <h4 className="text-xl font-bold font-heading text-white leading-tight">
+                  <h4 className="text-xl font-bold font-heading text-secondary leading-tight">
                     {c.label}
                   </h4>
                 </div>
@@ -117,7 +117,7 @@ export default function WeeklyClasses() {
         </div>
 
         <FadeIn delay={0.2} className="mt-10 flex flex-col items-center gap-4">
-          <p className="text-white/70 text-sm font-bold uppercase tracking-wider">Choose your location to enroll:</p>
+          <p className="text-secondary/60 text-sm font-bold uppercase tracking-wider">Choose your location to enroll:</p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
               href="https://winnipeg.jumbula.com/north-east-coding-classes"
@@ -136,7 +136,7 @@ export default function WeeklyClasses() {
               Enroll — Seven Oaks
             </a>
           </div>
-          <p className="text-white/60 text-sm font-medium">
+          <p className="text-secondary/50 text-sm font-medium">
             No contracts. Flexible, month-to-month membership that fits your schedule.
           </p>
         </FadeIn>
