@@ -79,6 +79,22 @@ export default function Navbar() {
             About Us
           </Link>
 
+          {/* Why Us */}
+          <Link
+            href="/about#why-us"
+            className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors whitespace-nowrap"
+          >
+            Why Us
+          </Link>
+
+          {/* Results */}
+          <Link
+            href="/about#results"
+            className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors whitespace-nowrap"
+          >
+            Results
+          </Link>
+
           {/* Programs dropdown */}
           <div
             className="relative"
@@ -245,6 +261,8 @@ export default function Navbar() {
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
 
             <Link href="/about" className="text-base font-semibold text-white hover:text-primary transition-colors" onClick={() => setOpen(false)}>About Us</Link>
+            <Link href="/about#why-us" className="text-base font-semibold text-white hover:text-primary transition-colors" onClick={() => setOpen(false)}>Why Us</Link>
+            <Link href="/about#results" className="text-base font-semibold text-white hover:text-primary transition-colors" onClick={() => setOpen(false)}>Results</Link>
 
             {/* Programs */}
             <div>
