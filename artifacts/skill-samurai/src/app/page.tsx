@@ -10,7 +10,6 @@ import HowItWorks from "@/components/sections/how-it-works";
 import Schedule from "@/components/sections/schedule";
 import FinalCta from "@/components/sections/final-cta";
 import StudentSpotlightTeaser from "@/components/sections/student-spotlight-teaser";
-import MidCta from "@/components/sections/mid-cta";
 
 const WeeklyClasses = dynamic(() => import("@/components/sections/weekly-classes"));
 const GoogleReviews = dynamic(() => import("@/components/sections/google-reviews"));
@@ -25,7 +24,6 @@ export default function HomePage() {
       <BeforeAfter />
       <ChildBenefits />
       <StatsStrip />
-      <MidCta />
       <HowItWorks />
       <Suspense fallback={null}>
         <GoogleReviews />
