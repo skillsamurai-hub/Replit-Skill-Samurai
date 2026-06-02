@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { FadeIn } from "@/components/ui/fade-in";
 import { Gamepad2, Brain, Timer, Trophy } from "lucide-react";
 
@@ -67,6 +68,14 @@ export default function Relatability() {
               <span className="block">Your child already loves being on screens.</span>
               <span className="block">We turn that into something you can actually feel good about.</span>
             </p>
+            <div className="mt-10">
+              <Link
+                href="/about#why-us"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 text-base font-bold text-white hover:bg-primary/90 hover:scale-[1.03] active:scale-95 transition-all shadow-lg"
+              >
+                See why parents choose us →
+              </Link>
+            </div>
           </div>
         </FadeIn>
       </div>
