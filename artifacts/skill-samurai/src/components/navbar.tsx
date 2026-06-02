@@ -52,6 +52,8 @@ export default function Navbar() {
     { label: "Live Parent Calendar 2026", href: null, type: "popup" as const },
     { label: "Shop / Merch", href: "/shop", type: "internal" as const },
     { label: "Free Coding Resources", href: "https://www.youtube.com/@SkillSamuraiWinnipeg/playlists", type: "external" as const },
+    { label: "FAQ", href: "/faq", type: "internal" as const },
+    { label: "Contact", href: "/contact", type: "internal" as const },
     { label: "Parent Log In", href: "https://winnipeg.jumbula.com/", type: "external" as const },
     { label: "Staff Log In", href: "https://app.skillsamurai.com/", type: "external" as const },
     { label: "Careers", href: "/careers", type: "internal" as const },
@@ -216,22 +218,6 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Contact */}
-          <Link
-            href="/contact"
-            className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors whitespace-nowrap"
-          >
-            Contact
-          </Link>
-
-          {/* FAQ */}
-          <Link
-            href="/faq"
-            className="text-sm font-semibold uppercase tracking-wider text-white/80 hover:text-primary transition-colors whitespace-nowrap"
-          >
-            FAQ
-          </Link>
-
         </nav>
 
         <div className="flex items-center gap-3">
@@ -352,9 +338,6 @@ export default function Navbar() {
                 <Link href="/careers" className="text-sm font-medium text-white/70 hover:text-primary" onClick={() => setOpen(false)}>Careers</Link>
               </div>
             </div>
-
-            <Link href="/contact" className="text-base font-semibold text-white hover:text-primary transition-colors" onClick={() => setOpen(false)}>Contact</Link>
-            <Link href="/faq" className="text-base font-semibold text-white hover:text-primary transition-colors" onClick={() => setOpen(false)}>FAQ</Link>
 
             <button
               type="button"
