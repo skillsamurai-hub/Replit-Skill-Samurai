@@ -82,9 +82,8 @@ export default function Hero() {
             <span className="block">Classes for Kids in Winnipeg</span>
           </h1>
 
-          <p className="text-base sm:text-lg lg:text-xl text-white/90 mb-6 lg:mb-8 leading-relaxed font-medium drop-shadow max-w-2xl mx-auto">
-            <span className="block">We help kids build confidence, creativity, and future-ready skills by</span>
-            <span className="block">creating technology — instead of just consuming it.</span>
+          <p className="text-base sm:text-lg lg:text-xl text-white/90 mb-6 lg:mb-8 leading-relaxed font-medium drop-shadow">
+            Transform screen time into valuable skills that will shape your child&apos;s future.
           </p>
 
           <a
