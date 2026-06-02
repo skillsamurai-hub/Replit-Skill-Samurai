@@ -84,56 +84,53 @@ export default function AboutPage() {
       <section id="why-us" className="py-16 md:py-24 bg-white border-b border-secondary/10">
         <div className="container mx-auto px-4 max-w-5xl">
           <FadeIn className="text-center mb-12 md:mb-16">
-            <p className="text-primary font-bold uppercase tracking-widest text-sm mb-4">Why Skill Samurai</p>
-            <p className="text-secondary/50 font-semibold uppercase tracking-widest text-xs mb-5">This might sound familiar...</p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading text-secondary leading-tight tracking-tight">
-              The Screen Time Battle<br className="hidden md:block" /> Every Parent Knows
+            <p className="text-primary font-bold uppercase tracking-widest text-sm mb-4">Why Parents Choose Us</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black font-heading text-secondary leading-tight tracking-tight">
+              There are other options.<br className="hidden md:block" /> Here's what makes us different.
             </h2>
+            <p className="mt-5 text-lg text-secondary/65 max-w-2xl mx-auto">
+              Most coding programs for kids look similar on paper. These are the things Winnipeg parents consistently tell us set us apart.
+            </p>
           </FadeIn>
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
-            <FadeIn>
-              <div className="space-y-5">
-                {[
-                  "Your kid has been on a screen for three hours — again. You've asked them to stop four times.",
-                  "It's YouTube, TikTok, Roblox, repeat. Passive consumption, no end in sight.",
-                  "You know technology is their future — but watching them scroll mindlessly doesn't feel like preparation.",
-                  "You've looked for coding programs, but most feel boring, too advanced, or just glorified babysitting.",
-                ].map((text, i) => (
-                  <div key={i} className="flex gap-4 items-start bg-secondary/5 rounded-2xl p-5 border border-secondary/10">
-                    <span className="mt-0.5 h-7 w-7 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 text-secondary/50 text-sm font-black">{i + 1}</span>
-                    <p className="text-secondary/75 text-base leading-relaxed font-medium">{text}</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+            {[
+              {
+                label: "146+ five-star reviews",
+                detail: "The most-reviewed kids coding academy in Winnipeg — from real local parents, not imported testimonials.",
+              },
+              {
+                label: "Month-to-month, no contracts",
+                detail: "We earn your trust every single month. There's no lock-in, no pressure, no penalty for leaving.",
+              },
+              {
+                label: "Ages 6 to 18, every level",
+                detail: "Whether your child is 6 or 16, total beginner or self-taught — we have the right track for where they are today.",
+              },
+              {
+                label: "Background-checked instructors",
+                detail: "Every instructor passes a background check and child abuse registry check before stepping into a classroom.",
+              },
+              {
+                label: "Small class sizes",
+                detail: "Intentionally capped so every student gets real attention — not a one-size-fits-all lecture to a room of 30.",
+              },
+              {
+                label: "International award-winning curriculum",
+                detail: "Backed by a global network across Canada, Australia, New Zealand, and the US — proven, structured, and always updated.",
+              },
+            ].map((item, i) => (
+              <FadeIn key={i} delay={i * 0.07}>
+                <div className="bg-secondary/5 rounded-2xl border border-secondary/10 p-6 md:p-7 h-full hover:shadow-md hover:border-primary/30 transition-all">
+                  <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center mb-4">
+                    <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
                   </div>
-                ))}
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.15}>
-              <div className="bg-secondary rounded-3xl p-8 md:p-10 text-white relative overflow-hidden">
-                <div className="absolute -top-16 -right-16 w-48 h-48 bg-primary/20 rounded-full blur-3xl pointer-events-none" />
-                <div className="relative z-10">
-                  <p className="text-primary font-bold uppercase tracking-widest text-xs mb-4">Here's the shift</p>
-                  <h3 className="text-2xl md:text-3xl font-black font-heading leading-tight mb-5">
-                    What if screen time built something real?
-                  </h3>
-                  <div className="space-y-4">
-                    {[
-                      "Your child builds actual games, apps, and animations — not just plays them.",
-                      "Every class ends with something tangible they made themselves.",
-                      "The skills transfer everywhere: problem-solving, persistence, creativity.",
-                      "You stop dreading the screen — because now it's a tool, not a distraction.",
-                    ].map((point, i) => (
-                      <div key={i} className="flex gap-3 items-start">
-                        <span className="mt-1 h-5 w-5 rounded-full bg-primary flex items-center justify-center shrink-0">
-                          <svg className="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                          </svg>
-                        </span>
-                        <p className="text-white/80 text-sm leading-relaxed">{point}</p>
-                      </div>
-                    ))}
-                  </div>
+                  <h3 className="font-heading font-bold text-secondary text-base md:text-lg mb-2">{item.label}</h3>
+                  <p className="text-sm text-secondary/65 leading-relaxed">{item.detail}</p>
                 </div>
-              </div>
-            </FadeIn>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>
