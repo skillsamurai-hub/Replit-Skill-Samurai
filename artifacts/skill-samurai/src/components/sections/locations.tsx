@@ -32,7 +32,7 @@ const locations = [
   },
 ];
 
-const programTags = ["Coding", "Robotics", "STEM", "Game Development", "App Development", "3D Printing", "Artificial Intelligence", "Video Editing"];
+const programTags = ["Coding", "STEM", "Game Development", "App Development", "Artificial Intelligence", "Video Editing"];
 
 function openPopup(url: string) {
   const w = 900, h = 700;
