@@ -105,7 +105,7 @@ export default function Locations() {
                         href="#weekly-classes"
                         className={`text-sm font-bold ${accentText} hover:underline`}
                       >
-                        Coding · STEM · Game Development · App Development · AI · Video Editing →
+                        Coding · STEM · Game Development · App Development · AI →
                       </a>
                     </div>
 
