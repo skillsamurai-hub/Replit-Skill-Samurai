@@ -83,6 +83,53 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Meet the Owners */}
+      <section className="py-16 md:py-24 bg-white border-b border-secondary/10">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <FadeIn className="text-center mb-12">
+            <p className="text-primary font-bold uppercase tracking-widest text-sm mb-3">Meet the Owners</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black font-heading text-secondary leading-tight tracking-tight">
+              We&apos;re Genesis &amp; Akil — and this started with our own kids.
+            </h2>
+          </FadeIn>
+
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+            <FadeIn className="space-y-5 text-lg text-secondary/75 leading-relaxed">
+              <p>
+                We&apos;re parents to Evan (15) and Ava (5), and we proudly own two Skill Samurai locations here in Winnipeg.
+              </p>
+              <p>
+                Like most parents, we wanted more for our kids than just endless screen time. When Evan was 8, he was deep into video games — but we knew he needed something more purposeful. At the time, there weren&apos;t any local programs for kids to learn coding. So Akil — who has a background in computer science and a big heart for helping kids — put together a simple coding curriculum using online resources.
+              </p>
+              <p className="font-semibold text-secondary">
+                And that one decision changed everything.
+              </p>
+              <p>
+                Evan went from playing games to building them. He started solving problems, thinking creatively, and for the first time, he was genuinely excited to learn. Watching that spark come alive in him was everything.
+              </p>
+            </FadeIn>
+
+            <FadeIn delay={0.12} className="space-y-5 text-lg text-secondary/75 leading-relaxed">
+              <p>
+                With Akil&apos;s Computer Science background and Genesis&apos;s experience in sales, marketing, and growing businesses in tech, we launched Skill Samurai Winnipeg to help other kids find that same spark.
+              </p>
+              <p>
+                Because the truth is — it&apos;s not just about coding. We&apos;re teaching kids how to be resourceful, how to think outside the box, and how to understand their own learning style. We help them build real confidence and skills they&apos;ll carry for life — whether they go into tech or not.
+              </p>
+              <p>
+                As a mom with ADHD, Genesis knows how hard traditional classrooms can be. That&apos;s why we&apos;ve created something different — where kids can thrive being exactly who they are.
+              </p>
+              <p>
+                We work with kids ages 6–18, helping them grow from curious beginners into capable creators — at their own pace, in a space where they feel seen, supported, and inspired.
+              </p>
+              <p className="font-semibold text-secondary">
+                As parents, if we&apos;re investing every month in a program, we want to know it&apos;s leading somewhere. At Skill Samurai, it does.
+              </p>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
       {/* Why Us */}
       <section id="why-us" className="py-16 md:py-24 bg-white border-b border-secondary/10">
         <div className="container mx-auto px-4 max-w-5xl">
