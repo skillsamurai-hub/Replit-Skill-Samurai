@@ -83,26 +83,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Meet the Owners */}
-      <section className="py-16 md:py-24 bg-white border-b border-secondary/10">
-        <div className="container mx-auto px-4 max-w-3xl text-center">
-          <FadeIn>
-            <p className="text-primary font-bold uppercase tracking-widest text-sm mb-3">Meet the Owners</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black font-heading text-secondary leading-tight tracking-tight mb-8">
-              Locally owned by parents who built this for their own kids first.
-            </h2>
-            <div className="space-y-5 text-lg text-secondary/75 leading-relaxed text-left max-w-2xl mx-auto">
-              <p>
-                We&apos;re Genesis and Akil — Winnipeg parents who couldn&apos;t find a local program that turned screen time into something meaningful. So Akil, with a background in computer science, built one. Watching our own child go from consuming technology to creating it changed everything.
-              </p>
-              <p>
-                With Akil&apos;s CS expertise and Genesis&apos;s background in sales, marketing, and tech, we launched Skill Samurai Winnipeg to give other kids that same spark — real skills, real confidence, and a place where they feel seen for exactly who they are.
-              </p>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
       {/* Why Us */}
       <section id="why-us" className="py-16 md:py-24 bg-white border-b border-secondary/10">
         <div className="container mx-auto px-4 max-w-5xl">
