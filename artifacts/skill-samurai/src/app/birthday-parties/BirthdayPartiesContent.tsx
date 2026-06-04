@@ -160,11 +160,11 @@ export default function BirthdayPartiesContent() {
           <FadeIn delay={0.3}>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href="mailto:Genesis@SkillSamurai.com?subject=Birthday Party Inquiry"
+                href="mailto:winnipeg@skillsamurai.com?subject=Birthday Party Inquiry"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary text-white font-black text-sm uppercase tracking-wide shadow-lg shadow-primary/40 hover:bg-primary/90 transition-colors"
               >
                 <Cake className="h-4 w-4" />
-                Book a Party
+                Request Info
               </a>
               <a
                 href="tel:+12048182155"
@@ -329,11 +329,11 @@ export default function BirthdayPartiesContent() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href="mailto:Genesis@SkillSamurai.com?subject=Birthday Party Inquiry"
+                href="mailto:winnipeg@skillsamurai.com?subject=Birthday Party Inquiry"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary text-white font-black text-sm uppercase tracking-wide shadow-lg shadow-primary/40 hover:bg-primary/90 transition-colors"
               >
                 <Mail className="h-4 w-4" />
-                Email Us to Book
+                Request Info
               </a>
               <a
                 href="tel:+12048182155"
