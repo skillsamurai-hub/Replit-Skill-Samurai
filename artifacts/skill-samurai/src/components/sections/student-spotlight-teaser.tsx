@@ -184,7 +184,7 @@ export default function StudentSpotlightTeaser() {
             href="#locations"
             className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-sm font-black uppercase tracking-wide text-white shadow-lg shadow-primary/30 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95"
           >
-            Book a Free Trial Class
+            Your Child Could Be Next
           </a>
           <Link
             href="/student-projects"

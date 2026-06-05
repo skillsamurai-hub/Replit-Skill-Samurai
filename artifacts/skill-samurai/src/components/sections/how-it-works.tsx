@@ -64,7 +64,7 @@ export default function HowItWorks() {
             href="#locations"
             className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-sm font-black uppercase tracking-wide text-white shadow-lg shadow-primary/30 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95"
           >
-            Book a Free Trial Class
+            Get Your Child Started
           </a>
           <p className="mt-3 text-sm text-secondary/50 font-medium">First class is free · No experience needed · Ages 6–18</p>
         </FadeIn>
