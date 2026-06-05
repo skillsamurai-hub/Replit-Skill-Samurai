@@ -18,24 +18,6 @@ export default function FinalCta() {
 
             <div className="relative z-10 flex flex-col lg:flex-row">
 
-              <div className="lg:w-[42%] flex-shrink-0 relative">
-                <div className="relative h-72 sm:h-80 lg:h-full min-h-[400px]">
-                  <Image
-                    src={instructorPhoto}
-                    alt="Skill Samurai instructor working one-on-one with a student at a computer"
-                    fill
-                    className="object-cover object-center"
-                    sizes="(max-width: 1024px) 100vw, 42vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-secondary/80" />
-                  <div className="absolute bottom-4 left-4 right-4 lg:hidden">
-                    <p className="text-white/90 text-xs font-bold uppercase tracking-widest">
-                      Real instructors. Real one-on-one attention.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
               <div className="lg:w-[58%] p-6 sm:p-8 md:p-10 xl:p-14 text-center lg:text-left flex flex-col justify-center">
                 <p className="text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-accent mb-4">
                   Free trial · No commitment
@@ -89,6 +71,24 @@ export default function FinalCta() {
                 <p className="mt-5 hidden lg:block text-white/40 text-xs font-bold uppercase tracking-widest border-t border-white/10 pt-5">
                   Real instructors. Real one-on-one attention.
                 </p>
+              </div>
+
+              <div className="lg:w-[42%] flex-shrink-0 relative order-first lg:order-last">
+                <div className="relative h-72 sm:h-80 lg:h-full min-h-[400px]">
+                  <Image
+                    src={instructorPhoto}
+                    alt="Skill Samurai instructor working one-on-one with a student at a computer"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 1024px) 100vw, 42vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-transparent to-transparent lg:bg-gradient-to-l lg:from-transparent lg:via-transparent lg:to-secondary/80" />
+                  <div className="absolute bottom-4 left-4 right-4 lg:hidden">
+                    <p className="text-white/90 text-xs font-bold uppercase tracking-widest">
+                      Real instructors. Real one-on-one attention.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
