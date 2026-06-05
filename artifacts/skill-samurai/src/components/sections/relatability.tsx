@@ -69,12 +69,12 @@ export default function Relatability() {
               <span className="block">We turn that into something you can actually feel good about.</span>
             </p>
             <div className="mt-10">
-              <Link
-                href="/about#why-us"
+              <a
+                href="#how-it-works"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 text-base font-bold text-white hover:bg-primary/90 hover:scale-[1.03] active:scale-95 transition-all shadow-lg"
               >
-                See why Winnipeg parents choose us →
-              </Link>
+                See how it works →
+              </a>
             </div>
           </div>
         </FadeIn>

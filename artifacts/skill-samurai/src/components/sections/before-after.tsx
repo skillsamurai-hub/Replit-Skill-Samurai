@@ -47,7 +47,7 @@ export default function BeforeAfter() {
               {before.map((item, i) => (
                 <li key={i} className="flex items-start gap-4">
                   <XCircle className="h-6 w-6 text-muted-foreground flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground text-lg font-medium">{item}</span>
+                  <span className="text-muted-foreground text-base sm:text-lg font-medium">{item}</span>
                 </li>
               ))}
             </ul>
@@ -67,7 +67,7 @@ export default function BeforeAfter() {
               {after.map((item, i) => (
                 <li key={i} className="flex items-start gap-4">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-secondary font-bold text-lg">{item}</span>
+                  <span className="text-secondary font-bold text-base sm:text-lg">{item}</span>
                 </li>
               ))}
             </ul>

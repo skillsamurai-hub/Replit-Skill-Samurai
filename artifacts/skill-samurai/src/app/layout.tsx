@@ -21,6 +21,7 @@ import { Suspense } from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { ModalProvider } from "@/components/ui/modal-provider";
+import StickyMobileCta from "@/components/ui/sticky-mobile-cta";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.skillsamuraiwinnipeg.com"),
@@ -171,6 +172,7 @@ export default function RootLayout({
             </Suspense>
           </div>
           <ModalProvider />
+          <StickyMobileCta />
         </Providers>
         <script
           type="application/ld+json"

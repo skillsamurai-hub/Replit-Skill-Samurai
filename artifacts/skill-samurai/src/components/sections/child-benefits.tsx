@@ -123,11 +123,11 @@ export default function ChildBenefits() {
             <div className="absolute -top-10 -right-2 sm:-right-6 w-56 h-56 sm:w-64 sm:h-64 bg-secondary rounded-full blur-[60px] opacity-35 z-0 animate-pulse"></div>
             <div className="absolute -bottom-10 -left-2 sm:-left-6 w-56 h-56 sm:w-64 sm:h-64 bg-accent rounded-full blur-[60px] opacity-30 z-0 animate-pulse" style={{ animationDelay: '1s' }}></div>
 
-            <div className="absolute top-1/2 -left-2 sm:-left-10 -translate-y-1/2 bg-white rounded-[1.5rem] sm:rounded-[2rem] p-4 sm:p-5 shadow-2xl z-20 border-[4px] border-muted animate-bounce" style={{ animationDuration: '3s' }}>
-              <span className="text-4xl sm:text-5xl">🚀</span>
+            <div className="hidden sm:flex absolute top-1/2 -left-10 -translate-y-1/2 bg-white rounded-[2rem] p-5 shadow-2xl z-20 border-[4px] border-muted animate-bounce" style={{ animationDuration: '3s' }}>
+              <span className="text-5xl">🚀</span>
             </div>
-            <div className="absolute -bottom-4 sm:-bottom-6 -right-2 sm:-right-6 bg-white rounded-[1.5rem] sm:rounded-[2rem] p-4 sm:p-5 shadow-2xl z-20 border-[4px] border-muted animate-bounce" style={{ animationDuration: '4s', animationDelay: '0.5s' }}>
-              <span className="text-4xl sm:text-5xl">💡</span>
+            <div className="hidden sm:flex absolute -bottom-6 -right-6 bg-white rounded-[2rem] p-5 shadow-2xl z-20 border-[4px] border-muted animate-bounce" style={{ animationDuration: '4s', animationDelay: '0.5s' }}>
+              <span className="text-5xl">💡</span>
             </div>
           </FadeIn>
         </div>
