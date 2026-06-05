@@ -354,18 +354,12 @@ export default function GoogleReviews() {
           </div>
         </div>
 
-        <FadeIn delay={0.3} className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="#locations"
-            className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 text-sm font-black uppercase tracking-wide text-white shadow-lg shadow-primary/30 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95"
-          >
-            Join 146+ Winnipeg Families
-          </a>
+        <FadeIn delay={0.3} className="text-center mt-12">
           <a
             href="https://www.google.com/maps/place/Skill+Samurai+-+Coding,+Robotics+%26+STEM+Academy+(Coding+For+Kids+in+Winnipeg)/@49.9482295,-97.1391547,17z"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-secondary/20 text-secondary font-bold hover:bg-secondary/5 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-secondary text-white font-bold hover:bg-secondary/90 transition-colors"
           >
             <GoogleG className="w-5 h-5" />
             Read all reviews on Google

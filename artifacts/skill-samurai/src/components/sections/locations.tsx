@@ -62,6 +62,10 @@ export default function Locations() {
           <p className="text-base sm:text-lg text-white/75 font-medium mb-3">
             Same hands-on programs at both locations — no experience needed.
           </p>
+          <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-accent">
+            <span className="inline-block h-2 w-2 rounded-full bg-accent animate-pulse" />
+            Limited spots per session — classes are kept intentionally small
+          </p>
         </FadeIn>
 
         <div className="grid md:grid-cols-2 gap-5 md:gap-6 max-w-5xl mx-auto">

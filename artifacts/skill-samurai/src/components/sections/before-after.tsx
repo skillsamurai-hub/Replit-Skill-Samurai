@@ -12,11 +12,11 @@ export default function BeforeAfter() {
   ];
 
   const after = [
-    "Creating their own games and projects",
-    "Focused and engaged on something they care about",
-    "Works through challenges instead of quitting",
-    "Looks forward to class each week",
-    "Excited to show you what they built"
+    "Asks to do extra coding when they get home",
+    "Sits down and works for a full hour — without being asked",
+    "Hits a problem, figures it out, and tells you about it",
+    "Asks 'is it coding day?' before school on class days",
+    "Calls everyone over to show what they made"
   ];
 
   return (
