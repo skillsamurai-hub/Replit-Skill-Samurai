@@ -111,6 +111,7 @@ export default function Locations() {
                       ))}
                       <a
                         href="#weekly-classes"
+                        onClick={(e) => e.stopPropagation()}
                         className={`text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${accentSoft} ${accentText} hover:opacity-80 transition-opacity`}
                       >
                         + More →
