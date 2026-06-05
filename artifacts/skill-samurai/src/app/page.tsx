@@ -8,6 +8,7 @@ import ChildBenefits from "@/components/sections/child-benefits";
 import BeforeAfter from "@/components/sections/before-after";
 import HowItWorks from "@/components/sections/how-it-works";
 import Schedule from "@/components/sections/schedule";
+import EmailCapture from "@/components/sections/email-capture";
 import FinalCta from "@/components/sections/final-cta";
 import StudentSpotlightTeaser from "@/components/sections/student-spotlight-teaser";
 
@@ -36,6 +37,7 @@ export default function HomePage() {
         <Locations />
       </Suspense>
       <Schedule />
+      <EmailCapture />
       <FinalCta />
     </>
   );

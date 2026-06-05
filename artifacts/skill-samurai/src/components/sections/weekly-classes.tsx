@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { FadeIn } from "@/components/ui/fade-in";
 import {
   Code2,
@@ -15,17 +15,23 @@ import {
   ChevronRight,
   CheckCircle2,
 } from "lucide-react";
-import { openBookingModal } from "@/components/ui/modal-events";
 
 const classes = [
-  { icon: Code2, label: "Coding", color: "bg-primary", ages: "Ages 7–18" },
-  { icon: Bot, label: "Robotics", color: "bg-accent", ages: "Ages 7–14" },
-  { icon: FlaskConical, label: "STEM", color: "bg-secondary", ages: "Ages 7–12" },
-  { icon: Gamepad2, label: "Game Development", color: "bg-primary", ages: "Ages 10–18" },
-  { icon: Smartphone, label: "App Development", color: "bg-accent", ages: "Ages 12–18" },
-  { icon: Box, label: "3D Printing", color: "bg-secondary", ages: "Ages 8–14" },
-  { icon: BrainCircuit, label: "Artificial Intelligence", color: "bg-primary", ages: "Ages 13–18" },
-  { icon: Clapperboard, label: "Video Editing", color: "bg-accent", ages: "Ages 9–16" },
+  { icon: Code2,        label: "Coding",               color: "bg-primary",   ageMin: 7,  ageMax: 18 },
+  { icon: Bot,          label: "Robotics",              color: "bg-accent",    ageMin: 7,  ageMax: 14 },
+  { icon: FlaskConical, label: "STEM",                  color: "bg-secondary", ageMin: 7,  ageMax: 12 },
+  { icon: Gamepad2,     label: "Game Development",      color: "bg-primary",   ageMin: 10, ageMax: 18 },
+  { icon: Smartphone,   label: "App Development",       color: "bg-accent",    ageMin: 12, ageMax: 18 },
+  { icon: Box,          label: "3D Printing",           color: "bg-secondary", ageMin: 8,  ageMax: 14 },
+  { icon: BrainCircuit, label: "Artificial Intelligence", color: "bg-primary", ageMin: 13, ageMax: 18 },
+  { icon: Clapperboard, label: "Video Editing",         color: "bg-accent",    ageMin: 9,  ageMax: 16 },
+];
+
+const ageFilters = [
+  { label: "All Ages",    min: 6,  max: 18 },
+  { label: "Ages 6–10",  min: 6,  max: 10 },
+  { label: "Ages 11–14", min: 11, max: 14 },
+  { label: "Ages 15–18", min: 15, max: 18 },
 ];
 
 const features = [
@@ -37,6 +43,7 @@ const features = [
 
 export default function WeeklyClasses() {
   const scrollerRef = useRef<HTMLDivElement>(null);
+  const [activeFilter, setActiveFilter] = useState(0);
 
   const scrollBy = (dir: number) => {
     const el = scrollerRef.current;
@@ -45,6 +52,16 @@ export default function WeeklyClasses() {
     const step = card ? card.offsetWidth + 24 : 320;
     el.scrollBy({ left: dir * step, behavior: "smooth" });
   };
+
+  const handleFilter = (idx: number) => {
+    setActiveFilter(idx);
+    if (scrollerRef.current) {
+      scrollerRef.current.scrollTo({ left: 0, behavior: "smooth" });
+    }
+  };
+
+  const { min, max } = ageFilters[activeFilter];
+  const filtered = classes.filter((c) => c.ageMin <= max && c.ageMax >= min);
 
   return (
     <section id="weekly-classes" className="py-20 md:py-28 bg-white border-y border-secondary/10 relative overflow-hidden">
@@ -62,12 +79,29 @@ export default function WeeklyClasses() {
           </p>
         </FadeIn>
 
-        <FadeIn delay={0.1} className="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-10">
+        <FadeIn delay={0.1} className="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-8">
           {features.map((f) => (
             <div key={f} className="inline-flex items-center gap-2 text-secondary font-semibold text-sm md:text-base">
               <CheckCircle2 className="h-5 w-5 text-primary" />
               {f}
             </div>
+          ))}
+        </FadeIn>
+
+        <FadeIn delay={0.15} className="flex justify-center gap-2 mb-8 flex-wrap">
+          {ageFilters.map((f, i) => (
+            <button
+              key={f.label}
+              type="button"
+              onClick={() => handleFilter(i)}
+              className={`rounded-full px-5 py-2 text-sm font-bold transition-all ${
+                activeFilter === i
+                  ? "bg-primary text-white shadow-md shadow-primary/25"
+                  : "bg-secondary/8 text-secondary hover:bg-secondary/15"
+              }`}
+            >
+              {f.label}
+            </button>
           ))}
         </FadeIn>
 
@@ -94,7 +128,7 @@ export default function WeeklyClasses() {
             className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scroll-smooth -mx-4 px-4 scrollbar-hide"
             style={{ scrollbarWidth: "none" }}
           >
-            {classes.map((c) => {
+            {filtered.map((c) => {
               const Icon = c.icon;
               return (
                 <div
@@ -111,7 +145,7 @@ export default function WeeklyClasses() {
                     {c.label}
                   </h4>
                   <span className="text-xs font-bold uppercase tracking-wide text-secondary/50 bg-secondary/8 rounded-full px-3 py-1">
-                    {c.ages}
+                    Ages {c.ageMin}–{c.ageMax}
                   </span>
                 </div>
               );
