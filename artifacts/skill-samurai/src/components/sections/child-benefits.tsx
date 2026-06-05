@@ -77,6 +77,16 @@ export default function ChildBenefits() {
                 </FadeIn>
               ))}
             </div>
+
+            <FadeIn delay={0.5} className="mt-8">
+              <a
+                href="#locations"
+                className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-sm font-black uppercase tracking-wide text-white shadow-lg shadow-primary/30 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95"
+              >
+                Book a Free Trial Class
+              </a>
+              <p className="mt-3 text-sm text-secondary/50 font-medium">No experience needed · First class is free</p>
+            </FadeIn>
           </div>
 
           <FadeIn direction="left" className="relative lg:pt-6">
