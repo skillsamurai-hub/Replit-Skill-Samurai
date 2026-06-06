@@ -232,7 +232,7 @@ export default function Footer() {
               href="https://www.firstcallai.io"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary/80 hover:text-primary transition-colors font-semibold"
+              className="hover:text-white transition-colors"
             >
               FirstCall AI
             </a>
