@@ -226,7 +226,17 @@ export default function Footer() {
 
         <div className="border-t border-white/10 py-6 text-sm text-white/55 flex flex-col md:grid md:grid-cols-3 items-center gap-3 text-center">
           <p className="md:text-left">© 2026 Skill Samurai Winnipeg. All rights reserved.</p>
-          <p>Serving Winnipeg Families Since 2023.</p>
+          <p>
+            Built by{" "}
+            <a
+              href="https://firstcallai.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary/80 hover:text-primary transition-colors font-semibold"
+            >
+              FirstCall AI
+            </a>
+          </p>
           <div className="flex gap-6 md:justify-end">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">
               Privacy Policy
