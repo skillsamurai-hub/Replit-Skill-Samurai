@@ -50,7 +50,7 @@ export default function Navbar() {
     { label: "Careers", href: "/careers", type: "internal" as const },
     { label: "Parent Log In", href: "https://winnipeg.jumbula.com/", type: "external" as const },
     { label: "Staff Log In", href: "https://app.skillsamurai.com/", type: "external" as const },
-    { label: "Student Log In", href: "https://hub.skillsamuraiwinnipeg.com", type: "external" as const },
+    { label: "Student Hub Log In", href: "https://hub.skillsamuraiwinnipeg.com", type: "external" as const },
   ];
 
   const dropdownItemClass = "block px-5 py-3.5 text-sm font-semibold text-secondary hover:bg-primary hover:text-white transition-colors border-b border-border last:border-b-0";
@@ -306,7 +306,7 @@ export default function Navbar() {
                 <Link href="/careers" className="text-sm font-medium text-white/70 hover:text-primary" onClick={() => setOpen(false)}>Careers</Link>
                 <a href="https://winnipeg.jumbula.com/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-white/70 hover:text-primary" onClick={() => setOpen(false)}>Parent Log In</a>
                 <a href="https://app.skillsamurai.com/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-white/70 hover:text-primary" onClick={() => setOpen(false)}>Staff Log In</a>
-                <a href="https://hub.skillsamuraiwinnipeg.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-white/70 hover:text-primary" onClick={() => setOpen(false)}>Student Log In</a>
+                <a href="https://hub.skillsamuraiwinnipeg.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-white/70 hover:text-primary" onClick={() => setOpen(false)}>Student Hub Log In</a>
               </div>
             </div>
 
