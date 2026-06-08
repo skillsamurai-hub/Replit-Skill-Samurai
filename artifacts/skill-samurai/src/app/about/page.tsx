@@ -63,49 +63,37 @@ export default function AboutPage() {
           <FadeIn className="text-center mb-12 md:mb-16">
             <p className="text-primary font-bold uppercase tracking-widest text-sm mb-4">Why Parents Choose Us</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black font-heading text-secondary leading-tight tracking-tight">
-              There are other options.<br className="hidden md:block" /> Here's what makes us different.
+              There are other options.<br className="hidden md:block" /> Here's what actually sets us apart.
             </h2>
             <p className="mt-5 text-lg text-secondary/65 max-w-2xl mx-auto">
-              We help kids build confidence, creativity, and future-ready skills by creating technology — instead of just consuming it.
+              Not marketing. Specifics — the things a Winnipeg parent can verify before they ever book a trial.
             </p>
           </FadeIn>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
             {[
               {
-                label: "Kids actually look forward to class",
-                detail: "Our hands-on, project-based format keeps kids genuinely excited — not just sitting through another screen session.",
+                label: "Winnipeg's highest-rated kids coding academy",
+                detail: "146+ five-star Google reviews from real Winnipeg families. That's not a marketing claim — it's what parents say after their kids have actually been through our classes.",
               },
               {
-                label: "Small class sizes with personalized support",
-                detail: "Intentionally capped so every student gets real attention — not a one-size-fits-all lecture to a room of 30.",
+                label: "No contracts. Ever.",
+                detail: "Month-to-month, no lock-in, no cancellation fees. We earn your family's trust every single month — and if we ever stop delivering, you can leave with zero pressure.",
               },
               {
-                label: "Build confidence through real projects",
-                detail: "Every student leaves class with something they made themselves — a game, app, or animation they're proud to show off.",
+                label: "Built by Winnipeg parents, for Winnipeg parents",
+                detail: "We started this because we were searching for exactly this ourselves and couldn't find it. We built it — and we run it the way we'd want it run for our own kids.",
               },
               {
-                label: "Coding, AI, robotics, and game development",
-                detail: "A curriculum that keeps up with tech — so your child is always learning skills that are actually relevant today.",
+                label: "Two locations, right in your neighbourhood",
+                detail: "North East and Seven Oaks. No long drives across the city. Real, local access for Winnipeg families — before school, after school, and weekends.",
               },
               {
-                label: "Make friends with like-minded kids",
-                detail: "A welcoming environment where kids bond over shared interests and build real friendships alongside real skills.",
+                label: "Safe, screened & certified — every instructor, no exceptions",
+                detail: "Background checks. Child abuse registry checks. Structured certification before any instructor steps into a classroom. Your child's safety is built into how we hire — not added as an afterthought.",
               },
               {
-                label: "Month-to-month, no long-term contracts",
-                detail: "We earn your family's trust every single month — no lock-in, no pressure, no penalty for leaving.",
-              },
-              {
-                label: "Safe, screened & certified instructors",
-                detail: "Every instructor undergoes background checks, child abuse registry checks, and structured training before stepping into a classroom. Your child's safety is never an afterthought.",
-              },
-              {
-                label: "We meet every child where they are",
-                detail: "Six or sixteen, total beginner or self-taught coder — we start from where your child is today and keep the challenge just ahead of where they're comfortable.",
-              },
-              {
-                label: "The skills go beyond coding",
-                detail: "Coding teaches kids how to break big problems into small steps, persist when things go wrong, and think creatively. Those habits show up everywhere — not just on a laptop.",
+                label: "Proven curriculum — not improvised lessons",
+                detail: "As a Skill Samurai franchise, our curriculum is internationally developed and structured. Your child gets the same proven progression that's worked for thousands of students worldwide — not a freelancer's lesson plan.",
               },
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.07}>
