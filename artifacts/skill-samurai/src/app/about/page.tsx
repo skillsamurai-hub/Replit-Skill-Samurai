@@ -20,32 +20,6 @@ const stats = [
   { value: "Since 2023", label: "Serving Winnipeg Families" },
 ];
 
-const values = [
-  {
-    title: "Real Projects, Not Busy Work",
-    body: "Every student builds actual games, apps, websites, and AI experiments. They leave each class with something they made themselves — not a worksheet.",
-  },
-  {
-    title: "Small Classes, Personal Attention",
-    body: "We keep class sizes intentionally small so every student gets guidance tailored to their level, pace, and interests — not a one-size-fits-all lecture.",
-  },
-  {
-    title: "The Skills Go Beyond Coding",
-    body: "Coding teaches kids how to break big problems into small steps, persist when things go wrong, and think creatively. Those habits show up everywhere — not just on a laptop.",
-  },
-  {
-    title: "Safe, Screened, and Certified",
-    body: "Every Coding Instructor undergoes background checks, child abuse registry checks, and structured training before stepping into a classroom. Your child's safety is never an afterthought.",
-  },
-  {
-    title: "No Contracts, No Pressure",
-    body: "Everything is month-to-month. We earn your family's trust every single month — through the quality of our teaching and the excitement your child brings home after class.",
-  },
-  {
-    title: "We Meet Every Child Where They Are",
-    body: "Six or sixteen, total beginner or self-taught — we start from where your child is today and keep the challenge just ahead of where they currently feel comfortable.",
-  },
-];
 
 export default function AboutPage() {
   return (
@@ -121,6 +95,18 @@ export default function AboutPage() {
                 label: "Month-to-month, no long-term contracts",
                 detail: "We earn your family's trust every single month — no lock-in, no pressure, no penalty for leaving.",
               },
+              {
+                label: "Safe, screened & certified instructors",
+                detail: "Every instructor undergoes background checks, child abuse registry checks, and structured training before stepping into a classroom. Your child's safety is never an afterthought.",
+              },
+              {
+                label: "We meet every child where they are",
+                detail: "Six or sixteen, total beginner or self-taught coder — we start from where your child is today and keep the challenge just ahead of where they're comfortable.",
+              },
+              {
+                label: "The skills go beyond coding",
+                detail: "Coding teaches kids how to break big problems into small steps, persist when things go wrong, and think creatively. Those habits show up everywhere — not just on a laptop.",
+              },
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.07}>
                 <div className="bg-secondary/5 rounded-2xl border border-secondary/10 p-6 md:p-7 h-full hover:shadow-md hover:border-primary/30 transition-all">
@@ -175,31 +161,6 @@ export default function AboutPage() {
                 See Student Work →
               </Link>
             </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="py-16 md:py-24 bg-secondary/5 border-y border-secondary/10">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <FadeIn className="text-center mb-10 md:mb-14">
-            <p className="text-primary font-bold uppercase tracking-widest text-sm mb-3">What We Stand For</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black font-heading text-secondary leading-tight tracking-tight">
-              How we teach is as important<br className="hidden md:block" /> as what we teach.
-            </h2>
-          </FadeIn>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-            {values.map((v, i) => (
-              <FadeIn key={v.title} delay={i * 0.07}>
-                <div className="bg-white rounded-2xl border border-secondary/10 p-6 md:p-7 h-full shadow-sm hover:shadow-md transition-shadow">
-                  <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <span className="text-primary font-black text-lg">{i + 1}</span>
-                  </div>
-                  <h3 className="font-heading font-bold text-secondary text-base md:text-lg mb-2">{v.title}</h3>
-                  <p className="text-sm text-secondary/65 leading-relaxed">{v.body}</p>
-                </div>
-              </FadeIn>
-            ))}
           </div>
         </div>
       </section>
