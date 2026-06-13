@@ -66,7 +66,7 @@ export default function Relatability() {
             </h3>
             <p className="text-base sm:text-lg md:text-2xl lg:text-3xl text-white/90 max-w-4xl mx-auto font-medium leading-snug">
               <span className="block">Your child already loves being on screens.</span>
-              <span className="block">We turn that into something you can actually feel good about.</span>
+              <span className="block">We turn that into something you can actually<br />feel good about.</span>
             </p>
             <div className="mt-10">
               <a
