@@ -80,7 +80,7 @@ export default function AboutPage() {
                 detail: "Month-to-month, no lock-in, no cancellation fees. We earn your family's trust every single month — and if we ever stop delivering, you can leave with zero pressure.",
               },
               {
-                label: "Built by Winnipeg parents, for Winnipeg parents",
+                label: "Built by parents, for parents",
                 detail: "We started this because we were searching for exactly this ourselves and couldn't find it. We built it — and we run it the way we'd want it run for our own kids.",
               },
               {
