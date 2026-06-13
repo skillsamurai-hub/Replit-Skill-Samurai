@@ -66,7 +66,7 @@ export default function AboutPage() {
               There are other options.<br className="hidden md:block" /> Here's what actually sets us apart.
             </h2>
             <p className="mt-5 text-lg text-secondary/65 max-w-2xl mx-auto">
-              Not marketing. Specifics — the things any parent can verify before they ever book a trial.
+              Not marketing. Specifics — the things any<br />parent can verify before they ever book a trial.
             </p>
           </FadeIn>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
