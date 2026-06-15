@@ -16,6 +16,15 @@ type Review = {
 
 const reviews: Review[] = [
   {
+    name: "Cheryl D",
+    initials: "CD",
+    color: "bg-secondary",
+    weeksAgo: "May 19, 2025",
+    rating: 5,
+    tags: ["Selective Mutism", "Special Needs", "Patient Staff"],
+    text: "My son has been coming here for almost a year now and absolutely loves it! He has Select Mutism and it has been difficult finding an extra curricular activity for him that he is comfortable with and actually enjoys. Akil has been so amazing with him, and can see if he's struggling even without the verbal cues for help. Genesis is also so friendly and helpful. The class is held in a coffee shop with a little play area for toddlers. It's a great place to catch up on work or some reading while my son does his coding.",
+  },
+  {
     name: "Bria Lylyk",
     initials: "BL",
     color: "bg-accent text-secondary",
@@ -194,15 +203,6 @@ const reviews: Review[] = [
     rating: 5,
     tags: ["Builds Confidence", "Game Making", "Goes At Own Pace"],
     text: "My son has had a great experience thus far! It has boosted his confidence, allowing him to be creative with video game creation at a speed that suits him. He looks forward to his class every week.",
-  },
-  {
-    name: "Cheryl D",
-    initials: "CD",
-    color: "bg-secondary",
-    weeksAgo: "May 19, 2025",
-    rating: 5,
-    tags: ["Selective Mutism", "Special Needs", "Patient Staff"],
-    text: "My son has been coming here for almost a year now and absolutely loves it! He has Select Mutism and it has been difficult finding an extra curricular activity for him that he is comfortable with and actually enjoys. Akil has been so amazing with him, and can see if he's struggling even without the verbal cues for help. Genesis is also so friendly and helpful. The class is held in a coffee shop with a little play area for toddlers. It's a great place to catch up on work or some reading while my son does his coding.",
   },
   {
     name: "Louise Hargave",
