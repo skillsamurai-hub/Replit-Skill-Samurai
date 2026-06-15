@@ -16,15 +16,6 @@ type Review = {
 
 const reviews: Review[] = [
   {
-    name: "Chris K",
-    initials: "CK",
-    color: "bg-secondary",
-    weeksAgo: "11 weeks ago",
-    rating: 5,
-    tags: ["Free Demo Class", "Beyond Coding", "Instantly Hooked"],
-    text: "Had a great experience participating in a demo coding class the other day. The environment was welcoming and well organized, instructors were attentive to students unique needs, and everyone was engaged in their projects. Genesis (the owner) answered all my questions and also educated me on all the various benefits this program provides beyond just coding. My son had a blast and was hooked from the start. Looking forward to watching him flourish as he develops his coding skills, builds confidence and becomes more comfortable with evolving technology and software.",
-  },
-  {
     name: "Bria Lylyk",
     initials: "BL",
     color: "bg-accent text-secondary",
@@ -59,6 +50,15 @@ const reviews: Review[] = [
     rating: 5,
     tags: ["Homeschooling", "Multiple Kids", "Learning Through Play"],
     text: "My kids have been coming for almost two months now, and they absolutely love it! As a homeschooling family, I really appreciate how Skill Samurai makes learning feel like play. What I love most is how Skill Samurai sneaks in so many different subjects without the kids feeling like they're doing \"work\". They just think they're playing games! The staff is amazing, patient, and encouraging, and the location is super convenient with plenty of parking. Highly recommend for any parent who wants to make learning fun and meaningful.",
+  },
+  {
+    name: "Chris K",
+    initials: "CK",
+    color: "bg-secondary",
+    weeksAgo: "11 weeks ago",
+    rating: 5,
+    tags: ["Free Demo Class", "Beyond Coding", "Instantly Hooked"],
+    text: "Had a great experience participating in a demo coding class the other day. The environment was welcoming and well organized, instructors were attentive to students unique needs, and everyone was engaged in their projects. Genesis (the owner) answered all my questions and also educated me on all the various benefits this program provides beyond just coding. My son had a blast and was hooked from the start. Looking forward to watching him flourish as he develops his coding skills, builds confidence and becomes more comfortable with evolving technology and software.",
   },
   {
     name: "Josh Gilbert",
