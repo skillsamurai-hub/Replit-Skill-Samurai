@@ -16,15 +16,6 @@ type Review = {
 
 const reviews: Review[] = [
   {
-    name: "Cheryl D",
-    initials: "CD",
-    color: "bg-secondary",
-    weeksAgo: "May 19, 2025",
-    rating: 5,
-    tags: ["Selective Mutism", "Special Needs", "Patient Staff"],
-    text: "My son has been coming here for almost a year now and absolutely loves it! He has Select Mutism and it has been difficult finding an extra curricular activity for him that he is comfortable with and actually enjoys. Akil has been so amazing with him, and can see if he's struggling even without the verbal cues for help. Genesis is also so friendly and helpful. The class is held in a coffee shop with a little play area for toddlers. It's a great place to catch up on work or some reading while my son does his coding.",
-  },
-  {
     name: "Bria Lylyk",
     initials: "BL",
     color: "bg-accent text-secondary",
@@ -41,6 +32,15 @@ const reviews: Review[] = [
     rating: 5,
     tags: ["Grade 10", "High School", "1+ Year Member", "Affordable"],
     text: "My son has been attending these computer classes for over a year, and he really enjoys them! The atmosphere is very welcoming, and the instructors provide an individual approach to every child. There are many interesting directions to choose from — coding, robotics, STEM, and game development. My son has already completed more than three programs and continues to learn with great interest. I love that these classes help him focus, think critically, and be creative while doing something he truly enjoys. The schedule and location are convenient, and the price is affordable. I highly recommend this program for kids in Winnipeg!",
+  },
+  {
+    name: "Cheryl D",
+    initials: "CD",
+    color: "bg-secondary",
+    weeksAgo: "May 19, 2025",
+    rating: 5,
+    tags: ["Selective Mutism", "Special Needs", "Patient Staff"],
+    text: "My son has been coming here for almost a year now and absolutely loves it! He has Select Mutism and it has been difficult finding an extra curricular activity for him that he is comfortable with and actually enjoys. Akil has been so amazing with him, and can see if he's struggling even without the verbal cues for help. Genesis is also so friendly and helpful. The class is held in a coffee shop with a little play area for toddlers. It's a great place to catch up on work or some reading while my son does his coding.",
   },
   {
     name: "Christine Remoquillo",
