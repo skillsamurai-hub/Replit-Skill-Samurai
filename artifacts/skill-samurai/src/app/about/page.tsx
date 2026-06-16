@@ -203,7 +203,7 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://www.google.com/maps/place/Skill+Samurai+-+Coding,+Robotics+%26+STEM+Academy+(Coding+For+Kids+in+Winnipeg)/@49.9482295,-97.1391547,17z"
+                href="https://www.google.com/search?q=skill+samurai+winnipeg&sca_esv=0584e342056e488a&ei=wGZ-aM_7NLKC0PEPtpOWoAY&gs_ssp=eJzj4tVP1zc0zDHNTk8zKTY3YLRSNagwMTS2ME5ONTI1NrdISU4ytjKoMDWzSDU1Skk0skw1NEi0SPMSK87OzMlRKE7MLS1KzFQoz8zLyyxITQcAW4YXtg&oq=skill+samura&sclient=gws-wiz-serp#mpd=~8442050446591582271/customers/reviews"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full border-2 border-secondary px-7 py-3 text-base font-bold text-secondary hover:bg-secondary hover:text-white transition-all"
