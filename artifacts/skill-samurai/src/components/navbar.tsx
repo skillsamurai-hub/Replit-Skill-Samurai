@@ -246,7 +246,11 @@ export default function Navbar() {
           </button>
           <button
             type="button"
-            onClick={() => setOpen((v) => !v)}
+            onClick={() => {
+              const next = !open;
+              setOpen(next);
+              window.dispatchEvent(new CustomEvent("mobileNavToggle", { detail: { open: next } }));
+            }}
             className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white"
             aria-label="Toggle menu"
             aria-expanded={open}

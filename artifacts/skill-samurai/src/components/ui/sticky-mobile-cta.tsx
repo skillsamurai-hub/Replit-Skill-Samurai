@@ -6,6 +6,7 @@ import { X, ArrowRight } from "lucide-react";
 export default function StickyMobileCta() {
   const [visible, setVisible] = useState(false);
   const [dismissed, setDismissed] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
 
   useEffect(() => {
     if (typeof sessionStorage !== "undefined" && sessionStorage.getItem("stickyCtaDismissed")) {
@@ -15,6 +16,12 @@ export default function StickyMobileCta() {
     const handleScroll = () => setVisible(window.scrollY > 350);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handler = (e: Event) => setNavOpen((e as CustomEvent<{ open: boolean }>).detail.open);
+    window.addEventListener("mobileNavToggle", handler);
+    return () => window.removeEventListener("mobileNavToggle", handler);
   }, []);
 
   const handleDismiss = () => {
@@ -29,7 +36,7 @@ export default function StickyMobileCta() {
   return (
     <div
       className={`md:hidden fixed bottom-0 left-0 right-0 z-50 p-3 transition-transform duration-300 ${
-        visible ? "translate-y-0" : "translate-y-full"
+        visible && !navOpen ? "translate-y-0" : "translate-y-full"
       }`}
       style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}
     >
