@@ -156,7 +156,7 @@ export default function Footer() {
                   <Mail className="h-4 w-4 text-primary flex-shrink-0 mt-1" />
                   <a
                     href="mailto:winnipeg@skillsamurai.com"
-                    className="hover:text-white transition-colors break-all"
+                    className="hover:text-white transition-colors break-words"
                   >
                     winnipeg@skillsamurai.com
                   </a>
