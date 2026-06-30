@@ -62,7 +62,7 @@ export default function ContactPage() {
           {/* Top 3 contact cards */}
           <div className="grid gap-4 sm:grid-cols-3 mb-6">
             <a
-              href="tel:+12048182155"
+              href="tel:+14319982155"
               className="group flex items-center gap-4 rounded-2xl border border-border bg-white px-5 py-5 shadow-sm hover:border-primary hover:shadow-md transition-all"
             >
               <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
@@ -70,7 +70,7 @@ export default function ContactPage() {
               </div>
               <div className="min-w-0">
                 <p className="text-xs font-bold uppercase tracking-widest text-secondary/40 mb-0.5">Phone</p>
-                <p className="text-sm font-extrabold text-secondary truncate">204-818-2155</p>
+                <p className="text-sm font-extrabold text-secondary truncate">431-998-2155</p>
               </div>
             </a>
 
