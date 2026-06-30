@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         <div className="py-16 grid gap-12 md:grid-cols-12">
-          <div className="md:col-span-4">
+          <div className="md:col-span-3">
             <Link
               href="/"
               className="inline-flex items-center mb-6 group"
@@ -137,7 +137,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="md:col-span-4 grid sm:grid-cols-2 gap-8">
+          <div className="md:col-span-5 grid sm:grid-cols-2 gap-8">
             <div>
               <h4 className="font-heading font-black text-sm mb-5 text-accent uppercase tracking-[0.15em]">
                 Contact
