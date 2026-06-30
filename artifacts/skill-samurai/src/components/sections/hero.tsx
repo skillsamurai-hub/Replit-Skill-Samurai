@@ -96,12 +96,21 @@ export default function Hero() {
             <span className="text-white/90 text-xs sm:text-sm font-bold uppercase tracking-wide">146 Five-Star Reviews · Winnipeg&apos;s Top-Rated Coding Classes</span>
           </a>
 
-          <a
-            href="#locations"
-            className="inline-flex h-10 sm:h-12 items-center justify-center rounded-full bg-primary px-5 sm:px-7 text-[11px] sm:text-sm font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 border-b-4 border-primary-foreground/20 mb-6 lg:mb-8"
-          >
-            Book a Free Trial Class
-          </a>
+          <div className="flex flex-wrap items-center gap-3 mb-6 lg:mb-8">
+            <a
+              href="#locations"
+              className="inline-flex h-10 sm:h-12 items-center justify-center rounded-full bg-primary px-5 sm:px-7 text-[11px] sm:text-sm font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95 border-b-4 border-primary-foreground/20"
+            >
+              Book a Free Trial Class
+            </a>
+            <a
+              href="tel:+14319982155"
+              className="inline-flex h-10 sm:h-12 items-center justify-center gap-2 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm px-5 sm:px-7 text-[11px] sm:text-sm font-black uppercase tracking-wide text-white transition-all hover:bg-white/20 hover:border-white/50 hover:scale-105 active:scale-95"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1.32h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call Us
+            </a>
+          </div>
 
         </div>
       </div>
