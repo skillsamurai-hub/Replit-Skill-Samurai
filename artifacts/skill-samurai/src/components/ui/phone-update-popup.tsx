@@ -172,11 +172,11 @@ export default function PhoneUpdatePopup() {
             href="https://conta.cc/45a9Mqh"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Read our parent update, opens in new tab"
+            aria-label="View the announcement email we sent to all families, opens in new tab"
             className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
           >
             <ExternalLink className="h-3.5 w-3.5" />
-            Read Our Parent Update
+            View the Email We Sent to All Families
           </a>
 
           {/* Footer note */}
