@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { X, Phone, ExternalLink, CheckCircle2 } from 'lucide-react';
+import { X, Phone, ExternalLink, CheckCircle2, Mail } from 'lucide-react';
 
 const STORAGE_KEY = 'ss_phone_popup_dismissed';
 const DISMISS_DAYS = 7;
@@ -142,23 +142,31 @@ export default function PhoneUpdatePopup() {
           <div className="flex flex-col sm:flex-row gap-3">
             <a
               href="tel:+14319982155"
-              aria-label="Call or text Skill Samurai Winnipeg at 431-998-2155"
+              aria-label="Call Skill Samurai Winnipeg at 431-998-2155"
               className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-primary/90 font-heading"
             >
               <Phone className="h-4 w-4" />
-              Call or Text Us
+              Call Us
             </a>
             <a
-              href="https://conta.cc/45a9Mqh"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Read our parent update, opens in new tab"
+              href="mailto:winnipeg@skillsamurai.com"
+              aria-label="Email Skill Samurai Winnipeg"
               className="flex flex-1 items-center justify-center gap-2 rounded-xl border-2 border-border px-5 py-3 text-sm font-semibold text-secondary transition-colors hover:border-primary hover:text-primary"
             >
-              <ExternalLink className="h-4 w-4" />
-              Read Our Parent Update
+              <Mail className="h-4 w-4" />
+              Email Us
             </a>
           </div>
+          <a
+            href="https://conta.cc/45a9Mqh"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Read our parent update, opens in new tab"
+            className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
+          >
+            <ExternalLink className="h-3.5 w-3.5" />
+            Read Our Parent Update
+          </a>
 
           {/* Footer note */}
           <p className="text-center text-xs text-muted-foreground leading-relaxed">
