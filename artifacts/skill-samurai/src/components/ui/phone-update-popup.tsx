@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { X, Phone, ExternalLink, CheckCircle2, Mail } from 'lucide-react';
+import { X, Phone, ExternalLink, CheckCircle2, Mail, UserPlus } from 'lucide-react';
 
 const STORAGE_KEY = 'ss_phone_popup_dismissed';
 const DISMISS_DAYS = 7;
@@ -120,6 +120,17 @@ export default function PhoneUpdatePopup() {
               (431) 998-2155
             </p>
           </div>
+
+          {/* Save contact CTA */}
+          <a
+            href="/skill-samurai-winnipeg.vcf"
+            download="Skill Samurai Winnipeg.vcf"
+            aria-label="Save Skill Samurai Winnipeg as a contact"
+            className="flex items-center justify-center gap-2 rounded-xl border-2 border-primary/30 bg-primary/5 px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-primary/10 hover:border-primary/50"
+          >
+            <UserPlus className="h-4 w-4" />
+            Save Contact to Your Phone
+          </a>
 
           {/* Previous number note */}
           <p className="text-sm text-muted-foreground leading-relaxed">
