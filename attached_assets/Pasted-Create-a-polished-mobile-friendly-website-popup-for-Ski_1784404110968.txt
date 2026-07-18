@@ -1,0 +1,62 @@
+Create a polished, mobile-friendly website popup for Skill Samurai Winnipeg announcing our updated direct phone number.
+
+The popup should feel friendly, reassuring, and professional. It should not feel urgent or alarming.
+
+POPUP CONTENT
+
+Headline:
+📞 We’ve Updated Our Direct Phone Number
+
+Body copy:
+To better serve our Skill Samurai families, we’ve updated our direct phone number.
+
+Label:
+Our New Direct Number
+
+Phone number:
+(431) 998-2155
+
+Supporting text:
+If you have our previous number (204) 818-2155 saved, please take a moment to update your contacts.
+
+Add a highlighted reassurance message:
+When we call, your caller ID will now display “Skill Samurai Winnipeg,” making it easier to recognize our calls.
+
+Add a small footer message:
+We’re still the same Skill Samurai Winnipeg team—just with a new direct phone number to make it easier to stay connected.
+
+BUTTONS
+
+Primary button:
+Call or Text Us
+
+Link:
+tel:+14319982155
+
+Secondary button:
+Read Our Parent Update
+
+Link:
+https://conta.cc/45a9Mqh
+
+FUNCTIONAL REQUIREMENTS
+
+1. Display the popup shortly after the page loads, using a 1–2 second delay.
+2. Include a visible close “X” button in the top-right corner.
+3. Allow users to close the popup by clicking outside it.
+4. Do not show the popup again for 7 days after the user closes it. Use localStorage or cookies.
+5. Open the Parent Update link in a new tab.
+6. Make the phone button work properly on mobile devices.
+7. Ensure the popup is fully responsive and accessible.
+8. Add appropriate aria labels and keyboard support.
+9. Pressing Escape should close the popup.
+10. Prevent the popup from covering the full screen on mobile.
+11. Keep the popup width around 500–600px on desktop.
+12. Use clean spacing, rounded corners, a subtle shadow, and readable font sizes.
+13. Use Skill Samurai-inspired colours, including dark navy, bright blue, and small pink accents.
+14. Do not use flashing effects, countdown timers, warning colours, or anything that could cause concern.
+15. Add a soft fade-and-slide entrance animation.
+
+Please provide the complete HTML, CSS, and JavaScript code in separate clearly labelled sections.
+
+The code should be easy to add to an existing website without affecting the rest of the site. Prefix all CSS classes with “ss-phone-popup-” to avoid styling conflicts.
