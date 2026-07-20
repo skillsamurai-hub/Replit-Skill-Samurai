@@ -236,14 +236,13 @@ export default function Navbar() {
             BOOK MAKEUP CLASS
           </button>
 
-          <button
-            type="button"
-            onClick={openBookingModal}
+          <Link
+            href="/#locations"
             className="inline-flex h-10 sm:h-11 items-center justify-center whitespace-nowrap rounded-full bg-primary px-5 sm:px-8 text-xs sm:text-sm font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-lg active:scale-95 cursor-pointer"
           >
             <span className="lg:hidden">FREE TRIAL</span>
             <span className="hidden lg:inline">BOOK A FREE SESSION</span>
-          </button>
+          </Link>
           <button
             type="button"
             onClick={() => {
