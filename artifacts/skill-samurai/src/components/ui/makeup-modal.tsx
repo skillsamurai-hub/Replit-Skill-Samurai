@@ -10,13 +10,13 @@ const locations = [
     name: "North East",
     address: "1199 Rothesay St.",
     days: "Mon – Tue",
-    href: "https://link.skillsamurai.com/widget/booking/SGsgwBr4folY53lMpMYc",
+    href: "https://book.skillsamuraiwinnipeg.com/widget/booking/yJGhJxF00WXEIK4PMqwR",
   },
   {
     name: "Seven Oaks",
     address: "745 Kingsbury Ave.",
     days: "Wed – Thu",
-    href: "https://link.skillsamurai.com/widget/booking/RjGKMmLLevpPEAJx8FnW",
+    href: "https://book.skillsamuraiwinnipeg.com/widget/booking/fAz7Vr2KMa3wAWSUDICP",
   },
 ];
 

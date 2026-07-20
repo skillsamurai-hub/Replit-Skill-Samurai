@@ -14,8 +14,8 @@ const locations = [
     days: "Mon – Tue",
     times: "5:30pm & 6:30pm",
     timesDetail: "Two flexible after-school start times",
-    bookHref: "https://link.skillsamurai.com/widget/booking/Ku7skA5XAkgQpg8rQqN1",
-    makeupHref: "https://link.skillsamurai.com/widget/booking/SGsgwBr4folY53lMpMYc",
+    bookHref: "https://book.skillsamuraiwinnipeg.com/widget/booking/TnDl1OMZ4UVFMhbBfc8g",
+    makeupHref: "https://book.skillsamuraiwinnipeg.com/widget/booking/yJGhJxF00WXEIK4PMqwR",
     accent: "secondary",
   },
   {
@@ -26,8 +26,8 @@ const locations = [
     days: "Wed – Thu",
     times: "4:30pm, 5:30pm & 6:30pm",
     timesDetail: "Three flexible after-school start times",
-    bookHref: "https://link.skillsamurai.com/widget/booking/uLciDSsBTUDqpqKRDaZq",
-    makeupHref: "https://link.skillsamurai.com/widget/booking/RjGKMmLLevpPEAJx8FnW",
+    bookHref: "https://book.skillsamuraiwinnipeg.com/widget/booking/tjfCJpZCGAyeMV3MucK5",
+    makeupHref: "https://book.skillsamuraiwinnipeg.com/widget/booking/fAz7Vr2KMa3wAWSUDICP",
     accent: "primary",
   },
 ];
