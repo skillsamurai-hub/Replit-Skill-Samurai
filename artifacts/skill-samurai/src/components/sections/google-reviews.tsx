@@ -348,7 +348,7 @@ const FILTERS: FilterGroup[] = [
   { label: "Girls in Coding", emoji: "👩‍💻", tags: ["Girls in Coding"] },
   { label: "Game Making", emoji: "🎮", tags: ["Game Making", "Gaming", "Builds Sprites", "Animations & Music", "Gaming → Creating", "Fun & Educational"] },
   { label: "Multiple Kids", emoji: "👨‍👩‍👧‍👦", tags: ["Siblings", "Multiple Kids", "Two Kids", "Ages 7 & 10", "Ages 6 & 8"] },
-  { label: "Special Needs", emoji: "🤝", tags: ["Selective Mutism", "Special Needs", "ADHD", "Nervous at First"] },
+  { label: "Neurodivergent", emoji: "🤝", tags: ["Selective Mutism", "Special Needs", "ADHD", "Nervous at First"] },
 ];
 
 export default function GoogleReviews() {
