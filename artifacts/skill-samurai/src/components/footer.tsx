@@ -179,7 +179,7 @@ export default function Footer() {
               <h4 className="font-heading font-black text-sm mb-5 text-accent uppercase tracking-[0.15em]">
                 Quick Links
               </h4>
-              <ul className="space-y-3 text-white/75 font-medium text-sm">
+              <ul className="space-y-4 text-white/75 font-medium text-sm">
                 <li>
                   <button
                     type="button"

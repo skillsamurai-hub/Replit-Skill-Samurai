@@ -57,14 +57,14 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-secondary/95 backdrop-blur-md">
-      <div className="container mx-auto px-4 h-24 flex items-center justify-between gap-6">
+      <div className="container mx-auto px-4 h-16 md:h-24 flex items-center justify-between gap-6">
         <Link href="/" className="flex items-center group shrink-0" data-testid="link-home">
           <Image
             src={logoUrl}
             alt="Skill Samurai — Coding, Robotics & STEM Academy"
             height={80}
             priority
-            className="h-20 w-auto group-hover:scale-105 transition-transform duration-300"
+            className="h-12 md:h-20 w-auto group-hover:scale-105 transition-transform duration-300"
             style={{ width: "auto" }}
           />
         </Link>
