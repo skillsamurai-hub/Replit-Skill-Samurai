@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "146+", label: "Five-Star Google Reviews" },
+  { value: "148+", label: "Five-Star Google Reviews" },
   { value: "2", label: "Winnipeg Locations" },
   { value: "Ages 6–18", label: "Students Served" },
   { value: "Since 2023", label: "Serving Winnipeg Families" },
@@ -73,7 +73,7 @@ export default function AboutPage() {
             {[
               {
                 label: "Winnipeg's highest-rated kids coding academy",
-                detail: "146+ five-star Google reviews from real Winnipeg families. That's not a marketing claim — it's what parents say after their kids have actually been through our classes.",
+                detail: "148+ five-star Google reviews from real Winnipeg families. That's not a marketing claim — it's what parents say after their kids have actually been through our classes.",
               },
               {
                 label: "No contracts. Ever.",
@@ -196,7 +196,7 @@ export default function AboutPage() {
           <FadeIn>
             <p className="text-primary font-bold uppercase tracking-widest text-sm mb-3">Don't Take Our Word For It</p>
             <h2 className="text-3xl md:text-4xl font-black font-heading text-secondary leading-tight tracking-tight mb-5">
-              146+ five-star reviews from Winnipeg families.
+              148+ five-star reviews from Winnipeg families.
             </h2>
             <p className="text-lg text-secondary/70 mb-8">
               Read what local parents are saying about their child's experience at Skill Samurai Winnipeg.
