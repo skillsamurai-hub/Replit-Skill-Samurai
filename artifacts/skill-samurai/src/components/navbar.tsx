@@ -320,6 +320,7 @@ export default function Navbar() {
                 <button type="button" onClick={() => { openCalendarModal(); setOpen(false); }} className="text-sm font-medium text-white/70 hover:text-primary text-left cursor-pointer">Live Parent Calendar 2026</button>
                 <Link href="/shop" className="text-sm font-medium text-white/70 hover:text-primary" onClick={() => setOpen(false)}>Shop / Merch</Link>
                 <a href="https://www.youtube.com/@SkillSamuraiWinnipeg/playlists" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-white/70 hover:text-primary" onClick={() => setOpen(false)}>Free Coding Resources</a>
+                <Link href="/faq" className="text-sm font-medium text-white/70 hover:text-primary" onClick={() => setOpen(false)}>FAQ</Link>
                 <Link href="/careers" className="text-sm font-medium text-white/70 hover:text-primary" onClick={() => setOpen(false)}>Careers</Link>
                 <a href="https://winnipeg.jumbula.com/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-white/70 hover:text-primary" onClick={() => setOpen(false)}>Parent Log In</a>
                 <a href="https://app.skillsamurai.com/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-white/70 hover:text-primary" onClick={() => setOpen(false)}>Staff Log In</a>
