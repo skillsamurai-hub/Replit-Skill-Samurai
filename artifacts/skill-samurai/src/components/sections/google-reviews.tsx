@@ -342,13 +342,13 @@ type FilterGroup = { label: string; emoji: string; tags: string[] };
 
 const FILTERS: FilterGroup[] = [
   { label: "All", emoji: "⭐", tags: [] },
+  { label: "Neurodivergent", emoji: "🤝", tags: ["Selective Mutism", "Special Needs", "ADHD", "Nervous at First"] },
   { label: "Free Trial", emoji: "🎯", tags: ["Free Trial", "Free Demo Class", "Trial Class", "Wants to Return", "Begged to Go Back", "Instantly Hooked"] },
   { label: "Builds Confidence", emoji: "💪", tags: ["Builds Confidence", "Screen Time → Skills", "Builds Patience", "Builds Focus", "Future-Ready", "Engaged & Motivated", "Always Excited", "Fast Progress"] },
   { label: "Great Instructors", emoji: "🏅", tags: ["Kind Instructors", "Encouraging", "Caring Staff", "Patient Staff", "Supportive Team", "Welcoming", "Laid Back & Fun", "Engaged the Whole Hour"] },
   { label: "Girls in Coding", emoji: "👩‍💻", tags: ["Girls in Coding"] },
   { label: "Game Making", emoji: "🎮", tags: ["Game Making", "Gaming", "Builds Sprites", "Animations & Music", "Gaming → Creating", "Fun & Educational"] },
   { label: "Multiple Kids", emoji: "👨‍👩‍👧‍👦", tags: ["Siblings", "Multiple Kids", "Two Kids", "Ages 7 & 10", "Ages 6 & 8"] },
-  { label: "Neurodivergent", emoji: "🤝", tags: ["Selective Mutism", "Special Needs", "ADHD", "Nervous at First"] },
 ];
 
 export default function GoogleReviews() {
