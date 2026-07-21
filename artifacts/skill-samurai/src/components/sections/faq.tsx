@@ -4,7 +4,7 @@ import React, { useId, useState } from "react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { Plus } from "lucide-react";
 
-const faqGroups = [
+const faqGroups: { category: string; items: { q: string; a: React.ReactNode }[] }[] = [
   {
     category: "Quick Answers",
     items: [
@@ -39,7 +39,7 @@ const faqGroups = [
     items: [
       {
         q: "Why do parents choose Skill Samurai?",
-        a: "Parents choose Skill Samurai because we're focused on more than just coding. Our students build confidence, problem-solving skills, creativity, and future-ready technology skills in a fun and supportive environment. We keep class sizes small, provide personalized guidance, and help each child progress at their own pace. It's also an easy activity to hand off — no homework to manage, no equipment to buy, just an hour your child looks forward to. We've earned over 148 five-star Google reviews from Winnipeg families who have trusted us with their child's learning journey.",
+        a: <>Parents choose Skill Samurai because we&apos;re focused on more than just coding. Our students build confidence, problem-solving skills, creativity, and future-ready technology skills in a fun and supportive environment. We keep class sizes small, provide personalized guidance, and help each child progress at their own pace. It&apos;s also an easy activity to hand off — no homework to manage, no equipment to buy, just an hour your child looks forward to. We&apos;ve earned <a href="http://skillsamuraiwinnipeg.com/reviews" target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-2 hover:text-white transition-colors" style={{pointerEvents:"auto"}}>over 148 five-star Google reviews</a> from Winnipeg families who have trusted us with their child&apos;s learning journey.</>,
       },
       {
         q: "How do you determine the right class for my child?",
@@ -121,7 +121,7 @@ const faqGroups = [
   },
 ];
 
-function FaqItem({ q, a, defaultOpen = false }: { q: string; a: string; defaultOpen?: boolean }) {
+function FaqItem({ q, a, defaultOpen = false }: { q: string; a: React.ReactNode; defaultOpen?: boolean }) {
   const [open, setOpen] = useState(defaultOpen);
   const reactId = useId();
   const buttonId = `faq-btn-${reactId}`;
