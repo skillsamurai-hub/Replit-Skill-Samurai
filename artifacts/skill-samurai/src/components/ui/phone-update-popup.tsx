@@ -163,7 +163,7 @@ export default function PhoneUpdatePopup() {
                 className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3.5 text-sm font-bold text-white transition-colors hover:bg-primary/90 font-heading"
               >
                 <Phone className="h-4 w-4" />
-                Call Us
+                Call Us · 431-998-2155
               </a>
               <a
                 href="mailto:winnipeg@skillsamurai.com"
