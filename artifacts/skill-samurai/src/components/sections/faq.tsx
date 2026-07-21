@@ -3,7 +3,6 @@
 import React, { useId, useState } from "react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { Plus } from "lucide-react";
-import { openBookingModal } from "@/components/ui/modal-events";
 
 const faqGroups = [
   {
@@ -174,16 +173,9 @@ export default function Faq() {
             <h3 className="text-4xl md:text-5xl font-black font-heading text-white leading-tight tracking-tight mb-5">
               Parent questions,<br />honestly answered.
             </h3>
-            <p className="text-lg text-white/75 font-medium mb-6">
+            <p className="text-lg text-white/75 font-medium">
               The things parents actually ask before booking a trial. If you don't see your question here, just ask us — we'd rather over-explain than oversell.
             </p>
-            <button
-              type="button"
-              onClick={openBookingModal}
-              className="relative z-20 inline-flex items-center justify-center rounded-full bg-primary px-7 py-3 text-base font-bold text-white shadow-lg hover:bg-primary/90 hover:scale-[1.02] active:scale-95 transition-all cursor-pointer"
-            >
-              BOOK A FREE TRIAL
-            </button>
           </FadeIn>
 
           <FadeIn delay={0.15} className="relative z-10 space-y-6">
