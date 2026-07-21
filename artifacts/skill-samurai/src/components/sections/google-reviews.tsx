@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState, useMemo, useEffect } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
 
@@ -340,6 +340,23 @@ function Stars({ count }: { count: number }) {
 
 export default function GoogleReviews() {
   const scrollerRef = useRef<HTMLDivElement>(null);
+  const [activeTag, setActiveTag] = useState<string>("All");
+
+  const allTags = useMemo(() => {
+    const tagSet = new Set<string>();
+    reviews.forEach((r) => r.tags.forEach((t) => tagSet.add(t)));
+    return ["All", ...Array.from(tagSet)];
+  }, []);
+
+  const filtered = useMemo(() =>
+    activeTag === "All" ? reviews : reviews.filter((r) => r.tags.includes(activeTag)),
+  [activeTag]);
+
+  useEffect(() => {
+    if (scrollerRef.current) {
+      scrollerRef.current.scrollTo({ left: 0, behavior: "smooth" });
+    }
+  }, [activeTag]);
 
   const scrollByCard = (dir: 1 | -1) => {
     const el = scrollerRef.current;
@@ -354,7 +371,7 @@ export default function GoogleReviews() {
       <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-accent/15 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <FadeIn className="text-center max-w-3xl mx-auto mb-8 md:mb-14">
+        <FadeIn className="text-center max-w-3xl mx-auto mb-8 md:mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/5 border border-secondary/10 mb-6">
             <GoogleG className="w-5 h-5" />
             <span className="text-secondary font-bold tracking-wide text-sm uppercase">Winnipeg&apos;s Top Rated Kids Coding Academy</span>
@@ -372,6 +389,34 @@ export default function GoogleReviews() {
             <span className="text-secondary/70 font-medium">from local Winnipeg families</span>
           </div>
         </FadeIn>
+
+        {/* Tag filter bar */}
+        <div className="-mx-4 px-4 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden mb-6 md:mb-8">
+          <div className="flex gap-2 w-max mx-auto pb-1">
+            {allTags.map((tag) => {
+              const isActive = activeTag === tag;
+              return (
+                <button
+                  key={tag}
+                  type="button"
+                  onClick={() => setActiveTag(tag)}
+                  className={`shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wide transition-all cursor-pointer ${
+                    isActive
+                      ? "bg-primary text-white shadow-lg shadow-primary/30 scale-105"
+                      : "bg-white text-secondary/70 border border-secondary/15 hover:border-primary/40 hover:text-primary"
+                  }`}
+                >
+                  {tag}
+                  {tag !== "All" && (
+                    <span className={`ml-1.5 text-[10px] ${isActive ? "text-white/70" : "text-secondary/40"}`}>
+                      {reviews.filter((r) => r.tags.includes(tag)).length}
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        </div>
 
         <div className="relative">
           <button
@@ -393,44 +438,58 @@ export default function GoogleReviews() {
 
           <div ref={scrollerRef} className="-mx-4 px-4 overflow-x-auto overflow-y-visible scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" style={{ overscrollBehaviorX: "contain", touchAction: "pan-y pan-x" }}>
             <div className="flex gap-6 md:gap-8 pb-4 w-max min-w-full">
-            {reviews.map((r) => (
-            <div key={r.name} className="snap-start shrink-0 w-[85vw] sm:w-[420px] md:w-[460px]">
-              <article className="h-full flex flex-col bg-white rounded-3xl p-5 md:p-6 border border-secondary/10 shadow-xl shadow-secondary/10">
-                <div className="flex items-start justify-between mb-5">
-                  <div className="flex items-center gap-3">
-                    <div className={`w-11 h-11 rounded-full ${r.color} text-white flex items-center justify-center font-black text-sm shrink-0`}>
-                      {r.initials}
+              {filtered.length > 0 ? filtered.map((r) => (
+                <div key={r.name} className="snap-start shrink-0 w-[85vw] sm:w-[420px] md:w-[460px]">
+                  <article className="h-full flex flex-col bg-white rounded-3xl p-5 md:p-6 border border-secondary/10 shadow-xl shadow-secondary/10">
+                    <div className="flex items-start justify-between mb-5">
+                      <div className="flex items-center gap-3">
+                        <div className={`w-11 h-11 rounded-full ${r.color} text-white flex items-center justify-center font-black text-sm shrink-0`}>
+                          {r.initials}
+                        </div>
+                        <div className="min-w-0">
+                          <div className="font-bold text-secondary truncate">{r.name}</div>
+                          <div className="text-xs text-secondary/60">{r.weeksAgo}</div>
+                        </div>
+                      </div>
+                      <GoogleG className="w-5 h-5 shrink-0 mt-1" />
                     </div>
-                    <div className="min-w-0">
-                      <div className="font-bold text-secondary truncate">{r.name}</div>
-                      <div className="text-xs text-secondary/60">{r.weeksAgo}</div>
+
+                    <div className="flex items-center gap-3 mt-1">
+                      <Stars count={r.rating} />
+                      <span className="inline-flex items-center gap-1 text-xs text-secondary/50 font-medium">
+                        <GoogleG className="w-3.5 h-3.5" />
+                        Google Review
+                      </span>
                     </div>
-                  </div>
-                  <GoogleG className="w-5 h-5 shrink-0 mt-1" />
-                </div>
 
-                <div className="flex items-center gap-3 mt-1">
-                  <Stars count={r.rating} />
-                  <span className="inline-flex items-center gap-1 text-xs text-secondary/50 font-medium">
-                    <GoogleG className="w-3.5 h-3.5" />
-                    Google Review
-                  </span>
-                </div>
+                    <p className="mt-4 text-secondary/80 leading-relaxed text-[15px] flex-1">
+                      {r.text}
+                    </p>
 
-                <p className="mt-4 text-secondary/80 leading-relaxed text-[15px] flex-1">
-                  {r.text}
-                </p>
-
-                <div className="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-secondary/8">
-                  {r.tags.map((tag) => (
-                    <span key={tag} className="inline-block px-2.5 py-1 rounded-full bg-secondary/6 text-secondary/60 text-[11px] font-semibold tracking-wide">
-                      {tag}
-                    </span>
-                  ))}
+                    <div className="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-secondary/8">
+                      {r.tags.map((tag) => (
+                        <button
+                          key={tag}
+                          type="button"
+                          onClick={() => setActiveTag(tag)}
+                          className={`inline-block px-2.5 py-1 rounded-full text-[11px] font-semibold tracking-wide transition-colors cursor-pointer ${
+                            activeTag === tag
+                              ? "bg-primary text-white"
+                              : "bg-secondary/6 text-secondary/60 hover:bg-primary/10 hover:text-primary"
+                          }`}
+                        >
+                          {tag}
+                        </button>
+                      ))}
+                    </div>
+                  </article>
                 </div>
-              </article>
-            </div>
-            ))}
+              )) : (
+                <div className="w-full min-w-[300px] flex flex-col items-center justify-center py-16 text-center px-4">
+                  <p className="text-secondary/60 font-semibold text-lg mb-2">No reviews for this topic yet</p>
+                  <button type="button" onClick={() => setActiveTag("All")} className="text-primary font-bold underline underline-offset-2 text-sm cursor-pointer">Show all reviews</button>
+                </div>
+              )}
             </div>
           </div>
         </div>
