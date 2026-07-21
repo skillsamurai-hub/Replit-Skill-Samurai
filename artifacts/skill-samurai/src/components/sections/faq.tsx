@@ -166,31 +166,29 @@ function FaqItem({ q, a, defaultOpen = false }: { q: string; a: string; defaultO
 export default function Faq() {
   return (
     <section className="pt-16 pb-28 bg-secondary relative overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-[1fr,1.6fr] gap-12 lg:gap-20 max-w-6xl mx-auto items-start">
-          <FadeIn className="lg:sticky lg:top-28 relative z-20">
-            <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-3">FAQ</h2>
-            <h3 className="text-4xl md:text-5xl font-black font-heading text-white leading-tight tracking-tight mb-5">
-              Parent questions,<br />honestly answered.
-            </h3>
-            <p className="text-lg text-white/75 font-medium">
-              The things parents actually ask before booking a trial. If you don't see your question here, just ask us — we'd rather over-explain than oversell.
-            </p>
-          </FadeIn>
+      <div className="container mx-auto px-4 max-w-4xl">
+        <FadeIn className="mb-10">
+          <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-3">FAQ</h2>
+          <h3 className="text-4xl md:text-5xl font-black font-heading text-white leading-tight tracking-tight mb-4">
+            Parent questions,<br />honestly answered.
+          </h3>
+          <p className="text-lg text-white/75 font-medium max-w-2xl">
+            The things parents actually ask before booking a trial. If you don't see your question here, just ask us — we'd rather over-explain than oversell.
+          </p>
+        </FadeIn>
 
-          <FadeIn delay={0.15} className="relative z-10 space-y-6">
-            {faqGroups.map((group) => (
-              <div key={group.category} className="bg-black/15 rounded-3xl border border-white/10 shadow-xl shadow-black/20 px-7 md:px-10 py-3 backdrop-blur-sm">
-                <p className="text-xs font-bold uppercase tracking-widest text-accent pt-5 pb-2">
-                  {group.category}
-                </p>
-                {group.items.map((f, i) => (
-                  <FaqItem key={i} q={f.q} a={f.a} />
-                ))}
-              </div>
-            ))}
-          </FadeIn>
-        </div>
+        <FadeIn delay={0.15} className="space-y-6">
+          {faqGroups.map((group) => (
+            <div key={group.category} className="bg-black/15 rounded-3xl border border-white/10 shadow-xl shadow-black/20 px-7 md:px-10 py-3 backdrop-blur-sm">
+              <p className="text-xs font-bold uppercase tracking-widest text-accent pt-5 pb-2">
+                {group.category}
+              </p>
+              {group.items.map((f, i) => (
+                <FaqItem key={i} q={f.q} a={f.a} />
+              ))}
+            </div>
+          ))}
+        </FadeIn>
       </div>
     </section>
   );
