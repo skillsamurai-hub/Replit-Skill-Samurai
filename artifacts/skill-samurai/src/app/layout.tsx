@@ -183,6 +183,21 @@ export default function RootLayout({
         <Script id="domain-redirect" strategy="beforeInteractive">
           {`if(window.location.hostname.endsWith('.replit.app')){window.location.replace('https://www.skillsamuraiwinnipeg.com'+window.location.pathname+window.location.search);}`}
         </Script>
+        <Script id="content-protect" strategy="afterInteractive">
+          {`
+            (function(){
+              document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+              document.addEventListener('keydown', function(e){
+                var k = e.key ? e.key.toLowerCase() : '';
+                var ctrl = e.ctrlKey || e.metaKey;
+                if(ctrl && ['u','s','p','a','c','x','i','j'].includes(k)){ e.preventDefault(); return false; }
+                if(ctrl && e.shiftKey && ['i','j','c','k'].includes(k)){ e.preventDefault(); return false; }
+                if(k === 'f12'){ e.preventDefault(); return false; }
+              });
+              document.addEventListener('dragstart', function(e){ e.preventDefault(); });
+            })();
+          `}
+        </Script>
         <Script
           src="https://beta.leadconnectorhq.com/loader.js"
           data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
