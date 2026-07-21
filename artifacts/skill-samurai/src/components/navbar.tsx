@@ -236,12 +236,18 @@ export default function Navbar() {
             BOOK MAKEUP CLASS
           </button>
 
+          <button
+            type="button"
+            onClick={openMakeupModal}
+            className="lg:hidden inline-flex h-10 sm:h-11 items-center justify-center whitespace-nowrap rounded-full bg-primary px-5 text-xs font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-lg active:scale-95 cursor-pointer"
+          >
+            MAKEUP CLASS
+          </button>
           <Link
             href="/#locations"
-            className="inline-flex h-10 sm:h-11 items-center justify-center whitespace-nowrap rounded-full bg-primary px-5 sm:px-8 text-xs sm:text-sm font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-lg active:scale-95 cursor-pointer"
+            className="hidden lg:inline-flex h-11 items-center justify-center whitespace-nowrap rounded-full bg-primary px-8 text-sm font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-lg active:scale-95 cursor-pointer"
           >
-            <span className="lg:hidden">FREE TRIAL</span>
-            <span className="hidden lg:inline">BOOK A FREE SESSION</span>
+            BOOK A FREE SESSION
           </Link>
           <button
             type="button"
