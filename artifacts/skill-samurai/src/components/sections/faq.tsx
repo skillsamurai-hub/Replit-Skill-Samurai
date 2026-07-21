@@ -165,7 +165,7 @@ function FaqItem({ q, a, defaultOpen = false }: { q: string; a: string; defaultO
 
 export default function Faq() {
   return (
-    <section className="pt-10 pb-28 bg-secondary relative overflow-hidden">
+    <section className="pt-0 pb-28 bg-secondary relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-[1fr,1.6fr] gap-12 lg:gap-20 max-w-6xl mx-auto items-start">
           <FadeIn className="lg:sticky lg:top-28 relative z-20">
