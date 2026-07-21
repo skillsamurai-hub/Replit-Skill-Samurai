@@ -264,6 +264,14 @@ export default function Navbar() {
         <div className="lg:hidden border-t border-white/10 bg-secondary/95 backdrop-blur-md">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
 
+            <button
+              type="button"
+              onClick={() => { openMakeupModal(); setOpen(false); }}
+              className="text-base font-semibold text-white text-left cursor-pointer hover:text-primary transition-colors"
+            >
+              Book Makeup Class
+            </button>
+
             <Link href="/about#why-us" className="text-base font-semibold text-white hover:text-primary transition-colors" onClick={() => setOpen(false)}>Why Us</Link>
             <Link href="/about" className="text-base font-semibold text-white hover:text-primary transition-colors" onClick={() => setOpen(false)}>About Us</Link>
             <Link href="/#student-spotlight" className="text-base font-semibold text-white hover:text-primary transition-colors" onClick={() => setOpen(false)}>Results</Link>
@@ -312,14 +320,6 @@ export default function Navbar() {
                 <a href="https://hub.skillsamuraiwinnipeg.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-white/70 hover:text-primary" onClick={() => setOpen(false)}>Student Hub Log In</a>
               </div>
             </div>
-
-            <button
-              type="button"
-              onClick={() => { openMakeupModal(); setOpen(false); }}
-              className="text-base font-semibold text-white text-left cursor-pointer"
-            >
-              Book Makeup Class
-            </button>
 
             {/* Social icons — mobile */}
             <div className="flex items-center gap-4 pt-2 border-t border-white/10">
