@@ -338,25 +338,35 @@ function Stars({ count }: { count: number }) {
   );
 }
 
+type FilterGroup = { label: string; emoji: string; tags: string[] };
+
+const FILTERS: FilterGroup[] = [
+  { label: "All", emoji: "⭐", tags: [] },
+  { label: "Free Trial", emoji: "🎯", tags: ["Free Trial", "Free Demo Class", "Trial Class", "Wants to Return", "Begged to Go Back", "Instantly Hooked"] },
+  { label: "Builds Confidence", emoji: "💪", tags: ["Builds Confidence", "Screen Time → Skills", "Builds Patience", "Builds Focus", "Future-Ready", "Engaged & Motivated", "Always Excited", "Fast Progress"] },
+  { label: "Great Instructors", emoji: "🏅", tags: ["Kind Instructors", "Encouraging", "Caring Staff", "Patient Staff", "Supportive Team", "Welcoming", "Laid Back & Fun", "Engaged the Whole Hour"] },
+  { label: "Girls in Coding", emoji: "👩‍💻", tags: ["Girls in Coding"] },
+  { label: "Game Making", emoji: "🎮", tags: ["Game Making", "Gaming", "Builds Sprites", "Animations & Music", "Gaming → Creating", "Fun & Educational"] },
+  { label: "Multiple Kids", emoji: "👨‍👩‍👧‍👦", tags: ["Siblings", "Multiple Kids", "Two Kids", "Ages 7 & 10", "Ages 6 & 8"] },
+  { label: "Special Needs", emoji: "🤝", tags: ["Selective Mutism", "Special Needs", "ADHD", "Nervous at First"] },
+];
+
 export default function GoogleReviews() {
   const scrollerRef = useRef<HTMLDivElement>(null);
-  const [activeTag, setActiveTag] = useState<string>("All");
+  const [activeFilter, setActiveFilter] = useState<string>("All");
 
-  const allTags = useMemo(() => {
-    const tagSet = new Set<string>();
-    reviews.forEach((r) => r.tags.forEach((t) => tagSet.add(t)));
-    return ["All", ...Array.from(tagSet)];
-  }, []);
-
-  const filtered = useMemo(() =>
-    activeTag === "All" ? reviews : reviews.filter((r) => r.tags.includes(activeTag)),
-  [activeTag]);
+  const filtered = useMemo(() => {
+    if (activeFilter === "All") return reviews;
+    const group = FILTERS.find((f) => f.label === activeFilter);
+    if (!group) return reviews;
+    return reviews.filter((r) => r.tags.some((t) => group.tags.includes(t)));
+  }, [activeFilter]);
 
   useEffect(() => {
     if (scrollerRef.current) {
       scrollerRef.current.scrollTo({ left: 0, behavior: "smooth" });
     }
-  }, [activeTag]);
+  }, [activeFilter]);
 
   const scrollByCard = (dir: 1 | -1) => {
     const el = scrollerRef.current;
@@ -390,28 +400,28 @@ export default function GoogleReviews() {
           </div>
         </FadeIn>
 
-        {/* Tag filter bar */}
+        {/* Filter bar */}
         <div className="-mx-4 px-4 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden mb-6 md:mb-8">
           <div className="flex gap-2 w-max mx-auto pb-1">
-            {allTags.map((tag) => {
-              const isActive = activeTag === tag;
+            {FILTERS.map((f) => {
+              const isActive = activeFilter === f.label;
+              const count = f.tags.length === 0
+                ? reviews.length
+                : reviews.filter((r) => r.tags.some((t) => f.tags.includes(t))).length;
               return (
                 <button
-                  key={tag}
+                  key={f.label}
                   type="button"
-                  onClick={() => setActiveTag(tag)}
-                  className={`shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wide transition-all cursor-pointer ${
+                  onClick={() => setActiveFilter(f.label)}
+                  className={`shrink-0 flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold tracking-wide transition-all cursor-pointer ${
                     isActive
                       ? "bg-primary text-white shadow-lg shadow-primary/30 scale-105"
                       : "bg-white text-secondary/70 border border-secondary/15 hover:border-primary/40 hover:text-primary"
                   }`}
                 >
-                  {tag}
-                  {tag !== "All" && (
-                    <span className={`ml-1.5 text-[10px] ${isActive ? "text-white/70" : "text-secondary/40"}`}>
-                      {reviews.filter((r) => r.tags.includes(tag)).length}
-                    </span>
-                  )}
+                  <span>{f.emoji}</span>
+                  <span>{f.label}</span>
+                  <span className={`text-[10px] ${isActive ? "text-white/70" : "text-secondary/40"}`}>{count}</span>
                 </button>
               );
             })}
@@ -468,18 +478,12 @@ export default function GoogleReviews() {
 
                     <div className="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-secondary/8">
                       {r.tags.map((tag) => (
-                        <button
+                        <span
                           key={tag}
-                          type="button"
-                          onClick={() => setActiveTag(tag)}
-                          className={`inline-block px-2.5 py-1 rounded-full text-[11px] font-semibold tracking-wide transition-colors cursor-pointer ${
-                            activeTag === tag
-                              ? "bg-primary text-white"
-                              : "bg-secondary/6 text-secondary/60 hover:bg-primary/10 hover:text-primary"
-                          }`}
+                          className="inline-block px-2.5 py-1 rounded-full bg-secondary/6 text-secondary/60 text-[11px] font-semibold tracking-wide"
                         >
                           {tag}
-                        </button>
+                        </span>
                       ))}
                     </div>
                   </article>
@@ -487,7 +491,7 @@ export default function GoogleReviews() {
               )) : (
                 <div className="w-full min-w-[300px] flex flex-col items-center justify-center py-16 text-center px-4">
                   <p className="text-secondary/60 font-semibold text-lg mb-2">No reviews for this topic yet</p>
-                  <button type="button" onClick={() => setActiveTag("All")} className="text-primary font-bold underline underline-offset-2 text-sm cursor-pointer">Show all reviews</button>
+                  <button type="button" onClick={() => setActiveFilter("All")} className="text-primary font-bold underline underline-offset-2 text-sm cursor-pointer">Show all reviews</button>
                 </div>
               )}
             </div>
