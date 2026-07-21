@@ -241,7 +241,7 @@ export default function Navbar() {
             onClick={openMakeupModal}
             className="lg:hidden inline-flex h-10 sm:h-11 items-center justify-center whitespace-nowrap rounded-full bg-accent px-5 text-xs font-semibold text-white shadow-md transition-all hover:bg-accent/90 hover:scale-105 hover:shadow-lg active:scale-95 cursor-pointer"
           >
-            MAKEUP CLASS
+            BOOK MAKEUP CLASS
           </button>
           <Link
             href="/#locations"
