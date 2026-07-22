@@ -17,10 +17,10 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "How much does it cost?",
+      name: "How much do weekly coding classes cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Enrollment is a one-time $99 registration fee, plus a $169 monthly membership. Since everything is month-to-month with no long-term contract, you can cancel anytime with 30 days' notice.",
+        text: "Our weekly coding classes are $169/month for one 55-minute class each week. There is also a one-time $99 registration fee, which includes student account setup, learning platform access, progress tracking, resources your child can use to continue coding at home, and administrative onboarding. Our memberships are month-to-month, so there's no long-term contract.",
       },
     },
     {

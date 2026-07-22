@@ -9,8 +9,19 @@ const faqGroups: { category: string; items: { q: string; a: React.ReactNode }[] 
     category: "Quick Answers",
     items: [
       {
-        q: "How much does it cost?",
-        a: "Enrollment is a one-time $99 registration fee, plus a $169 monthly membership. Since everything is month-to-month with no long-term contract, you can cancel anytime with 30 days' notice.",
+        q: "How much do weekly coding classes cost?",
+        a: <>
+          <p>Our weekly coding classes are <strong>$169/month</strong> for one 55-minute class each week.</p>
+          <p className="mt-3">There is also a one-time <strong>$99 registration fee</strong>, which includes:</p>
+          <ul className="mt-2 list-disc list-inside space-y-1">
+            <li>Student account setup</li>
+            <li>Learning platform access</li>
+            <li>Progress tracking</li>
+            <li>Resources your child can use to continue coding at home</li>
+            <li>Administrative onboarding</li>
+          </ul>
+          <p className="mt-3">Our memberships are month-to-month, so there&apos;s no long-term contract.</p>
+        </>,
       },
       {
         q: "Is there a long-term contract?",
