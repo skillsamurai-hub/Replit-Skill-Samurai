@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Phone, Mail } from "lucide-react";
+import { Phone, Mail, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
 export type Slot = {
@@ -18,37 +18,55 @@ type Props = {
   locationAddress: string;
 };
 
+const WHAT_KIDS_LEARN = [
+  "Build real games, apps, and projects from day one",
+  "Learn Python, Scratch, JavaScript, and more",
+  "Progress at their own pace — beginner to advanced",
+];
+
 export default function ScheduleTable({ slots, locationName, locationAddress }: Props) {
   const days = Array.from(new Set(slots.map((s) => s.day)));
 
   return (
     <>
-      {/* Section heading */}
-      <h2 className="text-xl font-black text-secondary text-center mb-1">Available Sessions</h2>
-      <p className="text-secondary/70 text-sm text-center mb-1">
-        Weekly Coding Classes &nbsp;·&nbsp; Grades 1–12 &nbsp;·&nbsp; Ages 6–18
-      </p>
-      <p className="text-secondary/50 text-xs text-center mb-8">
-        {locationName} &nbsp;·&nbsp; {locationAddress}
-      </p>
-
-      {/* Start + billing notice */}
-      <div className="grid sm:grid-cols-2 gap-3 mb-6">
-        <div className="flex items-start gap-3 bg-orange-50 border border-orange-200 rounded-xl px-4 py-3.5">
-          <span className="text-xl mt-0.5">📅</span>
-          <div>
-            <p className="text-secondary font-black text-sm">Start any week</p>
-            <p className="text-secondary/70 text-xs mt-0.5">New students welcome every {days[0]}{days.length > 1 ? ` & ${days[days.length - 1]}` : ""}. Pick a day and time below.</p>
-          </div>
-        </div>
-        <div className="flex items-start gap-3 bg-blue-50 border border-blue-200 rounded-xl px-4 py-3.5">
-          <span className="text-xl mt-0.5">💳</span>
-          <div>
-            <p className="text-secondary font-black text-sm">Prorated first month</p>
-            <p className="text-secondary/70 text-xs mt-0.5">You only pay for the weeks remaining in the month. Month-to-month — no long-term contract.</p>
-          </div>
+      {/* What kids learn */}
+      <div className="mb-8">
+        <h2 className="text-xl font-black text-secondary text-center mb-4">What Your Child Will Learn</h2>
+        <div className="grid sm:grid-cols-3 gap-3">
+          {WHAT_KIDS_LEARN.map((item, i) => (
+            <div key={i} className="flex items-start gap-3 bg-white rounded-xl border border-gray-200 px-4 py-3.5 shadow-sm">
+              <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+              <p className="text-secondary text-sm font-medium">{item}</p>
+            </div>
+          ))}
         </div>
       </div>
+
+      {/* Pricing */}
+      <div className="bg-secondary rounded-2xl p-6 mb-8">
+        <h2 className="text-white font-black text-lg text-center mb-5">Simple, Transparent Pricing</h2>
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div className="bg-white/10 rounded-xl px-5 py-4 text-center border border-white/20">
+            <p className="text-white/60 text-xs uppercase tracking-widest font-bold mb-1">One-Time Registration</p>
+            <p className="text-white font-black text-4xl mb-1">$99</p>
+            <p className="text-white/60 text-xs">Paid once when you first enrol</p>
+          </div>
+          <div className="bg-primary rounded-xl px-5 py-4 text-center shadow-lg shadow-primary/30">
+            <p className="text-white/80 text-xs uppercase tracking-widest font-bold mb-1">Monthly Subscription</p>
+            <p className="text-white font-black text-4xl mb-1">$169<span className="text-lg font-bold">/mo</span></p>
+            <p className="text-white/80 text-xs">First month prorated · No contracts</p>
+          </div>
+        </div>
+        <p className="text-white/50 text-xs text-center mt-4">
+          Cancel anytime with 30 days written notice. Makeup classes available at either location.
+        </p>
+      </div>
+
+      {/* Available sessions heading */}
+      <h2 className="text-xl font-black text-secondary text-center mb-1">Available Sessions</h2>
+      <p className="text-secondary/60 text-sm text-center mb-6">
+        {locationName} &nbsp;·&nbsp; Start any {days[0]}{days.length > 1 ? ` or ${days[days.length - 1]}` : ""}
+      </p>
 
       {/* Day cards */}
       <div className={`grid gap-4 mb-8 ${days.length === 2 ? "sm:grid-cols-2" : days.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
@@ -56,11 +74,9 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
           const daySlots = slots.filter((s) => s.day === day);
           return (
             <div key={day} className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
-              {/* Day header */}
               <div className="bg-secondary px-5 py-3">
                 <p className="text-white font-black text-base tracking-wide">{day}</p>
               </div>
-              {/* Time slots */}
               <div className="divide-y divide-gray-100">
                 {daySlots.map((slot, i) => (
                   <div key={i} className="flex items-center justify-between px-5 py-4 hover:bg-primary/5 transition-colors">
@@ -81,21 +97,30 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
         })}
       </div>
 
-      {/* Policies */}
+      {/* Trust strip */}
+      <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-secondary/60 mb-8 py-4 border-y border-gray-200">
+        <span className="flex items-center gap-1.5">⭐ 155+ five-star reviews</span>
+        <span className="hidden sm:block text-gray-300">|</span>
+        <span className="flex items-center gap-1.5">📅 Start any week — first month prorated</span>
+        <span className="hidden sm:block text-gray-300">|</span>
+        <span className="flex items-center gap-1.5">🔓 No long-term contracts</span>
+      </div>
+
+      {/* Flexible membership */}
       <div className="bg-white rounded-2xl border border-gray-200 p-6 mb-6">
-        <h3 className="text-base font-black text-secondary mb-4">Class Cancellation and Make-up Class Policy</h3>
+        <h3 className="text-base font-black text-secondary mb-4">Flexible Membership</h3>
         <div className="space-y-4 text-sm text-secondary/70">
           <div>
-            <p className="font-bold text-secondary mb-1">How to Cancel or Pause Classes</p>
-            <p>We require 30 days written notice to cancel or pause your membership. Please email us or call <a href="tel:+14319982155" className="text-primary font-bold hover:underline">431-998-2155</a> to initiate any changes.</p>
+            <p className="font-bold text-secondary mb-1">Cancel or Pause Anytime</p>
+            <p>We require 30 days written notice to cancel or pause your membership. Email us or call <a href="tel:+14319982155" className="text-primary font-bold hover:underline">431-998-2155</a> to make any changes.</p>
           </div>
           <div>
-            <p className="font-bold text-secondary mb-1">Make-up Classes</p>
-            <p>If your child misses a class, we offer makeup sessions at either location. Contact us to schedule a makeup at a time that works for your family.</p>
+            <p className="font-bold text-secondary mb-1">Makeup Classes Included</p>
+            <p>Missed a class? We offer makeup sessions at either location. Just contact us and we&apos;ll find a time that works.</p>
           </div>
           <div>
-            <p className="font-bold text-secondary mb-1">Month-to-Month Membership</p>
-            <p>There are no long-term contracts. Your membership continues month-to-month until you choose to cancel with 30 days notice.</p>
+            <p className="font-bold text-secondary mb-1">Month-to-Month</p>
+            <p>No annual contracts or commitments. Your membership continues month-to-month until you say otherwise.</p>
           </div>
         </div>
       </div>
