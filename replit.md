@@ -47,4 +47,4 @@ See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and pa
 
 ## User Preferences
 
-- **GitHub/Vercel deploys**: Only push to GitHub (and trigger Vercel) when explicitly asked — e.g. "push", "deploy", "publish". Never push automatically after making code changes.
+- **GitHub/Vercel deploys**: Every task merge auto-pushes to GitHub via `scripts/post-merge.sh`. Manual pushes are only needed if the auto-push fails or for out-of-band changes.
