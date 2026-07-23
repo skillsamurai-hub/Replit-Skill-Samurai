@@ -34,7 +34,7 @@ export default function SevenOaksCodingClasses() {
             Home
           </Link>
           <p className="text-primary font-bold uppercase tracking-widest text-xs mb-3">After-School Program · Seven Oaks Winnipeg</p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white leading-tight tracking-tight mb-2">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading text-white leading-tight tracking-tight mb-2">
             Coding Classes — Seven Oaks
           </h1>
           <p className="text-white/70 text-sm max-w-2xl">
