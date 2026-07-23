@@ -22,7 +22,7 @@ const FAQS = [
   },
   {
     q: "My child learns differently — will they be supported?",
-    a: "Absolutely. Every child learns in their own way, and our instructors are experienced at adapting to that. We keep class sizes small, adjust our approach to how each child learns best, and have practical supports in place — like noise-cancelling headphones, advance notice before transitions, and the option to arrive early to settle in. Just let us know before the first class and we'll make sure they're set up for success.",
+    a: "Absolutely. We warmly welcome neurodivergent learners and every child who learns in their own way. Our instructors are experienced at adapting to different needs — we keep class sizes small, adjust our approach to how each child learns best, and have practical supports in place like noise-cancelling headphones, advance notice before transitions, and the option to arrive early to settle in. Just let us know before the first class and we'll make sure they're set up for success.",
   },
   {
     q: "What is your cancellation policy?",
