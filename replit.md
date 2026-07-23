@@ -44,6 +44,7 @@ See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and pa
 - **Repository**: `skillsamurai-hub/Replit-Skill-Samurai` — https://github.com/skillsamurai-hub/Replit-Skill-Samurai
 - **Auth**: `GITHUB_TOKEN` secret (skillsamurai-hub PAT with repo scope) embedded in origin remote URL
 - **Push command**: `git push origin main` (or `git push -f origin main` if branches diverge after Replit checkpoints)
+- **Token rotation**: See `docs/github-token-rotation.md`. `post-merge.sh` checks token validity on every merge and warns when fewer than 14 days remain (fine-grained PATs only). Classic PATs do not expose expiry via the API — set a calendar reminder when you create one.
 
 ## User Preferences
 

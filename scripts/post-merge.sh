@@ -1,11 +1,81 @@
 #!/bin/bash
 set -e
+
 pnpm install --frozen-lockfile
 pnpm --filter db push
 
-# Capture both stdout/stderr and the exit code without triggering `set -e`.
-# Using an if/else block is the POSIX-safe way to run a command whose failure
-# we want to handle ourselves rather than letting errexit terminate the script.
+# ---------------------------------------------------------------------------
+# Token health check
+# Verify GITHUB_TOKEN is set and valid before attempting anything that needs
+# it.  Also warns when the token is within EXPIRY_WARN_DAYS days of expiring
+# (GitHub returns the `x-oauth-expiry` header for fine-grained PATs; classic
+# PATs omit it, so the expiry check is silently skipped for them).
+# ---------------------------------------------------------------------------
+EXPIRY_WARN_DAYS=14
+
+if [ -z "${GITHUB_TOKEN}" ]; then
+  echo ""
+  echo "=========================================="
+  echo "  GITHUB_TOKEN IS NOT SET"
+  echo "  The Replit secret 'GITHUB_TOKEN' is missing."
+  echo "  See docs/github-token-rotation.md to create"
+  echo "  a new PAT and add it as a Replit secret."
+  echo "=========================================="
+  echo ""
+  exit 1
+fi
+
+TOKEN_CHECK=$(curl -s -w "\n%{http_code}" \
+  -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+  -H "Accept: application/vnd.github+json" \
+  -H "X-GitHub-Api-Version: 2022-11-28" \
+  -D /tmp/gh_token_headers.txt \
+  https://api.github.com/user)
+
+TOKEN_HTTP=$(echo "${TOKEN_CHECK}" | tail -n1)
+
+if [ "${TOKEN_HTTP}" = "401" ]; then
+  TIMESTAMP=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
+  echo ""
+  echo "=========================================="
+  echo "  GITHUB_TOKEN IS INVALID OR EXPIRED"
+  echo "  Timestamp : ${TIMESTAMP}"
+  echo "  The token was rejected by GitHub (HTTP 401)."
+  echo "  See docs/github-token-rotation.md to rotate"
+  echo "  the token and update the Replit secret."
+  echo "=========================================="
+  echo ""
+  exit 1
+fi
+
+# Check x-oauth-expiry header (fine-grained PATs only).
+EXPIRY_EPOCH=$(grep -i '^x-oauth-expiry:' /tmp/gh_token_headers.txt 2>/dev/null \
+  | tr -d '\r' | awk '{print $2}')
+
+if [ -n "${EXPIRY_EPOCH}" ]; then
+  NOW_EPOCH=$(date -u +%s)
+  DAYS_LEFT=$(( (EXPIRY_EPOCH - NOW_EPOCH) / 86400 ))
+  EXPIRY_DATE=$(date -u -d "@${EXPIRY_EPOCH}" '+%Y-%m-%d' 2>/dev/null \
+    || date -u -r "${EXPIRY_EPOCH}" '+%Y-%m-%d' 2>/dev/null \
+    || echo "unknown")
+
+  if [ "${DAYS_LEFT}" -le "${EXPIRY_WARN_DAYS}" ]; then
+    echo ""
+    echo "=========================================="
+    echo "  GITHUB_TOKEN EXPIRY WARNING"
+    echo "  Expires : ${EXPIRY_DATE} (${DAYS_LEFT} day(s) remaining)"
+    echo "  Rotate the token before it expires to keep"
+    echo "  auto-pushes working."
+    echo "  See docs/github-token-rotation.md for steps."
+    echo "=========================================="
+    echo ""
+  fi
+fi
+
+# ---------------------------------------------------------------------------
+# Push to GitHub
+# ---------------------------------------------------------------------------
+
 PUSH_ERROR=""
 if PUSH_ERROR=$(git push -f "https://${GITHUB_TOKEN}@github.com/skillsamurai-hub/Replit-Skill-Samurai.git" main 2>&1); then
   exit 0
