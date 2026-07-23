@@ -23,7 +23,7 @@ export default function StAlphonsusCodingClasses() {
 
       {/* Page header */}
       <div className="bg-secondary border-b border-white/10 py-8 md:py-12">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <div className="container mx-auto px-4">
           <Link href="/" className="inline-flex items-center gap-1.5 text-white/50 hover:text-white text-sm font-medium mb-6 transition-colors">
             <ArrowRight className="h-3.5 w-3.5 rotate-180" />
             Home
@@ -44,7 +44,7 @@ export default function StAlphonsusCodingClasses() {
       </div>
 
       {/* Schedule table */}
-      <div className="container mx-auto px-4 max-w-5xl py-10">
+      <div className="container mx-auto px-4 py-10">
 
         <h2 className="text-xl font-black text-secondary text-center mb-1">Summer 2026 — Available Sessions</h2>
         <p className="text-secondary/50 text-sm text-center mb-8">Select a time slot and click Enroll Now to register on our secure registration portal.</p>
