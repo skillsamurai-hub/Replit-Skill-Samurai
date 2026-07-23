@@ -11,13 +11,11 @@ export const metadata: Metadata = {
   },
 };
 
-const ENROLL_URL = "https://winnipeg.jumbula.com/north-east-coding-classes";
-
 const slots = [
-  { day: "Monday",  time: "5:30 PM",  program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Monday start date"   },
-  { day: "Monday",  time: "6:30 PM",  program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Monday start date"   },
-  { day: "Tuesday", time: "5:30 PM",  program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Tuesday start date"  },
-  { day: "Tuesday", time: "6:30 PM",  program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Tuesday start date"  },
+  { day: "Monday",  time: "5:30 PM",  program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Monday start date",  url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Monday530pmWeeklyCodingClasses_143" },
+  { day: "Monday",  time: "6:30 PM",  program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Monday start date",  url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Monday630pmWeeklyCodingClasses" },
+  { day: "Tuesday", time: "5:30 PM",  program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Tuesday start date", url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Tuesday530pmWeeklyCodingClasses" },
+  { day: "Tuesday", time: "6:30 PM",  program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Tuesday start date", url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Tuesday630pmWeeklyCodingClasses" },
 ];
 
 export default function NorthEastCodingClasses() {
@@ -78,7 +76,7 @@ export default function NorthEastCodingClasses() {
                   <td className="px-5 py-4 text-secondary/50 text-xs">{slot.note}</td>
                   <td className="px-5 py-4 text-right">
                     <a
-                      href={ENROLL_URL}
+                      href={slot.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 bg-primary hover:bg-primary/90 text-white font-bold px-4 py-2 rounded-lg text-xs uppercase tracking-wide transition-all hover:scale-105 shadow-sm shadow-primary/30 whitespace-nowrap"
@@ -101,7 +99,7 @@ export default function NorthEastCodingClasses() {
               <p className="text-secondary/50 text-xs mb-1">{slot.grades}</p>
               <p className="text-secondary/40 text-xs mb-4">1199 Rothesay St., Winnipeg, MB R2G 0J7</p>
               <a
-                href={ENROLL_URL}
+                href={slot.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-xl text-sm uppercase tracking-wide transition-all w-full"
