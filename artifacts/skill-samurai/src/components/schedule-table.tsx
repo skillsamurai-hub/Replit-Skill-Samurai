@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { ArrowRight, Phone, Mail } from "lucide-react";
 import Link from "next/link";
 
@@ -13,14 +12,6 @@ export type Slot = {
   url: string;
 };
 
-const TERMS = [
-  { label: "Oct – Dec", key: "oct-dec" },
-  { label: "Jan – Mar", key: "jan-mar" },
-  { label: "Apr – Jun", key: "apr-jun" },
-] as const;
-
-type TermKey = (typeof TERMS)[number]["key"];
-
 type Props = {
   slots: Slot[];
   locationName: string;
@@ -28,37 +19,12 @@ type Props = {
 };
 
 export default function ScheduleTable({ slots, locationName, locationAddress }: Props) {
-  const [activeTerm, setActiveTerm] = useState<TermKey>("oct-dec");
-  const activeTerm_ = TERMS.find((t) => t.key === activeTerm)!;
-
   return (
     <>
       {/* Section heading */}
       <h2 className="text-xl font-black text-secondary text-center mb-1">Available Sessions</h2>
-      <p className="text-secondary/50 text-sm text-center mb-6">
-        Select a term and time slot, then click Enroll Now to register on our secure registration portal.
-      </p>
-
-      {/* Term tabs */}
-      <div className="flex items-center justify-center gap-2 mb-8">
-        {TERMS.map((term) => (
-          <button
-            key={term.key}
-            onClick={() => setActiveTerm(term.key)}
-            className={`px-5 py-2 rounded-full text-sm font-bold transition-all border ${
-              activeTerm === term.key
-                ? "bg-secondary text-white border-secondary shadow-sm"
-                : "bg-white text-secondary/60 border-gray-200 hover:border-secondary/40 hover:text-secondary"
-            }`}
-          >
-            {term.label}
-          </button>
-        ))}
-      </div>
-
-      {/* Active term badge */}
-      <p className="text-xs text-secondary/40 font-semibold uppercase tracking-widest text-center mb-4">
-        Showing slots for <span className="text-primary">{activeTerm_.label}</span>
+      <p className="text-secondary/50 text-sm text-center mb-8">
+        Select a time slot and click Enroll Now to register on our secure registration portal.
       </p>
 
       {/* Desktop table */}
@@ -69,7 +35,6 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
               <th className="text-left px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Program</th>
               <th className="text-left px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Restrictions</th>
               <th className="text-left px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Location</th>
-              <th className="text-left px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Term</th>
               <th className="text-left px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Additional Note</th>
               <th className="text-right px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Action</th>
             </tr>
@@ -84,9 +49,6 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
                 <td className="px-5 py-4 text-secondary/60">
                   {locationName},<br />
                   <span className="text-secondary/40">{locationAddress}</span>
-                </td>
-                <td className="px-5 py-4 text-secondary/60 text-xs font-semibold whitespace-nowrap">
-                  {activeTerm_.label}
                 </td>
                 <td className="px-5 py-4 text-secondary/50 text-xs">{slot.note}</td>
                 <td className="px-5 py-4 text-right">
@@ -109,10 +71,7 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
       <div className="md:hidden space-y-3 mb-8">
         {slots.map((slot, i) => (
           <div key={i} className="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
-            <div className="flex items-center justify-between mb-1">
-              <p className="font-black text-secondary text-base">{slot.day} {slot.time}</p>
-              <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">{activeTerm_.label}</span>
-            </div>
+            <p className="font-black text-secondary text-base mb-1">{slot.day} {slot.time}</p>
             <p className="text-secondary/70 text-sm font-semibold mb-1">{slot.program}</p>
             <p className="text-secondary/50 text-xs mb-1">{slot.grades}</p>
             <p className="text-secondary/40 text-xs mb-4">{locationAddress}</p>

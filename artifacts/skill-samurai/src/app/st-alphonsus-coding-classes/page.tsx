@@ -5,11 +5,17 @@ import { MapPin, ArrowRight, Star, Phone, Mail, Clock } from "lucide-react";
 export const metadata: Metadata = {
   title: "St. Alphonsus Coding Classes — Coming Soon | Skill Samurai Winnipeg",
   description:
-    "Weekly coding, robotics, and STEM classes are coming soon to Skill Samurai's St. Alphonsus location in Winnipeg. Ages 6–18. Register your interest today.",
+    "Weekly coding, robotics, and STEM classes are coming soon to Skill Samurai's St. Alphonsus location in Winnipeg. Ages 6–18. Three terms: Oct–Dec, Jan–Mar, Apr–Jun.",
   alternates: {
     canonical: "https://www.skillsamuraiwinnipeg.com/st-alphonsus-coding-classes",
   },
 };
+
+const TERMS = [
+  { label: "Fall Term",   dates: "Oct – Dec",  key: "fall"   },
+  { label: "Winter Term", dates: "Jan – Mar",  key: "winter" },
+  { label: "Spring Term", dates: "Apr – Jun",  key: "spring" },
+];
 
 export default function StAlphonsusCodingClasses() {
   return (
@@ -37,17 +43,28 @@ export default function StAlphonsusCodingClasses() {
         </div>
       </div>
 
-      {/* Coming Soon */}
       <div className="container mx-auto px-4 py-16">
 
-        <div className="max-w-xl mx-auto text-center">
+        {/* Coming Soon */}
+        <div className="max-w-2xl mx-auto text-center mb-14">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
             <Clock className="h-8 w-8 text-primary" />
           </div>
           <h2 className="text-2xl font-black text-secondary mb-3">Coming Soon</h2>
           <p className="text-secondary/60 text-sm mb-8">
-            We&apos;re finalising the schedule for our St. Alphonsus location. Check back shortly or get in touch and we&apos;ll let you know as soon as enrolment opens.
+            We&apos;re finalising the schedule for our St. Alphonsus location. Classes will run across three terms each year — register your interest and we&apos;ll be in touch as soon as enrolment opens.
           </p>
+
+          {/* Terms */}
+          <div className="grid grid-cols-3 gap-3 mb-8">
+            {TERMS.map((term) => (
+              <div key={term.key} className="bg-white rounded-2xl border border-gray-200 p-4 shadow-sm text-center">
+                <p className="text-xs font-bold text-primary uppercase tracking-widest mb-1">{term.label}</p>
+                <p className="text-lg font-black text-secondary">{term.dates}</p>
+              </div>
+            ))}
+          </div>
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
               href="tel:+14319982155"
@@ -55,17 +72,17 @@ export default function StAlphonsusCodingClasses() {
             >
               <Phone className="h-4 w-4" /> 431-998-2155
             </a>
-            <a
+            <Link
               href="/contact"
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors w-full sm:w-auto justify-center"
             >
               <Mail className="h-4 w-4" /> Email Us
-            </a>
+            </Link>
           </div>
         </div>
 
-        {/* While you wait — other locations */}
-        <div className="mt-16 border-t border-gray-200 pt-12">
+        {/* Other locations */}
+        <div className="border-t border-gray-200 pt-12">
           <p className="text-center text-secondary/50 text-xs uppercase tracking-widest font-bold mb-6">Enrol now at our other locations</p>
           <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
             <Link
