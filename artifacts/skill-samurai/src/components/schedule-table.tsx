@@ -54,7 +54,7 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
           <div className="bg-primary rounded-xl px-5 py-4 text-center shadow-lg shadow-primary/30">
             <p className="text-white/80 text-xs uppercase tracking-widest font-bold mb-1">Monthly Subscription</p>
             <p className="text-white font-black text-4xl mb-1">$169<span className="text-lg font-bold">/mo</span></p>
-            <p className="text-white/80 text-xs">First month prorated · No contracts</p>
+            <p className="text-white/80 text-xs">Only pay for remaining classes this month · No contracts</p>
           </div>
         </div>
         <p className="text-white/50 text-xs text-center mt-4">
@@ -101,7 +101,7 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
       <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-secondary/60 mb-8 py-4 border-y border-gray-200">
         <span className="flex items-center gap-1.5">⭐ 155+ five-star reviews</span>
         <span className="hidden sm:block text-gray-300">|</span>
-        <span className="flex items-center gap-1.5">📅 Start any week — first month prorated</span>
+        <span className="flex items-center gap-1.5">📅 Start any week — only pay for remaining classes this month</span>
         <span className="hidden sm:block text-gray-300">|</span>
         <span className="flex items-center gap-1.5">🔓 No long-term contracts</span>
       </div>
