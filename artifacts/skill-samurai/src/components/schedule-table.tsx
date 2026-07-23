@@ -183,25 +183,6 @@ export default function ScheduleTable({ slots, locationName, locationAddress, lo
       {/* FAQ */}
       <EnrollmentFAQ />
 
-      {/* Flexible membership */}
-      <div className="bg-white rounded-2xl border border-gray-200 p-6 mb-6">
-        <h3 className="text-base font-black text-secondary mb-4">Flexible Membership</h3>
-        <div className="space-y-4 text-sm text-secondary/70">
-          <div>
-            <p className="font-bold text-secondary mb-1">Cancel or Pause Anytime</p>
-            <p>We require 30 days written notice to cancel or pause your membership. Email us or call <a href="tel:+14319982155" className="text-primary font-bold hover:underline">431-998-2155</a> to make any changes.</p>
-          </div>
-          <div>
-            <p className="font-bold text-secondary mb-1">Makeup Classes Included</p>
-            <p>Missed a class? We offer makeup sessions at either location. Just contact us and we&apos;ll find a time that works.</p>
-          </div>
-          <div>
-            <p className="font-bold text-secondary mb-1">Month-to-Month</p>
-            <p>No annual contracts or commitments. Your membership continues month-to-month until you say otherwise.</p>
-          </div>
-        </div>
-      </div>
-
       {/* Contact */}
       <div className="bg-secondary rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
