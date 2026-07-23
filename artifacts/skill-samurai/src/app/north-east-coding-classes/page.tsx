@@ -35,7 +35,7 @@ export default function NorthEastCodingClasses() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading text-white leading-tight tracking-tight mb-2">
             Coding Classes — North East
           </h1>
-          <p className="text-white/70 text-sm max-w-2xl">
+          <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed font-medium max-w-2xl">
             Weekly coding &amp; STEM classes for kids ages 6–18. No experience needed.
           </p>
           <div className="flex flex-wrap gap-4 mt-5 text-sm text-white/80">
