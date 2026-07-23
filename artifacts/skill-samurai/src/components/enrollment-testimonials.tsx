@@ -34,7 +34,12 @@ export default function EnrollmentTestimonials() {
             <p className="text-secondary/80 text-sm leading-relaxed flex-1">&ldquo;{r.text}&rdquo;</p>
             <div>
               <p className="text-secondary font-bold text-xs">{r.name}</p>
-              <p className="text-secondary/40 text-xs">{r.label}</p>
+              <a
+                href="https://www.google.com/search?q=skill+samurai+winnipeg#mpd=~8442050446591582271/customers/reviews"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:underline text-xs"
+              >{r.label}</a>
             </div>
           </div>
         ))}
