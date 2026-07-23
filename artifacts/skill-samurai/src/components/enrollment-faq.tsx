@@ -9,6 +9,10 @@ const FAQS = [
     a: "Absolutely. Most kids who walk into Skill Samurai have zero coding experience — and that's exactly who our beginner curriculum is designed for. Our Coding Instructors start with visual, game-based tools and grow with your child as they're ready.",
   },
   {
+    q: "My child has only ever used a tablet or phone — is that okay?",
+    a: "Totally normal — most of our new students are in the same boat. We introduce kids to a keyboard and mouse at a pace that feels comfortable, and within a class or two it clicks. The fact that they love being on a screen is actually a head start.",
+  },
+  {
     q: "What happens in the free trial class?",
     a: "Your child joins a real class, meets a Coding Instructor, and builds an actual mini-project they can show you at the end. You'll get a clear sense of the environment, the instructors, and whether your child enjoys the experience before making any commitment.",
   },
