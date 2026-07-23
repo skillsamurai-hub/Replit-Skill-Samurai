@@ -32,12 +32,22 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
         {locationName} &nbsp;·&nbsp; {locationAddress}
       </p>
 
-      {/* Start notice */}
-      <div className="flex items-center justify-center gap-2.5 bg-orange-50 border border-orange-200 rounded-xl px-5 py-3.5 mb-6">
-        <span className="text-lg">📅</span>
-        <p className="text-secondary font-bold text-sm">
-          <span className="text-[#F59100]">Start any week</span> — new students welcome every {days[0]}{days.length > 1 ? ` & ${days[days.length - 1]}` : ""}. Choose your preferred day and time below.
-        </p>
+      {/* Start + billing notice */}
+      <div className="grid sm:grid-cols-2 gap-3 mb-6">
+        <div className="flex items-start gap-3 bg-orange-50 border border-orange-200 rounded-xl px-4 py-3.5">
+          <span className="text-xl mt-0.5">📅</span>
+          <div>
+            <p className="text-secondary font-black text-sm">Start any week</p>
+            <p className="text-secondary/70 text-xs mt-0.5">New students welcome every {days[0]}{days.length > 1 ? ` & ${days[days.length - 1]}` : ""}. Pick a day and time below.</p>
+          </div>
+        </div>
+        <div className="flex items-start gap-3 bg-blue-50 border border-blue-200 rounded-xl px-4 py-3.5">
+          <span className="text-xl mt-0.5">💳</span>
+          <div>
+            <p className="text-secondary font-black text-sm">Prorated first month</p>
+            <p className="text-secondary/70 text-xs mt-0.5">You only pay for the weeks remaining in the month. Month-to-month — no long-term contract.</p>
+          </div>
+        </div>
       </div>
 
       {/* Day cards */}
