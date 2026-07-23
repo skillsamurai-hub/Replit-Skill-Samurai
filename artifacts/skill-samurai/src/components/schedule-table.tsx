@@ -19,71 +19,48 @@ type Props = {
 };
 
 export default function ScheduleTable({ slots, locationName, locationAddress }: Props) {
+  const days = Array.from(new Set(slots.map((s) => s.day)));
+
   return (
     <>
       {/* Section heading */}
       <h2 className="text-xl font-black text-secondary text-center mb-1">Available Sessions</h2>
-
-      {/* Single-line context row — replaces repeated columns */}
-      <p className="text-secondary/70 text-sm text-center mb-2">
+      <p className="text-secondary/70 text-sm text-center mb-1">
         Weekly Coding Classes &nbsp;·&nbsp; Grades 1–12 &nbsp;·&nbsp; Ages 6–18
       </p>
       <p className="text-secondary/50 text-xs text-center mb-8">
         {locationName} &nbsp;·&nbsp; {locationAddress}
       </p>
 
-      {/* Desktop table */}
-      <div className="hidden md:block bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden mb-8">
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="bg-secondary text-white">
-              <th className="text-left px-6 py-3.5 font-bold text-xs uppercase tracking-wider">Day</th>
-              <th className="text-left px-6 py-3.5 font-bold text-xs uppercase tracking-wider">Time</th>
-              <th className="text-right px-6 py-3.5 font-bold text-xs uppercase tracking-wider">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {slots.map((slot, i) => (
-              <tr
-                key={i}
-                className={`${i % 2 === 0 ? "bg-white" : "bg-gray-50"} hover:bg-primary/5 transition-colors`}
-              >
-                <td className="px-6 py-4 font-bold text-secondary text-base">{slot.day}</td>
-                <td className="px-6 py-4 text-secondary/80 font-medium">{slot.time}</td>
-                <td className="px-6 py-4 text-right">
-                  <a
-                    href={slot.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 bg-primary hover:bg-primary/90 text-white font-bold px-5 py-2 rounded-lg text-xs uppercase tracking-wide transition-all hover:scale-105 shadow-sm shadow-primary/30 whitespace-nowrap"
-                  >
-                    Enroll Now
-                  </a>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      {/* Mobile cards */}
-      <div className="md:hidden space-y-3 mb-8">
-        {slots.map((slot, i) => (
-          <div key={i} className="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm flex items-center justify-between gap-4">
-            <div>
-              <p className="font-black text-secondary text-base">{slot.day}</p>
-              <p className="text-secondary/70 text-sm font-medium">{slot.time}</p>
+      {/* Day cards */}
+      <div className={`grid gap-4 mb-8 ${days.length === 2 ? "sm:grid-cols-2" : days.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
+        {days.map((day) => {
+          const daySlots = slots.filter((s) => s.day === day);
+          return (
+            <div key={day} className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+              {/* Day header */}
+              <div className="bg-secondary px-5 py-3">
+                <p className="text-white font-black text-base tracking-wide">{day}</p>
+              </div>
+              {/* Time slots */}
+              <div className="divide-y divide-gray-100">
+                {daySlots.map((slot, i) => (
+                  <div key={i} className="flex items-center justify-between px-5 py-4 hover:bg-primary/5 transition-colors">
+                    <span className="text-secondary font-bold text-lg">{slot.time}</span>
+                    <a
+                      href={slot.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 bg-primary hover:bg-primary/90 text-white font-bold px-4 py-2 rounded-lg text-xs uppercase tracking-wide transition-all hover:scale-105 shadow-sm shadow-primary/30 whitespace-nowrap"
+                    >
+                      Enroll Now
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
-            <a
-              href={slot.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold px-4 py-2.5 rounded-xl text-xs uppercase tracking-wide transition-all shrink-0"
-            >
-              Enroll Now <ArrowRight className="h-3.5 w-3.5" />
-            </a>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Policies */}
