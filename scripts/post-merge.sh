@@ -2,7 +2,56 @@
 set -e
 
 pnpm install --frozen-lockfile
-pnpm --filter db push
+set +e
+
+# Capture both stdout/stderr and the exit code without triggering `set -e`.
+# Using an if/else block is the POSIX-safe way to run a command whose failure
+# we want to handle ourselves rather than letting errexit terminate the script.
+DB_ERROR=""
+if DB_ERROR=$(pnpm --filter db push 2>&1); then
+  true
+else
+  DB_EXIT=$?
+  TIMESTAMP=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
+
+  ISSUE_TITLE="⚠️ DB migration failed after task merge — ${TIMESTAMP}"
+  ISSUE_BODY="## Database migration failed\n\n**Timestamp:** \`${TIMESTAMP}\`\n\n**Error output:**\n\`\`\`\n${DB_ERROR}\n\`\`\`\n\n**What to do:** Run the migration manually with:\n\`\`\`bash\npnpm --filter db push\n\`\`\`"
+
+  JSON_PAYLOAD=$(python3 -c "
+import json, sys
+title = sys.argv[1]
+body  = sys.argv[2]
+print(json.dumps({'title': title, 'body': body}))
+" "${ISSUE_TITLE}" "${ISSUE_BODY}")
+
+  RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
+    -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+    -H "Accept: application/vnd.github+json" \
+    -H "X-GitHub-Api-Version: 2022-11-28" \
+    -H "Content-Type: application/json" \
+    https://api.github.com/repos/skillsamurai-hub/Replit-Skill-Samurai/issues \
+    -d "${JSON_PAYLOAD}")
+
+  HTTP_CODE=$(echo "${RESPONSE}" | tail -n1)
+  ISSUE_URL=$(echo "${RESPONSE}" | head -n-1 \
+    | python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('html_url','(unknown)'))" 2>/dev/null \
+    || echo "(unknown)")
+
+  echo ""
+  echo "=========================================="
+  echo "  DB MIGRATION FAILED"
+  echo "  Timestamp : ${TIMESTAMP}"
+  echo "  Error     : ${DB_ERROR}"
+  if [ "${HTTP_CODE}" = "201" ]; then
+    echo "  Issue     : ${ISSUE_URL}"
+  else
+    echo "  Issue creation failed (HTTP ${HTTP_CODE}) — check GITHUB_TOKEN"
+  fi
+  echo "  Manual fix: pnpm --filter db push"
+  echo "=========================================="
+  echo ""
+  exit $DB_EXIT
+fi
 
 # ---------------------------------------------------------------------------
 # Token health check
