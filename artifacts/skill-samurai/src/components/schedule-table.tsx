@@ -11,6 +11,7 @@ export type Slot = {
   note: string;
   url: string;
   spotsLeft?: number;
+  waitlistUrl?: string;
 };
 
 type Props = {
@@ -91,10 +92,10 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
                       )}
                     </div>
                     <a
-                      href={slot.url}
+                      href={slot.spotsLeft === 0 ? (slot.waitlistUrl ?? "tel:+14319982155") : slot.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 bg-primary hover:bg-primary/90 text-white font-bold px-4 py-2 rounded-lg text-xs uppercase tracking-wide transition-all hover:scale-105 shadow-sm shadow-primary/30 whitespace-nowrap"
+                      className={`inline-flex items-center gap-1.5 font-bold px-4 py-2 rounded-lg text-xs uppercase tracking-wide transition-all hover:scale-105 shadow-sm whitespace-nowrap ${slot.spotsLeft === 0 ? "bg-secondary/80 hover:bg-secondary text-white shadow-secondary/20" : "bg-primary hover:bg-primary/90 text-white shadow-primary/30"}`}
                     >
                       {slot.spotsLeft === 0 ? "Join Waitlist" : "Enroll Now"}
                     </a>
