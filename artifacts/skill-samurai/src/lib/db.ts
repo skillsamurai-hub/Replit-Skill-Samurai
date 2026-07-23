@@ -58,17 +58,20 @@ export async function updateSlot(
   return result.rows[0] ?? null;
 }
 
+const NE_WAITLIST  = "https://book.skillsamuraiwinnipeg.com/widget/form/JKoCjgAhRxcyySexZMhq";
+const SO_WAITLIST  = "https://book.skillsamuraiwinnipeg.com/widget/form/7XZ4NFi0bH4aYHux9FRh";
+
 const SEED_DATA = [
-  { location_id: "north-east", day: "Monday",    time: "5:30 PM", spots_left: 5, waitlist_url: null },
-  { location_id: "north-east", day: "Monday",    time: "6:30 PM", spots_left: 5, waitlist_url: null },
-  { location_id: "north-east", day: "Tuesday",   time: "5:30 PM", spots_left: 5, waitlist_url: null },
-  { location_id: "north-east", day: "Tuesday",   time: "6:30 PM", spots_left: 5, waitlist_url: null },
-  { location_id: "seven-oaks", day: "Wednesday", time: "4:30 PM", spots_left: 5, waitlist_url: null },
-  { location_id: "seven-oaks", day: "Wednesday", time: "5:30 PM", spots_left: 5, waitlist_url: null },
-  { location_id: "seven-oaks", day: "Wednesday", time: "6:30 PM", spots_left: 5, waitlist_url: null },
-  { location_id: "seven-oaks", day: "Thursday",  time: "4:30 PM", spots_left: 5, waitlist_url: null },
-  { location_id: "seven-oaks", day: "Thursday",  time: "5:30 PM", spots_left: 5, waitlist_url: null },
-  { location_id: "seven-oaks", day: "Thursday",  time: "6:30 PM", spots_left: 5, waitlist_url: null },
+  { location_id: "north-east", day: "Monday",    time: "5:30 PM", spots_left: 5, waitlist_url: NE_WAITLIST },
+  { location_id: "north-east", day: "Monday",    time: "6:30 PM", spots_left: 5, waitlist_url: NE_WAITLIST },
+  { location_id: "north-east", day: "Tuesday",   time: "5:30 PM", spots_left: 5, waitlist_url: NE_WAITLIST },
+  { location_id: "north-east", day: "Tuesday",   time: "6:30 PM", spots_left: 5, waitlist_url: NE_WAITLIST },
+  { location_id: "seven-oaks", day: "Wednesday", time: "4:30 PM", spots_left: 5, waitlist_url: SO_WAITLIST },
+  { location_id: "seven-oaks", day: "Wednesday", time: "5:30 PM", spots_left: 5, waitlist_url: SO_WAITLIST },
+  { location_id: "seven-oaks", day: "Wednesday", time: "6:30 PM", spots_left: 5, waitlist_url: SO_WAITLIST },
+  { location_id: "seven-oaks", day: "Thursday",  time: "4:30 PM", spots_left: 5, waitlist_url: SO_WAITLIST },
+  { location_id: "seven-oaks", day: "Thursday",  time: "5:30 PM", spots_left: 5, waitlist_url: SO_WAITLIST },
+  { location_id: "seven-oaks", day: "Thursday",  time: "6:30 PM", spots_left: 5, waitlist_url: SO_WAITLIST },
 ];
 
 export async function seedSlots(): Promise<SlotRow[]> {

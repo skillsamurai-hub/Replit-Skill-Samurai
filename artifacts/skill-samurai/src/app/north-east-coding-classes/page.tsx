@@ -56,6 +56,7 @@ export default function NorthEastCodingClasses() {
           locationName="North East Location"
           locationAddress="1199 Rothesay St., Winnipeg, MB R2G 0J7"
           locationId="north-east"
+          defaultWaitlistUrl="https://book.skillsamuraiwinnipeg.com/widget/form/JKoCjgAhRxcyySexZMhq"
         />
       </div>
 

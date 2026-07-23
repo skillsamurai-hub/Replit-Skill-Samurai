@@ -22,6 +22,7 @@ type Props = {
   locationName: string;
   locationAddress: string;
   locationId?: string;
+  defaultWaitlistUrl?: string;
 };
 
 const WHAT_KIDS_LEARN = [
@@ -30,7 +31,7 @@ const WHAT_KIDS_LEARN = [
   "Progress at their own pace — beginner to advanced",
 ];
 
-export default function ScheduleTable({ slots, locationName, locationAddress, locationId }: Props) {
+export default function ScheduleTable({ slots, locationName, locationAddress, locationId, defaultWaitlistUrl }: Props) {
   const [liveSlots, setLiveSlots] = useState<LiveSlot[]>([]);
 
   useEffect(() => {
@@ -115,7 +116,7 @@ export default function ScheduleTable({ slots, locationName, locationAddress, lo
                       )}
                     </div>
                     <a
-                      href={slot.spotsLeft === 0 ? (slot.waitlistUrl ?? "tel:+14319982155") : slot.url}
+                      href={slot.spotsLeft === 0 ? (slot.waitlistUrl ?? defaultWaitlistUrl ?? "tel:+14319982155") : slot.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`inline-flex items-center gap-1.5 font-bold px-4 py-2 rounded-lg text-xs uppercase tracking-wide transition-all hover:scale-105 shadow-sm whitespace-nowrap ${slot.spotsLeft === 0 ? "bg-secondary/80 hover:bg-secondary text-white shadow-secondary/20" : "bg-primary hover:bg-primary/90 text-white shadow-primary/30"}`}

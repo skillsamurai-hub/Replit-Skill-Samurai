@@ -58,6 +58,7 @@ export default function SevenOaksCodingClasses() {
           locationName="Seven Oaks Location"
           locationAddress="745 Kingsbury Ave., Winnipeg, MB R2V 3N5"
           locationId="seven-oaks"
+          defaultWaitlistUrl="https://book.skillsamuraiwinnipeg.com/widget/form/7XZ4NFi0bH4aYHux9FRh"
         />
       </div>
 
