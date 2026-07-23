@@ -10,6 +10,7 @@ export type Slot = {
   grades: string;
   note: string;
   url: string;
+  spotsLeft?: number;
 };
 
 type Props = {
@@ -54,7 +55,7 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
           <div className="bg-primary rounded-xl px-5 py-4 text-center shadow-lg shadow-primary/30">
             <p className="text-white/80 text-xs uppercase tracking-widest font-bold mb-1">Monthly Subscription</p>
             <p className="text-white font-black text-4xl mb-1">$169<span className="text-lg font-bold">/mo</span></p>
-            <p className="text-white/80 text-xs">Only pay for remaining classes this month · No contracts</p>
+            <p className="text-white/80 text-xs">Month-to-month · No contracts</p>
           </div>
         </div>
         <p className="text-white/50 text-xs text-center mt-4">
@@ -63,31 +64,39 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
       </div>
 
       {/* Available sessions heading */}
-      <h2 className="text-xl font-black text-secondary text-center mb-1">Available Sessions</h2>
+      <h2 className="text-xl font-black text-secondary text-center mb-1">Pick Your Session</h2>
       <p className="text-secondary/60 text-sm text-center mb-6">
         {locationName} &nbsp;·&nbsp; Start any {days[0]}{days.length > 1 ? ` or ${days[days.length - 1]}` : ""}
       </p>
 
       {/* Day cards */}
-      <div className={`grid gap-4 mb-8 ${days.length === 2 ? "sm:grid-cols-2" : days.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
+      <div className={`grid gap-4 mb-4 ${days.length === 2 ? "sm:grid-cols-2" : days.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
         {days.map((day) => {
           const daySlots = slots.filter((s) => s.day === day);
           return (
             <div key={day} className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
-              <div className="bg-secondary px-5 py-3">
+              <div className="bg-secondary px-5 py-3 flex items-center justify-between">
                 <p className="text-white font-black text-base tracking-wide">{day}</p>
+                <span className="text-xs font-bold text-primary/80 bg-primary/10 px-2 py-0.5 rounded-full">Limited spots</span>
               </div>
               <div className="divide-y divide-gray-100">
                 {daySlots.map((slot, i) => (
                   <div key={i} className="flex items-center justify-between px-5 py-4 hover:bg-primary/5 transition-colors">
-                    <span className="text-secondary font-bold text-lg">{slot.time}</span>
+                    <div>
+                      <span className="text-secondary font-bold text-lg">{slot.time}</span>
+                      {slot.spotsLeft !== undefined && (
+                        <p className={`text-xs font-semibold mt-0.5 ${slot.spotsLeft <= 3 ? "text-red-500" : "text-secondary/50"}`}>
+                          {slot.spotsLeft === 0 ? "Full — join waitlist" : `${slot.spotsLeft} spot${slot.spotsLeft === 1 ? "" : "s"} left`}
+                        </p>
+                      )}
+                    </div>
                     <a
                       href={slot.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 bg-primary hover:bg-primary/90 text-white font-bold px-4 py-2 rounded-lg text-xs uppercase tracking-wide transition-all hover:scale-105 shadow-sm shadow-primary/30 whitespace-nowrap"
                     >
-                      Enroll Now
+                      {slot.spotsLeft === 0 ? "Join Waitlist" : "Enroll Now"}
                     </a>
                   </div>
                 ))}
@@ -97,11 +106,27 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
         })}
       </div>
 
+      {/* Free trial CTA */}
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-primary/5 border border-primary/20 rounded-xl px-5 py-4 mb-8">
+        <div>
+          <p className="text-secondary font-black text-sm">Not ready to commit yet?</p>
+          <p className="text-secondary/60 text-xs mt-0.5">Try a free class first — no registration fee, no obligation.</p>
+        </div>
+        <Link
+          href="/#locations"
+          className="inline-flex items-center gap-2 bg-white border border-primary/30 hover:border-primary text-primary font-bold px-5 py-2.5 rounded-xl text-sm transition-all whitespace-nowrap hover:bg-primary/5 shrink-0"
+        >
+          Book a Free Class →
+        </Link>
+      </div>
+
       {/* Trust strip */}
-      <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-secondary/60 mb-8 py-4 border-y border-gray-200">
+      <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-secondary/60 mb-8 py-4 border-y border-gray-200">
+        <span className="flex items-center gap-1.5 font-semibold text-secondary">{locationName} &nbsp;·&nbsp; {locationAddress}</span>
+        <span className="hidden sm:block text-gray-300">|</span>
         <span className="flex items-center gap-1.5">⭐ 155+ five-star reviews</span>
         <span className="hidden sm:block text-gray-300">|</span>
-        <span className="flex items-center gap-1.5">📅 Start any week — only pay for remaining classes this month</span>
+        <span className="flex items-center gap-1.5">📅 Start any week</span>
         <span className="hidden sm:block text-gray-300">|</span>
         <span className="flex items-center gap-1.5">🔓 No long-term contracts</span>
       </div>
