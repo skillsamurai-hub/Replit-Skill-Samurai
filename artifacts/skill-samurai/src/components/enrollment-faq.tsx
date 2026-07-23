@@ -5,28 +5,36 @@ import { ChevronDown } from "lucide-react";
 
 const FAQS = [
   {
-    q: "Does my child need any coding experience?",
-    a: "None at all. Most kids start from zero. We meet every child where they are — complete beginners start with visual coding and work up to Python and JavaScript at their own pace.",
+    q: "My child has never coded before. Will they fit in?",
+    a: "Absolutely. Most kids who walk into Skill Samurai have zero coding experience — and that's exactly who our beginner curriculum is designed for. Our Coding Instructors start with visual, game-based tools and grow with your child as they're ready.",
   },
   {
-    q: "What age is the right age to start?",
-    a: "We work with kids ages 6–18. Younger kids (6–10) typically start with Scratch or block-based coding, while older kids jump into Python, JavaScript, game dev, and more.",
-  },
-  {
-    q: "What if we miss a class?",
-    a: "Makeup classes are available at either location. Just give us a call or send an email and we'll find a time that works.",
-  },
-  {
-    q: "Can my child switch to a different time slot?",
-    a: "Yes — just let us know and we'll move you to any available session at either location.",
+    q: "What happens in the free trial class?",
+    a: "Your child joins a real class, meets a Coding Instructor, and builds an actual mini-project they can show you at the end. You'll get a clear sense of the environment, the instructors, and whether your child enjoys the experience before making any commitment.",
   },
   {
     q: "Is there a long-term contract?",
-    a: "No contracts, ever. It's month-to-month. You can cancel with 30 days written notice whenever you like.",
+    a: "No. Everything is month-to-month. We earn your trust and your child's excitement every month.",
   },
   {
-    q: "What happens at the free trial class?",
-    a: "Your child comes in, meets their instructor, and jumps straight into a project. It's a real class — not a sales pitch. If they love it, you enrol. If not, no hard feelings.",
+    q: "Do you offer a sibling or multi-child discount?",
+    a: "Yes. Families enrolling more than one child receive 10% off for each additional sibling.",
+  },
+  {
+    q: "Do you accommodate different learning abilities?",
+    a: "Yes. We accommodate all learning abilities, including autistic, ADHD, and dyslexic students, students with anxiety, and students who read below grade level. Instructors keep group sizes small and adjust their approach to how each child learns best — including noise-cancelling headphones available for every student, advance notice before transitions, and the option to arrive early to settle in.",
+  },
+  {
+    q: "What is your cancellation policy?",
+    a: "We offer flexible month-to-month memberships. If you need to cancel, we simply require 30 days' notice before your next billing date. This helps us manage class sizes and instructor scheduling while giving families the flexibility they need.",
+  },
+  {
+    q: "Do you offer make-up classes?",
+    a: "Yes. If your child misses a class, we'll do our best to arrange a make-up class based on availability. Make-up classes need to be scheduled within the same month as the missed class.",
+  },
+  {
+    q: "Are your instructors screened and certified?",
+    a: "Yes. All instructors undergo background checks, child abuse registry checks, and training before working with students. Your child's safety is always a top priority.",
   },
 ];
 
