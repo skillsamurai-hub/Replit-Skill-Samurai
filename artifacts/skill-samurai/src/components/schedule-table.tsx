@@ -23,7 +23,7 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
     <>
       {/* Section heading */}
       <h2 className="text-xl font-black text-secondary text-center mb-1">Available Sessions</h2>
-      <p className="text-secondary/50 text-sm text-center mb-8">
+      <p className="text-secondary/70 text-sm text-center mb-8">
         Select a time slot and click Enroll Now to register on our secure registration portal.
       </p>
 
@@ -45,12 +45,12 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
                 <td className="px-5 py-4 font-semibold text-secondary">
                   {slot.day} {slot.time} – {slot.program}
                 </td>
-                <td className="px-5 py-4 text-secondary/60">{slot.grades}</td>
-                <td className="px-5 py-4 text-secondary/60">
+                <td className="px-5 py-4 text-secondary/80">{slot.grades}</td>
+                <td className="px-5 py-4 text-secondary/80">
                   {locationName},<br />
-                  <span className="text-secondary/40">{locationAddress}</span>
+                  <span className="text-secondary/70">{locationAddress}</span>
                 </td>
-                <td className="px-5 py-4 text-secondary/50 text-xs">{slot.note}</td>
+                <td className="px-5 py-4 text-secondary/70 text-xs">{slot.note}</td>
                 <td className="px-5 py-4 text-right">
                   <a
                     href={slot.url}

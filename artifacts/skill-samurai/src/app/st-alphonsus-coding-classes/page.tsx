@@ -32,11 +32,11 @@ export default function StAlphonsusCodingClasses() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white leading-tight tracking-tight mb-2">
             Weekly Coding and STEM Classes
           </h1>
-          <p className="text-lg font-semibold text-white/60 mb-1">(St. Alphonsus Location)</p>
-          <p className="text-white/50 text-sm max-w-2xl">
+          <p className="text-lg font-semibold text-white/80 mb-1">(St. Alphonsus Location)</p>
+          <p className="text-white/75 text-sm max-w-2xl">
             Fun and timely after-school coding sessions that teach students the fundamentals of software development.
           </p>
-          <div className="flex flex-wrap gap-4 mt-5 text-sm text-white/60">
+          <div className="flex flex-wrap gap-4 mt-5 text-sm text-white/80">
             <span className="flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5 text-primary" />St. Alphonsus School, Winnipeg, MB</span>
             <span className="flex items-center gap-1.5"><Star className="h-3.5 w-3.5 text-yellow-400 fill-yellow-400" />155+ five-star reviews</span>
           </div>
