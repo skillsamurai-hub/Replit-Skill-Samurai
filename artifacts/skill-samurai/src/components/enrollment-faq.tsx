@@ -26,7 +26,7 @@ const FAQS = [
   },
   {
     q: "My child learns differently — will they be supported?",
-    a: "Yes — and you're not alone in asking. Many of our students are neurodivergent, and some of our most enthusiastic coders are kids who struggled to find their place in a traditional classroom. Coding rewards the way their minds work — the curiosity, the pattern recognition, the deep focus. We keep classes small, move at each child's pace, and have supports ready like noise-cancelling headphones and advance notice before transitions. Just mention it before the first class and we'll make sure your child feels comfortable from day one.",
+    a: "Yes — and you're not alone in asking. Many of our students are neurodivergent — including kids on the autism spectrum, those with ADHD, dyslexia, or anxiety — and some of our most enthusiastic coders are kids who struggled to find their place in a traditional classroom. Coding rewards the way their minds work: the curiosity, the pattern recognition, the deep focus. We keep classes small, move at each child's pace, and have supports in place like noise-cancelling headphones and advance notice before transitions. Just let us know before the first class and we'll make sure your child feels comfortable from day one.",
   },
   {
     q: "What is your cancellation policy?",
