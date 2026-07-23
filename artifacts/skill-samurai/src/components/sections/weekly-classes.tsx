@@ -157,17 +157,13 @@ export default function WeeklyClasses() {
           <p className="text-secondary/60 text-sm font-bold uppercase tracking-wider">Choose your location to enroll:</p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="https://winnipeg.jumbula.com/north-east-coding-classes"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/north-east-coding-classes"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-primary hover:bg-primary/90 hover:scale-105 active:scale-95 text-white px-7 py-4 text-sm font-black uppercase tracking-wide shadow-lg shadow-primary/30 transition-all border-b-4 border-primary-foreground/20"
             >
               Enroll — North East
             </a>
             <a
-              href="https://winnipeg.jumbula.com/seven-oaks-coding-classes"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/seven-oaks-coding-classes"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-accent hover:bg-accent/90 hover:scale-105 active:scale-95 text-white px-7 py-4 text-sm font-black uppercase tracking-wide shadow-lg shadow-accent/30 transition-all border-b-4 border-primary-foreground/20"
             >
               Enroll — Seven Oaks
