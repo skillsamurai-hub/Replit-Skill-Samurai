@@ -33,6 +33,9 @@ export default function SevenOaksCodingClasses() {
             <ArrowRight className="h-3.5 w-3.5 rotate-180" />
             Home
           </Link>
+          <div className="inline-flex items-center gap-1.5 bg-primary/20 border border-primary/30 text-primary text-xs font-bold px-3 py-1 rounded-full mb-3">
+            <Star className="h-3 w-3 fill-primary" /> Winnipeg&apos;s Top-Rated Coding Classes for Kids
+          </div>
           <p className="text-primary font-bold uppercase tracking-widest text-xs mb-3">After-School Program · Seven Oaks Winnipeg</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white leading-tight tracking-tight mb-1">
             Coding Classes — Seven Oaks
