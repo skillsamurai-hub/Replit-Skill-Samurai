@@ -16,10 +16,9 @@ type Props = {
   slots: Slot[];
   locationName: string;
   locationAddress: string;
-  startNotice?: string;
 };
 
-export default function ScheduleTable({ slots, locationName, locationAddress, startNotice }: Props) {
+export default function ScheduleTable({ slots, locationName, locationAddress }: Props) {
   const days = Array.from(new Set(slots.map((s) => s.day)));
 
   return (
@@ -34,14 +33,12 @@ export default function ScheduleTable({ slots, locationName, locationAddress, st
       </p>
 
       {/* Start notice */}
-      {startNotice && (
-        <div className="flex items-center justify-center gap-2.5 bg-orange-50 border border-orange-200 rounded-xl px-5 py-3.5 mb-6">
-          <span className="text-lg">📅</span>
-          <p className="text-secondary font-bold text-sm">
-            Next intake starting <span className="text-[#F59100]">{startNotice}</span> — enroll now to secure your spot!
-          </p>
-        </div>
-      )}
+      <div className="flex items-center justify-center gap-2.5 bg-orange-50 border border-orange-200 rounded-xl px-5 py-3.5 mb-6">
+        <span className="text-lg">📅</span>
+        <p className="text-secondary font-bold text-sm">
+          <span className="text-[#F59100]">Start any week</span> — new students welcome every Monday to Thursday. Choose your preferred day and time below.
+        </p>
+      </div>
 
       {/* Day cards */}
       <div className={`grid gap-4 mb-8 ${days.length === 2 ? "sm:grid-cols-2" : days.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>

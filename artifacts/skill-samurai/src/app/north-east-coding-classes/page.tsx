@@ -52,7 +52,6 @@ export default function NorthEastCodingClasses() {
           slots={slots}
           locationName="North East Location"
           locationAddress="1199 Rothesay St., Winnipeg, MB R2G 0J7"
-          startNotice="August 2026"
         />
       </div>
 
