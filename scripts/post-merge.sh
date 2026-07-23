@@ -127,6 +127,30 @@ fi
 
 PUSH_ERROR=""
 if PUSH_ERROR=$(git push -f "https://${GITHUB_TOKEN}@github.com/skillsamurai-hub/Replit-Skill-Samurai.git" main 2>&1); then
+  # GitHub push succeeded — now deploy to Vercel if token is available
+  if [ -n "${VERCEL_TOKEN}" ]; then
+    echo "Deploying to Vercel..."
+    VERCEL_DEPLOY_OUTPUT=""
+    if VERCEL_DEPLOY_OUTPUT=$(VERCEL_ORG_ID="${VERCEL_ORG_ID}" VERCEL_PROJECT_ID="${VERCEL_PROJECT_ID}" \
+        npx vercel@latest deploy --prod \
+        --token="${VERCEL_TOKEN}" \
+        --cwd "artifacts/skill-samurai" \
+        --yes 2>&1); then
+      echo ""
+      echo "=========================================="
+      echo "  VERCEL DEPLOYMENT TRIGGERED"
+      echo "  ${VERCEL_DEPLOY_OUTPUT}"
+      echo "=========================================="
+      echo ""
+    else
+      echo ""
+      echo "=========================================="
+      echo "  VERCEL DEPLOY FAILED (GitHub push succeeded)"
+      echo "  Error: ${VERCEL_DEPLOY_OUTPUT}"
+      echo "=========================================="
+      echo ""
+    fi
+  fi
   exit 0
 fi
 PUSH_EXIT=$?
