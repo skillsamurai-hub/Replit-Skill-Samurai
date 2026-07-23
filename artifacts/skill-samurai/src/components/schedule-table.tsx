@@ -23,8 +23,13 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
     <>
       {/* Section heading */}
       <h2 className="text-xl font-black text-secondary text-center mb-1">Available Sessions</h2>
-      <p className="text-secondary/70 text-sm text-center mb-8">
-        Select a time slot and click Enroll Now to register on our secure registration portal.
+
+      {/* Single-line context row — replaces repeated columns */}
+      <p className="text-secondary/70 text-sm text-center mb-2">
+        Weekly Coding Classes &nbsp;·&nbsp; Grades 1–12 &nbsp;·&nbsp; Ages 6–18
+      </p>
+      <p className="text-secondary/50 text-xs text-center mb-8">
+        {locationName} &nbsp;·&nbsp; {locationAddress}
       </p>
 
       {/* Desktop table */}
@@ -32,29 +37,25 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
         <table className="w-full text-sm">
           <thead>
             <tr className="bg-secondary text-white">
-              <th className="text-left px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Program</th>
-              <th className="text-left px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Restrictions</th>
-              <th className="text-left px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Location</th>
-              <th className="text-right px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Action</th>
+              <th className="text-left px-6 py-3.5 font-bold text-xs uppercase tracking-wider">Day</th>
+              <th className="text-left px-6 py-3.5 font-bold text-xs uppercase tracking-wider">Time</th>
+              <th className="text-right px-6 py-3.5 font-bold text-xs uppercase tracking-wider">Action</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-100">
+          <tbody>
             {slots.map((slot, i) => (
-              <tr key={i} className="hover:bg-gray-50 transition-colors">
-                <td className="px-5 py-4 font-semibold text-secondary">
-                  {slot.day} {slot.time} – {slot.program}
-                </td>
-                <td className="px-5 py-4 text-secondary/80">{slot.grades}</td>
-                <td className="px-5 py-4 text-secondary/80">
-                  {locationName},<br />
-                  <span className="text-secondary/70">{locationAddress}</span>
-                </td>
-                <td className="px-5 py-4 text-right">
+              <tr
+                key={i}
+                className={`${i % 2 === 0 ? "bg-white" : "bg-gray-50"} hover:bg-primary/5 transition-colors`}
+              >
+                <td className="px-6 py-4 font-bold text-secondary text-base">{slot.day}</td>
+                <td className="px-6 py-4 text-secondary/80 font-medium">{slot.time}</td>
+                <td className="px-6 py-4 text-right">
                   <a
                     href={slot.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 bg-primary hover:bg-primary/90 text-white font-bold px-4 py-2 rounded-lg text-xs uppercase tracking-wide transition-all hover:scale-105 shadow-sm shadow-primary/30 whitespace-nowrap"
+                    className="inline-flex items-center gap-1.5 bg-primary hover:bg-primary/90 text-white font-bold px-5 py-2 rounded-lg text-xs uppercase tracking-wide transition-all hover:scale-105 shadow-sm shadow-primary/30 whitespace-nowrap"
                   >
                     Enroll Now
                   </a>
@@ -68,18 +69,18 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
       {/* Mobile cards */}
       <div className="md:hidden space-y-3 mb-8">
         {slots.map((slot, i) => (
-          <div key={i} className="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
-            <p className="font-black text-secondary text-base mb-1">{slot.day} {slot.time}</p>
-            <p className="text-secondary/70 text-sm font-semibold mb-1">{slot.program}</p>
-            <p className="text-secondary/50 text-xs mb-1">{slot.grades}</p>
-            <p className="text-secondary/40 text-xs mb-4">{locationAddress}</p>
+          <div key={i} className="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm flex items-center justify-between gap-4">
+            <div>
+              <p className="font-black text-secondary text-base">{slot.day}</p>
+              <p className="text-secondary/70 text-sm font-medium">{slot.time}</p>
+            </div>
             <a
               href={slot.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-xl text-sm uppercase tracking-wide transition-all w-full"
+              className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold px-4 py-2.5 rounded-xl text-xs uppercase tracking-wide transition-all shrink-0"
             >
-              Enroll Now <ArrowRight className="h-4 w-4" />
+              Enroll Now <ArrowRight className="h-3.5 w-3.5" />
             </a>
           </div>
         ))}
@@ -108,7 +109,7 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
       <div className="bg-secondary rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <p className="text-white font-black text-base mb-1">Have questions before enrolling?</p>
-          <p className="text-white/60 text-sm">We&apos;re happy to help you find the right fit for your child.</p>
+          <p className="text-white/70 text-sm">We&apos;re happy to help you find the right fit for your child.</p>
         </div>
         <div className="flex flex-col sm:flex-row gap-3 shrink-0">
           <a href="tel:+14319982155" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold px-4 py-2.5 rounded-xl text-sm border border-white/20 transition-colors">
