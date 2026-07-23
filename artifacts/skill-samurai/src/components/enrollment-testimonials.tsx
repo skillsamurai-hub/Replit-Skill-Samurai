@@ -1,17 +1,17 @@
 const REVIEWS = [
   {
     name: "Louise Hargave",
-    label: "Google Review · Mar 2025",
+    label: "Google Review",
     text: "My grandsons really enjoyed the class and have signed up for 3 months now and looking forward to going. My oldest has ADHD and found it kept his interest for the whole class. The teacher helped him out when he needed it. The younger one didn't want to leave. I would highly recommend this program.",
   },
   {
     name: "Natasha Penniston",
-    label: "Google Review · Mar 2025",
+    label: "Google Review",
     text: "My son expressed interest in coding and I came across Skill Samurai on Instagram. After trying the first class, my son absolutely loved it and has enjoyed learning with them for the past month. Everything about the program is welcoming and flexible. I am blown away with what the kids learn and are capable of creating. Great program!!",
   },
   {
     name: "Hudson's Mom",
-    label: "Google Review · Mar 2025",
+    label: "Google Review",
     text: "My 6-year-old son started at Skill Samurai last fall and I can't praise the program enough! Hudson often gets discouraged quickly, but we've noticed he's become much more patient and persistent since he began coding. Genesis and Akil are amazing — so supportive and attentive.",
   },
 ];
