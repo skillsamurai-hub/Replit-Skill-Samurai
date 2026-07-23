@@ -35,7 +35,6 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
               <th className="text-left px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Program</th>
               <th className="text-left px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Restrictions</th>
               <th className="text-left px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Location</th>
-              <th className="text-left px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Additional Note</th>
               <th className="text-right px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Action</th>
             </tr>
           </thead>
@@ -50,7 +49,6 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
                   {locationName},<br />
                   <span className="text-secondary/70">{locationAddress}</span>
                 </td>
-                <td className="px-5 py-4 text-secondary/70 text-xs">{slot.note}</td>
                 <td className="px-5 py-4 text-right">
                   <a
                     href={slot.url}
