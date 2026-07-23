@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Phone, Mail, CheckCircle2 } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import Link from "next/link";
 import EnrollmentTestimonials from "./enrollment-testimonials";
 import EnrollmentFAQ from "./enrollment-faq";
@@ -27,11 +27,6 @@ type Props = {
   defaultWaitlistUrl?: string;
 };
 
-const WHAT_KIDS_LEARN = [
-  "Build real games, apps, and projects from day one",
-  "Learn Python, Scratch, JavaScript, and more",
-  "Progress at their own pace — beginner to advanced",
-];
 
 export default function ScheduleTable({ slots, locationName, locationAddress, locationId, defaultWaitlistUrl }: Props) {
   const [liveSlots, setLiveSlots] = useState<LiveSlot[]>([]);
@@ -132,38 +127,6 @@ export default function ScheduleTable({ slots, locationName, locationAddress, lo
         >
           Book a Free Class →
         </Link>
-      </div>
-
-      {/* What kids learn */}
-      <div className="mb-8">
-        <h2 className="text-xl font-black text-secondary text-center mb-4">What Your Child Will Learn</h2>
-        <div className="grid sm:grid-cols-3 gap-3">
-          {WHAT_KIDS_LEARN.map((item, i) => (
-            <div key={i} className="flex items-start gap-3 bg-white rounded-xl border border-gray-200 px-4 py-3.5 shadow-sm">
-              <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-              <p className="text-secondary text-sm font-medium">{item}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* What to expect at first class */}
-      <div className="mb-8">
-        <h2 className="text-xl font-black text-secondary text-center mb-1">What Happens at the First Class</h2>
-        <p className="text-secondary/50 text-sm text-center mb-5">No preparation needed — just show up</p>
-        <div className="grid sm:grid-cols-3 gap-4">
-          {[
-            { step: "1", title: "Meet your instructor", desc: "Your child gets matched with a coach who finds their level and picks the right starting project." },
-            { step: "2", title: "Start building something real", desc: "Day one they're already coding — a game, an app, or an animation. No boring lectures." },
-            { step: "3", title: "Leave with a win", desc: "Every class ends with something they built themselves. That first win is what keeps them coming back." },
-          ].map((item) => (
-            <div key={item.step} className="bg-white rounded-2xl border border-gray-200 shadow-sm px-5 py-5">
-              <div className="w-8 h-8 rounded-full bg-primary/10 text-primary font-black text-sm flex items-center justify-center mb-3">{item.step}</div>
-              <p className="text-secondary font-black text-sm mb-1">{item.title}</p>
-              <p className="text-secondary/60 text-sm leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* Testimonials */}
