@@ -1,18 +1,18 @@
 const REVIEWS = [
   {
-    name: "Sarah M.",
-    label: "North East parent",
-    text: "My son has been coming for 6 months and absolutely loves it. He built his first game in the very first month. The instructors are patient and genuinely make it fun.",
+    name: "Louise Hargave",
+    label: "Google Review · Mar 2025",
+    text: "My grandsons really enjoyed the class and have signed up for 3 months now and looking forward to going. My oldest has ADHD and found it kept his interest for the whole class. The teacher helped him out when he needed it. The younger one didn't want to leave. I would highly recommend this program.",
   },
   {
-    name: "Mike T.",
-    label: "Winnipeg parent",
-    text: "We tried a few coding programs — Skill Samurai is by far the best. My daughter went from knowing nothing to building her own websites. The month-to-month is a big plus too.",
+    name: "Natasha Penniston",
+    label: "Google Review · Mar 2025",
+    text: "My son expressed interest in coding and I came across Skill Samurai on Instagram. After trying the first class, my son absolutely loved it and has enjoyed learning with them for the past month. Everything about the program is welcoming and flexible. I am blown away with what the kids learn and are capable of creating. Great program!!",
   },
   {
-    name: "Jennifer K.",
-    label: "Seven Oaks parent",
-    text: "My kids look forward to every single class. The instructors are amazing at meeting each child at their level — my 8-year-old and 13-year-old are both thriving.",
+    name: "Hudson's Mom",
+    label: "Google Review · Mar 2025",
+    text: "My 6-year-old son started at Skill Samurai last fall and I can't praise the program enough! Hudson often gets discouraged quickly, but we've noticed he's become much more patient and persistent since he began coding. Genesis and Akil are amazing — so supportive and attentive.",
   },
 ];
 
