@@ -33,8 +33,8 @@ const FAQS = [
     a: "Yes. If your child misses a class, we'll do our best to arrange a make-up class based on availability. Make-up classes need to be scheduled within the same month as the missed class.",
   },
   {
-    q: "Are your instructors screened and certified?",
-    a: "Yes. All instructors undergo background checks, child abuse registry checks, and training before working with students. Your child's safety is always a top priority.",
+    q: "How do you keep my child safe?",
+    a: "Your child's safety comes first — always. Every instructor goes through a thorough background check and child abuse registry check before they ever set foot in a class. They're also trained specifically to work with kids. You're not just handing your child to someone who knows how to code — you're handing them to someone we trust to look after them.",
   },
 ];
 
