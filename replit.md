@@ -39,6 +39,12 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 
 See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
 
+## GitHub
+
+- **Repository**: `skillsamurai-hub/Replit-Skill-Samurai` — https://github.com/skillsamurai-hub/Replit-Skill-Samurai
+- **Auth**: `GITHUB_TOKEN` secret (skillsamurai-hub PAT with repo scope) embedded in origin remote URL
+- **Push command**: `git push origin main` (or `git push -f origin main` if branches diverge after Replit checkpoints)
+
 ## User Preferences
 
 - **GitHub/Vercel deploys**: Only push to GitHub (and trigger Vercel) when explicitly asked — e.g. "push", "deploy", "publish". Never push automatically after making code changes.

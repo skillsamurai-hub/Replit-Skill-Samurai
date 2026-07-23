@@ -1,1 +1,2 @@
 - [GitHub-Vercel deploy workflow](github-vercel-deploy.md) — live site is on Vercel (not Replit); push to GitHub after changes to deploy
+- [GitHub push setup](github-push-setup.md) — token is from skillsamurai-hub account; use force push after Replit checkpoints cause divergence
