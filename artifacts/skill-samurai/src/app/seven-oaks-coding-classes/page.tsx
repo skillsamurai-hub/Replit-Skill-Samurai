@@ -33,16 +33,19 @@ export default function SevenOaksCodingClasses() {
             <ArrowRight className="h-3.5 w-3.5 rotate-180" />
             Home
           </Link>
-          <p className="text-primary font-bold uppercase tracking-widest text-xs mb-2">Skill Samurai Winnipeg</p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white leading-tight tracking-tight mb-2">
-            Weekly Coding and STEM Classes
+          <p className="text-primary font-bold uppercase tracking-widest text-xs mb-3">After-School Program · Seven Oaks Winnipeg</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white leading-tight tracking-tight mb-1">
+            Coding Classes — Seven Oaks
           </h1>
-          <p className="text-lg font-semibold text-white/80 mb-1">(Seven Oaks Location)</p>
-          <p className="text-white/75 text-sm max-w-2xl">
-            Fun and timely after-school coding sessions that teach students the fundamentals of software development.
+          <p className="text-white/60 font-semibold text-base mb-3">745 Kingsbury Ave., Winnipeg, MB R2V 3N5</p>
+          <p className="text-white/80 text-sm max-w-2xl">
+            After-school coding and STEM classes for kids ages 6–18. Project-based sessions every Wednesday and Thursday evening — no experience needed.
           </p>
           <div className="flex flex-wrap gap-4 mt-5 text-sm text-white/80">
             <span className="flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5 text-primary" />745 Kingsbury Ave., Winnipeg, MB R2V 3N5</span>
+            <span className="flex items-center gap-1.5 text-white/60">·</span>
+            <span className="flex items-center gap-1.5">Ages 6–18</span>
+            <span className="flex items-center gap-1.5 text-white/60">·</span>
             <span className="flex items-center gap-1.5"><Star className="h-3.5 w-3.5 text-yellow-400 fill-yellow-400" />155+ five-star reviews</span>
           </div>
         </div>
