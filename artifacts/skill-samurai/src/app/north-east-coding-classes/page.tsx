@@ -50,7 +50,7 @@ export default function NorthEastCodingClasses() {
       <div className="container mx-auto px-4 py-10">
         <ScheduleTable
           slots={slots}
-          locationName="North East Location (Scout Coffee + Community)"
+          locationName="North East Location"
           locationAddress="1199 Rothesay St., Winnipeg, MB R2G 0J7"
         />
       </div>
