@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { Phone, Mail, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import EnrollmentTestimonials from "./enrollment-testimonials";
+import EnrollmentFAQ from "./enrollment-faq";
 
 export type Slot = {
   day: string;
@@ -63,6 +65,25 @@ export default function ScheduleTable({ slots, locationName, locationAddress, lo
             <div key={i} className="flex items-start gap-3 bg-white rounded-xl border border-gray-200 px-4 py-3.5 shadow-sm">
               <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
               <p className="text-secondary text-sm font-medium">{item}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* What to expect at first class */}
+      <div className="mb-8">
+        <h2 className="text-xl font-black text-secondary text-center mb-1">What Happens at the First Class</h2>
+        <p className="text-secondary/50 text-sm text-center mb-5">No preparation needed — just show up</p>
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[
+            { step: "1", title: "Meet your instructor", desc: "Your child gets matched with a coach who finds their level and picks the right starting project." },
+            { step: "2", title: "Start building something real", desc: "Day one they're already coding — a game, an app, or an animation. No boring lectures." },
+            { step: "3", title: "Leave with a win", desc: "Every class ends with something they built themselves. That first win is what keeps them coming back." },
+          ].map((item) => (
+            <div key={item.step} className="bg-white rounded-2xl border border-gray-200 shadow-sm px-5 py-5">
+              <div className="w-8 h-8 rounded-full bg-primary/10 text-primary font-black text-sm flex items-center justify-center mb-3">{item.step}</div>
+              <p className="text-secondary font-black text-sm mb-1">{item.title}</p>
+              <p className="text-secondary/60 text-sm leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -145,6 +166,9 @@ export default function ScheduleTable({ slots, locationName, locationAddress, lo
         </Link>
       </div>
 
+      {/* Testimonials */}
+      <EnrollmentTestimonials />
+
       {/* Trust strip */}
       <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-secondary/60 mb-8 py-4 border-y border-gray-200">
         <span className="flex items-center gap-1.5 font-semibold text-secondary">{locationName} &nbsp;·&nbsp; {locationAddress}</span>
@@ -155,6 +179,9 @@ export default function ScheduleTable({ slots, locationName, locationAddress, lo
         <span className="hidden sm:block text-gray-300">|</span>
         <span className="flex items-center gap-1.5">🔓 No long-term contracts</span>
       </div>
+
+      {/* FAQ */}
+      <EnrollmentFAQ />
 
       {/* Flexible membership */}
       <div className="bg-white rounded-2xl border border-gray-200 p-6 mb-6">
