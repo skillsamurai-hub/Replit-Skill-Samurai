@@ -167,7 +167,7 @@ function FaqItem({ q, a, defaultOpen = false }: { q: string; a: React.ReactNode;
         }`}
       >
         <div className="overflow-hidden">
-          <p className="text-sm md:text-base text-white/75 leading-relaxed pr-4 md:pr-10">{a}</p>
+          <div className="text-sm md:text-base text-white/75 leading-relaxed pr-4 md:pr-10">{a}</div>
         </div>
       </div>
     </div>
