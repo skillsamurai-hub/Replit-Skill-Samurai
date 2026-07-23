@@ -1,21 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MapPin, ArrowRight, Star, Phone, Mail } from "lucide-react";
+import { MapPin, ArrowRight, Star, Phone, Mail, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Enroll in St. Alphonsus Coding Classes | Skill Samurai Winnipeg",
+  title: "St. Alphonsus Coding Classes — Coming Soon | Skill Samurai Winnipeg",
   description:
-    "Enroll your child in weekly coding, robotics, and STEM classes at Skill Samurai's St. Alphonsus location in Winnipeg. Ages 6–18. No experience needed.",
+    "Weekly coding, robotics, and STEM classes are coming soon to Skill Samurai's St. Alphonsus location in Winnipeg. Ages 6–18. Register your interest today.",
   alternates: {
     canonical: "https://www.skillsamuraiwinnipeg.com/st-alphonsus-coding-classes",
   },
 };
-
-const ENROLL_URL = "https://winnipeg.jumbula.com/st-alphonsus-coding-classes";
-
-const slots = [
-  { day: "TBD", time: "—", program: "Weekly Coding Classes", grades: "Grades 1–12", note: "See registration for current schedule" },
-];
 
 export default function StAlphonsusCodingClasses() {
   return (
@@ -43,103 +37,53 @@ export default function StAlphonsusCodingClasses() {
         </div>
       </div>
 
-      {/* Schedule table */}
-      <div className="container mx-auto px-4 py-10">
+      {/* Coming Soon */}
+      <div className="container mx-auto px-4 py-16">
 
-        <h2 className="text-xl font-black text-secondary text-center mb-1">Summer 2026 — Available Sessions</h2>
-        <p className="text-secondary/50 text-sm text-center mb-8">Select a time slot and click Enroll Now to register on our secure registration portal.</p>
-
-        {/* Desktop table */}
-        <div className="hidden md:block bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden mb-8">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="bg-secondary text-white">
-                <th className="text-left px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Program</th>
-                <th className="text-left px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Restrictions</th>
-                <th className="text-left px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Location</th>
-                <th className="text-left px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Additional Note</th>
-                <th className="text-right px-5 py-3.5 font-bold text-xs uppercase tracking-wider">Action</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-100">
-              {slots.map((slot, i) => (
-                <tr key={i} className="hover:bg-gray-50 transition-colors">
-                  <td className="px-5 py-4 font-semibold text-secondary">
-                    {slot.day} {slot.time !== "—" ? slot.time : ""} – {slot.program}
-                  </td>
-                  <td className="px-5 py-4 text-secondary/60">{slot.grades}</td>
-                  <td className="px-5 py-4 text-secondary/60">
-                    St. Alphonsus Location,<br />
-                    <span className="text-secondary/40">Winnipeg, MB</span>
-                  </td>
-                  <td className="px-5 py-4 text-secondary/50 text-xs">{slot.note}</td>
-                  <td className="px-5 py-4 text-right">
-                    <a
-                      href={ENROLL_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 bg-primary hover:bg-primary/90 text-white font-bold px-4 py-2 rounded-lg text-xs uppercase tracking-wide transition-all hover:scale-105 shadow-sm shadow-primary/30 whitespace-nowrap"
-                    >
-                      Enroll Now
-                    </a>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        {/* Mobile cards */}
-        <div className="md:hidden space-y-3 mb-8">
-          {slots.map((slot, i) => (
-            <div key={i} className="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
-              <p className="font-black text-secondary text-base mb-1">{slot.program}</p>
-              <p className="text-secondary/50 text-xs mb-1">{slot.grades}</p>
-              <p className="text-secondary/40 text-xs mb-4">St. Alphonsus School, Winnipeg, MB</p>
-              <a
-                href={ENROLL_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-xl text-sm uppercase tracking-wide transition-all w-full"
-              >
-                Enroll Now <ArrowRight className="h-4 w-4" />
-              </a>
-            </div>
-          ))}
-        </div>
-
-        {/* Policies */}
-        <div className="bg-white rounded-2xl border border-gray-200 p-6 mb-6">
-          <h3 className="text-base font-black text-secondary mb-4">Class Cancellation and Make-up Class Policy</h3>
-          <div className="space-y-4 text-sm text-secondary/70">
-            <div>
-              <p className="font-bold text-secondary mb-1">How to Cancel or Pause Classes</p>
-              <p>We require 30 days written notice to cancel or pause your membership. Please email us or call <a href="tel:+14319982155" className="text-primary font-bold hover:underline">431-998-2155</a> to initiate any changes.</p>
-            </div>
-            <div>
-              <p className="font-bold text-secondary mb-1">Make-up Classes</p>
-              <p>If your child misses a class, we offer makeup sessions at either location. Contact us to schedule a makeup at a time that works for your family.</p>
-            </div>
-            <div>
-              <p className="font-bold text-secondary mb-1">Month-to-Month Membership</p>
-              <p>There are no long-term contracts. Your membership continues month-to-month until you choose to cancel with 30 days notice.</p>
-            </div>
+        <div className="max-w-xl mx-auto text-center">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
+            <Clock className="h-8 w-8 text-primary" />
           </div>
-        </div>
-
-        {/* Contact */}
-        <div className="bg-secondary rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div>
-            <p className="text-white font-black text-base mb-1">Have questions before enrolling?</p>
-            <p className="text-white/60 text-sm">We&apos;re happy to help you find the right fit for your child.</p>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-            <a href="tel:+14319982155" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold px-4 py-2.5 rounded-xl text-sm border border-white/20 transition-colors">
-              <Phone className="h-4 w-4 text-primary" /> 431-998-2155
+          <h2 className="text-2xl font-black text-secondary mb-3">Coming Soon</h2>
+          <p className="text-secondary/60 text-sm mb-8">
+            We&apos;re finalising the schedule for our St. Alphonsus location. Check back shortly or get in touch and we&apos;ll let you know as soon as enrolment opens.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href="tel:+14319982155"
+              className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors w-full sm:w-auto justify-center"
+            >
+              <Phone className="h-4 w-4" /> 431-998-2155
             </a>
-            <a href="/contact" className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold px-4 py-2.5 rounded-xl text-sm transition-colors">
+            <a
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors w-full sm:w-auto justify-center"
+            >
               <Mail className="h-4 w-4" /> Email Us
             </a>
+          </div>
+        </div>
+
+        {/* While you wait — other locations */}
+        <div className="mt-16 border-t border-gray-200 pt-12">
+          <p className="text-center text-secondary/50 text-xs uppercase tracking-widest font-bold mb-6">Enrol now at our other locations</p>
+          <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            <Link
+              href="/north-east-coding-classes"
+              className="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm hover:shadow-md hover:border-primary/30 transition-all group"
+            >
+              <p className="font-black text-secondary group-hover:text-primary transition-colors mb-1">North East Location</p>
+              <p className="text-secondary/50 text-xs mb-3">1199 Rothesay St. · Mon &amp; Tue evenings</p>
+              <span className="inline-flex items-center gap-1 text-primary text-xs font-bold">View schedule <ArrowRight className="h-3 w-3" /></span>
+            </Link>
+            <Link
+              href="/seven-oaks-coding-classes"
+              className="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm hover:shadow-md hover:border-primary/30 transition-all group"
+            >
+              <p className="font-black text-secondary group-hover:text-primary transition-colors mb-1">Seven Oaks Location</p>
+              <p className="text-secondary/50 text-xs mb-3">745 Kingsbury Ave. · Wed &amp; Thu evenings</p>
+              <span className="inline-flex items-center gap-1 text-primary text-xs font-bold">View schedule <ArrowRight className="h-3 w-3" /></span>
+            </Link>
           </div>
         </div>
 
