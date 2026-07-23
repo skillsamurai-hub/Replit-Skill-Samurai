@@ -21,8 +21,8 @@ const FAQS = [
     a: "Yes. Families enrolling more than one child receive 10% off for each additional sibling.",
   },
   {
-    q: "Do you accommodate different learning abilities?",
-    a: "Yes. We accommodate all learning abilities, including autistic, ADHD, and dyslexic students, students with anxiety, and students who read below grade level. Instructors keep group sizes small and adjust their approach to how each child learns best — including noise-cancelling headphones available for every student, advance notice before transitions, and the option to arrive early to settle in.",
+    q: "My child learns differently — will they be supported?",
+    a: "Absolutely. Every child learns in their own way, and our instructors are experienced at adapting to that. We keep class sizes small, adjust our approach to how each child learns best, and have practical supports in place — like noise-cancelling headphones, advance notice before transitions, and the option to arrive early to settle in. Just let us know before the first class and we'll make sure they're set up for success.",
   },
   {
     q: "What is your cancellation policy?",
