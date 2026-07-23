@@ -46,6 +46,15 @@ See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and pa
 - **Push command**: `git push origin main` (or `git push -f origin main` if branches diverge after Replit checkpoints)
 - **Token rotation**: See `docs/github-token-rotation.md`. `post-merge.sh` checks token validity on every merge and warns when fewer than 14 days remain (fine-grained PATs only). Classic PATs do not expose expiry via the API — set a calendar reminder when you create one.
 
+## Vercel Deployment
+
+- **Vercel project**: `skill-samurai-website-skill-samurai` on team `genesis-projects4`
+- **Deploy mechanism**: `scripts/post-merge.sh` pushes to GitHub then triggers Vercel via REST API (`POST /v13/deployments`) — no Git repo connection needed in Vercel dashboard
+- **Required secrets**: `VERCEL_TOKEN` (Vercel personal token), `GITHUB_TOKEN` (skillsamurai-hub PAT)
+- **Required env vars**: `VERCEL_ORG_ID=team_baXFXlFK2Y9ThvOv2ZcMcgvZ`, `VERCEL_PROJECT_ID=prj_awlTOmcLyHWuTGOVPRQTSOhW835q`
+- **GitHub repo ID**: `1309542257` (hardcoded in post-merge.sh, do not change)
+- **Live domain**: `skillsamuraiwinnipeg.com` — managed via Vercel dashboard
+
 ## User Preferences
 
-- **GitHub/Vercel deploys**: Every task merge auto-pushes to GitHub via `scripts/post-merge.sh`. Manual pushes are only needed if the auto-push fails or for out-of-band changes.
+- **GitHub/Vercel deploys**: Every task merge auto-pushes to GitHub AND triggers a Vercel production deployment via `scripts/post-merge.sh`. Manual pushes are only needed if the auto-push fails or for out-of-band changes.

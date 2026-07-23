@@ -127,26 +127,39 @@ fi
 
 PUSH_ERROR=""
 if PUSH_ERROR=$(git push -f "https://${GITHUB_TOKEN}@github.com/skillsamurai-hub/Replit-Skill-Samurai.git" main 2>&1); then
-  # GitHub push succeeded — now deploy to Vercel if token is available
+  # GitHub push succeeded — now trigger Vercel deployment via REST API
   if [ -n "${VERCEL_TOKEN}" ]; then
-    echo "Deploying to Vercel..."
-    VERCEL_DEPLOY_OUTPUT=""
-    if VERCEL_DEPLOY_OUTPUT=$(VERCEL_ORG_ID="${VERCEL_ORG_ID}" VERCEL_PROJECT_ID="${VERCEL_PROJECT_ID}" \
-        npx vercel@latest deploy --prod \
-        --token="${VERCEL_TOKEN}" \
-        --cwd "artifacts/skill-samurai" \
-        --yes 2>&1); then
+    echo "Triggering Vercel deployment..."
+    VERCEL_RESPONSE=$(curl -s -X POST \
+      "https://api.vercel.com/v13/deployments?teamId=${VERCEL_ORG_ID}&forceNew=1" \
+      -H "Authorization: Bearer ${VERCEL_TOKEN}" \
+      -H "Content-Type: application/json" \
+      -d "{
+        \"name\": \"skill-samurai-website-skill-samurai\",
+        \"project\": \"${VERCEL_PROJECT_ID}\",
+        \"target\": \"production\",
+        \"gitSource\": {
+          \"type\": \"github\",
+          \"repo\": \"skillsamurai-hub/Replit-Skill-Samurai\",
+          \"repoId\": 1309542257,
+          \"ref\": \"main\"
+        }
+      }")
+    DEPLOY_ID=$(echo "${VERCEL_RESPONSE}" | python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('id',''))" 2>/dev/null || echo "")
+    DEPLOY_URL=$(echo "${VERCEL_RESPONSE}" | python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('url',''))" 2>/dev/null || echo "")
+    if [ -n "${DEPLOY_ID}" ]; then
       echo ""
       echo "=========================================="
       echo "  VERCEL DEPLOYMENT TRIGGERED"
-      echo "  ${VERCEL_DEPLOY_OUTPUT}"
+      echo "  ID  : ${DEPLOY_ID}"
+      echo "  URL : https://${DEPLOY_URL}"
       echo "=========================================="
       echo ""
     else
       echo ""
       echo "=========================================="
       echo "  VERCEL DEPLOY FAILED (GitHub push succeeded)"
-      echo "  Error: ${VERCEL_DEPLOY_OUTPUT}"
+      echo "  Response: ${VERCEL_RESPONSE}"
       echo "=========================================="
       echo ""
     fi
