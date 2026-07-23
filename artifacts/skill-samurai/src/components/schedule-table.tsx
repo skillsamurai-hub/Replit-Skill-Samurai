@@ -36,7 +36,7 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
       <div className="flex items-center justify-center gap-2.5 bg-orange-50 border border-orange-200 rounded-xl px-5 py-3.5 mb-6">
         <span className="text-lg">📅</span>
         <p className="text-secondary font-bold text-sm">
-          <span className="text-[#F59100]">Start any week</span> — new students welcome every Monday to Thursday. Choose your preferred day and time below.
+          <span className="text-[#F59100]">Start any week</span> — new students welcome every {days[0]}{days.length > 1 ? ` & ${days[days.length - 1]}` : ""}. Choose your preferred day and time below.
         </p>
       </div>
 
