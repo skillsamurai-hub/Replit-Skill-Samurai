@@ -203,7 +203,7 @@ export default function CampsContent() {
                   { icon: Users, label: "Max 12 kids per camp", color: "text-primary", bg: "bg-primary/10" },
                   { icon: Trophy, label: "Real projects to take home", color: "text-[#F59100]", bg: "bg-[#F59100]/10" },
                   { icon: Zap, label: "CS-trained instructors", color: "text-primary", bg: "bg-primary/10" },
-                  { icon: Star, label: "148+ five-star reviews", color: "text-[#F59100]", bg: "bg-[#F59100]/10" },
+                  { icon: Star, label: "155+ five-star reviews", color: "text-[#F59100]", bg: "bg-[#F59100]/10" },
                 ].map((item, i) => (
                   <div key={i} className="bg-gray-50 rounded-2xl p-5 border border-gray-100 text-center">
                     <div className={`inline-flex p-3 rounded-xl ${item.bg} mb-3`}>

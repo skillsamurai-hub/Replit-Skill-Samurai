@@ -93,7 +93,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6 lg:mb-8 hover:bg-white/20 transition-colors"
           >
             <span className="text-yellow-400 text-base leading-none">★★★★★</span>
-            <span className="text-white/90 text-xs sm:text-sm font-bold uppercase tracking-wide">148 Five-Star Reviews · Winnipeg&apos;s Top-Rated Coding Classes</span>
+            <span className="text-white/90 text-xs sm:text-sm font-bold uppercase tracking-wide">155 Five-Star Reviews · Winnipeg&apos;s Top-Rated Coding Classes</span>
           </a>
 
           <div className="flex flex-wrap items-center gap-3 mb-6 lg:mb-8">

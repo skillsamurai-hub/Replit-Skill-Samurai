@@ -68,7 +68,7 @@ const faqSchema = {
       name: "Why do parents choose Skill Samurai?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Parents choose Skill Samurai because we're focused on more than just coding. Our students build confidence, problem-solving skills, creativity, and future-ready technology skills in a fun and supportive environment. We keep class sizes small, provide personalized guidance, and help each child progress at their own pace. It's also an easy activity to hand off — no homework to manage, no equipment to buy, just an hour your child looks forward to. We've earned over 148 five-star Google reviews from Winnipeg families who have trusted us with their child's learning journey.",
+        text: "Parents choose Skill Samurai because we're focused on more than just coding. Our students build confidence, problem-solving skills, creativity, and future-ready technology skills in a fun and supportive environment. We keep class sizes small, provide personalized guidance, and help each child progress at their own pace. It's also an easy activity to hand off — no homework to manage, no equipment to buy, just an hour your child looks forward to. We've earned over 155 five-star Google reviews from Winnipeg families who have trusted us with their child's learning journey.",
       },
     },
     {
