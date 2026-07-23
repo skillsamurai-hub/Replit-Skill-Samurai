@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Phone, Mail, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
@@ -14,10 +15,13 @@ export type Slot = {
   waitlistUrl?: string;
 };
 
+type LiveSlot = { day: string; time: string; spots_left: number; waitlist_url: string | null };
+
 type Props = {
   slots: Slot[];
   locationName: string;
   locationAddress: string;
+  locationId?: string;
 };
 
 const WHAT_KIDS_LEARN = [
@@ -26,8 +30,27 @@ const WHAT_KIDS_LEARN = [
   "Progress at their own pace — beginner to advanced",
 ];
 
-export default function ScheduleTable({ slots, locationName, locationAddress }: Props) {
-  const days = Array.from(new Set(slots.map((s) => s.day)));
+export default function ScheduleTable({ slots, locationName, locationAddress, locationId }: Props) {
+  const [liveSlots, setLiveSlots] = useState<LiveSlot[]>([]);
+
+  useEffect(() => {
+    if (!locationId) return;
+    fetch(`/api/slots?location=${locationId}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data: LiveSlot[] | null) => { if (data) setLiveSlots(data); })
+      .catch(() => {});
+  }, [locationId]);
+
+  const displaySlots =
+    liveSlots.length === 0
+      ? slots
+      : slots.map((slot) => {
+          const live = liveSlots.find((l) => l.day === slot.day && l.time === slot.time);
+          if (!live) return slot;
+          return { ...slot, spotsLeft: live.spots_left, waitlistUrl: live.waitlist_url ?? slot.waitlistUrl };
+        });
+
+  const days = Array.from(new Set(displaySlots.map((s) => s.day)));
 
   return (
     <>
@@ -73,7 +96,7 @@ export default function ScheduleTable({ slots, locationName, locationAddress }: 
       {/* Day cards */}
       <div className={`grid gap-4 mb-4 ${days.length === 2 ? "sm:grid-cols-2" : days.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
         {days.map((day) => {
-          const daySlots = slots.filter((s) => s.day === day);
+          const daySlots = displaySlots.filter((s) => s.day === day);
           return (
             <div key={day} className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
               <div className="bg-secondary px-5 py-3 flex items-center justify-between">

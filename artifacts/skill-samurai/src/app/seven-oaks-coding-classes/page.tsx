@@ -57,6 +57,7 @@ export default function SevenOaksCodingClasses() {
           slots={slots}
           locationName="Seven Oaks Location"
           locationAddress="745 Kingsbury Ave., Winnipeg, MB R2V 3N5"
+          locationId="seven-oaks"
         />
       </div>
 

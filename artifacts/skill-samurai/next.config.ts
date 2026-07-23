@@ -17,6 +17,7 @@ const config: NextConfig = {
   trailingSlash: true,
   compress: true,
   allowedDevOrigins: ["*.replit.dev", "*.kirk.replit.dev"],
+  serverExternalPackages: ["pg"],
   async redirects() {
     return [
       // /reviews → Google Reviews page (read reviews)

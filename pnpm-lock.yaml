@@ -414,6 +414,9 @@ importers:
       next:
         specifier: ^15.5.18
         version: 15.5.19(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      pg:
+        specifier: ^8.20.0
+        version: 8.20.0
       react:
         specifier: 'catalog:'
         version: 19.1.0
@@ -517,6 +520,9 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 25.3.5
+      '@types/pg':
+        specifier: ^8.18.0
+        version: 8.18.0
       '@types/react':
         specifier: 'catalog:'
         version: 19.2.14
