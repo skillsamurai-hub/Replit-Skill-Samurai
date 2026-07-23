@@ -22,7 +22,7 @@ const FAQS = [
   },
   {
     q: "My child learns differently — will they be supported?",
-    a: "Absolutely. We warmly welcome neurodivergent learners and every child who learns in their own way. Our instructors are experienced at adapting to different needs — we keep class sizes small, adjust our approach to how each child learns best, and have practical supports in place like noise-cancelling headphones, advance notice before transitions, and the option to arrive early to settle in. Just let us know before the first class and we'll make sure they're set up for success.",
+    a: "Yes — and you're not alone in asking. Many of our students are neurodivergent, and some of our most enthusiastic coders are kids who struggled to find their place in a traditional classroom. Coding rewards the way their minds work — the curiosity, the pattern recognition, the deep focus. We keep classes small, move at each child's pace, and have supports ready like noise-cancelling headphones and advance notice before transitions. Just mention it before the first class and we'll make sure your child feels comfortable from day one.",
   },
   {
     q: "What is your cancellation policy?",
