@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Image from "next/image";
+import logoUrl from "@assets/SkillSamurai_Logo_Full_(1)_(1)_(1)_1776400767722.png";
 
 const MOCK_ENROLLMENT_DATE = "January 15, 2025";
 const MOCK_WELCOME_EMAIL_DATE = "January 16, 2025";
@@ -222,6 +224,9 @@ export default function CancellationPage() {
           {/* ── Step 3: Confirmation ─────────────────────────────────────── */}
           {submitted && (
             <div className="bg-white rounded-2xl border border-border shadow-sm p-8 space-y-5">
+              <div className="flex items-center gap-3 pb-5 border-b border-border">
+                <Image src={logoUrl} alt="Skill Samurai Winnipeg" width={140} height={48} className="h-10 w-auto" />
+              </div>
               <div className="flex flex-col items-center text-center mb-2">
                 <div className="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center text-2xl mb-3">
                   <span className="text-secondary font-black text-xl">✓</span>
@@ -301,6 +306,9 @@ export default function CancellationPage() {
           {/* ── Step 1: Choose type ──────────────────────────────────────── */}
           {!submitted && step === 1 && (
             <div className="bg-white rounded-2xl border border-border shadow-sm p-8 space-y-6">
+              <div className="flex items-center gap-3 pb-5 border-b border-border">
+                <Image src={logoUrl} alt="Skill Samurai Winnipeg" width={140} height={48} className="h-10 w-auto" />
+              </div>
               <div>
                 <h2 className="text-xl font-black font-heading text-foreground mb-1">What would you like to do?</h2>
                 <p className="text-sm text-muted-foreground">
@@ -337,6 +345,9 @@ export default function CancellationPage() {
           {/* ── Step 2: Pause ────────────────────────────────────────────── */}
           {!submitted && step === 2 && requestType === "pause" && (
             <div className="bg-white rounded-2xl border border-border shadow-sm p-8 space-y-5">
+              <div className="flex items-center gap-3 pb-5 border-b border-border">
+                <Image src={logoUrl} alt="Skill Samurai Winnipeg" width={140} height={48} className="h-10 w-auto" />
+              </div>
               <div>
                 <button
                   onClick={() => setStep(1)}
@@ -386,6 +397,9 @@ export default function CancellationPage() {
           {/* ── Step 2: Cancel ───────────────────────────────────────────── */}
           {!submitted && step === 2 && requestType === "cancel" && (
             <div className="bg-white rounded-2xl border border-border shadow-sm p-8 space-y-5">
+              <div className="flex items-center gap-3 pb-5 border-b border-border">
+                <Image src={logoUrl} alt="Skill Samurai Winnipeg" width={140} height={48} className="h-10 w-auto" />
+              </div>
               <div>
                 <button
                   onClick={() => setStep(1)}
