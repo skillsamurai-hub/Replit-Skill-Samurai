@@ -452,10 +452,12 @@ export default function CancellationPage() {
               </div>
 
               {/* Enrollment record recap */}
-              <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-4 space-y-1 text-sm">
-                <p className="font-bold text-secondary text-xs uppercase tracking-wider mb-2">Policy on file</p>
-                <p className="text-muted-foreground text-xs">✓ Cancellation policy initialed at enrollment — <strong className="text-foreground">30 days notice required.</strong></p>
-                <p className="text-muted-foreground text-xs">✓ Policy reminder sent in your welcome email. We'll walk you through next steps below.</p>
+              <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-4 space-y-3 text-sm">
+                <p className="font-bold text-secondary text-xs uppercase tracking-wider">Cancellation Policy — initialed at enrollment</p>
+                <p className="text-muted-foreground text-xs leading-relaxed">
+                  Monthly memberships require <strong className="text-foreground">30 days notice</strong> to cancel. We are not able to refund classes missed in prior months. You may cancel by submitting this form or emailing us with the date you'd like to stop.
+                </p>
+                <p className="text-muted-foreground text-xs">✓ You initialed this policy at registration &nbsp;·&nbsp; ✓ Reminder included in your welcome email</p>
               </div>
 
               <Field label="Parent Name">
