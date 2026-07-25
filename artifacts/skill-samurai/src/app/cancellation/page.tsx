@@ -331,16 +331,16 @@ export default function CancellationPage() {
                   className="w-full text-left p-5 border-2 border-border rounded-2xl hover:border-primary hover:bg-primary/5 transition-all group"
                 >
                   <p className="font-black font-heading text-foreground group-hover:text-primary text-base mb-1">
-                    ⏸ Pause Enrollment
+                    Pause Enrollment
                   </p>
                   <p className="text-sm text-muted-foreground mb-3">
                     Hold your child's spot &amp; pause billing for 1–3 months.
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">✅ No cost to pause</span>
-                    <span className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">🔒 Rate locked in</span>
-                    <span className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">💰 $99 fee waived</span>
-                    <span className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">📍 Progress saved</span>
+                    <span className="inline-flex items-center bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">No cost to pause</span>
+                    <span className="inline-flex items-center bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">Rate locked in</span>
+                    <span className="inline-flex items-center bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">$99 fee waived</span>
+                    <span className="inline-flex items-center bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">Progress saved</span>
                   </div>
                 </button>
                 <button
@@ -348,7 +348,7 @@ export default function CancellationPage() {
                   className="w-full text-left p-5 border-2 border-border rounded-2xl hover:border-primary hover:bg-primary/5 transition-all group"
                 >
                   <p className="font-black font-heading text-foreground group-hover:text-primary text-base mb-1">
-                    ✖ Cancel Enrollment
+                    Cancel Enrollment
                   </p>
                   <p className="text-sm text-muted-foreground">
                     End your child's enrollment. We'll walk you through the policy steps.
@@ -378,19 +378,15 @@ export default function CancellationPage() {
                 <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-3">What's included with your pause</p>
                 <div className="grid grid-cols-2 gap-2 text-center sm:grid-cols-4">
                   <div className="bg-white rounded-xl p-3 border border-border">
-                    <div className="text-xl mb-1">✅</div>
                     <p className="text-xs font-bold text-foreground leading-tight">No cost to pause</p>
                   </div>
                   <div className="bg-white rounded-xl p-3 border border-border">
-                    <div className="text-xl mb-1">🔒</div>
                     <p className="text-xs font-bold text-foreground leading-tight">Rate locked in</p>
                   </div>
                   <div className="bg-white rounded-xl p-3 border border-border">
-                    <div className="text-xl mb-1">💰</div>
                     <p className="text-xs font-bold text-foreground leading-tight">$99 fee waived</p>
                   </div>
                   <div className="bg-white rounded-xl p-3 border border-border">
-                    <div className="text-xl mb-1">📍</div>
                     <p className="text-xs font-bold text-foreground leading-tight">Progress saved</p>
                   </div>
                 </div>
@@ -487,12 +483,12 @@ export default function CancellationPage() {
               {/* Nudge: planning to return → suggest pause */}
               {form.reasonForLeaving === "Planning to return / taking a break" && (
                 <div className="bg-primary/5 border border-primary/30 rounded-xl p-4 space-y-3">
-                  <p className="font-black font-heading text-primary text-sm">💡 Consider pausing instead — it's free to do and protects your membership.</p>
+                  <p className="font-black font-heading text-primary text-sm">Consider pausing instead — it's free and protects your membership.</p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="inline-flex items-center gap-1 bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">✅ No cost to pause</span>
-                    <span className="inline-flex items-center gap-1 bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">🔒 Rate locked in</span>
-                    <span className="inline-flex items-center gap-1 bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">💰 $99 fee waived</span>
-                    <span className="inline-flex items-center gap-1 bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">📍 Progress saved</span>
+                    <span className="inline-flex items-center bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">No cost to pause</span>
+                    <span className="inline-flex items-center bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">Rate locked in</span>
+                    <span className="inline-flex items-center bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">$99 fee waived</span>
+                    <span className="inline-flex items-center bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">Progress saved</span>
                   </div>
                   <button
                     type="button"
