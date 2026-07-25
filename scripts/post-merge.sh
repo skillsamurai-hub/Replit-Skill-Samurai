@@ -126,7 +126,9 @@ fi
 # ---------------------------------------------------------------------------
 
 PUSH_ERROR=""
-if PUSH_ERROR=$(git push -f "https://${GITHUB_TOKEN}@github.com/skillsamurai-hub/Replit-Skill-Samurai.git" main 2>&1); then
+# Capture stderr separately so we can sanitise it before logging.
+# The remote URL embeds GITHUB_TOKEN — never let raw stderr reach logs or issues.
+if git push -f "https://${GITHUB_TOKEN}@github.com/skillsamurai-hub/Replit-Skill-Samurai.git" main 2>/tmp/push_stderr.txt; then
   # GitHub push succeeded — now trigger Vercel deployment via REST API
   if [ -n "${VERCEL_TOKEN}" ]; then
     echo "Triggering Vercel deployment..."
@@ -167,6 +169,10 @@ if PUSH_ERROR=$(git push -f "https://${GITHUB_TOKEN}@github.com/skillsamurai-hub
   exit 0
 fi
 PUSH_EXIT=$?
+
+# Read and sanitise the push error — strip any token-bearing URL patterns
+# before the text is logged to stdout or posted to a GitHub issue.
+PUSH_ERROR=$(sed "s|https://[^@]*@github\.com|https://***@github.com|g" /tmp/push_stderr.txt 2>/dev/null || echo "(error output unavailable)")
 
 TIMESTAMP=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
 
