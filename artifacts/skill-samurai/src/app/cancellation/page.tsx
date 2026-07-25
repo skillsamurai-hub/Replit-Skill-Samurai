@@ -26,6 +26,9 @@ interface FormState {
   childName: string;
   email: string;
   phone: string;
+  location: string;
+  classDay: string;
+  classTime: string;
   nextBillingDate: string;
   reasonForLeaving: string;
   otherNote: string;
@@ -117,6 +120,9 @@ export default function CancellationPage() {
     childName: "",
     email: "",
     phone: "",
+    location: "",
+    classDay: "",
+    classTime: "",
     nextBillingDate: "",
     reasonForLeaving: "",
     otherNote: "",
@@ -145,7 +151,10 @@ export default function CancellationPage() {
       form.parentName.trim() &&
       form.childName.trim() &&
       form.email.trim() &&
-      form.phone.trim()
+      form.phone.trim() &&
+      form.location.trim() &&
+      form.classDay.trim() &&
+      form.classTime.trim()
     );
   }
 
@@ -171,6 +180,9 @@ export default function CancellationPage() {
         childName: form.childName,
         email: form.email,
         phone: form.phone,
+        location: form.location,
+        classDay: form.classDay,
+        classTime: form.classTime,
         requestType,
         ...(requestType === "pause"
           ? {
@@ -254,6 +266,12 @@ export default function CancellationPage() {
                 <p className="text-muted-foreground">
                   <span className="font-semibold text-foreground">{form.parentName}</span> (parent) /{" "}
                   <span className="font-semibold text-foreground">{form.childName}</span> (child)
+                </p>
+                <p className="text-muted-foreground">
+                  Location: <span className="font-semibold text-foreground">{form.location}</span>
+                </p>
+                <p className="text-muted-foreground">
+                  Class: <span className="font-semibold text-foreground">{form.classDay} at {form.classTime}</span>
                 </p>
                 <p className="text-muted-foreground">
                   Type:{" "}
@@ -409,6 +427,27 @@ export default function CancellationPage() {
               <Field label="Phone">
                 <input className={inputCls} type="tel" placeholder="204-555-0100" value={form.phone} onChange={(e) => set("phone", e.target.value)} />
               </Field>
+
+              <div className="pt-1">
+                <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-3">Class Details</p>
+                <div className="space-y-4">
+                  <Field label="Location / School">
+                    <input className={inputCls} placeholder="e.g. Pembina Trail, St. James…" value={form.location} onChange={(e) => set("location", e.target.value)} />
+                  </Field>
+                  <div className="grid grid-cols-2 gap-3">
+                    <Field label="Class Day">
+                      <select className={inputCls} value={form.classDay} onChange={(e) => set("classDay", e.target.value)}>
+                        <option value="">Select day…</option>
+                        {["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"].map(d => <option key={d} value={d}>{d}</option>)}
+                      </select>
+                    </Field>
+                    <Field label="Class Time">
+                      <input className={inputCls} placeholder="e.g. 4:00 PM" value={form.classTime} onChange={(e) => set("classTime", e.target.value)} />
+                    </Field>
+                  </div>
+                </div>
+              </div>
+
               <Field label="How many months would you like to pause?">
                 <select className={inputCls} value={form.pauseMonths} onChange={(e) => set("pauseMonths", e.target.value)}>
                   <option value="1">1 month</option>
@@ -478,6 +517,27 @@ export default function CancellationPage() {
               <Field label="Phone">
                 <input className={inputCls} type="tel" placeholder="204-555-0100" value={form.phone} onChange={(e) => set("phone", e.target.value)} />
               </Field>
+
+              <div className="pt-1">
+                <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-3">Class Details</p>
+                <div className="space-y-4">
+                  <Field label="Location / School">
+                    <input className={inputCls} placeholder="e.g. Pembina Trail, St. James…" value={form.location} onChange={(e) => set("location", e.target.value)} />
+                  </Field>
+                  <div className="grid grid-cols-2 gap-3">
+                    <Field label="Class Day">
+                      <select className={inputCls} value={form.classDay} onChange={(e) => set("classDay", e.target.value)}>
+                        <option value="">Select day…</option>
+                        {["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"].map(d => <option key={d} value={d}>{d}</option>)}
+                      </select>
+                    </Field>
+                    <Field label="Class Time">
+                      <input className={inputCls} placeholder="e.g. 4:00 PM" value={form.classTime} onChange={(e) => set("classTime", e.target.value)} />
+                    </Field>
+                  </div>
+                </div>
+              </div>
+
               <Field label="Reason for Leaving">
                 <select className={inputCls} value={form.reasonForLeaving} onChange={(e) => { set("reasonForLeaving", e.target.value); set("otherNote", ""); }}>
                   <option value="">Select a reason…</option>
