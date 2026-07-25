@@ -538,39 +538,38 @@ export default function CancellationPage() {
               {branch === "B" && (
                 <div className="space-y-3">
                   <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 text-sm">
-                    <p className="font-bold text-primary mb-1">Your request is within 30 days of your next billing date.</p>
-                    <p className="text-muted-foreground">
-                      Per the 30-day notice policy initialed at enrollment (referenced above), please choose one of the following options:
-                    </p>
+                    <p className="font-bold text-foreground mb-1">Your cancellation is within 30 days of your next charge.</p>
+                    <p className="text-muted-foreground">Our policy requires 30 days notice. No worries — just pick the option that works best for you:</p>
                   </div>
                   <div className="space-y-2">
-                    {[
-                      {
-                        val: "extend" as OptionChosen,
-                        label: "Extend One More Month",
-                        desc: "Your child continues attending classes for one more billing cycle. No further charges after this final month.",
-                      },
-                      {
-                        val: "credit" as OptionChosen,
-                        label: "Credit on File",
-                        desc: "The remaining value is held as a credit on your account for future use (re-enrollment or another program). No further charges will occur.",
-                      },
-                    ].map((opt) => (
-                      <button
-                        key={opt.val}
-                        onClick={() => set("optionChosen", opt.val)}
-                        className={`w-full text-left p-4 border-2 rounded-xl transition-all ${
-                          form.optionChosen === opt.val
-                            ? "border-primary bg-primary/5"
-                            : "border-border hover:border-primary/40"
-                        }`}
-                      >
-                        <p className={`font-black font-heading text-sm mb-0.5 ${form.optionChosen === opt.val ? "text-primary" : "text-foreground"}`}>
-                          {form.optionChosen === opt.val ? "✓ " : ""}{opt.label}
-                        </p>
-                        <p className="text-xs text-muted-foreground">{opt.desc}</p>
-                      </button>
-                    ))}
+                    <button
+                      onClick={() => set("optionChosen", "extend")}
+                      className={`w-full text-left p-4 border-2 rounded-xl transition-all ${form.optionChosen === "extend" ? "border-primary bg-primary/5" : "border-border hover:border-primary/40"}`}
+                    >
+                      <div className="flex items-start gap-3">
+                        <div className={`w-5 h-5 rounded-full border-2 flex-shrink-0 mt-0.5 flex items-center justify-center ${form.optionChosen === "extend" ? "border-primary bg-primary" : "border-border"}`}>
+                          {form.optionChosen === "extend" && <div className="w-2 h-2 rounded-full bg-white" />}
+                        </div>
+                        <div>
+                          <p className={`font-black font-heading text-sm mb-0.5 ${form.optionChosen === "extend" ? "text-primary" : "text-foreground"}`}>One more month of classes</p>
+                          <p className="text-xs text-muted-foreground">Your child attends for one more billing cycle, then enrollment ends. No charges after that.</p>
+                        </div>
+                      </div>
+                    </button>
+                    <button
+                      onClick={() => set("optionChosen", "credit")}
+                      className={`w-full text-left p-4 border-2 rounded-xl transition-all ${form.optionChosen === "credit" ? "border-primary bg-primary/5" : "border-border hover:border-primary/40"}`}
+                    >
+                      <div className="flex items-start gap-3">
+                        <div className={`w-5 h-5 rounded-full border-2 flex-shrink-0 mt-0.5 flex items-center justify-center ${form.optionChosen === "credit" ? "border-primary bg-primary" : "border-border"}`}>
+                          {form.optionChosen === "credit" && <div className="w-2 h-2 rounded-full bg-white" />}
+                        </div>
+                        <div>
+                          <p className={`font-black font-heading text-sm mb-0.5 ${form.optionChosen === "credit" ? "text-primary" : "text-foreground"}`}>Keep it as a credit</p>
+                          <p className="text-xs text-muted-foreground">We hold the remaining value on your account. Use it anytime for re-enrollment or another program. No further charges.</p>
+                        </div>
+                      </div>
+                    </button>
                   </div>
                 </div>
               )}
