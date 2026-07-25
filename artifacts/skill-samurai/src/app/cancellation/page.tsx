@@ -330,12 +330,17 @@ export default function CancellationPage() {
                   onClick={() => { setRequestType("pause"); setStep(2); }}
                   className="w-full text-left p-5 border-2 border-border rounded-2xl hover:border-primary hover:bg-primary/5 transition-all group"
                 >
-                  <p className="font-black font-heading text-foreground group-hover:text-primary text-base mb-1">
+                  <p className="font-black font-heading text-foreground group-hover:text-primary text-base mb-2">
                     ⏸ Pause Enrollment
                   </p>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-muted-foreground mb-3">
                     Hold your child's spot and pause billing for 1–3 months.
                   </p>
+                  <ul className="space-y-1 text-xs text-muted-foreground">
+                    <li className="flex items-center gap-1.5"><span className="text-primary font-black">✓</span> Grandfathered monthly rate when you return</li>
+                    <li className="flex items-center gap-1.5"><span className="text-primary font-black">✓</span> $99 re-enrollment fee waived</li>
+                    <li className="flex items-center gap-1.5"><span className="text-primary font-black">✓</span> Child's progress saved — pick up right where they left off</li>
+                  </ul>
                 </button>
                 <button
                   onClick={() => { setRequestType("cancel"); setStep(2); }}
@@ -368,8 +373,13 @@ export default function CancellationPage() {
                 <h2 className="text-xl font-black font-heading text-foreground mb-1">Pause Your Enrollment</h2>
               </div>
 
-              <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-4 text-sm text-muted-foreground">
-                Your child's spot will be held and billing will pause during this time. No further charges will occur until your pause period ends or you choose to restart sooner.
+              <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-4 space-y-3 text-sm">
+                <p className="text-muted-foreground">Your child's spot will be held and billing pauses during this time. When you're ready to return:</p>
+                <ul className="space-y-1.5 text-muted-foreground">
+                  <li className="flex items-start gap-2"><span className="text-secondary font-black mt-0.5">✓</span><span><strong className="text-foreground">Grandfathered rate</strong> — you keep your current monthly price, even if rates increase.</span></li>
+                  <li className="flex items-start gap-2"><span className="text-secondary font-black mt-0.5">✓</span><span><strong className="text-foreground">No re-enrollment fee</strong> — the $99 enrollment fee is waived when you restart.</span></li>
+                  <li className="flex items-start gap-2"><span className="text-secondary font-black mt-0.5">✓</span><span><strong className="text-foreground">Progress saved</strong> — your child picks up exactly where they left off.</span></li>
+                </ul>
               </div>
 
               <Field label="Parent Name">
@@ -472,12 +482,21 @@ export default function CancellationPage() {
               {/* Nudge: planning to return → suggest pause */}
               {form.reasonForLeaving === "Planning to return / taking a break" && (
                 <div className="bg-primary/5 border border-primary/30 rounded-xl p-4 space-y-3">
-                  <div>
-                    <p className="font-black font-heading text-primary text-sm mb-1">💡 Have you considered pausing instead?</p>
-                    <p className="text-sm text-muted-foreground">
-                      If you're planning to come back, a <strong className="text-foreground">pause</strong> is the better option — we'll hold your child's spot and billing stops for 1–3 months. You can restart whenever you're ready, with no re-enrollment needed.
-                    </p>
-                  </div>
+                  <p className="font-black font-heading text-primary text-sm">💡 Pausing is the smarter choice if you're coming back.</p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-black mt-0.5">✓</span>
+                      <span><strong className="text-foreground">Lock in your monthly rate</strong> — your current subscription price is grandfathered when you resume, even if rates go up.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-black mt-0.5">✓</span>
+                      <span><strong className="text-foreground">No re-enrollment fee</strong> — the $99 enrollment fee is waived when you restart after a pause.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-black mt-0.5">✓</span>
+                      <span><strong className="text-foreground">Pick up right where you left off</strong> — your child's progress and curriculum place are saved.</span>
+                    </li>
+                  </ul>
                   <button
                     type="button"
                     onClick={() => { setRequestType("pause"); set("reasonForLeaving", ""); }}
