@@ -87,3 +87,77 @@ export async function seedSlots(): Promise<SlotRow[]> {
   }
   return inserted;
 }
+
+// ─── Cancellation / Pause Requests ───────────────────────────────────────────
+
+export type CancellationRow = {
+  id: number;
+  created_at: Date;
+  parent_name: string;
+  child_name: string;
+  email: string;
+  phone: string;
+  request_type: string;
+  next_billing_date: string | null;
+  days_notice: number | null;
+  branch: string | null;
+  option_chosen: string | null;
+  reason_for_leaving: string | null;
+  pause_months: number | null;
+  enrollment_initial_date: string;
+  welcome_email_date: string;
+};
+
+async function ensureCancellationTable(): Promise<void> {
+  const pool = getPool();
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS cancellation_requests (
+      id                    SERIAL PRIMARY KEY,
+      created_at            TIMESTAMP DEFAULT NOW(),
+      parent_name           TEXT NOT NULL,
+      child_name            TEXT NOT NULL,
+      email                 TEXT NOT NULL,
+      phone                 TEXT NOT NULL,
+      request_type          TEXT NOT NULL,
+      next_billing_date     TEXT,
+      days_notice           INTEGER,
+      branch                TEXT,
+      option_chosen         TEXT,
+      reason_for_leaving    TEXT,
+      pause_months          INTEGER,
+      enrollment_initial_date TEXT NOT NULL,
+      welcome_email_date    TEXT NOT NULL
+    )
+  `);
+}
+
+export async function insertCancellationRequest(
+  data: Omit<CancellationRow, "id" | "created_at">,
+): Promise<CancellationRow> {
+  const pool = getPool();
+  await ensureCancellationTable();
+  const result = await pool.query<CancellationRow>(
+    `INSERT INTO cancellation_requests
+       (parent_name, child_name, email, phone, request_type,
+        next_billing_date, days_notice, branch, option_chosen,
+        reason_for_leaving, pause_months, enrollment_initial_date, welcome_email_date)
+     VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)
+     RETURNING *`,
+    [
+      data.parent_name, data.child_name, data.email, data.phone,
+      data.request_type, data.next_billing_date, data.days_notice,
+      data.branch, data.option_chosen, data.reason_for_leaving,
+      data.pause_months, data.enrollment_initial_date, data.welcome_email_date,
+    ],
+  );
+  return result.rows[0];
+}
+
+export async function getAllCancellationRequests(): Promise<CancellationRow[]> {
+  const pool = getPool();
+  await ensureCancellationTable();
+  const result = await pool.query<CancellationRow>(
+    "SELECT * FROM cancellation_requests ORDER BY created_at DESC",
+  );
+  return result.rows;
+}

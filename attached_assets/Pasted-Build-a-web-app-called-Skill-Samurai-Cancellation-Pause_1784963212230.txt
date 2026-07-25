@@ -1,0 +1,58 @@
+Build a web app called "Skill Samurai Cancellation & Pause Request Form" using React with a clean, friendly design (Tailwind CSS). Single page, mobile-friendly.
+
+FUNCTIONALITY:
+
+1. Landing screen with two options as large buttons:
+   - "Cancel Enrollment"
+   - "Pause Enrollment"
+
+2. If "Pause" is selected:
+   - Show a simple form: Parent Name, Child Name, Email, Phone
+   - Field: "How many months would you like to pause?" (dropdown: 1, 2, 3 months)
+   - Show message: "Your child's spot will be held and billing will pause during this time. No further charges will occur until your pause period ends or you choose to restart sooner."
+   - Submit button: "Request Pause"
+
+3. If "Cancel" is selected:
+   - Show form fields: Parent Name, Child Name, Email, Phone, Next Billing Date (date picker), Reason for Leaving (dropdown: Moving away, Too expensive, Schedule conflict, Child lost interest, Other)
+
+   - Before showing the branch logic, display a neutral "Your Enrollment Record" recap box using this exact language to match the original enrollment form:
+     "For reference, here's what's on file for your account:
+      ✓ You initialed the Cancellation Policy during online enrollment on [enrollment date placeholder], which states: 'Monthly memberships require 30 days cancellation... we are not able to refund you for any classes that you have missed in the months before.'
+      ✓ A reminder of this policy was also included in your welcome email on [welcome email date placeholder]
+     This form will walk you through your next steps based on that policy."
+     (Use a neutral gray/blue box, checkmark icons, non-alarming tone — this is informational, not accusatory)
+
+   - Calculate automatically: days between today's date and the "Next Billing Date" entered
+
+   - LOGIC BRANCH A (if days between today and Next Billing Date is 30 or more):
+     - Show green confirmation box: "Good news — you're providing enough notice. Your enrollment will end on [Next Billing Date] with no additional charges."
+     - Show button: "Confirm Cancellation"
+
+   - LOGIC BRANCH B (if days between today and Next Billing Date is less than 30):
+     - Show a notice box: "Your request is within 30 days of your next billing date. Per the 30-day notice policy initialed at enrollment (referenced above), please choose one of the following options:"
+     - Show two selectable option cards:
+       a) "Extend One More Month" — description: "Your child continues attending classes for one more billing cycle. No further charges after this final month."
+       b) "Credit on File" — description: "The remaining value is held as a credit on your account for future use (re-enrollment or another program). No further charges will occur."
+     - Require the parent to select one option before submitting
+     - Show button: "Confirm Selection"
+
+4. On any submission, show a confirmation screen:
+   - "Your request has been received."
+   - Summary of what was selected (cancel/pause, dates, chosen option)
+   - Recap of the enrollment record (initialing date + welcome email date) shown again for the parent's records
+   - Text: "A confirmation email has been sent to [email]. If you have any questions, contact us at [phone/email placeholder]."
+
+5. Store all submissions in a simple backend (use Replit DB or a JSON file) with fields: timestamp, parent name, child name, email, phone, request type (cancel/pause), next billing date, days notice given, branch (A or B), option chosen (credit/extend/pause length), reason for leaving, enrollment initial date, welcome email sent date.
+
+   - For now, use placeholder/mock values for "enrollment initial date" and "welcome email sent date" (e.g., a fixed date or a simple lookup by email in a mock JSON dataset), since real integration with Jumbula will come later.
+
+6. Add a simple admin view at /admin (password protected, simple hardcoded password for now) that lists all submissions in a table, sortable by date, including the enrollment initial date and welcome email date columns.
+
+DESIGN NOTES:
+- Use calm, neutral colors (blues/greens), not red or alarming colors — this should feel like a routine process form, not a punitive one
+- Avoid the word "fee" or "penalty" anywhere in the copy
+- Keep language plain and reassuring throughout
+- The "Enrollment Record" recap box should feel like a helpful reference, not a "gotcha" — informational tone, not confrontational
+- Use a progress indicator showing steps (e.g., Step 1: Request Type, Step 2: Details, Step 3: Confirmation)
+
+Do not integrate real email sending yet — just simulate the confirmation email with a placeholder message on screen for now.
