@@ -228,7 +228,7 @@ export default function CancellationPage() {
 
       {/* Form area */}
       <section className="bg-background py-12 sm:py-16">
-        <div className="container mx-auto px-4 max-w-lg">
+        <div className="container mx-auto px-4 max-w-2xl">
           <StepBar step={step} />
 
           {/* ── Step 3: Confirmation ─────────────────────────────────────── */}
