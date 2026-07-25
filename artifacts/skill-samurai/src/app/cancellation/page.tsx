@@ -330,17 +330,17 @@ export default function CancellationPage() {
                   onClick={() => { setRequestType("pause"); setStep(2); }}
                   className="w-full text-left p-5 border-2 border-border rounded-2xl hover:border-primary hover:bg-primary/5 transition-all group"
                 >
-                  <p className="font-black font-heading text-foreground group-hover:text-primary text-base mb-2">
+                  <p className="font-black font-heading text-foreground group-hover:text-primary text-base mb-1">
                     ⏸ Pause Enrollment
                   </p>
                   <p className="text-sm text-muted-foreground mb-3">
-                    Hold your child's spot and pause billing for 1–3 months.
+                    Hold your child's spot &amp; pause billing for 1–3 months.
                   </p>
-                  <ul className="space-y-1 text-xs text-muted-foreground">
-                    <li className="flex items-center gap-1.5"><span className="text-primary font-black">✓</span> Grandfathered monthly rate when you return</li>
-                    <li className="flex items-center gap-1.5"><span className="text-primary font-black">✓</span> $99 re-enrollment fee waived</li>
-                    <li className="flex items-center gap-1.5"><span className="text-primary font-black">✓</span> Child's progress saved — pick up right where they left off</li>
-                  </ul>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">🔒 Rate locked in</span>
+                    <span className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">💰 $99 fee waived</span>
+                    <span className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">📍 Progress saved</span>
+                  </div>
                 </button>
                 <button
                   onClick={() => { setRequestType("cancel"); setStep(2); }}
@@ -373,13 +373,22 @@ export default function CancellationPage() {
                 <h2 className="text-xl font-black font-heading text-foreground mb-1">Pause Your Enrollment</h2>
               </div>
 
-              <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-4 space-y-3 text-sm">
-                <p className="text-muted-foreground">Your child's spot will be held and billing pauses during this time. When you're ready to return:</p>
-                <ul className="space-y-1.5 text-muted-foreground">
-                  <li className="flex items-start gap-2"><span className="text-secondary font-black mt-0.5">✓</span><span><strong className="text-foreground">Grandfathered rate</strong> — you keep your current monthly price, even if rates increase.</span></li>
-                  <li className="flex items-start gap-2"><span className="text-secondary font-black mt-0.5">✓</span><span><strong className="text-foreground">No re-enrollment fee</strong> — the $99 enrollment fee is waived when you restart.</span></li>
-                  <li className="flex items-start gap-2"><span className="text-secondary font-black mt-0.5">✓</span><span><strong className="text-foreground">Progress saved</strong> — your child picks up exactly where they left off.</span></li>
-                </ul>
+              <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-4">
+                <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-3">What's included with your pause</p>
+                <div className="grid grid-cols-3 gap-2 text-center">
+                  <div className="bg-white rounded-xl p-3 border border-border">
+                    <div className="text-xl mb-1">🔒</div>
+                    <p className="text-xs font-bold text-foreground leading-tight">Rate locked in</p>
+                  </div>
+                  <div className="bg-white rounded-xl p-3 border border-border">
+                    <div className="text-xl mb-1">💰</div>
+                    <p className="text-xs font-bold text-foreground leading-tight">$99 fee waived</p>
+                  </div>
+                  <div className="bg-white rounded-xl p-3 border border-border">
+                    <div className="text-xl mb-1">📍</div>
+                    <p className="text-xs font-bold text-foreground leading-tight">Progress saved</p>
+                  </div>
+                </div>
               </div>
 
               <Field label="Parent Name">
@@ -443,21 +452,10 @@ export default function CancellationPage() {
               </div>
 
               {/* Enrollment record recap */}
-              <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-4 space-y-2 text-sm">
-                <p className="font-bold text-secondary text-xs uppercase tracking-wider mb-2">Your Enrollment Record</p>
-                <p className="text-muted-foreground text-xs mb-2">For reference, here's what's on file for your account:</p>
-                <p className="text-muted-foreground">
-                  ✓ You initialed the Cancellation Policy during online enrollment on{" "}
-                  <span className="font-semibold text-foreground">{MOCK_ENROLLMENT_DATE}</span>, which states:{" "}
-                  <em>"Monthly memberships require 30 days cancellation notice… we are not able to refund you for any classes that you have missed in the months before."</em>
-                </p>
-                <p className="text-muted-foreground">
-                  ✓ A reminder of this policy was also included in your welcome email on{" "}
-                  <span className="font-semibold text-foreground">{MOCK_WELCOME_EMAIL_DATE}</span>.
-                </p>
-                <p className="text-muted-foreground text-xs mt-1">
-                  This form will walk you through your next steps based on that policy.
-                </p>
+              <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-4 space-y-1 text-sm">
+                <p className="font-bold text-secondary text-xs uppercase tracking-wider mb-2">Policy on file</p>
+                <p className="text-muted-foreground text-xs">✓ Cancellation policy initialed at enrollment — <strong className="text-foreground">30 days notice required.</strong></p>
+                <p className="text-muted-foreground text-xs">✓ Policy reminder sent in your welcome email. We'll walk you through next steps below.</p>
               </div>
 
               <Field label="Parent Name">
@@ -482,21 +480,12 @@ export default function CancellationPage() {
               {/* Nudge: planning to return → suggest pause */}
               {form.reasonForLeaving === "Planning to return / taking a break" && (
                 <div className="bg-primary/5 border border-primary/30 rounded-xl p-4 space-y-3">
-                  <p className="font-black font-heading text-primary text-sm">💡 Pausing is the smarter choice if you're coming back.</p>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary font-black mt-0.5">✓</span>
-                      <span><strong className="text-foreground">Lock in your monthly rate</strong> — your current subscription price is grandfathered when you resume, even if rates go up.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary font-black mt-0.5">✓</span>
-                      <span><strong className="text-foreground">No re-enrollment fee</strong> — the $99 enrollment fee is waived when you restart after a pause.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary font-black mt-0.5">✓</span>
-                      <span><strong className="text-foreground">Pick up right where you left off</strong> — your child's progress and curriculum place are saved.</span>
-                    </li>
-                  </ul>
+                  <p className="font-black font-heading text-primary text-sm">💡 Consider pausing instead — it's free to do and protects your membership.</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="inline-flex items-center gap-1 bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">🔒 Rate locked in</span>
+                    <span className="inline-flex items-center gap-1 bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">💰 $99 fee waived</span>
+                    <span className="inline-flex items-center gap-1 bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">📍 Progress saved</span>
+                  </div>
                   <button
                     type="button"
                     onClick={() => { setRequestType("pause"); set("reasonForLeaving", ""); }}
