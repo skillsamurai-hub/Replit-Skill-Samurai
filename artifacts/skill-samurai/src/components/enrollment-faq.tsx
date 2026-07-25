@@ -5,28 +5,32 @@ import { ChevronDown } from "lucide-react";
 
 const FAQS = [
   {
-    q: "My child has never coded before. Will they fit in?",
-    a: "Absolutely. Most kids who walk into Skill Samurai have zero coding experience — and that's exactly who our beginner curriculum is designed for. Our Coding Instructors start with visual, game-based tools and grow with your child as they're ready.",
-  },
-  {
-    q: "My child has only ever used a tablet or phone — is that okay?",
-    a: "Totally normal — most of our new students are in the same boat. We introduce kids to a keyboard and mouse at a pace that feels comfortable, and within a class or two it clicks. The fact that they love being on a screen is actually a head start.",
-  },
-  {
-    q: "What happens in the free trial class?",
-    a: "Your child joins a real class, meets a Coding Instructor, and builds an actual mini-project they can show you at the end. You'll get a clear sense of the environment, the instructors, and whether your child enjoys the experience before making any commitment.",
+    q: "How much do weekly coding classes cost?",
+    a: "Our weekly coding classes are $169/month for one 55-minute class each week. There is also a one-time $99 registration fee, which includes student account setup, learning platform access, progress tracking, resources your child can use to continue coding at home, and administrative onboarding. Our memberships are month-to-month, so there's no long-term contract.",
   },
   {
     q: "Is there a long-term contract?",
     a: "No. Everything is month-to-month. We earn your trust and your child's excitement every month.",
   },
   {
-    q: "Do you offer a sibling or multi-child discount?",
-    a: "Yes. Families enrolling more than one child receive 10% off for each additional sibling.",
+    q: "What happens in the free trial class?",
+    a: "Your child joins a real class, meets a Coding Instructor, and builds an actual mini-project they can show you at the end. You'll get a clear sense of the environment, the instructors, and whether your child enjoys the experience before making any commitment.",
   },
   {
-    q: "My child learns differently — will they be supported?",
-    a: "Yes — and you're not alone in asking. Many of our students are neurodivergent — including kids on the autism spectrum, those with ADHD, dyslexia, or anxiety — and some of our most enthusiastic coders are kids who struggled to find their place in a traditional classroom. Coding rewards the way their minds work: the curiosity, the pattern recognition, the deep focus. We keep classes small, move at each child's pace, and have supports in place like noise-cancelling headphones and advance notice before transitions. Just let us know before the first class and we'll make sure your child feels comfortable from day one.",
+    q: "What ages do you teach?",
+    a: "We work with students ages 6 through 18. Younger students start with visual, game-based coding, while older students can explore Python, JavaScript, artificial intelligence, robotics, app development, game development, and more.",
+  },
+  {
+    q: "My child has never coded before. Will they fit in?",
+    a: "Absolutely. Most kids who walk into Skill Samurai have zero coding experience — and that's exactly who our beginner curriculum is designed for. Our Coding Instructors start with visual, game-based tools and grow with your child as they're ready.",
+  },
+  {
+    q: "Do you accommodate different learning abilities?",
+    a: "Yes. We accommodate all learning abilities, including autistic, ADHD, and dyslexic students, students with anxiety, and students who read below grade level. Instructors keep group sizes small and adjust their approach to how each child learns best — including noise-cancelling headphones available for every student, advance notice before transitions, the option to arrive early to settle in, and visual, drag-and-drop tools for younger or beginner coders so reading level doesn't hold them back.",
+  },
+  {
+    q: "Are your instructors screened and certified?",
+    a: "Yes. All instructors undergo background checks, child abuse registry checks, and training before working with students. Your child's safety is always a top priority.",
   },
   {
     q: "What is your cancellation policy?",
@@ -34,11 +38,11 @@ const FAQS = [
   },
   {
     q: "Do you offer make-up classes?",
-    a: "Yes. If your child misses a class, we'll do our best to arrange a make-up class based on availability. Make-up classes need to be scheduled within the same month as the missed class.",
+    a: "Yes. We know that kids get sick, family plans come up, and sometimes life happens. If your child misses a class, we'll do our best to arrange a make-up class based on availability. Make-up classes need to be scheduled within the same month as the missed class and cannot be carried forward to future months.",
   },
   {
-    q: "How do you keep my child safe?",
-    a: "Your child's safety comes first — always. Every instructor goes through a thorough background check and child abuse registry check before they ever set foot in a class. They're also trained specifically to work with kids. You're not just handing your child to someone who knows how to code — you're handing them to someone we trust to look after them.",
+    q: "Do you offer a sibling or multi-child discount?",
+    a: "Yes. Families enrolling more than one child receive 10% off for each additional sibling.",
   },
 ];
 
