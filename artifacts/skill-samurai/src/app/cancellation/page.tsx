@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Image from "next/image";
+import { CheckCircle2, Lock, DollarSign, BookOpen } from "lucide-react";
 import logoUrl from "@assets/SkillSamurai_Logo_Full_(1)_(1)_(1)_1776400767722.png";
 
 const MOCK_ENROLLMENT_DATE = "January 15, 2025";
@@ -337,10 +338,10 @@ export default function CancellationPage() {
                     Hold your child's spot &amp; pause billing for 1–3 months.
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="inline-flex items-center bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">No cost to pause</span>
-                    <span className="inline-flex items-center bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">Rate locked in</span>
-                    <span className="inline-flex items-center bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">$99 fee waived</span>
-                    <span className="inline-flex items-center bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">Progress saved</span>
+                    <span className="inline-flex items-center gap-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1"><CheckCircle2 size={12} />No cost to pause</span>
+                    <span className="inline-flex items-center gap-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1"><Lock size={12} />Rate locked in</span>
+                    <span className="inline-flex items-center gap-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1"><DollarSign size={12} />$99 fee waived</span>
+                    <span className="inline-flex items-center gap-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1"><BookOpen size={12} />Progress saved</span>
                   </div>
                 </button>
                 <button
@@ -377,16 +378,20 @@ export default function CancellationPage() {
               <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-4">
                 <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-3">What's included with your pause</p>
                 <div className="grid grid-cols-2 gap-2 text-center sm:grid-cols-4">
-                  <div className="bg-white rounded-xl p-3 border border-border">
+                  <div className="bg-white rounded-xl p-3 border border-border flex flex-col items-center gap-1.5">
+                    <CheckCircle2 size={18} className="text-secondary" />
                     <p className="text-xs font-bold text-foreground leading-tight">No cost to pause</p>
                   </div>
-                  <div className="bg-white rounded-xl p-3 border border-border">
+                  <div className="bg-white rounded-xl p-3 border border-border flex flex-col items-center gap-1.5">
+                    <Lock size={18} className="text-secondary" />
                     <p className="text-xs font-bold text-foreground leading-tight">Rate locked in</p>
                   </div>
-                  <div className="bg-white rounded-xl p-3 border border-border">
+                  <div className="bg-white rounded-xl p-3 border border-border flex flex-col items-center gap-1.5">
+                    <DollarSign size={18} className="text-secondary" />
                     <p className="text-xs font-bold text-foreground leading-tight">$99 fee waived</p>
                   </div>
-                  <div className="bg-white rounded-xl p-3 border border-border">
+                  <div className="bg-white rounded-xl p-3 border border-border flex flex-col items-center gap-1.5">
+                    <BookOpen size={18} className="text-secondary" />
                     <p className="text-xs font-bold text-foreground leading-tight">Progress saved</p>
                   </div>
                 </div>
@@ -485,10 +490,10 @@ export default function CancellationPage() {
                 <div className="bg-primary/5 border border-primary/30 rounded-xl p-4 space-y-3">
                   <p className="font-black font-heading text-primary text-sm">Consider pausing instead — it's free and protects your membership.</p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="inline-flex items-center bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">No cost to pause</span>
-                    <span className="inline-flex items-center bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">Rate locked in</span>
-                    <span className="inline-flex items-center bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">$99 fee waived</span>
-                    <span className="inline-flex items-center bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">Progress saved</span>
+                    <span className="inline-flex items-center gap-1.5 bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1"><CheckCircle2 size={12} className="text-primary" />No cost to pause</span>
+                    <span className="inline-flex items-center gap-1.5 bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1"><Lock size={12} className="text-primary" />Rate locked in</span>
+                    <span className="inline-flex items-center gap-1.5 bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1"><DollarSign size={12} className="text-primary" />$99 fee waived</span>
+                    <span className="inline-flex items-center gap-1.5 bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1"><BookOpen size={12} className="text-primary" />Progress saved</span>
                   </div>
                   <button
                     type="button"
