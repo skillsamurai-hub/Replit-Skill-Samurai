@@ -12,6 +12,7 @@ const REASONS = [
   "Too expensive",
   "Schedule conflict",
   "Child lost interest",
+  "Planning to return / taking a break",
   "Other",
 ];
 
@@ -26,7 +27,9 @@ interface FormState {
   phone: string;
   nextBillingDate: string;
   reasonForLeaving: string;
+  otherNote: string;
   pauseMonths: string;
+  pauseNote: string;
   optionChosen: OptionChosen;
 }
 
@@ -115,7 +118,9 @@ export default function CancellationPage() {
     phone: "",
     nextBillingDate: "",
     reasonForLeaving: "",
+    otherNote: "",
     pauseMonths: "1",
+    pauseNote: "",
     optionChosen: null,
   });
   const [submitting, setSubmitting] = useState(false);
@@ -146,6 +151,7 @@ export default function CancellationPage() {
   function cancelStep2Ready() {
     if (!commonFieldsFilled()) return false;
     if (!form.nextBillingDate || !form.reasonForLeaving) return false;
+    if (form.reasonForLeaving === "Other" && !form.otherNote.trim()) return false;
     if (daysUntil === null) return false;
     if (branch === "B" && !form.optionChosen) return false;
     return true;
@@ -166,13 +172,17 @@ export default function CancellationPage() {
         phone: form.phone,
         requestType,
         ...(requestType === "pause"
-          ? { pauseMonths: parseInt(form.pauseMonths) }
+          ? {
+              pauseMonths: parseInt(form.pauseMonths),
+              ...(form.pauseNote.trim() ? { notes: form.pauseNote } : {}),
+            }
           : {
               nextBillingDate: form.nextBillingDate,
               daysNotice: daysUntil,
               branch,
               optionChosen: branch === "B" ? form.optionChosen : "n/a",
               reasonForLeaving: form.reasonForLeaving,
+              ...(form.otherNote.trim() ? { otherNote: form.otherNote } : {}),
             }),
       };
       const res = await fetch("/api/cancellation", {
@@ -381,6 +391,15 @@ export default function CancellationPage() {
                   <option value="3">3 months</option>
                 </select>
               </Field>
+              <Field label="Anything else you'd like us to know? (optional)">
+                <textarea
+                  className={`${inputCls} resize-none`}
+                  rows={3}
+                  placeholder="e.g. travel dates, specific restart date, scheduling notes…"
+                  value={form.pauseNote}
+                  onChange={(e) => set("pauseNote", e.target.value)}
+                />
+              </Field>
 
               {submitError && <p className="text-destructive text-sm">{submitError}</p>}
 
@@ -444,11 +463,44 @@ export default function CancellationPage() {
                 <input className={inputCls} type="tel" placeholder="204-555-0100" value={form.phone} onChange={(e) => set("phone", e.target.value)} />
               </Field>
               <Field label="Reason for Leaving">
-                <select className={inputCls} value={form.reasonForLeaving} onChange={(e) => set("reasonForLeaving", e.target.value)}>
+                <select className={inputCls} value={form.reasonForLeaving} onChange={(e) => { set("reasonForLeaving", e.target.value); set("otherNote", ""); }}>
                   <option value="">Select a reason…</option>
                   {REASONS.map((r) => <option key={r} value={r}>{r}</option>)}
                 </select>
               </Field>
+
+              {/* Nudge: planning to return → suggest pause */}
+              {form.reasonForLeaving === "Planning to return / taking a break" && (
+                <div className="bg-primary/5 border border-primary/30 rounded-xl p-4 space-y-3">
+                  <div>
+                    <p className="font-black font-heading text-primary text-sm mb-1">💡 Have you considered pausing instead?</p>
+                    <p className="text-sm text-muted-foreground">
+                      If you're planning to come back, a <strong className="text-foreground">pause</strong> is the better option — we'll hold your child's spot and billing stops for 1–3 months. You can restart whenever you're ready, with no re-enrollment needed.
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => { setRequestType("pause"); set("reasonForLeaving", ""); }}
+                    className="text-sm font-black font-heading text-white bg-primary hover:bg-primary/90 rounded-xl px-4 py-2 transition-colors"
+                  >
+                    Switch to Pause Instead →
+                  </button>
+                </div>
+              )}
+
+              {/* Other: free-text note */}
+              {form.reasonForLeaving === "Other" && (
+                <Field label="Please tell us more">
+                  <textarea
+                    className={`${inputCls} resize-none`}
+                    rows={3}
+                    placeholder="Let us know what's going on — we appreciate the feedback."
+                    value={form.otherNote}
+                    onChange={(e) => set("otherNote", e.target.value)}
+                  />
+                </Field>
+              )}
+
               <Field label="Next Billing Date" hint="Check your email or bank statement for this date.">
                 <input className={inputCls} type="date" value={form.nextBillingDate} onChange={(e) => set("nextBillingDate", e.target.value)} />
               </Field>
