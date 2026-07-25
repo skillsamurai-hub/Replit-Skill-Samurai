@@ -337,6 +337,7 @@ export default function CancellationPage() {
                     Hold your child's spot &amp; pause billing for 1–3 months.
                   </p>
                   <div className="flex flex-wrap gap-2">
+                    <span className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">✅ No cost to pause</span>
                     <span className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">🔒 Rate locked in</span>
                     <span className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">💰 $99 fee waived</span>
                     <span className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-bold rounded-full px-3 py-1">📍 Progress saved</span>
@@ -375,7 +376,11 @@ export default function CancellationPage() {
 
               <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-4">
                 <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-3">What's included with your pause</p>
-                <div className="grid grid-cols-3 gap-2 text-center">
+                <div className="grid grid-cols-2 gap-2 text-center sm:grid-cols-4">
+                  <div className="bg-white rounded-xl p-3 border border-border">
+                    <div className="text-xl mb-1">✅</div>
+                    <p className="text-xs font-bold text-foreground leading-tight">No cost to pause</p>
+                  </div>
                   <div className="bg-white rounded-xl p-3 border border-border">
                     <div className="text-xl mb-1">🔒</div>
                     <p className="text-xs font-bold text-foreground leading-tight">Rate locked in</p>
@@ -484,6 +489,7 @@ export default function CancellationPage() {
                 <div className="bg-primary/5 border border-primary/30 rounded-xl p-4 space-y-3">
                   <p className="font-black font-heading text-primary text-sm">💡 Consider pausing instead — it's free to do and protects your membership.</p>
                   <div className="flex flex-wrap gap-2">
+                    <span className="inline-flex items-center gap-1 bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">✅ No cost to pause</span>
                     <span className="inline-flex items-center gap-1 bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">🔒 Rate locked in</span>
                     <span className="inline-flex items-center gap-1 bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">💰 $99 fee waived</span>
                     <span className="inline-flex items-center gap-1 bg-white border border-primary/20 text-foreground text-xs font-bold rounded-full px-3 py-1">📍 Progress saved</span>
