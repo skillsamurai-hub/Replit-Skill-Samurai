@@ -377,7 +377,7 @@ export default function CancellationPage() {
 
               <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-4">
                 <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-3">What's included with your pause</p>
-                <div className="grid grid-cols-2 gap-2 text-center sm:grid-cols-4">
+                <div className="grid grid-cols-4 gap-2 text-center">
                   <div className="bg-white rounded-xl p-3 border border-border flex flex-col items-center gap-1.5">
                     <CheckCircle2 size={18} className="text-secondary" />
                     <p className="text-xs font-bold text-foreground leading-tight">No cost to pause</p>
