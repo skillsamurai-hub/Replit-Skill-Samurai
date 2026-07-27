@@ -218,7 +218,7 @@ export default function BirthdayPartiesContent() {
             <p className="mt-3 text-secondary/60 max-w-xl mx-auto">Highlights from real birthday parties at Skill Samurai Winnipeg.</p>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <div className="max-w-sm mx-auto mb-8">
+            <div className="max-w-2xl mx-auto mb-6">
               <div className="aspect-[4/3] rounded-[2.25rem] overflow-hidden shadow-2xl border-[10px] border-white bg-white rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
                 <Image
                   src="/images/birthday-party.webp"
