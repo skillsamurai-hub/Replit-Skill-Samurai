@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { FadeIn } from "@/components/ui/fade-in";
 import FinalCta from "@/components/sections/final-cta";
 import { Cake, Gamepad2, Trophy, Clock, Users, Star, ArrowRight, CheckCircle, Sparkles, Phone, Mail, Pizza, Music, Wrench, ShieldCheck } from "lucide-react";
@@ -215,6 +216,17 @@ export default function BirthdayPartiesContent() {
               See It in Action
             </h2>
             <p className="mt-3 text-secondary/60 max-w-xl mx-auto">Highlights from real birthday parties at Skill Samurai Winnipeg.</p>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <div className="max-w-2xl mx-auto mb-6 rounded-3xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/birthday-party.webp"
+                alt="Kids celebrating a Roblox birthday party at Skill Samurai Winnipeg"
+                width={1080}
+                height={810}
+                className="w-full h-72 md:h-96 object-cover object-[center_30%]"
+              />
+            </div>
           </FadeIn>
           <div className="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
             {[
