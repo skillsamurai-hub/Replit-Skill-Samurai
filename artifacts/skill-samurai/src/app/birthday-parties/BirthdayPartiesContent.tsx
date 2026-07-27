@@ -231,16 +231,16 @@ export default function BirthdayPartiesContent() {
           <div className="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
             {[
               {
-                tag: "Party Fun",
-                videoUrl: "https://www.instagram.com/reel/DADztP8AN41/",
+                tag: "Kids Coding",
+                videoUrl: "https://www.instagram.com/reel/DI9g9RiSRDm/",
                 color: "text-primary",
                 bg: "bg-primary/10",
                 border: "border-primary/20",
                 tagBg: "bg-primary text-white",
               },
               {
-                tag: "Kids Coding",
-                videoUrl: "https://www.instagram.com/reel/DI9g9RiSRDm/",
+                tag: "Party Fun",
+                videoUrl: "https://www.instagram.com/reel/DADztP8AN41/",
                 color: "text-[#F59100]",
                 bg: "bg-[#F59100]/10",
                 border: "border-[#F59100]/20",
