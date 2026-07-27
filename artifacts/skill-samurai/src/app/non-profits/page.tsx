@@ -119,7 +119,6 @@ export default function NonProfitsPage() {
               { name: "Girl Guides of Canada", logo: "/images/partners/girlguides.webp" },
               { name: "Spence Neighbourhood Association", logo: "/images/partners/spence.webp" },
               { name: "Inner City Youth Alive", logo: "/images/partners/innercity.webp" },
-              { name: "MASH", logo: null },
               { name: "Island Lake First Nations Family Services", logo: "/images/partners/islandlake.webp" },
             ].map((partner) => (
               <FadeIn key={partner.name}>
