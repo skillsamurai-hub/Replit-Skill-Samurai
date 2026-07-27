@@ -120,10 +120,10 @@ export default function NonProfitsPage() {
               { name: "Spence Neighbourhood Association", logo: "/images/partners/spence.webp" },
               { name: "Inner City Youth Alive", logo: "/images/partners/innercity.webp" },
               { name: "MASH", logo: null },
-              { name: "Island Lake First Nations Family Services", logo: null },
+              { name: "Island Lake First Nations Family Services", logo: "/images/partners/islandlake.webp" },
             ].map((partner) => (
               <FadeIn key={partner.name}>
-                <div className="flex flex-col items-center justify-center gap-3 p-5 rounded-2xl border-2 border-secondary/10 bg-white hover:border-primary/30 hover:shadow-md transition-all duration-300 h-full min-h-[120px]">
+                <div className={`flex flex-col items-center justify-center gap-3 p-5 rounded-2xl border-2 hover:shadow-md transition-all duration-300 h-full min-h-[120px] ${partner.name === "Inner City Youth Alive" ? "border-gray-800 bg-black hover:border-gray-600" : "border-secondary/10 bg-white hover:border-primary/30"}`}>
                   {partner.logo ? (
                     <Image
                       src={partner.logo}
