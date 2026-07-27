@@ -133,7 +133,7 @@ export default function SchoolsPage() {
                   alt="Skill Samurai students and instructor at a school workshop in Winnipeg"
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
             </FadeIn>
