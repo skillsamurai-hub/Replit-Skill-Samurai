@@ -118,15 +118,6 @@ export default function ChildBenefits() {
                   className="w-full h-full object-cover object-center"
                 />
               </div>
-              <div className="aspect-[4/3] rounded-[2.25rem] overflow-hidden shadow-2xl relative z-10 border-4 sm:border-[10px] border-white bg-white rotate-[1.5deg] hover:rotate-0 transition-transform duration-500 lg:ml-8">
-                <img
-                  src="/images/group-class.webp"
-                  alt="Skill Samurai students and instructor group photo"
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
             </div>
 
             <div className="absolute -top-10 -right-2 sm:-right-6 w-56 h-56 sm:w-64 sm:h-64 bg-secondary rounded-full blur-[60px] opacity-35 z-0 animate-pulse"></div>

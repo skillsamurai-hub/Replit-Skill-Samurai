@@ -52,26 +52,39 @@ export default function SchoolsPage() {
         <div className="absolute -top-20 -right-20 w-96 h-96 bg-primary/20 rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-accent/20 rounded-full blur-[100px] pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
-          <FadeIn className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 mb-5 px-4 py-2 rounded-full bg-primary/20 border border-primary/30">
-              <GraduationCap className="h-4 w-4 text-primary" />
-              <span className="text-primary font-bold tracking-wider uppercase text-xs">For Schools</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading uppercase leading-[1.05] tracking-tight mb-6">
-              Bring coding &amp; STEM directly into your school.
-            </h1>
-            <p className="text-lg md:text-xl text-white/85 font-medium leading-relaxed max-w-2xl mb-8">
-              We deliver hands-on coding, robotics, and STEM workshops for Winnipeg schools — on-site, curriculum-aligned, and built for every grade level from K to 12.
-            </p>
-            <a
-              href="https://meetings.hubspot.com/skillsamurai/school-hour-of-code"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-sm font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95"
-            >
-              Book a School Workshop
-            </a>
-          </FadeIn>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <FadeIn>
+              <div className="inline-flex items-center gap-2 mb-5 px-4 py-2 rounded-full bg-primary/20 border border-primary/30">
+                <GraduationCap className="h-4 w-4 text-primary" />
+                <span className="text-primary font-bold tracking-wider uppercase text-xs">For Schools</span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading uppercase leading-[1.05] tracking-tight mb-6">
+                Bring coding &amp; STEM directly into your school.
+              </h1>
+              <p className="text-lg md:text-xl text-white/85 font-medium leading-relaxed max-w-2xl mb-8">
+                We deliver hands-on coding, robotics, and STEM workshops for Winnipeg schools — on-site, curriculum-aligned, and built for every grade level from K to 12.
+              </p>
+              <a
+                href="https://meetings.hubspot.com/skillsamurai/school-hour-of-code"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-8 text-sm font-black uppercase tracking-wide text-white shadow-2xl shadow-primary/40 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95"
+              >
+                Book a School Workshop
+              </a>
+            </FadeIn>
+            <FadeIn delay={0.15} direction="up" className="hidden md:block">
+              <div className="aspect-square rounded-[2.25rem] overflow-hidden shadow-2xl border-[10px] border-white/10 bg-white/5 rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
+                <img
+                  src="/images/group-class.webp"
+                  alt="Skill Samurai students and instructor group photo at a school workshop"
+                  loading="eager"
+                  decoding="async"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
