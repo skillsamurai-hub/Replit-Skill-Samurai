@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, Star, CalendarDays, LockOpen } from "lucide-react";
 import Link from "next/link";
 import EnrollmentTestimonials from "./enrollment-testimonials";
 import EnrollmentFAQ from "./enrollment-faq";
@@ -136,11 +136,11 @@ export default function ScheduleTable({ slots, locationName, locationAddress, lo
       <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-secondary/60 mb-8 py-4 border-y border-gray-200">
         <span className="flex items-center gap-1.5 font-semibold text-secondary">{locationName} &nbsp;·&nbsp; {locationAddress}</span>
         <span className="hidden sm:block text-gray-300">|</span>
-        <span className="flex items-center gap-1.5">⭐ 155+ five-star reviews</span>
+        <span className="flex items-center gap-1.5"><Star className="h-3.5 w-3.5 text-yellow-400 fill-yellow-400" />155+ five-star reviews</span>
         <span className="hidden sm:block text-gray-300">|</span>
-        <span className="flex items-center gap-1.5">📅 Start any week</span>
+        <span className="flex items-center gap-1.5"><CalendarDays className="h-3.5 w-3.5 text-primary" />Start any week</span>
         <span className="hidden sm:block text-gray-300">|</span>
-        <span className="flex items-center gap-1.5">🔓 No long-term contracts</span>
+        <span className="flex items-center gap-1.5"><LockOpen className="h-3.5 w-3.5 text-primary" />No long-term contracts</span>
       </div>
 
       {/* FAQ */}
