@@ -109,7 +109,7 @@ export default function SchoolsPage() {
               <p className="text-muted-foreground font-medium leading-relaxed mb-8">
                 We handle all the planning, materials, and delivery. Your teachers don't need any coding experience — we take care of everything so your students get a great experience from start to finish.
               </p>
-              <ul className="space-y-3">
+              <ul className="space-y-3 mb-8">
                 {details.map((d) => (
                   <li key={d} className="flex items-center gap-3 text-sm font-semibold text-secondary/80">
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
@@ -117,6 +117,20 @@ export default function SchoolsPage() {
                   </li>
                 ))}
               </ul>
+              <div className="rounded-3xl bg-secondary p-8 text-white">
+                <h3 className="text-2xl font-black font-heading mb-3">Ready to book?</h3>
+                <p className="text-white/80 font-medium mb-6 leading-relaxed">
+                  Tell us about your school, grade level, and goals — we'll put together a program that fits your schedule and curriculum.
+                </p>
+                <a
+                  href="https://meetings.hubspot.com/skillsamurai/school-hour-of-code"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-11 items-center justify-center rounded-full bg-primary px-7 text-sm font-black uppercase tracking-wide text-white shadow-lg shadow-primary/30 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95"
+                >
+                  Schedule an Intro Call
+                </a>
+              </div>
             </FadeIn>
             <FadeIn delay={0.15} direction="up">
               <div className="grid gap-4">
@@ -141,27 +155,6 @@ export default function SchoolsPage() {
               </div>
             </FadeIn>
           </div>
-        </div>
-      </section>
-
-      <section className="py-10 md:py-14 bg-secondary/5">
-        <div className="container mx-auto px-4">
-          <FadeIn delay={0.15}>
-            <div className="max-w-5xl mx-auto rounded-3xl bg-secondary p-8 md:p-10 text-white">
-              <h3 className="text-2xl font-black font-heading mb-3">Ready to book?</h3>
-              <p className="text-white/80 font-medium mb-6 leading-relaxed">
-                Tell us about your school, grade level, and goals — we'll put together a program that fits your schedule and curriculum.
-              </p>
-              <a
-                href="https://meetings.hubspot.com/skillsamurai/school-hour-of-code"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-11 items-center justify-center rounded-full bg-primary px-7 text-sm font-black uppercase tracking-wide text-white shadow-lg shadow-primary/30 transition-all hover:bg-primary/90 hover:scale-105 active:scale-95"
-              >
-                Schedule an Intro Call
-              </a>
-            </div>
-          </FadeIn>
         </div>
       </section>
 
