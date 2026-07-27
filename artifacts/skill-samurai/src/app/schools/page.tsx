@@ -134,7 +134,7 @@ export default function SchoolsPage() {
                     alt="Skill Samurai students and instructor at a school workshop in Winnipeg"
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-[center_65%]"
                   />
                 </div>
                 <div className="aspect-[4/3] rounded-[2.25rem] overflow-hidden shadow-2xl border-[10px] border-white bg-white rotate-[2deg] hover:rotate-0 transition-transform duration-500 ml-8">
@@ -143,7 +143,7 @@ export default function SchoolsPage() {
                     alt="Skill Samurai students and instructor group photo at a Winnipeg school"
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-[center_80%]"
                   />
                 </div>
               </div>
