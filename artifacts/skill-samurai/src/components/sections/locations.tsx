@@ -186,7 +186,7 @@ export default function Locations() {
           <p className="text-sm md:text-base text-white/70 font-medium mb-3">
             Already a student? Check class updates or reschedule a missed class.
           </p>
-          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 w-full">
             <button
               type="button"
               onClick={() => openCalendarModal()}
