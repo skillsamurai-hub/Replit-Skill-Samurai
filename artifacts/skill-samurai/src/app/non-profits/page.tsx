@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import React from "react";
-import Image from "next/image";
 import { FadeIn } from "@/components/ui/fade-in";
 import { HeartHandshake, CheckCircle2, Ticket, UsersRound, Megaphone, Handshake } from "lucide-react";
 import FinalCta from "@/components/sections/final-cta";
@@ -100,47 +99,6 @@ export default function NonProfitsPage() {
         </div>
       </section>
 
-      {/* Community Partners Banner */}
-      <section className="py-14 md:py-20 bg-white border-t border-secondary/10">
-        <div className="container mx-auto px-4">
-          <FadeIn className="text-center mb-10">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">Our Community Partners</p>
-            <h2 className="text-3xl md:text-4xl font-black font-heading text-secondary uppercase tracking-tight">
-              Organizations We Work With
-            </h2>
-            <p className="mt-3 text-secondary/60 max-w-xl mx-auto text-sm font-medium">
-              Proud to partner with these Winnipeg organizations to bring coding education to youth who need it most.
-            </p>
-          </FadeIn>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 max-w-4xl mx-auto">
-            {[
-              { name: "Canadian Red Cross", logo: "/images/partners/redcross.webp" },
-              { name: "Scouts Canada", logo: "/images/partners/scouts.webp" },
-              { name: "Girl Guides of Canada", logo: "/images/partners/girlguides.webp" },
-              { name: "Spence Neighbourhood Association", logo: "/images/partners/spence.webp" },
-              { name: "Inner City Youth Alive", logo: "/images/partners/innercity-v2.webp" },
-              { name: "Island Lake First Nations Family Services", logo: "/images/partners/islandlake.webp" },
-            ].map((partner) => (
-              <FadeIn key={partner.name}>
-                <div className="flex flex-col items-center justify-center gap-3 p-5 rounded-2xl border-2 border-secondary/10 bg-white hover:border-primary/30 hover:shadow-md transition-all duration-300 h-full min-h-[120px]">
-                  {partner.logo ? (
-                    <Image
-                      src={partner.logo}
-                      alt={`${partner.name} logo`}
-                      width={120}
-                      height={60}
-                      className={`object-contain w-auto ${partner.name === "Girl Guides of Canada" ? "max-h-20" : "max-h-14"}`}
-                    />
-                  ) : (
-                    <HeartHandshake className="h-8 w-8 text-primary" />
-                  )}
-                  <span className="text-xs font-bold text-secondary/70 text-center leading-tight">{partner.name}</span>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="py-16 md:py-24 bg-secondary/5">
         <div className="container mx-auto px-4">
