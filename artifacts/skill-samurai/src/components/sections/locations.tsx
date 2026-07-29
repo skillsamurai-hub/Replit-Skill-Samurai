@@ -182,7 +182,7 @@ export default function Locations() {
           })}
         </div>
 
-        <FadeIn delay={0.25} className="mt-8 md:mt-10 text-center">
+        <FadeIn delay={0.25} className="mt-8 md:mt-10 text-center w-full">
           <p className="text-sm md:text-base text-white/70 font-medium mb-3">
             Already a student? Check class updates or reschedule a missed class.
           </p>
