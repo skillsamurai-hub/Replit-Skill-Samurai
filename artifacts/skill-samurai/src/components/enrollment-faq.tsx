@@ -5,7 +5,7 @@ import { ChevronDown } from "lucide-react";
 
 const FAQS = [
   {
-    q: "How much does it cost?",
+    q: "What is the monthly subscription?",
     a: "$169/month for one 55-minute class per week, plus a one-time $99 registration fee. Month-to-month — no contracts.",
   },
   {
