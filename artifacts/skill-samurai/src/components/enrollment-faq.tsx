@@ -5,44 +5,24 @@ import { ChevronDown } from "lucide-react";
 
 const FAQS = [
   {
-    q: "How much do weekly coding classes cost?",
-    a: "Our weekly coding classes are $169/month for one 55-minute class each week. There is also a one-time $99 registration fee, which includes student account setup, learning platform access, progress tracking, resources your child can use to continue coding at home, and administrative onboarding. Our memberships are month-to-month, so there's no long-term contract.",
-  },
-  {
-    q: "Is there a long-term contract?",
-    a: "No. Everything is month-to-month. We earn your trust and your child's excitement every month.",
-  },
-  {
-    q: "What happens in the free trial class?",
-    a: "Your child joins a real class, meets a Coding Instructor, and builds an actual mini-project they can show you at the end. You'll get a clear sense of the environment, the instructors, and whether your child enjoys the experience before making any commitment.",
+    q: "How much does it cost?",
+    a: "$169/month for one 55-minute class per week, plus a one-time $99 registration fee. Month-to-month — no contracts.",
   },
   {
     q: "What ages do you teach?",
-    a: "We work with students ages 6 through 18. Younger students start with visual, game-based coding, while older students can explore Python, JavaScript, artificial intelligence, robotics, app development, game development, and more.",
+    a: "Ages 6–18. Younger kids start with visual, game-based coding. Older students can explore Python, JavaScript, AI, app development, game development, and more.",
   },
   {
-    q: "My child has never coded before. Will they fit in?",
-    a: "Absolutely. Most kids who walk into Skill Samurai have zero coding experience — and that's exactly who our beginner curriculum is designed for. Our Coding Instructors start with visual, game-based tools and grow with your child as they're ready.",
+    q: "My child has never coded before — will they fit in?",
+    a: "Absolutely. Most kids start with zero experience. Our instructors begin with beginner-friendly, visual tools and grow with your child at their own pace.",
   },
   {
-    q: "Do you accommodate different learning abilities?",
-    a: "Yes. We accommodate all learning abilities, including autistic, ADHD, and dyslexic students, students with anxiety, and students who read below grade level. Instructors keep group sizes small and adjust their approach to how each child learns best — including noise-cancelling headphones available for every student, advance notice before transitions, the option to arrive early to settle in, and visual, drag-and-drop tools for younger or beginner coders so reading level doesn't hold them back.",
+    q: "Do you accommodate different learning needs?",
+    a: "Yes — ADHD, autism, dyslexia, anxiety, and more. Small group sizes, noise-cancelling headphones, flexible transitions, and visual tools so every child can succeed.",
   },
   {
-    q: "Are your instructors screened and certified?",
-    a: "Yes. All instructors undergo background checks, child abuse registry checks, and training before working with students. Your child's safety is always a top priority.",
-  },
-  {
-    q: "What is your cancellation policy?",
-    a: "We offer flexible month-to-month memberships. If you need to cancel, we simply require 30 days' notice before your next billing date. This helps us manage class sizes and instructor scheduling while giving families the flexibility they need.",
-  },
-  {
-    q: "Do you offer make-up classes?",
-    a: "Yes. We know that kids get sick, family plans come up, and sometimes life happens. If your child misses a class, we'll do our best to arrange a make-up class based on availability. Make-up classes need to be scheduled within the same month as the missed class and cannot be carried forward to future months.",
-  },
-  {
-    q: "Do you offer a sibling or multi-child discount?",
-    a: "Yes. Families enrolling more than one child receive 10% off for each additional sibling.",
+    q: "What's your cancellation policy?",
+    a: "30 days' written notice before your next billing date. That's it — no penalties, no lock-in.",
   },
 ];
 
