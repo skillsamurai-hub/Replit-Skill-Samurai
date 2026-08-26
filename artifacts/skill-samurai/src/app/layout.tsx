@@ -22,7 +22,6 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { ModalProvider } from "@/components/ui/modal-provider";
 import StickyMobileCta from "@/components/ui/sticky-mobile-cta";
-import PhoneUpdatePopup from "@/components/ui/phone-update-popup";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.skillsamuraiwinnipeg.com"),
@@ -174,7 +173,6 @@ export default function RootLayout({
           </div>
           <ModalProvider />
           <StickyMobileCta />
-          <PhoneUpdatePopup />
         </Providers>
         <script
           type="application/ld+json"
