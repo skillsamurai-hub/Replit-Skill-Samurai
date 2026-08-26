@@ -201,7 +201,7 @@ export default function RootLayout({
         <Script
           src="https://widgets.leadconnectorhq.com/loader.js"
           data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="6a8f285ea5084a249b824641"
+          data-widget-id="6a5d5d5dfd9ec29d7c5593ff"
           strategy="afterInteractive"
         />
         <Script id="fb-pixel" strategy="afterInteractive">
