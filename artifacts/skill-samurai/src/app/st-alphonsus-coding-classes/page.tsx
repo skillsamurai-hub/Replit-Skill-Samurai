@@ -58,6 +58,14 @@ export default function StAlphonsusCodingClasses() {
             <span className="flex items-center gap-1.5 text-white/60">·</span>
             <span className="flex items-center gap-1.5"><Star className="h-3.5 w-3.5 text-yellow-400 fill-yellow-400" />155+ five-star reviews</span>
           </div>
+          <a
+            href={freeTrialUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-7 bg-primary hover:bg-primary/90 text-white font-black px-6 py-3 rounded-xl shadow-lg shadow-primary/30 transition-all hover:scale-105"
+          >
+            Book a Free Friday Trial <ArrowRight className="h-4 w-4" />
+          </a>
         </div>
       </div>
 

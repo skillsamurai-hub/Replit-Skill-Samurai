@@ -140,7 +140,7 @@ export default function ScheduleTable({
       {/* Free trial CTA */}
       {freeTrialUrl && freeTrialTerms?.length ? (
         <section className="bg-secondary rounded-2xl p-5 sm:p-7 mb-8">
-          <h2 className="text-white font-black text-xl text-center mb-1">Book a Free Trial</h2>
+          <h2 className="text-white font-black text-xl text-center mb-1">Book a Free Friday Trial</h2>
           <p className="text-white/60 text-sm text-center mb-6">Try a Friday class before choosing your term.</p>
           <div className="grid gap-5 sm:grid-cols-2">
             {freeTrialTerms.map((term, index) => (
