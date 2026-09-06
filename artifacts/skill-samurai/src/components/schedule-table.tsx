@@ -68,7 +68,7 @@ export default function ScheduleTable({ slots, locationName, locationAddress, lo
           </div>
         </div>
         <p className="text-white/50 text-xs text-center mt-4">
-          Cancel anytime with 30 days written notice. Makeup classes available at either location.
+          Cancel anytime with 30 days written notice. Makeup classes available at any location.
         </p>
       </div>
 
@@ -79,7 +79,7 @@ export default function ScheduleTable({ slots, locationName, locationAddress, lo
       </p>
 
       {/* Day cards */}
-      <div className={`grid gap-4 mb-4 ${days.length === 2 ? "sm:grid-cols-2" : days.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
+      <div className={`grid gap-4 mb-4 ${days.length === 1 ? "max-w-2xl mx-auto" : days.length === 2 ? "sm:grid-cols-2" : days.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
         {days.map((day) => {
           const daySlots = displaySlots.filter((s) => s.day === day);
           return (

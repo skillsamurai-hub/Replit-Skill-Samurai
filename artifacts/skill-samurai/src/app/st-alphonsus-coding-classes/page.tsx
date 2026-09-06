@@ -1,20 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MapPin, ArrowRight, Star, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, ArrowRight, Star } from "lucide-react";
+import ScheduleTable from "@/components/schedule-table";
+import type { Slot } from "@/components/schedule-table";
 
 export const metadata: Metadata = {
-  title: "St. Alphonsus Coding Classes — Coming Soon | Skill Samurai Winnipeg",
+  title: "Enroll in St. Alphonsus Coding Classes | Skill Samurai Winnipeg",
   description:
-    "Weekly coding, robotics, and STEM classes are coming soon to Skill Samurai's St. Alphonsus location in Winnipeg. Ages 6–18. Three terms: Oct–Dec, Jan–Mar, Apr–Jun.",
+    "Enroll your child in Friday coding, robotics, and STEM classes at St. Alphonsus School in Winnipeg. Ages 6–18. Classes at 3:15, 4:30, and 5:30 PM.",
   alternates: {
     canonical: "https://www.skillsamuraiwinnipeg.com/st-alphonsus-coding-classes",
   },
 };
 
-const TERMS = [
-  { label: "Fall Term",   dates: "Oct – Dec",  key: "fall"   },
-  { label: "Winter Term", dates: "Jan – Mar",  key: "winter" },
-  { label: "Spring Term", dates: "Apr – Jun",  key: "spring" },
+const slots: Slot[] = [
+  { day: "Friday", time: "3:15 PM", program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Friday start date", url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Friday315pmWeeklyCodingClasses" },
+  { day: "Friday", time: "4:30 PM", program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Friday start date", url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Friday430pmWeeklyCodingClasses" },
+  { day: "Friday", time: "5:30 PM", program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Friday start date", url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Friday530pmWeeklyCodingClasses" },
+];
+
+const terms = [
+  { label: "Term 1", dates: "Oct – Jan" },
+  { label: "Term 2", dates: "Feb – May" },
 ];
 
 export default function StAlphonsusCodingClasses() {
@@ -32,12 +39,11 @@ export default function StAlphonsusCodingClasses() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading text-white leading-tight tracking-tight mb-1">
             Coding Classes — St. Alphonsus
           </h1>
-          <p className="text-white/60 font-semibold text-base mb-3">St. Alphonsus School, Winnipeg, MB</p>
           <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed font-medium max-w-2xl">
-            After-school coding and STEM classes for kids ages 6–18. Coming soon to St. Alphonsus School — register your interest to be first in line when enrolment opens.
+            Weekly coding &amp; STEM classes for kids ages 6–18. No experience needed.
           </p>
           <div className="flex flex-wrap gap-4 mt-5 text-sm text-white/80">
-            <span className="flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5 text-primary" />St. Alphonsus School, Winnipeg, MB</span>
+            <span className="flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5 text-primary" />343 Munroe Avenue, Winnipeg, MB R2K 1H2</span>
             <span className="flex items-center gap-1.5 text-white/60">·</span>
             <span className="flex items-center gap-1.5">Ages 6–18</span>
             <span className="flex items-center gap-1.5 text-white/60">·</span>
@@ -46,67 +52,25 @@ export default function StAlphonsusCodingClasses() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-16">
-
-        {/* Coming Soon */}
-        <div className="max-w-2xl mx-auto text-center mb-14">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
-            <Clock className="h-8 w-8 text-primary" />
-          </div>
-          <h2 className="text-2xl font-black text-secondary mb-3">Coming Soon</h2>
-          <p className="text-secondary/60 text-sm mb-8">
-            We&apos;re finalising the schedule for our St. Alphonsus location. Classes will run across three terms each year — register your interest and we&apos;ll be in touch as soon as enrolment opens.
-          </p>
-
-          {/* Terms */}
-          <div className="grid grid-cols-3 gap-3 mb-8">
-            {TERMS.map((term) => (
-              <div key={term.key} className="bg-white rounded-2xl border border-gray-200 p-4 shadow-sm text-center">
+      {/* Schedule table */}
+      <div className="container mx-auto px-4 py-10">
+        <div className="max-w-2xl mx-auto mb-10">
+          <h2 className="text-xl font-black text-secondary text-center mb-5">Program Terms</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {terms.map((term) => (
+              <div key={term.label} className="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm text-center">
                 <p className="text-xs font-bold text-primary uppercase tracking-widest mb-1">{term.label}</p>
-                <p className="text-lg font-black text-secondary">{term.dates}</p>
+                <p className="text-xl font-black text-secondary">{term.dates}</p>
               </div>
             ))}
           </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="tel:+14319982155"
-              className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors w-full sm:w-auto justify-center"
-            >
-              <Phone className="h-4 w-4" /> 431-998-2155
-            </a>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors w-full sm:w-auto justify-center"
-            >
-              <Mail className="h-4 w-4" /> Email Us
-            </Link>
-          </div>
         </div>
-
-        {/* Other locations */}
-        <div className="border-t border-gray-200 pt-12">
-          <p className="text-center text-secondary/50 text-xs uppercase tracking-widest font-bold mb-6">Enrol now at our other locations</p>
-          <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-            <Link
-              href="/north-east-coding-classes"
-              className="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm hover:shadow-md hover:border-primary/30 transition-all group"
-            >
-              <p className="font-black text-secondary group-hover:text-primary transition-colors mb-1">North East Location</p>
-              <p className="text-secondary/50 text-xs mb-3">1199 Rothesay St. · Mon &amp; Tue evenings</p>
-              <span className="inline-flex items-center gap-1 text-primary text-xs font-bold">View schedule <ArrowRight className="h-3 w-3" /></span>
-            </Link>
-            <Link
-              href="/seven-oaks-coding-classes"
-              className="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm hover:shadow-md hover:border-primary/30 transition-all group"
-            >
-              <p className="font-black text-secondary group-hover:text-primary transition-colors mb-1">Seven Oaks Location</p>
-              <p className="text-secondary/50 text-xs mb-3">745 Kingsbury Ave. · Wed &amp; Thu evenings</p>
-              <span className="inline-flex items-center gap-1 text-primary text-xs font-bold">View schedule <ArrowRight className="h-3 w-3" /></span>
-            </Link>
-          </div>
-        </div>
-
+        <ScheduleTable
+          slots={slots}
+          locationName="St. Alphonsus School"
+          locationAddress="343 Munroe Avenue, Winnipeg, MB R2K 1H2"
+          locationId="st-alphonsus"
+        />
       </div>
     </div>
   );
