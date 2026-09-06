@@ -45,12 +45,16 @@ export default function ScheduleTable({ slots, termSchedules, locationName, loca
       .catch(() => {});
   }, [locationId]);
 
-  const scheduleGroups = termSchedules ?? [{ label: "", slots }];
+  const scheduleGroups = termSchedules ?? Array.from(new Set(slots.map((slot) => slot.day))).map((day) => ({
+    label: day,
+    slots: slots.filter((slot) => slot.day === day),
+  }));
   const displaySlot = (slot: Slot) => {
     const live = liveSlots.find((l) => l.day === slot.day && l.time === slot.time);
     if (!live) return slot;
     return { ...slot, spotsLeft: live.spots_left, waitlistUrl: live.waitlist_url ?? slot.waitlistUrl };
   };
+  const sessionDays = Array.from(new Set(scheduleGroups.flatMap((group) => group.slots.map((slot) => slot.day))));
 
   return (
     <>
@@ -77,11 +81,11 @@ export default function ScheduleTable({ slots, termSchedules, locationName, loca
       {/* Available sessions heading */}
       <h2 className="text-xl font-black text-secondary text-center mb-1">Pick Your Session</h2>
       <p className="text-secondary/60 text-sm text-center mb-6">
-        {locationName} &nbsp;·&nbsp; Friday sessions
+        {locationName} &nbsp;·&nbsp; {termSchedules ? "Friday sessions" : `Start any ${sessionDays[0]}${sessionDays.length > 1 ? ` or ${sessionDays[sessionDays.length - 1]}` : ""}`}
       </p>
 
       {/* Term session cards */}
-      <div className="grid gap-4 mb-4 sm:grid-cols-2">
+      <div className={`grid gap-4 mb-4 ${scheduleGroups.length === 1 ? "max-w-2xl mx-auto" : scheduleGroups.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
         {scheduleGroups.map((group) => {
           const groupSlots = group.slots.map(displaySlot);
           return (

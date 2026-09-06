@@ -21,11 +21,11 @@ const slots: Slot[] = [
 
 const terms = [
   { label: "Term 1", dates: "Oct – Jan" },
-  { label: "Term 2", dates: "Feb – May" },
+  { label: "Term 2", dates: "Feb – May 2027" },
 ];
 
 const termSchedules: TermSchedule[] = terms.map((term) => ({
-  label: term.label,
+  label: `${term.label} · ${term.dates}`,
   slots,
 }));
 
