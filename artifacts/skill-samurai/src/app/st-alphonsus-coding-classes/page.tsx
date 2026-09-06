@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MapPin, ArrowRight, Star } from "lucide-react";
 import ScheduleTable from "@/components/schedule-table";
 import type { Slot, TermSchedule } from "@/components/schedule-table";
+import type { FreeTrialTerm } from "@/components/schedule-table";
 
 export const metadata: Metadata = {
   title: "Enroll in St. Alphonsus Coding Classes | Skill Samurai Winnipeg",
@@ -23,6 +24,9 @@ const terms = [
   { label: "Term 1", dates: "Oct – Jan" },
   { label: "Term 2", dates: "Feb – May 2027" },
 ];
+
+const freeTrialUrl = "https://book.skillsamuraiwinnipeg.com/widget/booking/agzgaYAJGGRT4YEiGkJy";
+const freeTrialTerms: FreeTrialTerm[] = terms;
 
 const termSchedules: TermSchedule[] = terms.map((term) => ({
   label: `${term.label} · ${term.dates}`,
@@ -65,6 +69,8 @@ export default function StAlphonsusCodingClasses() {
           locationName="St. Alphonsus School"
           locationAddress="343 Munroe Avenue, Winnipeg, MB R2K 1H2"
           locationId="st-alphonsus"
+          freeTrialUrl={freeTrialUrl}
+          freeTrialTerms={freeTrialTerms}
         />
       </div>
     </div>

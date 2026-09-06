@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Phone, Mail, Star, CalendarDays, LockOpen } from "lucide-react";
+import { Phone, Mail, Star, CalendarDays, LockOpen, Clock, Sparkles } from "lucide-react";
 import Link from "next/link";
 import EnrollmentTestimonials from "./enrollment-testimonials";
 import EnrollmentFAQ from "./enrollment-faq";
@@ -22,6 +22,11 @@ export type TermSchedule = {
   slots: Slot[];
 };
 
+export type FreeTrialTerm = {
+  label: string;
+  dates: string;
+};
+
 type LiveSlot = { day: string; time: string; spots_left: number; waitlist_url: string | null };
 
 type Props = {
@@ -31,10 +36,21 @@ type Props = {
   locationAddress: string;
   locationId?: string;
   defaultWaitlistUrl?: string;
+  freeTrialUrl?: string;
+  freeTrialTerms?: FreeTrialTerm[];
 };
 
 
-export default function ScheduleTable({ slots, termSchedules, locationName, locationAddress, locationId, defaultWaitlistUrl }: Props) {
+export default function ScheduleTable({
+  slots,
+  termSchedules,
+  locationName,
+  locationAddress,
+  locationId,
+  defaultWaitlistUrl,
+  freeTrialUrl,
+  freeTrialTerms,
+}: Props) {
   const [liveSlots, setLiveSlots] = useState<LiveSlot[]>([]);
 
   useEffect(() => {
@@ -122,18 +138,68 @@ export default function ScheduleTable({ slots, termSchedules, locationName, loca
       </div>
 
       {/* Free trial CTA */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-primary/5 border border-primary/20 rounded-xl px-5 py-4 mb-8">
-        <div>
-          <p className="text-secondary font-black text-sm">Not ready to commit yet?</p>
-          <p className="text-secondary/60 text-xs mt-0.5">Try a free class first — no registration fee, no obligation.</p>
+      {freeTrialUrl && freeTrialTerms?.length ? (
+        <section className="bg-secondary rounded-2xl p-5 sm:p-7 mb-8">
+          <h2 className="text-white font-black text-xl text-center mb-1">Book a Free Trial</h2>
+          <p className="text-white/60 text-sm text-center mb-6">Try a Friday class before choosing your term.</p>
+          <div className="grid gap-5 sm:grid-cols-2">
+            {freeTrialTerms.map((term, index) => (
+              <a
+                key={term.label}
+                href={freeTrialUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-white rounded-2xl p-5 shadow-lg hover:-translate-y-1 transition-all"
+              >
+                <div className="flex items-start gap-3 mb-4">
+                  <div className={`rounded-full p-3 shrink-0 ${index === 0 ? "bg-secondary text-secondary" : "bg-primary text-primary"}`}>
+                    <div className="bg-white rounded-full p-2">
+                      <CalendarDays className="h-5 w-5" />
+                    </div>
+                  </div>
+                  <div>
+                    <p className={`text-[10px] font-bold tracking-[0.2em] mb-1 ${index === 0 ? "text-secondary/60" : "text-primary"}`}>SKILL SAMURAI</p>
+                    <h3 className="text-2xl font-black text-secondary leading-tight">{term.label}</h3>
+                    <p className="text-secondary/60 text-sm font-semibold mt-0.5">{term.dates}</p>
+                  </div>
+                </div>
+                <p className="text-secondary/70 text-sm mb-3">After-school coding classes for ages 6–18</p>
+                <div className="flex flex-wrap gap-1.5 mb-5">
+                  {["CODING", "STEM", "GAME DEVELOPMENT", "APP DEVELOPMENT"].map((tag) => (
+                    <span key={tag} className={`rounded-full px-2.5 py-1 text-[10px] font-bold ${index === 0 ? "bg-secondary/10 text-secondary/70" : "bg-primary/10 text-primary"}`}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex items-center gap-3 mb-4">
+                  <Clock className={`h-5 w-5 shrink-0 ${index === 0 ? "text-secondary" : "text-primary"}`} />
+                  <div>
+                    <p className="text-secondary/50 text-[10px] font-bold tracking-widest">FRIDAY SESSIONS</p>
+                    <p className="text-secondary font-bold text-sm">3:15 PM, 4:30 PM &amp; 5:30 PM</p>
+                  </div>
+                </div>
+                <div className={`flex items-center justify-center gap-2 rounded-xl py-3 text-white font-bold text-sm shadow-md ${index === 0 ? "bg-secondary shadow-secondary/20" : "bg-primary shadow-primary/20"}`}>
+                  <Sparkles className="h-4 w-4" /> Book a Free Trial <span className="text-lg leading-none">→</span>
+                </div>
+                <p className="text-secondary/50 text-[11px] text-center mt-2">Takes 1 hour · Free · Ages 6–18</p>
+              </a>
+            ))}
+          </div>
+        </section>
+      ) : (
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-primary/5 border border-primary/20 rounded-xl px-5 py-4 mb-8">
+          <div>
+            <p className="text-secondary font-black text-sm">Not ready to commit yet?</p>
+            <p className="text-secondary/60 text-xs mt-0.5">Try a free class first — no registration fee, no obligation.</p>
+          </div>
+          <Link
+            href="/#locations"
+            className="inline-flex items-center gap-2 bg-white border border-primary/30 hover:border-primary text-primary font-bold px-5 py-2.5 rounded-xl text-sm transition-all whitespace-nowrap hover:bg-primary/5 shrink-0"
+          >
+            Book a Free Class →
+          </Link>
         </div>
-        <Link
-          href="/#locations"
-          className="inline-flex items-center gap-2 bg-white border border-primary/30 hover:border-primary text-primary font-bold px-5 py-2.5 rounded-xl text-sm transition-all whitespace-nowrap hover:bg-primary/5 shrink-0"
-        >
-          Book a Free Class →
-        </Link>
-      </div>
+      )}
 
       {/* Testimonials */}
       <EnrollmentTestimonials />
