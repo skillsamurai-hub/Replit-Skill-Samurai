@@ -17,10 +17,16 @@ export type Slot = {
   waitlistUrl?: string;
 };
 
+export type TermSchedule = {
+  label: string;
+  slots: Slot[];
+};
+
 type LiveSlot = { day: string; time: string; spots_left: number; waitlist_url: string | null };
 
 type Props = {
   slots: Slot[];
+  termSchedules?: TermSchedule[];
   locationName: string;
   locationAddress: string;
   locationId?: string;
@@ -28,7 +34,7 @@ type Props = {
 };
 
 
-export default function ScheduleTable({ slots, locationName, locationAddress, locationId, defaultWaitlistUrl }: Props) {
+export default function ScheduleTable({ slots, termSchedules, locationName, locationAddress, locationId, defaultWaitlistUrl }: Props) {
   const [liveSlots, setLiveSlots] = useState<LiveSlot[]>([]);
 
   useEffect(() => {
@@ -39,16 +45,12 @@ export default function ScheduleTable({ slots, locationName, locationAddress, lo
       .catch(() => {});
   }, [locationId]);
 
-  const displaySlots =
-    liveSlots.length === 0
-      ? slots
-      : slots.map((slot) => {
-          const live = liveSlots.find((l) => l.day === slot.day && l.time === slot.time);
-          if (!live) return slot;
-          return { ...slot, spotsLeft: live.spots_left, waitlistUrl: live.waitlist_url ?? slot.waitlistUrl };
-        });
-
-  const days = Array.from(new Set(displaySlots.map((s) => s.day)));
+  const scheduleGroups = termSchedules ?? [{ label: "", slots }];
+  const displaySlot = (slot: Slot) => {
+    const live = liveSlots.find((l) => l.day === slot.day && l.time === slot.time);
+    if (!live) return slot;
+    return { ...slot, spotsLeft: live.spots_left, waitlistUrl: live.waitlist_url ?? slot.waitlistUrl };
+  };
 
   return (
     <>
@@ -75,21 +77,21 @@ export default function ScheduleTable({ slots, locationName, locationAddress, lo
       {/* Available sessions heading */}
       <h2 className="text-xl font-black text-secondary text-center mb-1">Pick Your Session</h2>
       <p className="text-secondary/60 text-sm text-center mb-6">
-        {locationName} &nbsp;·&nbsp; Start any {days[0]}{days.length > 1 ? ` or ${days[days.length - 1]}` : ""}
+        {locationName} &nbsp;·&nbsp; Friday sessions
       </p>
 
-      {/* Day cards */}
-      <div className={`grid gap-4 mb-4 ${days.length === 1 ? "max-w-2xl mx-auto" : days.length === 2 ? "sm:grid-cols-2" : days.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
-        {days.map((day) => {
-          const daySlots = displaySlots.filter((s) => s.day === day);
+      {/* Term session cards */}
+      <div className="grid gap-4 mb-4 sm:grid-cols-2">
+        {scheduleGroups.map((group) => {
+          const groupSlots = group.slots.map(displaySlot);
           return (
-            <div key={day} className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+            <div key={group.label} className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
               <div className="bg-secondary px-5 py-3 flex items-center justify-between">
-                <p className="text-white font-black text-base tracking-wide">{day}</p>
+                <p className="text-white font-black text-base tracking-wide">{group.label}</p>
                 <span className="text-xs font-bold text-primary/80 bg-primary/10 px-2 py-0.5 rounded-full">Limited spots</span>
               </div>
               <div className="divide-y divide-gray-100">
-                {daySlots.map((slot, i) => (
+                {groupSlots.map((slot, i) => (
                   <div key={i} className="flex items-center justify-between px-5 py-4 hover:bg-primary/5 transition-colors">
                     <div>
                       <span className="text-secondary font-bold text-lg">{slot.time}</span>

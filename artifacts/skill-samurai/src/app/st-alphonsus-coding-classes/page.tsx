@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { MapPin, ArrowRight, Star } from "lucide-react";
 import ScheduleTable from "@/components/schedule-table";
-import type { Slot } from "@/components/schedule-table";
+import type { Slot, TermSchedule } from "@/components/schedule-table";
 
 export const metadata: Metadata = {
   title: "Enroll in St. Alphonsus Coding Classes | Skill Samurai Winnipeg",
@@ -23,6 +23,11 @@ const terms = [
   { label: "Term 1", dates: "Oct – Jan" },
   { label: "Term 2", dates: "Feb – May" },
 ];
+
+const termSchedules: TermSchedule[] = terms.map((term) => ({
+  label: term.label,
+  slots,
+}));
 
 export default function StAlphonsusCodingClasses() {
   return (
@@ -54,19 +59,9 @@ export default function StAlphonsusCodingClasses() {
 
       {/* Schedule table */}
       <div className="container mx-auto px-4 py-10">
-        <div className="max-w-2xl mx-auto mb-10">
-          <h2 className="text-xl font-black text-secondary text-center mb-5">Program Terms</h2>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {terms.map((term) => (
-              <div key={term.label} className="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm text-center">
-                <p className="text-xs font-bold text-primary uppercase tracking-widest mb-1">{term.label}</p>
-                <p className="text-xl font-black text-secondary">{term.dates}</p>
-              </div>
-            ))}
-          </div>
-        </div>
         <ScheduleTable
           slots={slots}
+          termSchedules={termSchedules}
           locationName="St. Alphonsus School"
           locationAddress="343 Munroe Avenue, Winnipeg, MB R2K 1H2"
           locationId="st-alphonsus"
