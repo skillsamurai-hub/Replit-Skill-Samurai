@@ -117,7 +117,7 @@ export default function ScheduleTable({
       </p>
 
       {/* Term session cards */}
-      <div className={`grid gap-4 mb-8 ${scheduleGroups.length === 1 ? "max-w-2xl mx-auto" : scheduleGroups.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
+      <div className={`grid gap-4 mb-12 ${scheduleGroups.length === 1 ? "max-w-2xl mx-auto" : scheduleGroups.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
         {scheduleGroups.map((group) => {
           const groupSlots = group.slots.map(displaySlot);
           return (
