@@ -8,7 +8,7 @@ import type { FreeTrialTerm } from "@/components/schedule-table";
 export const metadata: Metadata = {
   title: "Enroll in St. Alphonsus Coding Classes | Skill Samurai Winnipeg",
   description:
-    "Enroll your child in Friday coding, robotics, and STEM classes at St. Alphonsus School in Winnipeg. Ages 6–18. Classes at 3:15, 4:30, and 5:30 PM.",
+    "Enroll your child in Friday coding, robotics, and STEM classes at St. Alphonsus School in Winnipeg. Ages 6–18. Classes at 3:15, 4:30, and 5:45 PM.",
   alternates: {
     canonical: "https://www.skillsamuraiwinnipeg.com/st-alphonsus-coding-classes",
   },
