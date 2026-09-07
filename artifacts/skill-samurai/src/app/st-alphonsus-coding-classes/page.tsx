@@ -21,8 +21,8 @@ const slots: Slot[] = [
 ];
 
 const terms = [
-  { label: "Term 1", dates: "Oct – Jan" },
-  { label: "Term 2", dates: "Feb – May 2027" },
+  { label: "Term 1", dates: "Oct – Jan", sessionTimes: "3:15 PM, 4:30 PM & 5:45 PM" },
+  { label: "Term 2", dates: "Feb – May 2027", sessionTimes: "3:15 PM, 4:30 PM & 5:30 PM" },
 ];
 
 const term1Slots: Slot[] = slots.map((slot) =>
@@ -30,7 +30,9 @@ const term1Slots: Slot[] = slots.map((slot) =>
     ? { ...slot, url: "https://winnipeg.jumbula.com/StAlphonsusCodingClubTerm1Oct2026Jan2027Final/StAlphonsusCodingClubTerm1Oct2026Jan2027315pm415pm" }
     : slot.time === "4:30 PM"
       ? { ...slot, url: "https://winnipeg.jumbula.com/StAlphonsusCodingClubTerm1Oct2026Jan2027Final/StAlphonsusCodingClubTerm1Oct2026Jan2027430pm530pm" }
-    : slot
+      : slot.time === "5:30 PM"
+        ? { ...slot, time: "5:45 PM", url: "https://winnipeg.jumbula.com/StAlphonsusCodingClubTerm1Oct2026Jan2027Final/StAlphonsusCodingClubTerm1Oct2026Jan2027545pm645pm" }
+        : slot
 );
 
 const freeTrialUrl = "https://book.skillsamuraiwinnipeg.com/widget/booking/agzgaYAJGGRT4YEiGkJy";

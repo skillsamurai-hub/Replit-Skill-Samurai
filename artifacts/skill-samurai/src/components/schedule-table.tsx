@@ -25,6 +25,7 @@ export type TermSchedule = {
 export type FreeTrialTerm = {
   label: string;
   dates: string;
+  sessionTimes: string;
 };
 
 type LiveSlot = { day: string; time: string; spots_left: number; waitlist_url: string | null };
@@ -175,7 +176,7 @@ export default function ScheduleTable({
                   <Clock className={`h-5 w-5 shrink-0 ${index === 0 ? "text-secondary" : "text-primary"}`} />
                   <div>
                     <p className="text-secondary/50 text-[10px] font-bold tracking-widest">FRIDAY SESSIONS</p>
-                    <p className="text-secondary font-bold text-sm">3:15 PM, 4:30 PM &amp; 5:30 PM</p>
+                    <p className="text-secondary font-bold text-sm">{term.sessionTimes}</p>
                   </div>
                 </div>
                 <div className={`flex items-center justify-center gap-2 rounded-xl py-3 text-white font-bold text-sm shadow-md ${index === 0 ? "bg-secondary shadow-secondary/20" : "bg-primary shadow-primary/20"}`}>
