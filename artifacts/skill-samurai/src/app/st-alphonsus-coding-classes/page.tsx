@@ -56,7 +56,7 @@ const stAlphonsusFAQs: FAQItem[] = [
   },
   {
     q: "When are classes?",
-    a: "Classes are held on Fridays in two four-month terms: Term 1 runs October 2026–January 2027, and Term 2 runs February–May 2027. There are no classes on school closures, holidays, or scheduled non-instruction days. Families receive a full class calendar for each term.",
+    a: "Classes are held on Fridays in two four-month terms: Term 1 runs October 2026–January 2027, and Term 2 runs February–May 2027. There are no classes on school closures, holidays, or scheduled non-instruction days. Families receive a full class calendar for each term. The one-time $99 registration fee is waived when you enroll by the Early Bird deadline: October 2, 2026 for Term 1 or January 29, 2027 for Term 2. No promo code is required.",
   },
   {
     q: "How do you support different learning needs?",
