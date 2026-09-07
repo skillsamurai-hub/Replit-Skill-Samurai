@@ -143,8 +143,8 @@ export default function StAlphonsusCodingClasses() {
           registrationFeeNote="Paid once when you first enroll"
           registrationFeePromotion="Waived with Early Bird registration"
           subscriptionLabel="4-Month Term"
-          subscriptionNote="4 monthly payments · Taxes & program resources included"
-          pricingFooter="Registration is for the full 4-month term. Your child’s spot is reserved for the entire term."
+          subscriptionNote="4 monthly payments · Taxes, software & resources included"
+          pricingFooter="Registration is for the full 4-month term. Make-up classes are available at either Winnipeg location."
         />
       </div>
     </div>
