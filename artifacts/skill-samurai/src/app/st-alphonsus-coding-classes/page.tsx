@@ -56,7 +56,7 @@ const stAlphonsusFAQs: FAQItem[] = [
   },
   {
     q: "Who can join the St. Alphonsus Coding Club?",
-    a: "Classes are designed for students in Grades 1–8. The 3:15–4:15 PM class is reserved for St. Alphonsus students only. The 4:30–5:30 PM and 5:45–6:45 PM classes are open to all students.",
+    a: "Classes are designed for students in Grades 1–8. The 3:15–4:15 PM class is reserved for St. Alphonsus students only. The 4:30 PM and 5:30 PM classes are open to all students in Winnipeg and the surrounding community.",
   },
   {
     q: "When are classes?",
