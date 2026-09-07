@@ -41,6 +41,10 @@ type Props = {
   freeTrialTerms?: FreeTrialTerm[];
   faqs?: FAQItem[];
   registrationFeeNote?: string;
+  registrationFeePromotion?: string;
+  subscriptionLabel?: string;
+  subscriptionNote?: string;
+  pricingFooter?: string;
 };
 
 
@@ -55,6 +59,10 @@ export default function ScheduleTable({
   freeTrialTerms,
   faqs,
   registrationFeeNote,
+  registrationFeePromotion,
+  subscriptionLabel,
+  subscriptionNote,
+  pricingFooter,
 }: Props) {
   const [liveSlots, setLiveSlots] = useState<LiveSlot[]>([]);
 
@@ -87,15 +95,18 @@ export default function ScheduleTable({
             <p className="text-white/60 text-xs uppercase tracking-widest font-bold mb-1">One-Time Registration</p>
             <p className="text-white font-black text-4xl mb-1">$99</p>
             <p className="text-white/60 text-xs">{registrationFeeNote ?? "Paid once when you first enrol"}</p>
+            {registrationFeePromotion && (
+              <p className="text-primary text-xs font-semibold mt-1">{registrationFeePromotion}</p>
+            )}
           </div>
           <div className="bg-primary rounded-xl px-5 py-4 text-center shadow-lg shadow-primary/30">
-            <p className="text-white/80 text-xs uppercase tracking-widest font-bold mb-1">Monthly Subscription</p>
+            <p className="text-white/80 text-xs uppercase tracking-widest font-bold mb-1">{subscriptionLabel ?? "Monthly Subscription"}</p>
             <p className="text-white font-black text-4xl mb-1">$169<span className="text-lg font-bold">/mo</span></p>
-            <p className="text-white/80 text-xs">Month-to-month · No contracts</p>
+            <p className="text-white/80 text-xs">{subscriptionNote ?? "Month-to-month · No contracts"}</p>
           </div>
         </div>
         <p className="text-white/50 text-xs text-center mt-4">
-          Cancel anytime with 30 days written notice. Makeup classes available at any location.
+          {pricingFooter ?? "Cancel anytime with 30 days written notice. Makeup classes available at any location."}
         </p>
       </div>
 

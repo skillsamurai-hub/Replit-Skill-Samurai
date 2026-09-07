@@ -140,7 +140,11 @@ export default function StAlphonsusCodingClasses() {
           freeTrialUrl={freeTrialUrl}
           freeTrialTerms={freeTrialTerms}
           faqs={stAlphonsusFAQs}
-          registrationFeeNote="Waived by Early Bird deadline"
+          registrationFeeNote="Paid once when you first enroll"
+          registrationFeePromotion="Waived with Early Bird registration"
+          subscriptionLabel="4-Month Term"
+          subscriptionNote="4 monthly payments · Taxes & program resources included"
+          pricingFooter="Registration is for the full 4-month term. Your child’s spot is reserved for the entire term."
         />
       </div>
     </div>
