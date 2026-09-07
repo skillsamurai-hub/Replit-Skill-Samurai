@@ -68,7 +68,7 @@ const stAlphonsusFAQs: FAQItem[] = [
   },
   {
     q: "What will my child learn?",
-    a: "Students learn real coding skills through fun, hands-on projects using Scratch, Roblox, game design, and more. They also develop problem-solving, creativity, logical thinking, and confidence with technology.",
+    a: "Students learn real coding skills through fun, hands-on projects using Scratch, game design, and more. They also develop problem-solving, creativity, logical thinking, and confidence with technology.",
   },
   {
     q: "Does my child need to bring a laptop?",
