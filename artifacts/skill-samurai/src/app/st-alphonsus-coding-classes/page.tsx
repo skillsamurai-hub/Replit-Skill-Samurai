@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MapPin, ArrowRight, Star } from "lucide-react";
 import ScheduleTable from "@/components/schedule-table";
 import type { Slot, TermSchedule } from "@/components/schedule-table";
+import type { FAQItem } from "@/components/enrollment-faq";
 import type { FreeTrialTerm } from "@/components/schedule-table";
 
 export const metadata: Metadata = {
@@ -47,6 +48,53 @@ const term2Slots: Slot[] = slots.map((slot) =>
 
 const freeTrialUrl = "https://book.skillsamuraiwinnipeg.com/widget/booking/agzgaYAJGGRT4YEiGkJy";
 const freeTrialTerms: FreeTrialTerm[] = terms;
+
+const stAlphonsusFAQs: FAQItem[] = [
+  {
+    q: "What is the monthly tuition?",
+    a: "Tuition is $169/month and includes weekly coding classes, curriculum, software, laptops, and materials. There is a one-time $99 registration fee. During Early Bird Enrollment, use promo code STA2026 to have the registration fee waived. Students continuing from Term 1 into Term 2 will also have the $99 registration fee waived.",
+  },
+  {
+    q: "Who can join the St. Alphonsus Coding Club?",
+    a: "Classes are designed for students in Grades 1–8. The 3:15–4:15 PM class is reserved for St. Alphonsus students only. The 4:30–5:30 PM and 5:45–6:45 PM classes are open to all students.",
+  },
+  {
+    q: "When are classes?",
+    a: "Classes are held on Fridays and are offered in two four-month terms: Term 1 runs October–January and Term 2 runs February–May. There are no classes on school closures, holidays, or scheduled non-instruction days. Families receive a full class calendar for each term.",
+  },
+  {
+    q: "My child has never coded before. Will they fit in?",
+    a: "Absolutely. No previous coding experience is required. Students work at their own level and pace with support from Skill Samurai instructors.",
+  },
+  {
+    q: "What will my child learn?",
+    a: "Students learn real coding skills through fun, hands-on projects using Scratch, Roblox, game design, and more. They also develop problem-solving, creativity, logical thinking, and confidence with technology.",
+  },
+  {
+    q: "Does my child need to bring a laptop?",
+    a: "No. Skill Samurai provides the laptops, software, and everything students need for class.",
+  },
+  {
+    q: "How does the 3:15 PM class work for St. Alphonsus students?",
+    a: "Students registered for the 3:15–4:15 PM class can transition directly from the school day into Coding Club. We’ll coordinate with the school and maintain a clear list for parent pickup or return to the school’s after-school program after class.",
+  },
+  {
+    q: "What if my child misses a class?",
+    a: "Make-up classes are available at either of our two Winnipeg Skill Samurai locations, subject to availability. Select Book a Make-Up Class on our website or call 431-998-2155.",
+  },
+  {
+    q: "How big are the classes?",
+    a: "Each class is limited to 20 students, with one Skill Samurai instructor for every 10 students.",
+  },
+  {
+    q: "Do we need to register again for Term 2?",
+    a: "Yes. Term 1 and Term 2 are registered separately. Families continuing into Term 2 need to re-register to reserve their child’s spot. Spaces are first-come, first-served, and continuing students will not pay the $99 registration fee again.",
+  },
+  {
+    q: "What is the cancellation policy?",
+    a: "Registration reserves your child’s spot for the full four-month term. Once registration is confirmed, instructors, curriculum, software, and program resources are planned and allocated based on enrollment for the full term. Cancellations, pauses, and early withdrawals are not available once the term begins. Make-up classes are available at either Winnipeg location, subject to availability.",
+  },
+];
 
 const termSchedules: TermSchedule[] = terms.map((term, index) => ({
   label: `${term.label} · ${term.dates}`,
@@ -99,6 +147,7 @@ export default function StAlphonsusCodingClasses() {
           locationId="st-alphonsus"
           freeTrialUrl={freeTrialUrl}
           freeTrialTerms={freeTrialTerms}
+          faqs={stAlphonsusFAQs}
         />
       </div>
     </div>

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Phone, Mail, Star, CalendarDays, LockOpen, Clock, Sparkles } from "lucide-react";
 import Link from "next/link";
 import EnrollmentTestimonials from "./enrollment-testimonials";
-import EnrollmentFAQ from "./enrollment-faq";
+import EnrollmentFAQ, { type FAQItem } from "./enrollment-faq";
 
 export type Slot = {
   day: string;
@@ -39,6 +39,7 @@ type Props = {
   defaultWaitlistUrl?: string;
   freeTrialUrl?: string;
   freeTrialTerms?: FreeTrialTerm[];
+  faqs?: FAQItem[];
 };
 
 
@@ -51,6 +52,7 @@ export default function ScheduleTable({
   defaultWaitlistUrl,
   freeTrialUrl,
   freeTrialTerms,
+  faqs,
 }: Props) {
   const [liveSlots, setLiveSlots] = useState<LiveSlot[]>([]);
 
@@ -217,7 +219,7 @@ export default function ScheduleTable({
       </div>
 
       {/* FAQ */}
-      <EnrollmentFAQ />
+      <EnrollmentFAQ faqs={faqs} />
 
       {/* Contact */}
       <div className="bg-secondary rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">

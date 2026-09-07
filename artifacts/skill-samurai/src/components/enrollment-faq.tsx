@@ -3,7 +3,12 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-const FAQS = [
+export type FAQItem = {
+  q: string;
+  a: string;
+};
+
+const DEFAULT_FAQS: FAQItem[] = [
   {
     q: "What is the monthly subscription?",
     a: "$169/month for one 55-minute class per week, plus a one-time $99 registration fee. Month-to-month — no contracts.",
@@ -26,14 +31,18 @@ const FAQS = [
   },
 ];
 
-export default function EnrollmentFAQ() {
+type Props = {
+  faqs?: FAQItem[];
+};
+
+export default function EnrollmentFAQ({ faqs = DEFAULT_FAQS }: Props) {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
     <div className="mb-8">
       <h2 className="text-xl font-black text-secondary text-center mb-5">Common Questions</h2>
       <div className="space-y-2">
-        {FAQS.map((faq, i) => (
+        {faqs.map((faq, i) => (
           <div key={i} className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
             <button
               onClick={() => setOpen(open === i ? null : i)}
