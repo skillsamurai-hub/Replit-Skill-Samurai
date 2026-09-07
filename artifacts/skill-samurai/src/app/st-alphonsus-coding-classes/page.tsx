@@ -51,20 +51,12 @@ const freeTrialTerms: FreeTrialTerm[] = terms;
 
 const stAlphonsusFAQs: FAQItem[] = [
   {
-    q: "What is the monthly tuition?",
-    a: "Tuition is $169/month and includes weekly coding classes, curriculum, software, laptops, and materials. There is a one-time $99 registration fee. Students continuing from Term 1 into Term 2 will have the $99 registration fee waived.",
-  },
-  {
     q: "Who can register?",
     a: "The St. Alphonsus Coding Club is for students in Grades 1–8. The 3:15–4:15 PM class is for St. Alphonsus students only. The 4:30–5:30 PM and 5:45–6:45 PM classes are open to all students in Winnipeg and the surrounding community.",
   },
   {
     q: "When are classes?",
     a: "Classes are held on Fridays in two four-month terms: Term 1 runs October 2026–January 2027, and Term 2 runs February–May 2027. There are no classes on school closures, holidays, or scheduled non-instruction days. Families receive a full class calendar for each term.",
-  },
-  {
-    q: "My child has never coded before. Will they fit in?",
-    a: "Absolutely. No coding experience is required. Students learn at their own pace with support from Skill Samurai instructors.",
   },
   {
     q: "How do you support different learning needs?",
@@ -75,10 +67,6 @@ const stAlphonsusFAQs: FAQItem[] = [
     a: "Students build real coding and computer science skills through fun, hands-on projects, including game development, animations, interactive projects, and creative coding challenges. Along the way, they develop problem-solving, creativity, logical thinking, and confidence with technology.",
   },
   {
-    q: "How many students are in each class?",
-    a: "Classes are limited to 20 students, with one Skill Samurai instructor for every 10 students.",
-  },
-  {
     q: "Does my child need to bring a laptop?",
     a: "No. We provide the laptops, software, and everything students need for class.",
   },
@@ -87,16 +75,12 @@ const stAlphonsusFAQs: FAQItem[] = [
     a: "Students can transition directly from the school day into Coding Club. We’ll coordinate with the school and keep a clear list for parent pickup or return to the school’s after-school program after class.",
   },
   {
+    q: "My child has never coded before. Will they fit in?",
+    a: "Absolutely. No coding experience is required. Students learn at their own pace with support from Skill Samurai instructors.",
+  },
+  {
     q: "What if my child misses a class?",
     a: "Make-up classes are available at either of our two Winnipeg Skill Samurai locations, subject to availability. Make-up classes can be booked through our website or by calling 431-998-2155.",
-  },
-  {
-    q: "Is there an Early Bird offer?",
-    a: "Yes. Enroll at least one week before the term begins and we’ll automatically waive the $99 registration fee. For Term 1, enroll by October 2, 2026. For Term 2, enroll by January 29, 2027. No promo code is required.",
-  },
-  {
-    q: "Does my child automatically continue into Term 2?",
-    a: "No. Term 2 requires a separate registration to reserve your child’s spot. Families continuing from Term 1 need to re-register, and spaces are first-come, first-served. Continuing students will not pay the $99 registration fee again.",
   },
   {
     q: "What is the cancellation policy?",
