@@ -52,7 +52,7 @@ const freeTrialTerms: FreeTrialTerm[] = terms;
 const stAlphonsusFAQs: FAQItem[] = [
   {
     q: "What is the monthly tuition?",
-    a: "Tuition is $169/month and includes weekly coding classes, curriculum, software, laptops, and materials. There is a one-time $99 registration fee. During Early Bird Enrollment, use promo code STA2026 to have the registration fee waived. Students continuing from Term 1 into Term 2 will also have the $99 registration fee waived.",
+    a: "Tuition is $169/month and includes weekly coding classes, curriculum, software, laptops, and materials. There is a one-time $99 registration fee. Students continuing from Term 1 into Term 2 will have the $99 registration fee waived.",
   },
   {
     q: "Who can join the St. Alphonsus Coding Club?",
