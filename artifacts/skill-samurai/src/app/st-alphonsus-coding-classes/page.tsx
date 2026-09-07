@@ -67,6 +67,10 @@ const stAlphonsusFAQs: FAQItem[] = [
     a: "Absolutely. No previous coding experience is required. Students work at their own level and pace with support from Skill Samurai instructors.",
   },
   {
+    q: "Can neurodiverse children join?",
+    a: "Neurodiverse children are welcome. Families are encouraged to contact us before registering so we can learn about their child’s needs and discuss whether the program is a good fit.",
+  },
+  {
     q: "What will my child learn?",
     a: "Students learn real coding skills through fun, hands-on projects using Scratch, game design, and more. They also develop problem-solving, creativity, logical thinking, and confidence with technology.",
   },
