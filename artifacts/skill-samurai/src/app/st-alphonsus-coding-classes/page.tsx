@@ -60,7 +60,7 @@ const stAlphonsusFAQs: FAQItem[] = [
   },
   {
     q: "When are classes?",
-    a: "Classes are held on Fridays and are offered in two four-month terms: Term 1 runs October–January and Term 2 runs February–May. There are no classes on school closures, holidays, or scheduled non-instruction days. Families receive a full class calendar for each term.",
+    a: "Classes are held on Fridays and are offered in two four-month terms: Term 1 runs October–January and Term 2 runs February–May. There are no classes on school closures, holidays, or scheduled non-instruction days. Families receive a full class calendar for each term. Term 1 and Term 2 are registered separately, and continuing students will not pay the $99 registration fee again.",
   },
   {
     q: "My child has never coded before. Will they fit in?",
@@ -79,20 +79,8 @@ const stAlphonsusFAQs: FAQItem[] = [
     a: "Students registered for the 3:15–4:15 PM class can transition directly from the school day into Coding Club. We’ll coordinate with the school and maintain a clear list for parent pickup or return to the school’s after-school program after class.",
   },
   {
-    q: "What if my child misses a class?",
-    a: "Make-up classes are available at either of our two Winnipeg Skill Samurai locations, subject to availability. Select Book a Make-Up Class on our website or call 431-998-2155.",
-  },
-  {
-    q: "How big are the classes?",
-    a: "Each class is limited to 20 students, with one Skill Samurai instructor for every 10 students.",
-  },
-  {
-    q: "Do we need to register again for Term 2?",
-    a: "Yes. Term 1 and Term 2 are registered separately. Families continuing into Term 2 need to re-register to reserve their child’s spot. Spaces are first-come, first-served, and continuing students will not pay the $99 registration fee again.",
-  },
-  {
-    q: "What is the cancellation policy?",
-    a: "Registration reserves your child’s spot for the full four-month term. Once registration is confirmed, instructors, curriculum, software, and program resources are planned and allocated based on enrollment for the full term. Cancellations, pauses, and early withdrawals are not available once the term begins. Make-up classes are available at either Winnipeg location, subject to availability.",
+    q: "What if my child misses a class or needs to cancel?",
+    a: "Make-up classes are available at either of our two Winnipeg Skill Samurai locations, subject to availability. Registration reserves your child’s spot for the full four-month term, so cancellations, pauses, and early withdrawals are not available once the term begins. Select Book a Make-Up Class on our website or call 431-998-2155.",
   },
 ];
 
