@@ -38,7 +38,9 @@ const term1Slots: Slot[] = slots.map((slot) =>
 const term2Slots: Slot[] = slots.map((slot) =>
   slot.time === "3:15 PM"
     ? { ...slot, url: "https://winnipeg.jumbula.com/StAlphonsusCodingClubTerm2FebMay2027/StAlphonsusCodingClubTerm2FebMay2027315pm415pm" }
-    : slot
+    : slot.time === "4:30 PM"
+      ? { ...slot, url: "https://winnipeg.jumbula.com/StAlphonsusCodingClubTerm2FebMay2027/StAlphonsusCodingClubTerm2FebMay2027430pm530pm" }
+      : slot
 );
 
 const freeTrialUrl = "https://book.skillsamuraiwinnipeg.com/widget/booking/agzgaYAJGGRT4YEiGkJy";
