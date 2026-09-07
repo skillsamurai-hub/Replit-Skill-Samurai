@@ -140,6 +140,7 @@ export default function StAlphonsusCodingClasses() {
           freeTrialUrl={freeTrialUrl}
           freeTrialTerms={freeTrialTerms}
           faqs={stAlphonsusFAQs}
+          registrationFeeNote="Waived by Early Bird deadline"
         />
       </div>
     </div>

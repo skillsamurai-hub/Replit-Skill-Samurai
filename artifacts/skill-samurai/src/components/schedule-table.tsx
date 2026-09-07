@@ -40,6 +40,7 @@ type Props = {
   freeTrialUrl?: string;
   freeTrialTerms?: FreeTrialTerm[];
   faqs?: FAQItem[];
+  registrationFeeNote?: string;
 };
 
 
@@ -53,6 +54,7 @@ export default function ScheduleTable({
   freeTrialUrl,
   freeTrialTerms,
   faqs,
+  registrationFeeNote,
 }: Props) {
   const [liveSlots, setLiveSlots] = useState<LiveSlot[]>([]);
 
@@ -84,7 +86,7 @@ export default function ScheduleTable({
           <div className="bg-white/10 rounded-xl px-5 py-4 text-center border border-white/20">
             <p className="text-white/60 text-xs uppercase tracking-widest font-bold mb-1">One-Time Registration</p>
             <p className="text-white font-black text-4xl mb-1">$99</p>
-            <p className="text-white/60 text-xs">Paid once when you first enrol</p>
+            <p className="text-white/60 text-xs">{registrationFeeNote ?? "Paid once when you first enrol"}</p>
           </div>
           <div className="bg-primary rounded-xl px-5 py-4 text-center shadow-lg shadow-primary/30">
             <p className="text-white/80 text-xs uppercase tracking-widest font-bold mb-1">Monthly Subscription</p>
