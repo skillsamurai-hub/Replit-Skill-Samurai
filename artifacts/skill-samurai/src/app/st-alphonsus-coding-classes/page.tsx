@@ -35,12 +35,18 @@ const term1Slots: Slot[] = slots.map((slot) =>
         : slot
 );
 
+const term2Slots: Slot[] = slots.map((slot) =>
+  slot.time === "3:15 PM"
+    ? { ...slot, url: "https://winnipeg.jumbula.com/StAlphonsusCodingClubTerm2FebMay2027/StAlphonsusCodingClubTerm2FebMay2027315pm415pm" }
+    : slot
+);
+
 const freeTrialUrl = "https://book.skillsamuraiwinnipeg.com/widget/booking/agzgaYAJGGRT4YEiGkJy";
 const freeTrialTerms: FreeTrialTerm[] = terms;
 
 const termSchedules: TermSchedule[] = terms.map((term, index) => ({
   label: `${term.label} · ${term.dates}`,
-  slots: index === 0 ? term1Slots : slots,
+  slots: index === 0 ? term1Slots : term2Slots,
 }));
 
 export default function StAlphonsusCodingClasses() {
