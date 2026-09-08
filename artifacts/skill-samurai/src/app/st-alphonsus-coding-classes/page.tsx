@@ -9,16 +9,16 @@ import type { FreeTrialTerm } from "@/components/schedule-table";
 export const metadata: Metadata = {
   title: "Enroll in St. Alphonsus Coding Classes | Skill Samurai Winnipeg",
   description:
-    "Enroll your child in Friday coding, robotics, and STEM classes at St. Alphonsus School in Winnipeg. Ages 6–18. Classes at 3:15, 4:30, and 5:45 PM.",
+    "Enroll your child in Friday coding, robotics, and STEM classes for Grades 1–8 at St. Alphonsus School in Winnipeg. Classes at 3:15, 4:30, and 5:45 PM.",
   alternates: {
     canonical: "https://www.skillsamuraiwinnipeg.com/st-alphonsus-coding-classes",
   },
 };
 
 const slots: Slot[] = [
-  { day: "Friday", time: "3:15 PM", program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Friday start date", url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Friday315pmWeeklyCodingClasses" },
-  { day: "Friday", time: "4:30 PM", program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Friday start date", url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Friday430pmWeeklyCodingClasses" },
-  { day: "Friday", time: "5:30 PM", program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Friday start date", url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Friday530pmWeeklyCodingClasses" },
+  { day: "Friday", time: "3:15 PM", program: "Weekly Coding Classes", grades: "Grades 1–8", note: "Choose a Friday start date", url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Friday315pmWeeklyCodingClasses" },
+  { day: "Friday", time: "4:30 PM", program: "Weekly Coding Classes", grades: "Grades 1–8", note: "Choose a Friday start date", url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Friday430pmWeeklyCodingClasses" },
+  { day: "Friday", time: "5:30 PM", program: "Weekly Coding Classes", grades: "Grades 1–8", note: "Choose a Friday start date", url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Friday530pmWeeklyCodingClasses" },
 ];
 
 const terms = [
@@ -109,12 +109,12 @@ export default function StAlphonsusCodingClasses() {
             Friday Coding Classes — St. Alphonsus
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed font-medium max-w-2xl">
-            Weekly Friday coding &amp; STEM classes for kids ages 6–18. No experience needed.
+            Weekly Friday coding &amp; STEM classes for Grades 1–8. No experience needed.
           </p>
           <div className="flex flex-wrap gap-4 mt-5 text-sm text-white/80">
             <span className="flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5 text-primary" />343 Munroe Avenue, Winnipeg, MB R2K 1H2</span>
             <span className="flex items-center gap-1.5 text-white/60">·</span>
-            <span className="flex items-center gap-1.5">Ages 6–18</span>
+            <span className="flex items-center gap-1.5">Grades 1–8</span>
             <span className="flex items-center gap-1.5 text-white/60">·</span>
             <span className="flex items-center gap-1.5"><Star className="h-3.5 w-3.5 text-yellow-400 fill-yellow-400" />155+ five-star reviews</span>
           </div>
@@ -145,6 +145,7 @@ export default function StAlphonsusCodingClasses() {
           subscriptionLabel="4-Month Term"
           subscriptionNote="4 monthly payments · Taxes, software & resources included"
           pricingFooter="Registration is for the full 4-month term. Make-up classes are available at either Winnipeg location."
+          studentRangeLabel="Grades 1–8"
         />
       </div>
     </div>

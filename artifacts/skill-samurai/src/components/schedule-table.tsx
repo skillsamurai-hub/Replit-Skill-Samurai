@@ -45,6 +45,7 @@ type Props = {
   subscriptionLabel?: string;
   subscriptionNote?: string;
   pricingFooter?: string;
+  studentRangeLabel?: string;
 };
 
 
@@ -63,6 +64,7 @@ export default function ScheduleTable({
   subscriptionLabel,
   subscriptionNote,
   pricingFooter,
+  studentRangeLabel,
 }: Props) {
   const [liveSlots, setLiveSlots] = useState<LiveSlot[]>([]);
 
@@ -179,7 +181,7 @@ export default function ScheduleTable({
                     <p className="text-secondary/60 text-sm font-semibold mt-0.5">{term.dates}</p>
                   </div>
                 </div>
-                <p className="text-secondary/70 text-sm mb-3">After-school coding classes for ages 6–18</p>
+                <p className="text-secondary/70 text-sm mb-3">After-school coding classes for {studentRangeLabel ?? "ages 6–18"}</p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   {["CODING", "STEM", "GAME DEVELOPMENT", "APP DEVELOPMENT"].map((tag) => (
                     <span key={tag} className={`rounded-full px-2.5 py-1 text-[10px] font-bold ${index === 0 ? "bg-secondary/10 text-secondary/70" : "bg-primary/10 text-primary"}`}>
@@ -197,7 +199,7 @@ export default function ScheduleTable({
                 <div className={`flex items-center justify-center gap-2 rounded-xl py-3 text-white font-bold text-sm shadow-md ${index === 0 ? "bg-secondary shadow-secondary/20" : "bg-primary shadow-primary/20"}`}>
                   <Sparkles className="h-4 w-4" /> Book a Free Trial <span className="text-lg leading-none">→</span>
                 </div>
-                <p className="text-secondary/50 text-[11px] text-center mt-2">Takes 1 hour · Free · Ages 6–18</p>
+              <p className="text-secondary/50 text-[11px] text-center mt-2">Takes 1 hour · Free · {studentRangeLabel ?? "Ages 6–18"}</p>
               </a>
             ))}
           </div>
