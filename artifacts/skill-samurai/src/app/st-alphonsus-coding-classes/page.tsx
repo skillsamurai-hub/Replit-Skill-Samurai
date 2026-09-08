@@ -22,8 +22,8 @@ const slots: Slot[] = [
 ];
 
 const terms = [
-  { label: "Term 1", dates: "Oct 9, 2026 – Jan 2027", sessionTimes: "3:15 PM, 4:30 PM & 5:45 PM" },
-  { label: "Term 2", dates: "Feb 5, 2027 – May 2027", sessionTimes: "3:15 PM, 4:30 PM & 5:45 PM" },
+  { label: "Term 1", dates: "Oct 9, 2026 – Jan 29, 2027", sessionTimes: "3:15 PM, 4:30 PM & 5:45 PM" },
+  { label: "Term 2", dates: "Feb 5, 2027 – May 28, 2027", sessionTimes: "3:15 PM, 4:30 PM & 5:45 PM" },
 ];
 
 const term1Slots: Slot[] = slots.map((slot) =>
@@ -56,7 +56,7 @@ const stAlphonsusFAQs: FAQItem[] = [
   },
   {
     q: "When are classes?",
-    a: "Classes are held on Fridays in two four-month terms: Term 1 starts October 9, 2026 and runs through January 2027, while Term 2 starts February 5, 2027 and runs through May 2027. There are no classes on school closures, holidays, or scheduled non-instruction days. Families receive a full class calendar for each term. The one-time $99 registration fee is waived when you enroll by the Early Bird deadline: October 2, 2026 for Term 1 or January 29, 2027 for Term 2. No promo code is required.",
+    a: "Classes are held on Fridays in two four-month terms: Term 1 starts October 9, 2026 and ends January 29, 2027, while Term 2 starts February 5, 2027 and ends May 28, 2027. There are no classes on school closures, holidays, or scheduled non-instruction days. Families receive a full class calendar for each term. The one-time $99 registration fee is waived when you enroll by the Early Bird deadline: October 2, 2026 for Term 1 or January 29, 2027 for Term 2. No promo code is required.",
   },
   {
     q: "How do you support different learning needs?",
