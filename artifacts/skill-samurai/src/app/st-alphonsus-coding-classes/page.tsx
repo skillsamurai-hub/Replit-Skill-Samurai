@@ -141,7 +141,7 @@ export default function StAlphonsusCodingClasses() {
           freeTrialTerms={freeTrialTerms}
           faqs={stAlphonsusFAQs}
           registrationFeeNote="Paid once when you first enroll"
-          registrationFeePromotion="Waived with Early Bird registration"
+          registrationFeePromotion="Waived by Early Bird deadlines: Oct. 2 / Jan. 29"
           subscriptionLabel="4-Month Term"
           subscriptionNote="4 monthly payments · Taxes, software & resources included"
           pricingFooter="Registration is for the full 4-month term. Make-up classes are available at either Winnipeg location."
