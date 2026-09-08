@@ -108,7 +108,7 @@ export default function StAlphonsusCodingClasses() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading text-white leading-tight tracking-tight mb-1">
             Friday Coding Classes — St. Alphonsus
           </h1>
-          <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed font-medium max-w-2xl">
+          <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed font-medium max-w-none md:whitespace-nowrap">
             Weekly Friday coding &amp; STEM classes for <span className="whitespace-nowrap">Grades 1–8 (no experience needed).</span>
           </p>
           <div className="flex flex-wrap gap-4 mt-5 text-sm text-white/80">
