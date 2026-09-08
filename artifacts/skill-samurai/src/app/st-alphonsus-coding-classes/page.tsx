@@ -109,7 +109,7 @@ export default function StAlphonsusCodingClasses() {
             Friday Coding Classes — St. Alphonsus
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed font-medium max-w-2xl">
-            Weekly Friday coding &amp; STEM classes for Grades 1–8. No experience needed.
+            Weekly Friday coding &amp; STEM classes for <span className="whitespace-nowrap">Grades 1–8 (no experience needed).</span>
           </p>
           <div className="flex flex-wrap gap-4 mt-5 text-sm text-white/80">
             <span className="flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5 text-primary" />343 Munroe Avenue, Winnipeg, MB R2K 1H2</span>
