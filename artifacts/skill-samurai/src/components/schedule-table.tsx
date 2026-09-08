@@ -98,7 +98,7 @@ export default function ScheduleTable({
             <p className="text-white font-black text-4xl mb-1">$99</p>
             <p className="text-white/60 text-xs">{registrationFeeNote ?? "Paid once when you first enrol"}</p>
             {registrationFeePromotion && (
-              <p className="text-primary text-xs font-semibold mt-1">{registrationFeePromotion}</p>
+              <p className="text-white text-xs font-bold mt-1">{registrationFeePromotion}</p>
             )}
           </div>
           <div className="bg-primary rounded-xl px-5 py-4 text-center shadow-lg shadow-primary/30">
