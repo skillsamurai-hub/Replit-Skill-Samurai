@@ -28,7 +28,7 @@ const terms = [
 
 const term1Slots: Slot[] = slots.map((slot) =>
   slot.time === "3:15 PM"
-    ? { ...slot, spotsLeft: 8, url: "https://winnipeg.jumbula.com/StAlphonsusCodingClubTerm1Oct2026Jan2027Final/StAlphonsusCodingClubTerm1Oct16th2026Feb5th2027315pm415pm" }
+    ? { ...slot, spotsLeft: 6, url: "https://winnipeg.jumbula.com/StAlphonsusCodingClubTerm1Oct2026Jan2027Final/StAlphonsusCodingClubTerm1Oct16th2026Feb5th2027315pm415pm" }
     : slot.time === "4:30 PM"
       ? { ...slot, spotsLeft: 8, url: "https://winnipeg.jumbula.com/StAlphonsusCodingClubTerm1Oct2026Jan2027Final/StAlphonsusCodingClubTerm1Oct16th2026Feb5th2027430pm530pm" }
       : slot.time === "5:30 PM"
