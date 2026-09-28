@@ -30,3 +30,11 @@ A Vercel deployment created with `target: production` can reach `READY` while th
 **Why:** This happened after a successful production build: the project’s default Vercel aliases moved to the new deployment, but `www.skillsamuraiwinnipeg.com` and `www.codingforkidswinnipeg.com` still referenced the older deployment.
 
 **How to apply:** After a deployment reaches `READY`, verify both public aliases reference its deployment ID. If not, assign both aliases to that deployment before reporting the change as live. Also check DNS configuration and fetch each public URL: an alias can point at the right deployment while its hostname resolves to a registrar instead of Vercel. The apex domains redirect to these `www` aliases.
+
+## GitHub repository permissions
+
+The live-source repository and the separate `origin` repository require different authorized GitHub identities; a successful push to one does not imply write access to the other.
+
+**Why:** The account permitted to update the Vercel source received a permission error when pushing the same commit to `origin`; the separately configured workspace credential worked for `origin`.
+
+**How to apply:** Check both remote heads after a requested push. Use the appropriate existing workspace authentication for each repository, without exposing credential values or force-pushing to work around a permission error.
