@@ -7,7 +7,7 @@ import { OpenContactFormButton } from "@/components/ui/open-contact-form-button"
 export const metadata: Metadata = {
   title: "Contact Us | Skill Samurai Winnipeg",
   description:
-    "Get in touch with Skill Samurai Winnipeg. Call, email, or visit our three Winnipeg locations — North East, Seven Oaks, and St. Alphonsus. We'd love to answer your questions.",
+    "Get in touch with Skill Samurai Winnipeg. Call, email, or visit our three Winnipeg locations — North East, Seven Oaks, and East Kildonan. We'd love to answer your questions.",
   alternates: {
     canonical: "https://www.skillsamuraiwinnipeg.com/contact",
   },
@@ -31,7 +31,7 @@ const locations = [
     mapsHref: "https://maps.google.com/?q=745+Kingsbury+Ave+Winnipeg+MB",
   },
   {
-    name: "St. Alphonsus",
+    name: "East Kildonan",
     address: "343 Munroe Avenue",
     city: "Winnipeg, MB",
     days: "Fridays",

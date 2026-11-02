@@ -172,7 +172,7 @@ export default function WeeklyClasses() {
               href="/st-alphonsus-coding-classes"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-secondary hover:bg-secondary/90 hover:scale-105 active:scale-95 text-white px-7 py-4 text-sm font-black uppercase tracking-wide shadow-lg shadow-secondary/30 transition-all border-b-4 border-white/20"
             >
-              Enroll — St. Alphonsus
+              Enroll — East Kildonan
             </a>
           </div>
           <p className="text-secondary/50 text-sm font-medium">

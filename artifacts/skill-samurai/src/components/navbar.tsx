@@ -34,7 +34,7 @@ export default function Navbar() {
   const programLinks = [
     { href: "/north-east-coding-classes", label: "North East Coding Classes", external: false },
     { href: "/seven-oaks-coding-classes", label: "Seven Oaks Coding Classes", external: false },
-    { href: "/st-alphonsus-coding-classes", label: "St. Alphonsus Coding Classes", external: false },
+    { href: "/st-alphonsus-coding-classes", label: "East Kildonan Coding Classes", external: false },
     { href: "/camps", label: "Coding & STEM Camps", external: false },
     { href: "/birthday-parties", label: "Birthday Parties", external: false },
     { href: "/schools", label: "For Schools", external: false },

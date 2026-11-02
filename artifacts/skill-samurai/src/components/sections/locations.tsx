@@ -33,7 +33,7 @@ const locations = [
     accent: "primary",
   },
   {
-    name: "St. Alphonsus",
+    name: "East Kildonan",
     tag: "After-school coding classes for ages 6–14 · Grades 1–8",
     address: "343 Munroe Avenue, Winnipeg, MB",
     mapsHref: "https://www.google.com/maps/search/?api=1&query=343+Munroe+Avenue+Winnipeg+MB",
@@ -87,7 +87,7 @@ export default function Locations() {
           {locations.map((loc, i) => {
             const isPrimary = loc.accent === "primary";
             const isAccent = loc.accent === "accent";
-            const isStAlphonsus = loc.name === "St. Alphonsus";
+            const isEastKildonan = loc.name === "East Kildonan";
             const accentBg = isPrimary ? "bg-primary" : isAccent ? "bg-accent" : "bg-secondary";
             const accentText = isPrimary ? "text-primary" : isAccent ? "text-accent" : "text-secondary";
             const accentSoft = isPrimary ? "bg-primary/10" : isAccent ? "bg-accent/10" : "bg-secondary/10";
@@ -100,15 +100,9 @@ export default function Locations() {
                   type="button"
                   onClick={() => openPopup(loc.bookHref)}
                   aria-label={`Book a free trial at Skill Samurai ${loc.name}`}
-                  className={`group block w-full h-full text-left bg-white rounded-3xl p-6 sm:p-8 border-2 ${isStAlphonsus ? "border-primary shadow-primary/25 ring-4 ring-primary/15" : `border-white/20 ${ring} shadow-black/30`} shadow-2xl hover:-translate-y-1 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-accent/60 cursor-pointer`}
+                  className={`group block w-full h-full text-left bg-white rounded-3xl p-6 sm:p-8 border-2 ${isEastKildonan ? "border-primary shadow-primary/25 ring-4 ring-primary/15" : `border-white/20 ${ring} shadow-black/30`} shadow-2xl hover:-translate-y-1 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-accent/60 cursor-pointer`}
                 >
                   <div className="h-full flex flex-col">
-                    {isStAlphonsus && (
-                      <div className="mb-4 inline-flex self-start items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-[10px] font-black uppercase tracking-wider text-primary">
-                        <Sparkles className="h-3.5 w-3.5" />
-                        New Friday Classes
-                      </div>
-                    )}
                     <div className="flex items-center gap-3 mb-5">
                       <div className={`h-12 w-12 sm:h-14 sm:w-14 rounded-2xl ${accentBg} flex items-center justify-center shadow-lg rotate-3 flex-shrink-0`}>
                         <MapPin className="h-6 w-6 sm:h-7 sm:w-7 text-white" strokeWidth={2.4} />
@@ -193,7 +187,7 @@ export default function Locations() {
                         className={`w-full inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-black uppercase tracking-wide text-white shadow-xl ${buttonShadow} transition-all group-hover:scale-[1.02] ${accentBg} group-hover:opacity-95`}
                       >
                         <Sparkles className="h-4 w-4" />
-                        {isStAlphonsus ? "Book a Free Friday Class" : "Book a Free Trial"}
+                        {isEastKildonan ? "Book a Free Friday Class" : "Book a Free Trial"}
                         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </span>
                       <p className="mt-2 text-center text-[11px] font-semibold text-secondary/60">
@@ -239,7 +233,7 @@ export default function Locations() {
               onClick={() => openPopup(locations[2].makeupHref!)}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 sm:py-2.5 text-xs font-bold uppercase tracking-wide text-white border border-white/25 hover:bg-white/10 transition-all cursor-pointer whitespace-nowrap"
             >
-              Makeup · St. Alphonsus
+              Makeup · East Kildonan
             </button>
           </div>
         </FadeIn>

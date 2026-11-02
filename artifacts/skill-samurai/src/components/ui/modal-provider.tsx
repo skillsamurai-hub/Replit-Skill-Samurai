@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { MakeupModal } from "./makeup-modal";
 
 const CalendarModal = dynamic(
   () => import("./calendar-modal").then((m) => m.CalendarModal),
@@ -10,11 +11,6 @@ const BookingModal = dynamic(
   () => import("./booking-modal").then((m) => m.BookingModal),
   { ssr: false }
 );
-const MakeupModal = dynamic(
-  () => import("./makeup-modal").then((m) => m.MakeupModal),
-  { ssr: false }
-);
-
 export function ModalProvider() {
   return (
     <>

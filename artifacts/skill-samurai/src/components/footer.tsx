@@ -29,7 +29,7 @@ const locations = [
     mapsHref: "https://www.google.com/maps/place/Skill+Samurai+-+Coding,+Robotics+%26+STEM+Academy+(Coding+For+Kids+in+Winnipeg)/@49.9482295,-97.1417296,17z/data=!3m1!4b1!4m6!3m5!1s0x41383ce25378dcb3:0x568e52da29e10a8f!8m2!3d49.9482295!4d-97.1391547!16s%2Fg%2F11l5kgf4s7?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D",
   },
   {
-    name: "St. Alphonsus",
+    name: "East Kildonan",
     address: "343 Munroe Avenue",
     city: "Winnipeg, MB",
     mapsHref: "https://www.google.com/maps/search/?api=1&query=343+Munroe+Avenue+Winnipeg+MB",

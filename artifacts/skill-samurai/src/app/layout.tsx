@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.skillsamuraiwinnipeg.com"),
   title: "Skill Samurai Winnipeg | Coding & STEM Classes for Kids Ages 6–18",
   description:
-    "Skill Samurai Winnipeg offers weekly coding, robotics, and STEM classes for kids ages 6–18 at three locations: North East, Seven Oaks, and St. Alphonsus. Flexible month-to-month membership. Book a free trial class today!",
+    "Skill Samurai Winnipeg offers weekly coding, robotics, and STEM classes for kids ages 6–18 at three locations: North East, Seven Oaks, and East Kildonan. Flexible month-to-month membership. Book a free trial class today!",
   keywords: [
     "coding classes kids Winnipeg",
     "STEM classes Winnipeg",
@@ -99,7 +99,7 @@ export default function RootLayout({
     "@id": "https://www.skillsamuraiwinnipeg.com",
     name: "Skill Samurai Winnipeg",
     description:
-      "After-school coding, robotics, and STEM classes for kids ages 6–18 in Winnipeg, Manitoba. Three locations: North East, Seven Oaks, and St. Alphonsus.",
+      "After-school coding, robotics, and STEM classes for kids ages 6–18 in Winnipeg, Manitoba. Three locations: North East, Seven Oaks, and East Kildonan.",
     url: "https://www.skillsamuraiwinnipeg.com",
     telephone: "+1-204-818-2155",
     email: "Genesis@SkillSamurai.com",
@@ -131,7 +131,7 @@ export default function RootLayout({
         addressLocality: "Winnipeg",
         addressRegion: "MB",
         addressCountry: "CA",
-        name: "Skill Samurai St. Alphonsus",
+        name: "Skill Samurai East Kildonan",
       },
     ],
     geo: {

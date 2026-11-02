@@ -7,9 +7,9 @@ import type { FAQItem } from "@/components/enrollment-faq";
 import { stAlphonsusReviews } from "@/lib/program-reviews";
 
 export const metadata: Metadata = {
-  title: "Enroll in St. Alphonsus Coding Classes | Skill Samurai Winnipeg",
+  title: "Enroll in East Kildonan Coding Classes | Skill Samurai Winnipeg",
   description:
-    "Enroll your child in Friday coding, robotics, and STEM classes for Grades 1–8 at St. Alphonsus School in Winnipeg. Classes at 3:15, 4:30, and 5:45 PM.",
+    "Enroll your child in Friday coding, robotics, and STEM classes for Grades 1–8 at St. Alphonsus School in East Kildonan, Winnipeg. Classes at 3:15, 4:30, and 5:45 PM.",
   alternates: {
     canonical: "https://www.skillsamuraiwinnipeg.com/st-alphonsus-coding-classes",
   },
@@ -126,28 +126,23 @@ export default function StAlphonsusCodingClasses() {
       {/* Page header */}
       <div className="bg-secondary border-b border-white/10 py-8 md:py-12">
         <div className="container mx-auto px-4">
-          <Link href="/" className="inline-flex items-center gap-1.5 text-white/50 hover:text-white text-sm font-medium mb-6 transition-colors">
+          <Link href="/" className="inline-flex items-center gap-1.5 text-white/50 hover:text-white text-sm font-medium mb-5 transition-colors">
             <ArrowRight className="h-3.5 w-3.5 rotate-180" />
             Home
           </Link>
-          <div className="mb-3">
-            <span className="inline-flex rounded-full bg-primary px-3 py-1 text-[11px] font-black uppercase tracking-widest text-white shadow-lg shadow-primary/20">
-              New Friday Classes
-            </span>
-          </div>
-          <p className="text-primary font-bold uppercase tracking-widest text-xs mb-3">After-School Program · St. Alphonsus Winnipeg</p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading text-white leading-tight tracking-tight mb-1">
-            Friday Coding Classes — St. Alphonsus
+          <p className="text-primary font-bold uppercase tracking-widest text-xs mb-3">After-School Program · East Kildonan Winnipeg</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-heading text-white leading-tight tracking-tight mb-2">
+            Coding Classes — East Kildonan
           </h1>
-          <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed font-medium max-w-none md:whitespace-nowrap">
-            Weekly Friday coding &amp; STEM classes for <span className="whitespace-nowrap">Grades 1–8 (no experience needed).</span>
+          <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed font-medium max-w-2xl">
+            Weekly Friday coding &amp; STEM classes for Grades 1–8. No experience needed.
           </p>
           <div className="flex flex-wrap gap-4 mt-5 text-sm text-white/80">
             <span className="flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5 text-primary" />343 Munroe Avenue, Winnipeg, MB R2K 1H2</span>
             <span className="flex items-center gap-1.5 text-white/60">·</span>
             <span className="flex items-center gap-1.5">Grades 1–8</span>
             <span className="flex items-center gap-1.5 text-white/60">·</span>
-            <span className="flex items-center gap-1.5"><Star className="h-3.5 w-3.5 text-yellow-400 fill-yellow-400" />159 five-star reviews</span>
+            <span className="flex items-center gap-1.5"><Star className="h-3.5 w-3.5 text-yellow-400 fill-yellow-400" />161+ five-star reviews</span>
           </div>
           <div className="flex flex-wrap items-center gap-3 mt-7">
             <a
@@ -175,7 +170,7 @@ export default function StAlphonsusCodingClasses() {
         <ScheduleTable
           slots={slots}
           termSchedules={termSchedules}
-          locationName="St. Alphonsus School"
+          locationName="East Kildonan"
           locationAddress="343 Munroe Avenue, Winnipeg, MB R2K 1H2"
           locationId="st-alphonsus"
           freeTrialUrl={freeTrialUrl}
@@ -187,7 +182,7 @@ export default function StAlphonsusCodingClasses() {
           pricingFooter="Registration is for the full 4-month term. Make-up classes are available at either Winnipeg location."
           studentRangeLabel="Grades 1–8"
           testimonials={stAlphonsusReviews}
-          reviewCountLabel="159 five-star reviews"
+          reviewCountLabel="161+ five-star reviews"
         />
       </div>
     </div>

@@ -19,23 +19,12 @@ const locations = [
     href: "https://book.skillsamuraiwinnipeg.com/widget/booking/fAz7Vr2KMa3wAWSUDICP",
   },
   {
-    name: "St. Alphonsus",
+    name: "East Kildonan",
     address: "343 Munroe Avenue",
     days: "Fridays",
     href: "https://book.skillsamuraiwinnipeg.com/widget/booking/w1CEpOQnQCpLHXaOUr6W",
   },
 ];
-
-function openPopup(url: string) {
-  const w = 900, h = 700;
-  const left = Math.max(0, (window.screen.width - w) / 2);
-  const top = Math.max(0, (window.screen.height - h) / 2);
-  window.open(
-    url,
-    "SkillSamuraiMakeup",
-    `width=${w},height=${h},left=${left},top=${top},resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,status=no`
-  );
-}
 
 export function MakeupModal() {
   const [open, setOpen] = useState(false);
@@ -103,13 +92,12 @@ export function MakeupModal() {
 
           <div className="flex flex-col gap-3">
             {locations.map((loc) => (
-              <button
+              <a
                 key={loc.name}
-                type="button"
-                onClick={() => {
-                  openPopup(loc.href);
-                  setOpen(false);
-                }}
+                href={loc.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
                 className="group flex items-center gap-4 w-full rounded-2xl border-2 border-border hover:border-primary bg-neutral-50 hover:bg-primary/5 px-5 py-4 text-left transition-all"
               >
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
@@ -122,7 +110,7 @@ export function MakeupModal() {
                 <span className="text-xs font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity">
                   Select →
                 </span>
-              </button>
+              </a>
             ))}
           </div>
 
