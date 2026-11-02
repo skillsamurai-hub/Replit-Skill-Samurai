@@ -127,8 +127,26 @@ fi
 
 PUSH_ERROR=""
 # Capture stderr separately so we can sanitise it before logging.
-# The remote URL embeds GITHUB_TOKEN — never let raw stderr reach logs or issues.
-if git push -f "https://${GITHUB_TOKEN}@github.com/skillsamurai-hub/Replit-Skill-Samurai.git" main 2>/tmp/push_stderr.txt; then
+# Authenticate through a temporary askpass helper so the token is never placed
+# in the remote URL or exposed by Git's interactive credential prompt.
+ASKPASS_SCRIPT=$(mktemp)
+trap 'rm -f "${ASKPASS_SCRIPT}"' EXIT
+cat > "${ASKPASS_SCRIPT}" <<'ASKPASS'
+#!/bin/sh
+case "$1" in
+  *Username*) printf '%s\n' "x-access-token" ;;
+  *Password*) printf '%s\n' "$GITHUB_TOKEN" ;;
+  *) exit 1 ;;
+esac
+ASKPASS
+chmod 700 "${ASKPASS_SCRIPT}"
+
+PUSH_EXIT=0
+GIT_ASKPASS="${ASKPASS_SCRIPT}" GIT_TERMINAL_PROMPT=0 \
+  git push -f "https://github.com/skillsamurai-hub/Replit-Skill-Samurai.git" main 2>/tmp/push_stderr.txt || PUSH_EXIT=$?
+rm -f "${ASKPASS_SCRIPT}"
+
+if [ "${PUSH_EXIT}" -eq 0 ]; then
   # GitHub push succeeded — now trigger Vercel deployment via REST API
   if [ -n "${VERCEL_TOKEN}" ]; then
     echo "Triggering Vercel deployment..."
@@ -168,7 +186,6 @@ if git push -f "https://${GITHUB_TOKEN}@github.com/skillsamurai-hub/Replit-Skill
   fi
   exit 0
 fi
-PUSH_EXIT=$?
 
 # Read and sanitise the push error — strip any token-bearing URL patterns
 # before the text is logged to stdout or posted to a GitHub issue.
@@ -177,7 +194,7 @@ PUSH_ERROR=$(sed "s|https://[^@]*@github\.com|https://***@github.com|g" /tmp/pus
 TIMESTAMP=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
 
 ISSUE_TITLE="⚠️ GitHub push failed after task merge — ${TIMESTAMP}"
-ISSUE_BODY="## GitHub push failed\n\n**Timestamp:** \`${TIMESTAMP}\`\n\n**Error output:**\n\`\`\`\n${PUSH_ERROR}\n\`\`\`\n\n**What to do:** Re-push manually with:\n\`\`\`bash\ngit push -f \"https://\${GITHUB_TOKEN}@github.com/skillsamurai-hub/Replit-Skill-Samurai.git\" main\n\`\`\`"
+ISSUE_BODY="## GitHub push failed\n\n**Timestamp:** \`${TIMESTAMP}\`\n\n**Error output:**\n\`\`\`\n${PUSH_ERROR}\n\`\`\`\n\n**What to do:** After fixing the GitHub token, rerun the deployment script:\n\`\`\`bash\nbash scripts/post-merge.sh\n\`\`\`"
 
 # Use Python 3 to safely JSON-encode the payload (avoids shell quoting issues
 # with special characters in the error message).
@@ -211,7 +228,7 @@ if [ "${HTTP_CODE}" = "201" ]; then
 else
   echo "  Issue creation failed (HTTP ${HTTP_CODE}) — check GITHUB_TOKEN"
 fi
-echo "  Manual re-push: git push -f ... main"
+echo "  Manual re-push: bash scripts/post-merge.sh"
 echo "=========================================="
 echo ""
 exit $PUSH_EXIT
