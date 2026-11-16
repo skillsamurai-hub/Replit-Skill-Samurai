@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 };
 
 const slots: Slot[] = [
-  { day: "Monday",  time: "5:30 PM", program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Monday start date",  url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Monday530pmWeeklyCodingClasses_143", spotsLeft: 1 },
+  { day: "Monday",  time: "5:30 PM", program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Monday start date",  url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Monday530pmWeeklyCodingClasses_143", spotsLeft: 0 },
   { day: "Monday",  time: "6:30 PM", program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Monday start date",  url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Monday630pmWeeklyCodingClasses", spotsLeft: 0 },
   { day: "Tuesday", time: "5:30 PM", program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Tuesday start date", url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Tuesday530pmWeeklyCodingClasses", spotsLeft: 0 },
-  { day: "Tuesday", time: "6:30 PM", program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Tuesday start date", url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Tuesday630pmWeeklyCodingClasses", spotsLeft: 1 },
+  { day: "Tuesday", time: "6:30 PM", program: "Weekly Coding Classes", grades: "Grades 1–12", note: "Choose a Tuesday start date", url: "https://winnipeg.jumbula.com/JanuaryDec2028Subscription/Tuesday630pmWeeklyCodingClasses", spotsLeft: 0 },
 ];
 
 const freeClassUrl = "https://book.skillsamuraiwinnipeg.com/widget/booking/TnDl1OMZ4UVFMhbBfc8g";
@@ -72,6 +72,10 @@ export default function NorthEastCodingClasses() {
 
       {/* Schedule table */}
       <div className="container mx-auto px-4 py-10">
+        <div className="mb-6 rounded-2xl border border-primary/20 bg-primary/5 px-5 py-4 text-center">
+          <p className="font-bold text-secondary">January registration opens soon.</p>
+          <p className="mt-1 text-sm text-secondary/70">Join the waitlist for your preferred class time to get an update when registration opens.</p>
+        </div>
         <ScheduleTable
           slots={slots}
           locationName="North East Location"

@@ -143,12 +143,15 @@ export default function ScheduleTable({
           const groupSlots = group.slots.map(displaySlot);
           const enrollmentIsOpen = !group.enrollmentOpensAt
             || currentTime >= new Date(group.enrollmentOpensAt).getTime();
+          const allGroupSlotsFull = groupSlots.length > 0 && groupSlots.every((slot) => slot.spotsLeft === 0);
           return (
             <div key={group.label} className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
               <div className="bg-secondary px-5 py-3 flex items-center justify-between">
                 <p className="text-white font-black text-base tracking-wide">{group.label}</p>
                 <span className="text-xs font-bold text-primary/80 bg-primary/10 px-2 py-0.5 rounded-full">
-                  {enrollmentIsOpen ? "Limited spots" : (group.enrollmentOpensLabel ?? "Coming soon")}
+                  {enrollmentIsOpen
+                    ? allGroupSlotsFull ? "Waitlist open" : "Limited spots"
+                    : (group.enrollmentOpensLabel ?? "Coming soon")}
                 </span>
               </div>
               <div className="divide-y divide-gray-100">
