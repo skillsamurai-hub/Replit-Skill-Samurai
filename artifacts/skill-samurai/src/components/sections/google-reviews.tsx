@@ -401,7 +401,7 @@ export default function GoogleReviews() {
             <Stars count={5} />
             <span className="text-secondary font-bold">5.0</span>
             <span className="text-secondary/60">·</span>
-            <span className="text-secondary font-black">161+ five-star reviews</span>
+            <span className="text-secondary font-black">162 five-star Google reviews</span>
             <span className="text-secondary/60">·</span>
             <span className="text-secondary/70 font-medium">from local Winnipeg families</span>
           </div>

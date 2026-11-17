@@ -47,7 +47,7 @@ export default function NorthEastCodingClasses() {
             <span className="flex items-center gap-1.5 text-white/60">·</span>
             <span className="flex items-center gap-1.5">Ages 6–18</span>
             <span className="flex items-center gap-1.5 text-white/60">·</span>
-            <span className="flex items-center gap-1.5"><Star className="h-3.5 w-3.5 text-yellow-400 fill-yellow-400" />161+ five-star reviews</span>
+            <span className="flex items-center gap-1.5"><Star className="h-3.5 w-3.5 text-yellow-400 fill-yellow-400" />162 five-star Google reviews</span>
           </div>
           <div className="flex flex-wrap items-center gap-3 mt-7">
             <a
